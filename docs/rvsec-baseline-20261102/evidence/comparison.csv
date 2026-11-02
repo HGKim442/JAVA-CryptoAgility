@@ -1,0 +1,6 @@
+java,surface,normal_warning_count,omit_warning_count,warning_multiset_equal,ground_truth_and_output_check,normal_path,omit_path
+java8,JCA,26,26,True,True,D0-rvsec/runs/RVSec-JDK8-17-PQC-comparison-20261102/java8/JCA_HYBRID,D0-rvsec/runs/RVSec-JDK8-17-PQC-comparison-20261102/java8/JCA_OMIT_KEM
+java8,LW,16,16,True,True,D0-rvsec/runs/RVSec-JDK8-17-PQC-comparison-20261102/java8/LW_HYBRID,D0-rvsec/runs/RVSec-JDK8-17-PQC-comparison-20261102/java8/LW_OMIT_KEM
+java17,JCA,26,26,True,True,D0-rvsec/runs/RVSec-JDK8-17-PQC-comparison-20261102/java17/JCA_HYBRID,D0-rvsec/runs/RVSec-JDK8-17-PQC-comparison-20261102/java17/JCA_OMIT_KEM
+java17,LW,16,16,True,True,D0-rvsec/runs/RVSec-JDK8-17-PQC-comparison-20261102/java17/LW_HYBRID,D0-rvsec/runs/RVSec-JDK8-17-PQC-comparison-20261102/java17/LW_OMIT_KEM
+java21,javax.crypto.KEM,16,16,True,True,D0-rvsec/runs/RVSec-JDK21-classfile8-KEM-control-20261102/on,D0-rvsec/runs/RVSec-JDK21-classfile8-KEM-control-20261102/omit/on
