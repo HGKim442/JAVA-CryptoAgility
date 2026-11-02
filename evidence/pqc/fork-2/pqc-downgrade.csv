@@ -1,0 +1,7 @@
+fork,mode,failure_variant,normal_hybrid_success,observed_suite,roundtrip,downgrade_effect,outcome,error
+2,VULNERABLE,1,true,X25519_ONLY,true,true,OBSERVED,NoSuchProviderException
+2,VULNERABLE,2,true,X25519_ONLY,true,true,OBSERVED,NoSuchAlgorithmException
+2,ALLOWLIST,1,true,X25519_ONLY,true,true,OBSERVED,NoSuchProviderException
+2,ALLOWLIST,2,true,X25519_ONLY,true,true,OBSERVED,NoSuchAlgorithmException
+2,PROPOSED,1,true,NONE,false,false,POLICY_REJECTION,NoSuchProviderException
+2,PROPOSED,2,true,NONE,false,false,POLICY_REJECTION,NoSuchAlgorithmException

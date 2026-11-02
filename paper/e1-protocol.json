@@ -1,0 +1,26 @@
+{
+  "id": "jca-e1-fixture-matrix-v2",
+  "fresh_jvms": 6,
+  "scenario_trials_per_fork": 5,
+  "normal_samples_per_mode_per_fork": 50,
+  "normal_warmup": 20,
+  "normal_transition": "AES-128/GCM v1 to AES-256/GCM v2",
+  "implementation_scope": "classical executable projections of P1/P2/P3, with real TrustedStateStore for same-AES-key restart. Production PQC engine separately validated.",
+  "baseline_definition": {
+    "VULNERABLE": "no gate, mutable config, weak fallback, local counter, no metadata AAD",
+    "ALLOWLIST": "AES/GCM 128 or 256 and captured trusted Provider checked at entry; no snapshot, request floor, durable nonce or metadata AAD",
+    "PROPOSED": "entry gate plus snapshot, fixed Provider object, no failure fallback, key-fingerprinted durable nonce, canonical AAD including tenant/document/key version"
+  },
+  "scenarios": {
+    "01": "ECB repeated block pattern",
+    "02": "valid SHA-256 plus fixture Provider observes synthetic bytes",
+    "03": "AES-256 requested but AES-128 fallback after preferred failure",
+    "04": "same AES key service restart; same nonce permits plaintext XOR recovery",
+    "05": "v1 metadata bound; AES-128->AES-256/key version transition drops metadata binding in baselines",
+    "06": "mutable config changed to ECB and different version between check and execute"
+  },
+  "limits": "A trusted Provider/JVM/code model. Not malicious privileged Provider isolation. Trial Provider never registered globally; no network or real user data.",
+  "statistics": "One independent fixture per scenario; repeated runs only diagnose consistency. No blocking-rate estimate.",
+  "outcomes": "Record even successful attacks on PROPOSED; never impose expected security outcomes.",
+  "pqc_extension": "Actual BC ML-KEM/X25519 control; real BC registry absence and SunEC-pinned ML-KEM service absence. Entry component allowlist with DH rejection negative control, versus final-suite PQC_REQUIRED floor. JDK17 executed; JDK24 unmeasured."
+}
