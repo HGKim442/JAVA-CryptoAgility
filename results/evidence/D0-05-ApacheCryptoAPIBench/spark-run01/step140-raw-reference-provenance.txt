@@ -1,0 +1,124 @@
+=== 1. OUR SPARK REFERENCE ===
+ROWS: 55
+DISTINCT_TYPES: 43
+SHA256: 9792a9d9dc54ec4bb1d9e9aeccb7088a448e180d5345b996443800861bedffb5
+
+=== 2. ORIGINAL RAW SPARK CSV ===
+PATH: /home/RESEARCHER/pqc-research/D0-rvsec/RVSec-replication-package/ApacheCryptoAPIBench/apache_codes/spark/core/output/summary.csv
+SHA256: 9792a9d9dc54ec4bb1d9e9aeccb7088a448e180d5345b996443800861bedffb5
+ORIGINAL_ROWS: 55
+ORIGINAL_TYPES: 43
+EXACT_FILE_BYTES: True
+EVENT_MULTISET_EQUAL: True
+MISSING_FROM_OUR_REFERENCE: 0
+EXTRA_IN_OUR_REFERENCE: 0
+
+=== 3. OTHER ORIGINAL MOP OUTPUTS ===
+
+=== 4. SPARK CURATED GROUND TRUTH ===
+SPARK_ROWS: 76
+BY_TOOL:
+'CogniCrypt' 24
+'CryptoGuard' 29
+'RV' 23
+BY_TOOL_AND_VERDICT:
+('CogniCrypt', '-') 14
+('CogniCrypt', 'TRUE') 10
+('CryptoGuard', '-') 20
+('CryptoGuard', 'FALSE') 9
+('RV', '-') 10
+('RV', 'TRUE') 13
+
+SPARK_RV_ROWS:
+KeyGeneratorSpec CryptoStreamUtils$ createKey RelatedWarnings=3 Vulnerability=TRUE
+SecretKeySpecSpec CryptoStreamUtils$CryptoParams <init> RelatedWarnings=2 Vulnerability=TRUE
+IvParameterSpecSpec CryptoStreamUtils$ createCryptoOutputStream RelatedWarnings=2 Vulnerability=TRUE
+IvParameterSpecSpec CryptoStreamUtils$ createCryptoInputStream RelatedWarnings=2 Vulnerability=TRUE
+MessageDigestSpec SequenceFile$Writer <init> RelatedWarnings=3 Vulnerability=-
+SSLContextSpec HtmlUnitSSLConnectionSocketFactory buildSSLSocketFactory RelatedWarnings=3 Vulnerability=-
+PBEKeySpecSpec AuthEngine generateKey RelatedWarnings=2 Vulnerability=-
+SecretKeySpecSpec AuthEngine generateKey RelatedWarnings=2 Vulnerability=-
+IvParameterSpecSpec AuthEngine initializeForAuth RelatedWarnings=4 Vulnerability=-
+IvParameterSpecSpec TransportCipher createOutputStream RelatedWarnings=4 Vulnerability=-
+KeyGeneratorSpec CryptoStreamUtils$ createKey RelatedWarnings=3 Vulnerability=TRUE
+SecretKeySpecSpec CryptoStreamUtils$CryptoParams <init> RelatedWarnings=2 Vulnerability=TRUE
+IvParameterSpecSpec CryptoStreamUtils$ createWritableChannel RelatedWarnings=2 Vulnerability=TRUE
+IvParameterSpecSpec CryptoStreamUtils$ createReadableChannel RelatedWarnings=2 Vulnerability=TRUE
+IvParameterSpecSpec CryptoStreamUtils$ createCryptoOutputStream RelatedWarnings=2 Vulnerability=TRUE
+IvParameterSpecSpec CryptoStreamUtils$ createCryptoInputStream RelatedWarnings=2 Vulnerability=TRUE
+SecureRandomSpec LauncherServer createSecret RelatedWarnings=1 Vulnerability=-
+KeyStoreSpec SecurityManager$$anonfun$2 apply RelatedWarnings=1 Vulnerability=TRUE
+KeyManagerFactorySpec SslContextFactory getKeyManagers RelatedWarnings=1 Vulnerability=-
+SSLContextSpec SslContextFactory load RelatedWarnings=3 Vulnerability=-
+SSLContextSpec TestUtils$ httpResponseCode RelatedWarnings=3 Vulnerability=TRUE
+SSLContextSpec SSLOptions.liftedTree1$1 <init> RelatedWarnings=3 Vulnerability=TRUE
+MessageDigestSpec SequenceFile$Writer <init> RelatedWarnings=3 Vulnerability=-
+
+=== 5. ANALYSIS SCRIPT INPUTS ===
+ 34: ```{r load-mop}
+ 35: 
+ 36: mopArtemisCommons <- read.csv("../apache_codes/activemq-artemis/artemis-commons/output/summary.csv", head=T, sep=",")
+ 37: mopArtemisCommons['module'] <- 'ArtemisCommons'
+ 38: 
+ 39: mopDeltaSpikeCore <- read.csv("../apache_codes/deltaspike/deltaspike/core/impl/output/summary.csv", head=T, sep=",")
+ 40: mopDeltaSpikeCore['module'] <- 'DeltaSpikeCore'
+ 41: 
+ 42: mopApachedsKerberosCodec <- read.csv("../apache_codes/directory-server/kerberos-codec/output/summary.csv", head=T, sep=",")
+ 43: mopApachedsKerberosCodec['module'] <- 'ApachedsKerberosCodec'
+ 44: 
+ 45: mopMcfCore <- read.csv("../apache_codes/manifoldcf/framework/core/output/summary.csv", head=T, sep=",")
+ 46: mopMcfCore['module'] <- 'DeltaMcfCore'
+ 47: 
+ 48: mopMeecrowaveCore <- read.csv("../apache_codes/openwebbeans-meecrowave/meecrowave-core/output/summary.csv", head=T, sep=",")
+ 49: mopMeecrowaveCore['module'] <- 'MeecrowaveCore'
+ 50: 
+ 51: mopSparkCore <- read.csv("../apache_codes/spark/core/output/summary.csv", head=T, sep=",")
+ 52: mopSparkCore['module'] <- 'SparkCore'
+ 53: 
+ 54: mopTikaCore <- read.csv("../apache_codes/tika/tika-core/output/summary.csv", head=T, sep=",")
+ 55: mopTikaCore['module'] <- 'TikaCore'
+ 56: 
+ 57: mopWicketUtil <- read.csv("../apache_codes/wicket/wicket-util/output/summary.csv", head=T, sep=",")
+ 58: mopWicketUtil['module'] <- 'WicketUtil'
+ 59: 
+ 60: 
+ 61: mop <- rbind(mopArtemisCommons, mopDeltaSpikeCore)
+ 62: mop <- rbind(mop, mopApachedsKerberosCodec)
+ 63: mop <- rbind(mop, mopMcfCore)
+ 64: mop <- rbind(mop, mopMeecrowaveCore)
+ 65: mop <- rbind(mop, mopSparkCore)
+ 66: mop <- rbind(mop, mopTikaCore)
+ 67: mop <- rbind(mop, mopWicketUtil)
+ 68: 
+ 69: mop <- sqldf("select module, count(*) as RVSec from mop group by module order by 1,2")
+ 70: 
+ 71: 
+ 72: ```
+ 73: 
+
+FIXED ANALYSIS INPUT:
+ 20: ## Load the ApacheBench DataSet
+ 21: 
+ 22: ```{r load}
+ 23: final_ds <- read.csv("../results/gt-FIXED-new.csv", head=T, sep=',')
+ 24: colnames(final_ds)
+ 25: 
+ 26: ##  [1] "Project"         "Spec"            "Class"           "Method"         
+ 27: ##  [5] "Tool"            "Vulnerability"   "RelatedWarnings" "TestClass"      
+ 28: ##  [9] "ExternalClass"   "Observation"
+ 29: ```
+ 30: 
+ 31: ## Data CleanUp
+ 32: 
+ 33: ### Remove duplicated records
+ 34: 
+ 35: ```{r remove-dups}
+ 36: final_ds = distinct(final_ds)
+ 37: ```
+ 38: 
+ 39: ### Count the number of warnings and group them by tool 
+ 40: 
+
+=== FINAL ===
+RAW_REFERENCE_PROVENANCE_CHECK_COMPLETE
+READ_ONLY

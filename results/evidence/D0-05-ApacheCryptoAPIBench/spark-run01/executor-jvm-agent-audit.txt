@@ -1,0 +1,133 @@
+=== 1. CRYPTO TEST CONFIGURATION ===
+
+  test("encryption key propagation to executors") {
+    val conf = createConf().setAppName("Crypto Test").setMaster("local-cluster[1,1,1024]")
+    val sc = new SparkContext(conf)
+    try {
+      val content = "This is the content to be encrypted."
+      val encrypted = sc.parallelize(Seq(1))
+        .map { str =>
+          val bytes = new ByteArrayOutputStream()
+          val out = CryptoStreamUtils.createCryptoOutputStream(bytes, SparkEnv.get.conf,
+            SparkEnv.get.securityManager.getIOEncryptionKey().get)
+          out.write(content.getBytes(UTF_8))
+          out.close()
+          bytes.toByteArray()
+        }.collect()(0)
+
+      assert(content != encrypted)
+
+      val in = CryptoStreamUtils.createCryptoInputStream(new ByteArrayInputStream(encrypted),
+        sc.conf, SparkEnv.get.securityManager.getIOEncryptionKey().get)
+      val decrypted = new String(ByteStreams.toByteArray(in), UTF_8)
+      assert(content === decrypted)
+    } finally {
+      sc.stop()
+    }
+  }
+
+  test("crypto stream wrappers") {
+    val testData = new Array[Byte](128 * 1024)
+    new Random().nextBytes(testData)
+
+    val conf = createConf()
+    val key = createKey(conf)
+    val file = Files.createTempFile("crypto", ".test").toFile()
+    file.deleteOnExit()
+
+    val outStream = createCryptoOutputStream(new FileOutputStream(file), conf, key)
+    try {
+      ByteStreams.copy(new ByteArrayInputStream(testData), outStream)
+    } finally {
+      outStream.close()
+    }
+
+    val inStream = createCryptoInputStream(new FileInputStream(file), conf, key)
+    try {
+      val inStreamData = ByteStreams.toByteArray(inStream)
+      assert(Arrays.equals(inStreamData, testData))
+    } finally {
+      inStream.close()
+    }
+
+=== 2. EXECUTOR JVM LAUNCH CODE ===
+110-      case e: IllegalStateException => logWarning(e.getMessage(), e)
+111-    }
+112-  }
+113-
+114:  /** Stop this executor runner, including killing the process it launched */
+115-  private[worker] def kill() {
+116-    if (workerThread != null) {
+117-      // the workerThread will kill the child process when interrupted
+118-      workerThread.interrupt()
+--
+125-      }
+126-    }
+127-  }
+128-
+129:  /** Replace variables such as {{EXECUTOR_ID}} and {{CORES}} in a command argument passed to us */
+130-  private[worker] def substituteVariables(argument: String): String = argument match {
+131-    case "{{WORKER_URL}}" => workerUrl
+132-    case "{{EXECUTOR_ID}}" => execId.toString
+133-    case "{{HOSTNAME}}" => host
+--
+140-   * Download and run the executor described in our ApplicationDescription
+141-   */
+142-  private def fetchAndRunExecutor() {
+143-    try {
+144:      // Launch the process
+145:      val builder = CommandUtils.buildProcessBuilder(appDesc.command, new SecurityManager(conf),
+146-        memory, sparkHome.getAbsolutePath, substituteVariables)
+147:      val command = builder.command()
+148:      val formattedCommand = command.asScala.mkString("\"", "\" \"", "\"")
+149:      logInfo(s"Launch command: $formattedCommand")
+150-
+151-      builder.directory(executorDir)
+152-      builder.environment.put("SPARK_EXECUTOR_DIRS", appLocalDirs.mkString(File.pathSeparator))
+153-      // In case we are running this from within the Spark Shell, avoid creating a "scala"
+154:      // parent process for the executor command
+155:      builder.environment.put("SPARK_LAUNCH_WITH_SCALA", "0")
+156-
+157-      // Add webUI log urls
+158-      val baseUrl =
+159-        if (conf.getBoolean("spark.ui.reverseProxy", false)) {
+--
+164-      builder.environment.put("SPARK_LOG_URL_STDERR", s"${baseUrl}stderr")
+165-      builder.environment.put("SPARK_LOG_URL_STDOUT", s"${baseUrl}stdout")
+166-
+167-      process = builder.start()
+168:      val header = "Spark Executor Command: %s\n%s\n\n".format(
+169:        formattedCommand, "=" * 40)
+170-
+171-      // Redirect its stdout and stderr to files
+172-      val stdout = new File(executorDir, "stdout")
+173-      stdoutAppender = FileAppender(process.getInputStream, stdout, conf)
+--
+179-      // Wait for it to exit; executor may exit with code 0 (when driver instructs it to shutdown)
+180-      // or with nonzero exit code
+181-      val exitCode = process.waitFor()
+182-      state = ExecutorState.EXITED
+183:      val message = "Command exited with code " + exitCode
+184-      worker.send(ExecutorStateChanged(appId, execId, state, Some(message), Some(exitCode)))
+185-    } catch {
+186-      case interrupted: InterruptedException =>
+187-        logInfo("Runner thread for executor " + fullId + " interrupted")
+
+=== 3. TEST JVM AGENT CONFIGURATION ===
+483:							<argLine>-Xmx4096m -XX:MaxPermSize=1024m -javaagent:${basedir}/JavaMOPAgent.jar</argLine>
+489:						<artifactId>scalatest-maven-plugin</artifactId>
+491:							<argLine>-javaagent:${basedir}/JavaMOPAgent.jar</argLine>
+524:							<argLine>@{argLine}</argLine>
+531:						<artifactId>scalatest-maven-plugin</artifactId>
+718:							<argLine>-Xmx4096m -XX:MaxPermSize=1024m</argLine>
+719:							<argLine>-javaagent:${basedir}/JavaMOPAgent.jar @{argLine}</argLine>
+732:						<artifactId>scalatest-maven-plugin</artifactId>
+735:<!-- 							<argLine>-javaagent:${basedir}/JavaMOPAgent.jar</argLine> -->
+
+=== 4. EXECUTOR AGENT SETTINGS IN TEST ===
+101:    val conf = createConf().setAppName("Crypto Test").setMaster("local-cluster[1,1,1024]")
+102:    val sc = new SparkContext(conf)
+
+=== FINAL ===
+STATIC_EXECUTOR_AUDIT_COMPLETE
+NOTE: Runtime JVM options require separate verification.

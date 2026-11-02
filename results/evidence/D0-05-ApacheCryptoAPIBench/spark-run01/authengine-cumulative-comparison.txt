@@ -1,0 +1,35 @@
+=== AUTHENGINE VERIFICATION ===
+AUTH_EVENTS: 8
+AUTH_MATCHED: 8
+AUTH_UNEXPECTED: 0
+OVERLAP_WITH_PREVIOUS: 0
+AUTH_VERDICT: EXACT_REFERENCE_SUBSET
+
+=== CUMULATIVE SPARK COVERAGE ===
+REFERENCE: 55
+CRYPTO_SUITE: 13
+SSL_SUITE: 3
+AUTH_SUITE: 8
+PREVIOUS_COVERAGE: 16
+COMBINED_MAX_MULTIPLICITY: 24
+MATCHED: 24
+MISSING: 31
+UNEXPECTED: 0
+
+=== REMAINING EVENTS BY CLASS ===
+  7  org.apache.spark.security.CryptoStreamUtils$
+  6  org.apache.hadoop.io.SequenceFile$Writer
+  4  org.apache.spark.network.crypto.TransportCipher
+  4  org.eclipse.jetty.util.ssl.SslContextFactory
+  3  com.gargoylesoftware.htmlunit.httpclient.HtmlUnitSSLConnectionSocketFactory
+  3  org.apache.spark.TestUtils$
+  2  org.apache.spark.security.CryptoStreamUtils$CryptoParams
+  1  org.apache.spark.launcher.LauncherServer
+  1  org.apache.spark.SecurityManager$$anonfun$2
+
+=== UNEXPECTED EVENTS ===
+NONE
+
+=== FINAL VERDICT ===
+VERIFIED_PARTIAL_REFERENCE_COVERAGE
+NOTE: Independent runs use per-event maximum multiplicity.

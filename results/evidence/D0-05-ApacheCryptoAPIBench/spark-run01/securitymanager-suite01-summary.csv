@@ -1,0 +1,2 @@
+spec,class,className,method,location,error
+KeyStoreSpec,org.apache.spark.SecurityManager$$anonfun$2,SecurityManager$$anonfun$2,apply,SecurityManager.scala:268,InvalidSequenceOfMethodCalls

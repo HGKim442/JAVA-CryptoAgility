@@ -1,0 +1,284 @@
+=== 1. ORIGINAL PACKAGE ROOT ===
+FILE .gitignore
+FILE JavaMOPAgent.jar
+FILE README.md
+DIR  apache_codes
+DIR  assets
+FILE build.sh
+FILE clean.sh
+FILE copy_agent.sh
+FILE download.sh
+FILE execute.sh
+DIR  maven-invoker
+DIR  results
+FILE run-experiment.py
+FILE run-experiment.sh
+FILE run_ca.sh
+FILE run_cg.sh
+DIR  scripts
+
+=== 2. SCRIPT / DOCUMENT INVENTORY ===
+CANDIDATE_FILES: 491
+run-experiment.sh
+run-experiment.py
+build.sh
+execute.sh
+copy_agent.sh
+run_cg.sh
+README.md
+run_ca.sh
+clean.sh
+download.sh
+apache_codes/pom.xml
+apache_codes/copyJavaAgent.sh
+apache_codes/activemq-artemis/pom.xml
+apache_codes/activemq-artemis/RELEASING.md
+apache_codes/activemq-artemis/README.md
+apache_codes/activemq-artemis/artemis-boot/pom.xml
+apache_codes/activemq-artemis/artemis-cdi-client/pom.xml
+apache_codes/activemq-artemis/artemis-cli/pom.xml
+apache_codes/activemq-artemis/artemis-commons/pom.xml
+apache_codes/activemq-artemis/artemis-commons/evosuite-info.txt
+apache_codes/activemq-artemis/artemis-dto/pom.xml
+apache_codes/activemq-artemis/artemis-protocols/pom.xml
+apache_codes/activemq-artemis/artemis-protocols/artemis-amqp-protocol/pom.xml
+apache_codes/activemq-artemis/artemis-protocols/artemis-hornetq-protocol/pom.xml
+apache_codes/activemq-artemis/artemis-protocols/artemis-hqclient-protocol/pom.xml
+apache_codes/activemq-artemis/artemis-protocols/artemis-mqtt-protocol/pom.xml
+apache_codes/activemq-artemis/artemis-protocols/artemis-openwire-protocol/pom.xml
+apache_codes/activemq-artemis/artemis-protocols/artemis-stomp-protocol/pom.xml
+apache_codes/activemq-artemis/artemis-web/pom.xml
+apache_codes/activemq-artemis/artemis-website/pom.xml
+apache_codes/deltaspike/LICENSE.txt
+apache_codes/deltaspike/pom.xml
+apache_codes/deltaspike/README.md
+apache_codes/deltaspike/deltaspike/javadoc.sh
+apache_codes/deltaspike/deltaspike/pom.xml
+apache_codes/deltaspike/deltaspike/README.md
+apache_codes/deltaspike/deltaspike/buildall.sh
+apache_codes/deltaspike/deltaspike/checkstyle-rules/pom.xml
+apache_codes/deltaspike/deltaspike/core/pom.xml
+apache_codes/deltaspike/deltaspike/core/api/pom.xml
+apache_codes/deltaspike/deltaspike/core/impl/pom.xml
+apache_codes/deltaspike/deltaspike/core/impl/evosuite-info.txt
+apache_codes/deltaspike/deltaspike/parent/pom.xml
+apache_codes/deltaspike/deltaspike/parent/code/pom.xml
+apache_codes/deltaspike/deltaspike/readme/ReleaseNotes-1.0.3.txt
+apache_codes/deltaspike/deltaspike/readme/ReleaseNotes-1.2.0.txt
+apache_codes/deltaspike/deltaspike/readme/ReleaseNotes-1.7.0.txt
+apache_codes/deltaspike/deltaspike/readme/ReleaseNotes-1.7.1.txt
+apache_codes/deltaspike/deltaspike/readme/ReleaseNotes-1.2.1.txt
+apache_codes/deltaspike/deltaspike/readme/ReleaseNotes-1.4.1.txt
+apache_codes/deltaspike/deltaspike/readme/ReleaseNotes-1.5.1.txt
+apache_codes/deltaspike/deltaspike/readme/ReleaseNotes-0.6.txt
+apache_codes/deltaspike/deltaspike/readme/ReleaseNotes-0.2-incubating.txt
+apache_codes/deltaspike/deltaspike/readme/ReleaseNotes-1.4.0.txt
+apache_codes/deltaspike/deltaspike/readme/ReleaseNotes-1.3.0.txt
+apache_codes/deltaspike/deltaspike/readme/ReleaseNotes-1.0.2.txt
+apache_codes/deltaspike/deltaspike/readme/ReleaseNotes-0.7.txt
+apache_codes/deltaspike/deltaspike/readme/ReleaseNotes-0.4-incubating.txt
+apache_codes/deltaspike/deltaspike/readme/ReleaseNotes-1.0.1.txt
+apache_codes/deltaspike/deltaspike/readme/ReleaseNotes-1.6.1.txt
+apache_codes/deltaspike/deltaspike/readme/ReleaseNotes-1.5.4.txt
+apache_codes/deltaspike/deltaspike/readme/ReleaseNotes-0.3-incubating.txt
+apache_codes/deltaspike/deltaspike/readme/ReleaseNotes-1.4.2.txt
+apache_codes/deltaspike/deltaspike/readme/ReleaseNotes-1.5.3.txt
+apache_codes/deltaspike/deltaspike/readme/ReleaseNotes-1.1.0.txt
+apache_codes/deltaspike/deltaspike/readme/ReleaseNotes-1.6.0.txt
+apache_codes/deltaspike/deltaspike/readme/ReleaseNotes-1.5.2.txt
+apache_codes/deltaspike/deltaspike/readme/ReleaseNotes-0.5.txt
+apache_codes/deltaspike/deltaspike/readme/ReleaseNotes-1.0.0.txt
+apache_codes/deltaspike/deltaspike/readme/ReleaseNotes-1.7.2.txt
+apache_codes/deltaspike/deltaspike/readme/ReleaseNotes-1.5.0.txt
+apache_codes/deltaspike/deltaspike/test-utils/pom.xml
+apache_codes/directory-ldap-api/README.txt
+apache_codes/directory-ldap-api/pom.xml
+apache_codes/directory-ldap-api/all/pom.xml
+apache_codes/directory-ldap-api/asn1/pom.xml
+apache_codes/directory-ldap-api/asn1/api/pom.xml
+apache_codes/directory-ldap-api/asn1/ber/pom.xml
+apache_codes/directory-ldap-api/i18n/pom.xml
+apache_codes/directory-ldap-api/ldap/pom.xml
+apache_codes/directory-ldap-api/ldap/client/pom.xml
+apache_codes/directory-ldap-api/ldap/client/all/pom.xml
+apache_codes/directory-ldap-api/ldap/client/api/pom.xml
+apache_codes/directory-ldap-api/ldap/codec/pom.xml
+apache_codes/directory-ldap-api/ldap/codec/core/pom.xml
+apache_codes/directory-ldap-api/ldap/codec/standalone/pom.xml
+apache_codes/directory-ldap-api/ldap/extras/pom.xml
+apache_codes/directory-ldap-api/ldap/extras/aci/pom.xml
+apache_codes/directory-ldap-api/ldap/extras/codec/pom.xml
+apache_codes/directory-ldap-api/ldap/extras/codec-api/pom.xml
+
+=== 3. EXECUTION / MERGE COMMANDS ===
+
+FILE: run-experiment.sh
+6: PATH_RVSEC=$(mvn help:evaluate -Dexpression=settings.localRepository -q -DforceStdout)/br/unb/cic
+
+FILE: build.sh
+9: mvn clean install -pl artemis-commons --also-make # --also-make-dependents
+15: mvn clean install -pl deltaspike/core/impl --also-make
+21: mvn clean install -pl ldap --also-make -DskipTests -Dcheckstyle.skip
+25: mvn clean install -pl kerberos-codec --also-make
+31: mvn clean install -pl framework/core --also-make
+37: mvn clean install -pl meecrowave-core -am
+43: mvn clean install -pl core -am
+49: mvn clean install -pl tika-core -am
+55: mvn clean install -DskipTests -pl container/openejb-core -am
+57: #mvn test
+64: mvn clean install -pl wicket-util -am
+
+FILE: execute.sh
+7: mvn clean test -pl artemis-commons --also-make 
+13: mvn clean test -pl deltaspike/core/impl --also-make 
+19: mvn clean test -pl kerberos-codec --also-make
+25: mvn clean test -pl framework/core --also-make
+31: mvn clean test -pl meecrowave-core -am
+37: mvn clean test -pl core -am
+43: mvn clean test -pl tika-core -am
+49: #mvn clean test -pl container/openejb-core -am
+55: mvn clean test -pl wicket-util -am
+
+FILE: copy_agent.sh
+3: cp -v JavaMOPAgent.jar apache_codes/activemq-artemis/artemis-commons/
+4: cp -v JavaMOPAgent.jar apache_codes/deltaspike/deltaspike/core/impl/
+5: cp -v JavaMOPAgent.jar apache_codes/directory-server/kerberos-codec/
+6: cp -v JavaMOPAgent.jar apache_codes/manifoldcf/framework/core/
+7: cp -v JavaMOPAgent.jar apache_codes/openwebbeans-meecrowave/meecrowave-core/
+8: cp -v JavaMOPAgent.jar apache_codes/spark/core/
+9: cp -v JavaMOPAgent.jar apache_codes/tika/tika-core/
+10: cp -v JavaMOPAgent.jar apache_codes/wicket/wicket-util
+
+FILE: README.md
+16: mvn -am
+19: mvn clean test -pl core -am
+40:    * **tomee**: executa os testes no original, mas entra em "deadlock" com o JavaMOPAgent.  
+
+FILE: apache_codes/copyJavaAgent.sh
+1: cp ../../JavaMOPAgent.jar spark/core/JavaMOPAgent.jar
+2: cp ../../JavaMOPAgent.jar manifoldcf/framework/core/JavaMOPAgent.jar
+3: cp ../../JavaMOPAgent.jar tika/tika-core/JavaMOPAgent.jar
+4: cp ../../JavaMOPAgent.jar openwebbeans-meecrowave/meecrowave-core/JavaMOPAgent.jar
+5: cp ../../JavaMOPAgent.jar wicket/wicket-util/JavaMOPAgent.jar
+6: cp ../../JavaMOPAgent.jar deltaspike/deltaspike/core/impl/JavaMOPAgent.jar
+7: cp ../../JavaMOPAgent.jar activemq-artemis/artemis-commons/JavaMOPAgent.jar
+8: cp ../../JavaMOPAgent.jar tomee/container/openejb-core/JavaMOPAgent.jar
+9: cp ../../JavaMOPAgent.jar directory-server/kerberos-codec/JavaMOPAgent.jar 
+
+FILE: apache_codes/activemq-artemis/pom.xml
+157:        Idea picks up surefire argline by default:
+158:        if You don't want it, you can add -Didea.maven.surefire.disable.argLine=true to idea.vmoptions files,
+169:       <activemq-surefire-argline>-Djava.util.logging.manager=org.jboss.logmanager.LogManager
+173:       </activemq-surefire-argline>
+656:             <groupId>org.eclipse.jetty.aggregate</groupId>
+1079:             <activemq-surefire-argline>-Djava.util.logging.manager=org.jboss.logmanager.LogManager
+1084:             </activemq-surefire-argline>
+1101:                            This property is passed to maven-surefire-plugin -->
+1106:                         <id>merge</id>
+1109:                            <goal>merge</goal>
+1420:                <artifactId>maven-surefire-plugin</artifactId>
+1427:                   <argLine>${activemq-surefire-argline}</argLine>
+
+FILE: apache_codes/activemq-artemis/RELEASING.md
+15: * Build the release locally: mvn clean install -Prelease
+71: mvn clean release:prepare -DautoVersionSubmodules=true -Prelease
+77: mvn clean release:prepare -DautoVersionSubmodules=true -DpushChanges=false -Prelease
+115: mvn release:perform -Prelease
+
+FILE: apache_codes/activemq-artemis/README.md
+14: ActiveMQ Artemis does not ship with the Artemis Native ASYNCIO library in the source distribution.  These need to be built prior to running "mvn install", to ensure that the ASYNCIO journal type is av
+28:     $ mvn -Prelease install
+34:     $ mvn verify
+38:     $ mvn -Pexamples verify
+45:     cd examples/jms/topic && mvn dependency:list
+51:     $ mvn -Powasp verify
+
+FILE: apache_codes/activemq-artemis/artemis-commons/pom.xml
+108: 						<artifactId>maven-surefire-plugin</artifactId>
+111: 							<argLine>-javaagent:${basedir}/JavaMOPAgent.jar</argLine>
+123: 					<!-- mvn clean compile spotbugs:spotbugs -PFindSecBugs -->
+124: 					<!-- mvn spotbugs:gui -PFindSecBugs -->
+187: 						<artifactId>maven-surefire-plugin</artifactId>
+198: 			<!-- mvn clean test -Pevosuite-generate -->
+199: 			<!-- mvn -Dcores=8 -DmemoryInMB=8000 -Pevosuite-generate evosuite:generate evosuite:export test -->
+246: 						<artifactId>maven-surefire-plugin</artifactId>
+256: 			<!-- mvn clean test -Pevosuite -->
+327: 						<artifactId>maven-surefire-plugin</artifactId>
+330: 							<argLine>-javaagent:${basedir}/JavaMOPAgent.jar @{argLine}</argLine>
+368: 						<artifactId>maven-surefire-plugin</artifactId>
+
+FILE: apache_codes/activemq-artemis/artemis-web/pom.xml
+99:          <groupId>org.eclipse.jetty.aggregate</groupId>
+
+FILE: apache_codes/activemq-artemis/artemis-website/pom.xml
+121:                      <aggregate>true</aggregate>
+
+FILE: apache_codes/deltaspike/LICENSE.txt
+38:       (an example is provided in the Appendix below).
+
+FILE: apache_codes/deltaspike/pom.xml
+72:                 <!-- this is a hack to make mvn site not really run. -->
+
+FILE: apache_codes/deltaspike/README.md
+39: Just run `mvn clean install` from the top level directory, `deltaspike` to build the source code.
+
+FILE: apache_codes/deltaspike/deltaspike/javadoc.sh
+20: mvn clean javadoc:aggregate scm-publish:publish-scm
+
+FILE: apache_codes/deltaspike/deltaspike/README.md
+46: $> mvn clean install -PWeld
+51: $> mvn clean install -POWB
+
+FILE: apache_codes/deltaspike/deltaspike/buildall.sh
+29: mvn clean install -POWB -Dowb.version=1.2.7 -Dopenejb.owb.version=1.2.7 | tee mvn-owb1_2_7.log
+30: mvn clean install -PWeld1 -Dweld.version=1.1.10.Final | tee mvn-weld1_1_10.log
+31: mvn clean install -Ptomee-build-managed -Dtomee.version=1.7.5 -Dopenejb.version=4.7.5 -Dopenejb.owb.version=1.2.8 | tee mvn-tomee_1_7_5.log
+34: # mvn clean install -Pjbossas-build-managed-7 | tee mvn-jbossas_7.log
+37: mvn clean install -POWB15,OpenEJB-TomEE -Dowb.version=1.7.4 -Dopenejb.owb.version=1.7.4 -Dopenejb.version=7.0.4 | tee mvn-owb1.7.4.log
+38: mvn clean install -PWeld2 -Dweld.version=2.4.6.Final | tee mvn-weld2_4_6.log
+39: mvn clean install -Pwildfly-build-managed | tee mvn-wildfly9.log
+40: mvn clean install -Ptomee7-build-managed,OpenEJB-TomEE -Dtomee.version=7.0.4 -Dopenejb.version=7.0.4 -Dopenejb.owb.version=1.7.4 | tee mvn-tomee_7_0_4.log
+
+FILE: apache_codes/deltaspike/deltaspike/core/impl/pom.xml
+87: 						<artifactId>maven-surefire-plugin</artifactId>
+90: 							<argLine>-javaagent:${basedir}/JavaMOPAgent.jar</argLine>
+122: 						<artifactId>maven-surefire-plugin</artifactId>
+136: 					<!-- mvn clean compile spotbugs:spotbugs -PFindSecBugs -->
+137: 					<!-- mvn spotbugs:gui -PFindSecBugs -->
+177: 			<!-- mvn clean test -Pevosuite-generate -->
+178: 			<!-- mvn -Dcores=8 -DmemoryInMB=8000 -Pevosuite-generate evosuite:generate 
+226: 						<artifactId>maven-surefire-plugin</artifactId>
+236: 			<!-- mvn clean test -Pevosuite -->
+307: 						<artifactId>maven-surefire-plugin</artifactId>
+310: 							<argLine>-javaagent:${basedir}/JavaMOPAgent.jar @{argLine}</argLine>
+
+FILE: apache_codes/deltaspike/deltaspike/parent/pom.xml
+93:         <maven.surefire.plugin.version>2.19.1</maven.surefire.plugin.version>
+191:              * $> mvn clean install -Pcoverage
+838:                     <artifactId>maven-surefire-plugin</artifactId>
+839:                     <version>${maven.surefire.plugin.version}</version>
+846:                             <groupId>org.apache.maven.surefire</groupId>
+847:                             <artifactId>surefire-junit47</artifactId>
+848:                             <version>${maven.surefire.plugin.version}</version>
+
+FILE: apache_codes/deltaspike/deltaspike/parent/code/pom.xml
+76:                     <artifactId>maven-surefire-plugin</artifactId>
+77:                     <version>${maven.surefire.plugin.version}</version>
+160:                         <artifactId>maven-surefire-plugin</artifactId>
+232:                         <artifactId>maven-surefire-plugin</artifactId>
+336:                         <artifactId>maven-surefire-plugin</artifactId>
+498:                         <artifactId>maven-surefire-plugin</artifactId>
+605:                         <artifactId>maven-surefire-plugin</artifactId>
+729:                         <artifactId>maven-surefire-plugin</artifactId>
+752:              * mvn test -Ptomee-build-managed -Dtest=UnitTestName -Dopenejb.server.debug=true
+802:                         <artifactId>maven-surefire-plugin</artifactId>
+803:                         <version>${maven.surefire.plugin.version}</version>
+
+MATCHED_FILES: 21
+DISPLAYED_MATCHES: 120
+
+=== 4. ORIGINAL REFERENCE FILES ===
+
+=== FINAL ===
+ORIGINAL_PIPELINE_AUDIT_COMPLETE
+READ_ONLY

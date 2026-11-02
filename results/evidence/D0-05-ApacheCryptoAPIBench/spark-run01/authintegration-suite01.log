@@ -1,0 +1,315 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.spark:spark-parent_2.11:pom:2.4.0-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.apache.spark:spark-parent_2.11:2.4.0-SNAPSHOT (/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/pom.xml) points at br.unb.cic:mop-test-suite-b04 instead of org.apache:apache, please verify your project structure @ line 22, column 11
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] -------------< org.apache.spark:spark-network-common_2.11 >-------------
+[INFO] Building Spark Project Networking 2.4.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- surefire:2.20.1:test (default-cli) @ spark-network-common_2.11 ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.apache.spark.network.crypto.AuthIntegrationSuite
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.463 s - in org.apache.spark.network.crypto.AuthIntegrationSuite
+==start SecureRandomSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - next2: 0
+#event - next1: 0
+#event - g1: 0
+#event - g2: 0
+#event - g3: 0
+#event - g4: 0
+#event - c1: 0
+#event - c2: 0
+#event - setSeed3: 0
+#event - c3: 0
+#event - setSeed2: 0
+#event - setSeed1: 0
+#event - genSeed: 0
+#event - ints: 0
+#event - next3: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match1: 0
+==end SecureRandomSpec ==
+==start KeyGeneratorSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - init: 0
+#event - g1: 0
+#event - g2: 0
+#event - g3: 0
+#event - gk1: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end KeyGeneratorSpec ==
+==start KeyStoreSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - ge1: 0
+#event - load: 0
+#event - g1: 0
+#event - g2: 0
+#event - store: 0
+#event - gk1: 0
+#event - se1: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end KeyStoreSpec ==
+==start MacSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - i1: 0
+#event - i2: 0
+#event - update: 0
+#event - g1: 0
+#event - g2: 0
+#event - f1: 0
+#event - g3: 0
+#event - f2: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end MacSpec ==
+==start CipherOutputStreamSpec ==
+#monitors: 1
+#collected monitors: 0
+#terminated monitors: 0
+#event - fl: 0
+#event - cl: 0
+#event - w1: 0
+#event - w2: 0
+#event - c1: 0
+#category - prop 1 - fail: 0
+==end CipherOutputStreamSpec ==
+==start DHGenParameterSpecSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - c1: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end DHGenParameterSpecSpec ==
+==start KeyManagerFactorySpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - init: 0
+#event - gkm1: 0
+#event - g1: 0
+#event - g2: 0
+#event - g3: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match1: 0
+==end KeyManagerFactorySpec ==
+==start SecretKeySpecSpec ==
+#monitors: 1
+#collected monitors: 0
+#terminated monitors: 0
+#event - c3: 11
+#event - c4: 0
+#event - c1: 11
+#event - c2: 0
+#category - prop 1 - fail: 11
+#category - prop 1 - match: 0
+==end SecretKeySpecSpec ==
+==start TrustManagerFactorySpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - init: 0
+#event - gtm1: 0
+#event - g1: 0
+#event - g2: 0
+#event - g3: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match1: 0
+==end TrustManagerFactorySpec ==
+==start CipherInputStreamSpec ==
+#monitors: 1
+#collected monitors: 0
+#terminated monitors: 0
+#event - r2: 0
+#event - cl1: 0
+#event - c1: 0
+#event - r1: 0
+#category - prop 1 - fail: 0
+==end CipherInputStreamSpec ==
+==start PBEParameterSpecSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - c3: 0
+#event - c1: 0
+#event - c2: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end PBEParameterSpecSpec ==
+==start RandomStringPasswordSpec ==
+#monitors: 1
+#collected monitors: 0
+#terminated monitors: 0
+#event - vo: 0
+#event - gb: 271
+#category - prop 1 - match: 0
+==end RandomStringPasswordSpec ==
+==start SSLContextSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - init: 0
+#event - engine: 0
+#event - unsafe_protocol: 0
+#event - g1: 0
+#event - g2: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match1: 0
+==end SSLContextSpec ==
+==start CipherSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - u5: 0
+#event - i1: 0
+#event - i2: 0
+#event - g1: 0
+#event - g2: 0
+#event - f1: 0
+#event - g3: 0
+#event - f2: 0
+#event - f3: 0
+#event - f5: 0
+#event - f6: 0
+#event - f7: 0
+#event - wkb1: 0
+#event - u1: 0
+#event - u2: 0
+#event - u3: 0
+#event - u4: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match1: 0
+==end CipherSpec ==
+==start GCMParameterSpecSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - c1: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end GCMParameterSpecSpec ==
+==start PBEKeySpecSpec ==
+#monitors: 11
+#collected monitors: 0
+#terminated monitors: 0
+#event - err3: 11
+#event - err2: 11
+#event - err1: 11
+#event - f1: 0
+#event - f2: 0
+#event - c1: 11
+#event - c2: 0
+#category - prop 1 - fail: 33
+#category - prop 1 - match: 0
+==end PBEKeySpecSpec ==
+==start SignatureSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - i1: 0
+#event - i2: 0
+#event - update: 0
+#event - g1: 0
+#event - i3: 0
+#event - g2: 0
+#event - i4: 0
+#event - v1: 0
+#event - g3: 0
+#event - v2: 0
+#event - s1: 0
+#event - s2: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end SignatureSpec ==
+==start HMACParameterSpecSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - c: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end HMACParameterSpecSpec ==
+==start KeyPairGeneratorSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - gen: 0
+#event - init3: 0
+#event - init2: 0
+#event - g1: 0
+#event - init1: 0
+#event - g2: 0
+#event - g3: 0
+#event - initError: 0
+#event - init4: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end KeyPairGeneratorSpec ==
+==start KeyPairSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - gpr: 0
+#event - gpu: 0
+#event - c1: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end KeyPairSpec ==
+==start IvParameterSpecSpec ==
+#monitors: 22
+#collected monitors: 0
+#terminated monitors: 2
+#event - c3: 22
+#event - c1: 22
+#event - c2: 0
+#category - prop 1 - fail: 22
+#category - prop 1 - match: 0
+==end IvParameterSpecSpec ==
+==start MessageDigestSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - update: 0
+#event - reset: 0
+#event - g1: 0
+#event - g2: 0
+#event - g3: 0
+#event - d1: 0
+#event - d2: 0
+#event - d3: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end MessageDigestSpec ==
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  9.146 s
+[INFO] Finished at: 2026-10-18T21:16:37+09:00
+[INFO] ------------------------------------------------------------------------

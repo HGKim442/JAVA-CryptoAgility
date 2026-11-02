@@ -1,0 +1,23 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.manifoldcf:mcf-parent:pom:2.9-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.apache.manifoldcf:mcf-parent:2.9-SNAPSHOT (/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/manifoldcf/pom.xml) points at br.unb.cic:mop-test-suite-b04 instead of org.apache:apache, please verify your project structure @ line 21, column 11
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] -------------------< org.apache.manifoldcf:mcf-core >-------------------
+[INFO] Building ManifoldCF - Framework - Core 2.9-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- help:3.5.2:effective-pom (default-cli) @ mcf-core ---
+[INFO] Effective-POM written to: /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/manifoldcf-run01/effective-pom.xml
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.349 s
+[INFO] Finished at: 2026-10-18T19:41:04+09:00
+[INFO] ------------------------------------------------------------------------

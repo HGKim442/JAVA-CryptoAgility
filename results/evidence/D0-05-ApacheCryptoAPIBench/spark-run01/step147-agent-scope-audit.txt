@@ -1,0 +1,110 @@
+=== 1. EXECUTOR SCOPE DIFFERENCE ===
+
+CASE: ALL_11_RUNS
+OBSERVED: 57
+MISSING: 0
+EXCESS: 2
+EXCESS_EVENT: 1 | CryptoStreamUtils$CryptoParams | <init> | CryptoStreamUtils.scala:162 | InvalidSequenceOfMethodCalls
+EXCESS_EVENT: 1 | CryptoStreamUtils$CryptoParams | <init> | CryptoStreamUtils.scala:162 | UnsatisfiedConstraint
+
+CASE: WITHOUT_EXECUTOR
+OBSERVED: 53
+MISSING: 2
+EXCESS: 0
+MISSING_EVENT: 1 | CryptoStreamUtils$ | createCryptoOutputStream | CryptoStreamUtils.scala:58 | InvalidSequenceOfMethodCalls
+MISSING_EVENT: 1 | CryptoStreamUtils$ | createCryptoOutputStream | CryptoStreamUtils.scala:58 | UnsatisfiedConstraint
+
+=== 2. EXECUTOR-ONLY OBSERVATIONS ===
+1 | IvParameterSpecSpec | CryptoStreamUtils$ | createCryptoOutputStream | CryptoStreamUtils.scala:58 | InvalidSequenceOfMethodCalls
+1 | IvParameterSpecSpec | CryptoStreamUtils$ | createCryptoOutputStream | CryptoStreamUtils.scala:58 | UnsatisfiedConstraint
+1 | SecretKeySpecSpec | CryptoStreamUtils$CryptoParams | <init> | CryptoStreamUtils.scala:162 | InvalidSequenceOfMethodCalls
+1 | SecretKeySpecSpec | CryptoStreamUtils$CryptoParams | <init> | CryptoStreamUtils.scala:162 | UnsatisfiedConstraint
+
+=== 3. JAVA AGENT BINARY COMPARISON ===
+ORIGINAL_ROOT EXISTS: True
+SHA256: b4249fb09045d50e46d1b18db094ff54d35dec6a9620b636b4e168f4a83df0f6
+BYTES: 2325493
+ORIGINAL_SPARK EXISTS: True
+SHA256: 34ce5560e377ac8b482025abd9d60c95e7e3380994a51250f6ebe4ff1bc5f675
+BYTES: 2358927
+WORKING_SPARK EXISTS: True
+SHA256: 34ce5560e377ac8b482025abd9d60c95e7e3380994a51250f6ebe4ff1bc5f675
+BYTES: 2358927
+
+=== 4. MAVEN PROFILE AND PLUGIN CONFIG ===
+
+TOTAL_PROFILES: 8
+
+PROFILE: mop
+
+SCOPE: PROFILE:mop
+PLUGIN: maven-surefire-plugin
+DECLARATION: m:build/m:plugins/m:plugin
+CONFIG: argLine '-Xmx4096m -XX:MaxPermSize=1024m'
+CONFIG: argLine '-javaagent:${basedir}/JavaMOPAgent.jar'
+CONFIG: runOrder 'alphabetical'
+
+SCOPE: PROFILE:mop
+PLUGIN: scalatest-maven-plugin
+DECLARATION: m:build/m:plugins/m:plugin
+CONFIG: argLine '-javaagent:${basedir}/JavaMOPAgent.jar'
+
+PROFILE: jacoco
+
+SCOPE: PROFILE:jacoco
+PLUGIN: maven-surefire-plugin
+DECLARATION: m:build/m:plugins/m:plugin
+CONFIG: argLine '@{argLine}'
+CONFIG: runOrder 'alphabetical'
+
+SCOPE: PROFILE:jacoco
+PLUGIN: scalatest-maven-plugin
+DECLARATION: m:build/m:plugins/m:plugin
+CONFIG: skipTests 'true'
+
+PROFILE: FindSecBugs
+
+PROFILE: evosuite-generate
+
+SCOPE: PROFILE:evosuite-generate
+PLUGIN: maven-surefire-plugin
+DECLARATION: m:build/m:plugins/m:plugin
+CONFIG: skip 'true'
+
+PROFILE: evosuite
+
+SCOPE: PROFILE:evosuite
+PLUGIN: maven-surefire-plugin
+DECLARATION: m:build/m:plugins/m:plugin
+CONFIG: argLine '-Xmx4096m -XX:MaxPermSize=1024m'
+CONFIG: argLine '-javaagent:${basedir}/JavaMOPAgent.jar @{argLine}'
+CONFIG: runOrder 'alphabetical'
+CONFIG: testFailureIgnore 'true'
+
+SCOPE: PROFILE:evosuite
+PLUGIN: scalatest-maven-plugin
+DECLARATION: m:build/m:plugins/m:plugin
+CONFIG: skipTests 'true'
+
+PROFILE: Windows
+ACTIVE_BY_DEFAULT: 
+JDK: 
+ACTIVATION_PROPERTY:  
+
+PROFILE: unix
+ACTIVE_BY_DEFAULT: 
+JDK: 
+ACTIVATION_PROPERTY:  
+
+PROFILE: sparkr
+
+=== 5. ORIGINAL TEST EXECUTION RECIPE ===
+35: ##### SPARK #############################################################
+37: mvn clean test -pl core -am
+
+=== FINAL ===
+STEP_147_COMPLETE
+STATIC_PROFILE_INSPECTION_ONLY
+ACTIVE_PROFILE_NOT_YET_RUNTIME_VERIFIED
+NO_TEST_EXECUTION
+NO_SOURCE_MODIFICATION

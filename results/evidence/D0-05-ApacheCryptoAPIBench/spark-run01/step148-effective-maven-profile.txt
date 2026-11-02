@@ -1,0 +1,128 @@
+=== 1. POM FILE COMPARISON ===
+d0d37f37fe7afd25c0396966caa619c0870d43636857c300e9583218df392409  /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/pom.xml
+6f48c82f57651cfc7c8aa09705d45f5416bbeed7f1d3e67807f8da1b3242fd0f  /home/RESEARCHER/pqc-research/D0-rvsec/RVSec-replication-package/ApacheCryptoAPIBench/apache_codes/spark/core/pom.xml
+
+=== 2. MAVEN VERSION ===
+[1mApache Maven 3.9.12[m
+Maven home: /usr/share/maven
+Java version: 1.8.0_504, vendor: Temurin, runtime: /home/RESEARCHER/.sdkman/candidates/java/8.0.504+1-tem/jre
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "6.18.33.1-microsoft-standard-wsl2", arch: "amd64", family: "unix"
+
+=== 3. DEFAULT ACTIVE PROFILES ===
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.spark:spark-parent_2.11:pom:2.4.0-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.apache.spark:spark-parent_2.11:2.4.0-SNAPSHOT (/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/pom.xml) points at br.unb.cic:mop-test-suite-b04 instead of org.apache:apache, please verify your project structure @ line 22, column 11
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ------------------< org.apache.spark:spark-core_2.11 >------------------
+[INFO] Building Spark Project Core 2.4.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- help:3.5.2:active-profiles (default-cli) @ spark-core_2.11 ---
+[INFO] 
+Active Profiles for Project 'org.apache.spark:spark-core_2.11:jar:2.4.0-SNAPSHOT':
+
+The following profiles are active:
+
+ - unix (source: org.apache.spark:spark-core_2.11:2.4.0-SNAPSHOT)
+ - test-java-home (source: org.apache.spark:spark-parent_2.11:2.4.0-SNAPSHOT)
+
+
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.368 s
+[INFO] Finished at: 2026-10-19T16:56:32+09:00
+[INFO] ------------------------------------------------------------------------
+DEFAULT_PROFILE_EXIT_CODE: 0
+
+=== 4. EXPLICIT MOP ACTIVE PROFILES ===
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.spark:spark-parent_2.11:pom:2.4.0-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.apache.spark:spark-parent_2.11:2.4.0-SNAPSHOT (/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/pom.xml) points at br.unb.cic:mop-test-suite-b04 instead of org.apache:apache, please verify your project structure @ line 22, column 11
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ------------------< org.apache.spark:spark-core_2.11 >------------------
+[INFO] Building Spark Project Core 2.4.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- help:3.5.2:active-profiles (default-cli) @ spark-core_2.11 ---
+[INFO] 
+Active Profiles for Project 'org.apache.spark:spark-core_2.11:jar:2.4.0-SNAPSHOT':
+
+The following profiles are active:
+
+ - mop (source: org.apache.spark:spark-core_2.11:2.4.0-SNAPSHOT)
+ - unix (source: org.apache.spark:spark-core_2.11:2.4.0-SNAPSHOT)
+ - test-java-home (source: org.apache.spark:spark-parent_2.11:2.4.0-SNAPSHOT)
+
+
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.298 s
+[INFO] Finished at: 2026-10-19T16:56:33+09:00
+[INFO] ------------------------------------------------------------------------
+MOP_PROFILE_EXIT_CODE: 0
+
+=== 5. EFFECTIVE POM GENERATION ===
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.spark:spark-parent_2.11:pom:2.4.0-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.apache.spark:spark-parent_2.11:2.4.0-SNAPSHOT (/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/pom.xml) points at br.unb.cic:mop-test-suite-b04 instead of org.apache:apache, please verify your project structure @ line 22, column 11
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ------------------< org.apache.spark:spark-core_2.11 >------------------
+[INFO] Building Spark Project Core 2.4.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- help:3.5.2:effective-pom (default-cli) @ spark-core_2.11 ---
+[INFO] Effective-POM written to: /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/spark-run01/step148-mop-effective-pom.xml
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.420 s
+[INFO] Finished at: 2026-10-19T16:56:34+09:00
+[INFO] ------------------------------------------------------------------------
+EFFECTIVE_POM_EXIT_CODE: 0
+
+=== 6. EFFECTIVE PLUGIN SETTINGS ===
+EFFECTIVE_POM_EXISTS
+ARTIFACT_ID: spark-core_2.11
+
+PLUGIN: maven-surefire-plugin
+VERSION: 2.20.1
+CONFIG: argLine '-Xmx4096m -XX:MaxPermSize=1024m -javaagent:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/JavaMOPAgent.jar'
+CONFIG: runOrder 'alphabetical'
+
+PLUGIN: scalatest-maven-plugin
+VERSION: 1.0
+CONFIG: argLine '-javaagent:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/JavaMOPAgent.jar'
+
+PLUGIN_COUNT: 2
+EFFECTIVE_POM_INSPECTION_COMPLETE
+
+=== FINAL ===
+STEP_148_COMPLETE
+NO_TEST_EXECUTION
+NO_SOURCE_MODIFICATION

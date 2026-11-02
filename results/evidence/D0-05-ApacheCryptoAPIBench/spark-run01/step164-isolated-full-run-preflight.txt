@@ -1,0 +1,58 @@
+=== 1. SOURCE INTEGRITY ===
+6298327fdf32d6d812c97019cc46536d6e4542b88905b1b2a5dc78d685de9e8f  /home/RESEARCHER/pqc-research/D0-rvsec/RVSec-replication-package/ApacheCryptoAPIBench/apache_codes/spark/pom.xml
+6f48c82f57651cfc7c8aa09705d45f5416bbeed7f1d3e67807f8da1b3242fd0f  /home/RESEARCHER/pqc-research/D0-rvsec/RVSec-replication-package/ApacheCryptoAPIBench/apache_codes/spark/core/pom.xml
+34ce5560e377ac8b482025abd9d60c95e7e3380994a51250f6ebe4ff1bc5f675  /home/RESEARCHER/pqc-research/D0-rvsec/RVSec-replication-package/ApacheCryptoAPIBench/apache_codes/spark/core/JavaMOPAgent.jar
+d0d37f37fe7afd25c0396966caa619c0870d43636857c300e9583218df392409  /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/pom.xml
+34ce5560e377ac8b482025abd9d60c95e7e3380994a51250f6ebe4ff1bc5f675  /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/JavaMOPAgent.jar
+
+=== 2. DISK CAPACITY ===
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sde       1007G  6.9G  949G   1% /
+Filesystem     1024-blocks    Used Available Capacity Mounted on
+/dev/sde        1055762868 7180496 994878900       1% /
+
+=== 3. SOURCE AND BUILD SIZES ===
+157M	/home/RESEARCHER/pqc-research/D0-rvsec/RVSec-replication-package/ApacheCryptoAPIBench/apache_codes/spark
+312M	/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark
+145M	/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target
+316K	/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/work
+2.3M	/home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/spark-run01
+
+=== 4. ISOLATION TOOLS ===
+rsync: AVAILABLE
+cp: AVAILABLE
+tar: AVAILABLE
+mvn: AVAILABLE
+java: AVAILABLE
+javac: AVAILABLE
+sha256sum: AVAILABLE
+timeout: AVAILABLE
+
+=== 5. PREVIOUS COMPILED TESTS ===
+CRYPTO_TEST_CLASS: PRESENT
+ad7e7d05f0f075c787cecb1af25e55b5d86a5bd47f9906e08fb0e98df86b1398  /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/test-classes/org/apache/spark/security/CryptoStreamUtilsSuite.class
+
+=== 6. ORIGINAL AND WORKING OUTPUTS ===
+9792a9d9dc54ec4bb1d9e9aeccb7088a448e180d5345b996443800861bedffb5  /home/RESEARCHER/pqc-research/D0-rvsec/RVSec-replication-package/ApacheCryptoAPIBench/apache_codes/spark/core/output/summary.csv
+8da5c416dfee9abcb2b12fcf5fba8da0776804e7602a538fc313c12d0c12263b  /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/output/summary.csv
+3aaaf149a8376e319ebca9a560506742c3f4afc5c04b2b2e3ee6dec105f516c1  /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/spark-run01/step153-executor-instrumented/driver-output/summary.csv
+
+=== 7. NEW ISOLATED RUN PATH ===
+CANDIDATE: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-full-lifecycle01
+ISOLATION_PATH_AVAILABLE: True
+
+=== 8. CURRENT TOOLCHAIN ===
+openjdk version "1.8.0_504"
+OpenJDK Runtime Environment (Temurin)(build 1.8.0_504-b01)
+OpenJDK 64-Bit Server VM (Temurin)(build 25.504-b01, mixed mode)
+[1mApache Maven 3.9.12[m
+Maven home: /usr/share/maven
+Java version: 1.8.0_504, vendor: Temurin, runtime: /home/RESEARCHER/.sdkman/candidates/java/8.0.504+1-tem/jre
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "6.18.33.1-microsoft-standard-wsl2", arch: "amd64", family: "unix"
+
+=== FINAL ===
+STEP_164_COMPLETE
+NO_MAVEN_TEST_EXECUTION
+NO_SOURCE_MODIFICATION
+NO_EXISTING_OUTPUT_MODIFICATION

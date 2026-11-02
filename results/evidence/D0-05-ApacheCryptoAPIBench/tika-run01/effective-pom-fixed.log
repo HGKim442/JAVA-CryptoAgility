@@ -1,0 +1,15 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< org.apache.tika:tika-core >----------------------
+[INFO] Building Apache Tika core 1.17-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- help:3.5.2:effective-pom (default-cli) @ tika-core ---
+[INFO] Effective-POM written to: /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/tika-run01/effective-pom-fixed.xml
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.659 s
+[INFO] Finished at: 2026-10-18T20:14:21+09:00
+[INFO] ------------------------------------------------------------------------

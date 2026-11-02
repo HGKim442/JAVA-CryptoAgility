@@ -1,0 +1,31 @@
+REFERENCE_EVENTS: 55
+PREVIOUS_MATCHED: 24
+INTEGRATION_EVENTS: 12
+INTEGRATION_MATCHED: 12
+INTEGRATION_UNEXPECTED: 0
+OVERLAP_WITH_PREVIOUS: 8
+NEW_REFERENCE_COVERAGE: 4
+
+=== CUMULATIVE ===
+SPARK_MATCHED: 28
+SPARK_MISSING: 27
+SPARK_UNEXPECTED: 0
+APACHE_TOTAL_MATCHED: 123
+APACHE_TOTAL_REFERENCE: 150
+
+=== REMAINING BY CLASS ===
+  7 org.apache.spark.security.CryptoStreamUtils$
+  6 org.apache.hadoop.io.SequenceFile$Writer
+  4 org.eclipse.jetty.util.ssl.SslContextFactory
+  3 com.gargoylesoftware.htmlunit.httpclient.HtmlUnitSSLConnectionSocketFactory
+  3 org.apache.spark.TestUtils$
+  2 org.apache.spark.security.CryptoStreamUtils$CryptoParams
+  1 org.apache.spark.launcher.LauncherServer
+  1 org.apache.spark.SecurityManager$$anonfun$2
+
+=== UNEXPECTED EVENTS ===
+NONE
+
+=== VERDICT ===
+VERIFIED_PARTIAL_REFERENCE_COVERAGE
+COUNTING_METHOD: per-row maximum across runs

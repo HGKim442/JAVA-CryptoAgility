@@ -1,0 +1,544 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Apache Tika parent                                                 [pom]
+[INFO] Apache Tika core                                                [bundle]
+[INFO] 
+[INFO] --------------------< org.apache.tika:tika-parent >---------------------
+[INFO] Building Apache Tika parent 1.17-SNAPSHOT                          [1/2]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- remote-resources:1.5:process (default) @ tika-parent ---
+[INFO] 
+[INFO] ---------------------< org.apache.tika:tika-core >----------------------
+[INFO] Building Apache Tika core 1.17-SNAPSHOT                            [2/2]
+[INFO]   from /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/tika/tika-core/pom.xml
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- remote-resources:1.5:process (default) @ tika-core ---
+[INFO] 
+[INFO] --- resources:2.7:resources (default-resources) @ tika-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 32 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- compiler:3.2:compile (default-compile) @ tika-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 239 source files to /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/tika/tika-core/target/classes
+[INFO] /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/tika/tika-core/src/main/java/org/apache/tika/embedder/ExternalEmbedder.java: Some input files use or override a deprecated API.
+[INFO] /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/tika/tika-core/src/main/java/org/apache/tika/embedder/ExternalEmbedder.java: Recompile with -Xlint:deprecation for details.
+[INFO] /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/tika/tika-core/src/main/java/org/apache/tika/config/Param.java: Some input files use unchecked or unsafe operations.
+[INFO] /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/tika/tika-core/src/main/java/org/apache/tika/config/Param.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- resources:2.7:testResources (default-testResources) @ tika-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 64 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- compiler:3.2:testCompile (default-testCompile) @ tika-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 66 source files to /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/tika/tika-core/target/test-classes
+[INFO] /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/tika/tika-core/src/test/java/org/apache/tika/parser/ParserDecoratorTest.java: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/tika/tika-core/src/test/java/org/apache/tika/parser/ParserDecoratorTest.java uses or overrides a deprecated API.
+[INFO] /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/tika/tika-core/src/test/java/org/apache/tika/parser/ParserDecoratorTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- surefire:2.18.1:test (default-test) @ tika-core ---
+[INFO] Surefire report directory: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/tika/tika-core/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1024m; support was removed in 8.0
+Running org.apache.tika.TestRereadableInputStream
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec - in org.apache.tika.TestRereadableInputStream
+Running org.apache.tika.TikaDetectionTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.098 sec - in org.apache.tika.TikaDetectionTest
+Running org.apache.tika.config.ParamTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.143 sec - in org.apache.tika.config.ParamTest
+Running org.apache.tika.config.TikaConfigSerializerTest
+Oct 18, 2026 8:15:21 PM org.apache.tika.config.InitializableProblemHandler$3 handleInitializableProblem
+WARNING: sum cannot be > 1000: 1001
+Oct 18, 2026 8:15:21 PM org.apache.tika.config.InitializableProblemHandler$2 handleInitializableProblem
+INFO: sum cannot be > 1000: 1001
+Oct 18, 2026 8:15:21 PM org.apache.tika.config.LoadErrorHandler$2 handleLoadError
+WARNING: Unable to load made.up.invalid
+java.lang.ClassNotFoundException: made.up.invalid
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.apache.tika.config.ServiceLoader.getServiceClass(ServiceLoader.java:235)
+	at org.apache.tika.config.TikaConfig$XmlLoader.loadOne(TikaConfig.java:592)
+	at org.apache.tika.config.TikaConfig$XmlLoader.loadOverall(TikaConfig.java:553)
+	at org.apache.tika.config.TikaConfig.<init>(TikaConfig.java:190)
+	at org.apache.tika.config.TikaConfig.<init>(TikaConfig.java:167)
+	at org.apache.tika.config.TikaConfig.<init>(TikaConfig.java:132)
+	at org.apache.tika.config.TikaConfigTest.testUnknownParser(TikaConfigTest.java:89)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.1 sec - in org.apache.tika.config.TikaConfigSerializerTest
+Running org.apache.tika.config.TikaConfigTest
+Oct 18, 2026 8:15:21 PM org.apache.tika.config.InitializableProblemHandler$3 handleInitializableProblem
+WARNING: sum cannot be > 1000: 1001
+Oct 18, 2026 8:15:21 PM org.apache.tika.config.InitializableProblemHandler$2 handleInitializableProblem
+INFO: sum cannot be > 1000: 1001
+Oct 18, 2026 8:15:21 PM org.apache.tika.config.LoadErrorHandler$2 handleLoadError
+WARNING: Unable to load made.up.invalid
+java.lang.ClassNotFoundException: made.up.invalid
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.apache.tika.config.ServiceLoader.getServiceClass(ServiceLoader.java:235)
+	at org.apache.tika.config.TikaConfig$XmlLoader.loadOne(TikaConfig.java:592)
+	at org.apache.tika.config.TikaConfig$XmlLoader.loadOverall(TikaConfig.java:553)
+	at org.apache.tika.config.TikaConfig.<init>(TikaConfig.java:190)
+	at org.apache.tika.config.TikaConfig.<init>(TikaConfig.java:167)
+	at org.apache.tika.config.TikaConfig.<init>(TikaConfig.java:132)
+	at org.apache.tika.config.TikaConfigTest.testUnknownParser(TikaConfigTest.java:89)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 sec - in org.apache.tika.config.TikaConfigTest
+Running org.apache.tika.detect.MagicDetectorTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec - in org.apache.tika.detect.MagicDetectorTest
+Running org.apache.tika.detect.MimeDetectionWithNNTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec - in org.apache.tika.detect.MimeDetectionWithNNTest
+Running org.apache.tika.detect.NameDetectorTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec - in org.apache.tika.detect.NameDetectorTest
+Running org.apache.tika.detect.TextDetectorTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec - in org.apache.tika.detect.TextDetectorTest
+Running org.apache.tika.detect.TypeDetectorTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.tika.detect.TypeDetectorTest
+Running org.apache.tika.detect.ZeroSizeFileDetectorTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.apache.tika.detect.ZeroSizeFileDetectorTest
+Running org.apache.tika.fork.ForkParserTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.119 sec - in org.apache.tika.fork.ForkParserTest
+Running org.apache.tika.io.EndianUtilsTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in org.apache.tika.io.EndianUtilsTest
+Running org.apache.tika.io.FilenameUtilsTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.053 sec - in org.apache.tika.io.FilenameUtilsTest
+Running org.apache.tika.io.LookaheadInputStreamTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.tika.io.LookaheadInputStreamTest
+Running org.apache.tika.io.TaggedInputStreamTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec - in org.apache.tika.io.TaggedInputStreamTest
+Running org.apache.tika.io.TailStreamTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in org.apache.tika.io.TailStreamTest
+Running org.apache.tika.io.TemporaryResourcesTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec - in org.apache.tika.io.TemporaryResourcesTest
+Running org.apache.tika.io.TikaInputStreamTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec - in org.apache.tika.io.TikaInputStreamTest
+Running org.apache.tika.language.LanguageIdentifierTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.411 sec - in org.apache.tika.language.LanguageIdentifierTest
+Running org.apache.tika.language.LanguageProfileTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.tika.language.LanguageProfileTest
+Running org.apache.tika.language.LanguageProfilerBuilderTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.036 sec - in org.apache.tika.language.LanguageProfilerBuilderTest
+Running org.apache.tika.language.ProfilingWriterTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.tika.language.ProfilingWriterTest
+Running org.apache.tika.language.detect.LanguageNamesTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in org.apache.tika.language.detect.LanguageNamesTest
+Running org.apache.tika.metadata.TestMetadata
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec - in org.apache.tika.metadata.TestMetadata
+Running org.apache.tika.mime.CustomReaderTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec - in org.apache.tika.mime.CustomReaderTest
+Running org.apache.tika.mime.MediaTypeTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in org.apache.tika.mime.MediaTypeTest
+Running org.apache.tika.mime.MimeDetectionTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.03 sec - in org.apache.tika.mime.MimeDetectionTest
+Running org.apache.tika.mime.MimeTypesReaderTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec - in org.apache.tika.mime.MimeTypesReaderTest
+Running org.apache.tika.mime.PatternsTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.apache.tika.mime.PatternsTest
+Running org.apache.tika.mime.ProbabilisticMimeDetectionTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.028 sec - in org.apache.tika.mime.ProbabilisticMimeDetectionTest
+Running org.apache.tika.parser.CompositeParserTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec - in org.apache.tika.parser.CompositeParserTest
+Running org.apache.tika.parser.CryptoParserTest
+parser=org.apache.tika.parser.CryptoParserTest$CryptoParserImpl@74b13aa
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.046 sec - in org.apache.tika.parser.CryptoParserTest
+Running org.apache.tika.parser.InitializableParserTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec - in org.apache.tika.parser.InitializableParserTest
+Running org.apache.tika.parser.ParameterizedParserTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec - in org.apache.tika.parser.ParameterizedParserTest
+Running org.apache.tika.parser.ParserDecoratorTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in org.apache.tika.parser.ParserDecoratorTest
+Running org.apache.tika.sax.BasicContentHandlerFactoryTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 sec - in org.apache.tika.sax.BasicContentHandlerFactoryTest
+Running org.apache.tika.sax.BodyContentHandlerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.tika.sax.BodyContentHandlerTest
+Running org.apache.tika.sax.LinkContentHandlerTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec - in org.apache.tika.sax.LinkContentHandlerTest
+Running org.apache.tika.sax.OfflineContentHandlerTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec - in org.apache.tika.sax.OfflineContentHandlerTest
+Running org.apache.tika.sax.RichTextContentHandlerTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in org.apache.tika.sax.RichTextContentHandlerTest
+Running org.apache.tika.sax.SafeContentHandlerTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.tika.sax.SafeContentHandlerTest
+Running org.apache.tika.sax.SecureContentHandlerTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.029 sec - in org.apache.tika.sax.SecureContentHandlerTest
+Running org.apache.tika.sax.SerializerTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.tika.sax.SerializerTest
+Running org.apache.tika.sax.XHTMLContentHandlerTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.apache.tika.sax.XHTMLContentHandlerTest
+Running org.apache.tika.sax.xpath.XPathParserTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in org.apache.tika.sax.xpath.XPathParserTest
+Running org.apache.tika.utils.AnnotationUtilsTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec - in org.apache.tika.utils.AnnotationUtilsTest
+Running org.apache.tika.utils.CharsetUtilsTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec - in org.apache.tika.utils.CharsetUtilsTest
+Running org.apache.tika.utils.ConcurrentUtilsTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec - in org.apache.tika.utils.ConcurrentUtilsTest
+Running org.apache.tika.utils.RegexUtilsTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.apache.tika.utils.RegexUtilsTest
+Running randoop.RandoopRegressionTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in randoop.RandoopRegressionTest
+==start SecureRandomSpec ==
+#monitors: 1
+#collected monitors: 0
+#terminated monitors: 0
+#event - next2: 0
+#event - next1: 0
+#event - g1: 0
+#event - g2: 0
+#event - g3: 0
+#event - g4: 0
+#event - c1: 1
+#event - c2: 0
+#event - setSeed3: 0
+#event - c3: 0
+#event - setSeed2: 0
+#event - setSeed1: 0
+#event - genSeed: 0
+#event - ints: 0
+#event - next3: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match1: 1
+==end SecureRandomSpec ==
+==start KeyGeneratorSpec ==
+#monitors: 1
+#collected monitors: 0
+#terminated monitors: 0
+#event - init: 1
+#event - g1: 1
+#event - g2: 0
+#event - g3: 1
+#event - gk1: 1
+#category - prop 1 - fail: 2
+#category - prop 1 - match: 0
+==end KeyGeneratorSpec ==
+==start KeyStoreSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - ge1: 0
+#event - load: 0
+#event - g1: 0
+#event - g2: 0
+#event - store: 0
+#event - gk1: 0
+#event - se1: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end KeyStoreSpec ==
+==start MacSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - i1: 0
+#event - i2: 0
+#event - update: 0
+#event - g1: 0
+#event - g2: 0
+#event - f1: 0
+#event - g3: 0
+#event - f2: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end MacSpec ==
+==start CipherOutputStreamSpec ==
+#monitors: 1
+#collected monitors: 0
+#terminated monitors: 0
+#event - fl: 0
+#event - cl: 0
+#event - w1: 0
+#event - w2: 0
+#event - c1: 0
+#category - prop 1 - fail: 0
+==end CipherOutputStreamSpec ==
+==start DHGenParameterSpecSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - c1: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end DHGenParameterSpecSpec ==
+==start KeyManagerFactorySpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - init: 0
+#event - gkm1: 0
+#event - g1: 0
+#event - g2: 0
+#event - g3: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match1: 0
+==end KeyManagerFactorySpec ==
+==start SecretKeySpecSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - c3: 0
+#event - c4: 0
+#event - c1: 0
+#event - c2: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end SecretKeySpecSpec ==
+==start TrustManagerFactorySpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - init: 0
+#event - gtm1: 0
+#event - g1: 0
+#event - g2: 0
+#event - g3: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match1: 0
+==end TrustManagerFactorySpec ==
+==start CipherInputStreamSpec ==
+#monitors: 1
+#collected monitors: 0
+#terminated monitors: 0
+#event - r2: 0
+#event - cl1: 0
+#event - c1: 1
+#event - r1: 0
+#category - prop 1 - fail: 0
+==end CipherInputStreamSpec ==
+==start PBEParameterSpecSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - c3: 0
+#event - c1: 0
+#event - c2: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end PBEParameterSpecSpec ==
+==start RandomStringPasswordSpec ==
+#monitors: 1
+#collected monitors: 0
+#terminated monitors: 0
+#event - vo: 0
+#event - gb: 285
+#category - prop 1 - match: 0
+==end RandomStringPasswordSpec ==
+==start SSLContextSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - init: 0
+#event - engine: 0
+#event - unsafe_protocol: 0
+#event - g1: 0
+#event - g2: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match1: 0
+==end SSLContextSpec ==
+==start CipherSpec ==
+#monitors: 1
+#collected monitors: 0
+#terminated monitors: 0
+#event - u5: 0
+#event - i1: 0
+#event - i2: 1
+#event - g1: 1
+#event - g2: 0
+#event - f1: 0
+#event - g3: 1
+#event - f2: 0
+#event - f3: 0
+#event - f5: 0
+#event - f6: 0
+#event - f7: 0
+#event - wkb1: 0
+#event - u1: 0
+#event - u2: 0
+#event - u3: 0
+#event - u4: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match1: 0
+==end CipherSpec ==
+==start GCMParameterSpecSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - c1: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end GCMParameterSpecSpec ==
+==start PBEKeySpecSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - err3: 0
+#event - err2: 0
+#event - err1: 0
+#event - f1: 0
+#event - f2: 0
+#event - c1: 0
+#event - c2: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end PBEKeySpecSpec ==
+==start SignatureSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - i1: 0
+#event - i2: 0
+#event - update: 0
+#event - g1: 0
+#event - i3: 0
+#event - g2: 0
+#event - i4: 0
+#event - v1: 0
+#event - g3: 0
+#event - v2: 0
+#event - s1: 0
+#event - s2: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end SignatureSpec ==
+==start HMACParameterSpecSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - c: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end HMACParameterSpecSpec ==
+==start KeyPairGeneratorSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - gen: 0
+#event - init3: 0
+#event - init2: 0
+#event - g1: 0
+#event - init1: 0
+#event - g2: 0
+#event - g3: 0
+#event - initError: 0
+#event - init4: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end KeyPairGeneratorSpec ==
+==start KeyPairSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - gpr: 0
+#event - gpu: 0
+#event - c1: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end KeyPairSpec ==
+==start IvParameterSpecSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - c3: 0
+#event - c1: 0
+#event - c2: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end IvParameterSpecSpec ==
+==start MessageDigestSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - update: 0
+#event - reset: 0
+#event - g1: 0
+#event - g2: 0
+#event - g3: 0
+#event - d1: 0
+#event - d2: 0
+#event - d3: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end MessageDigestSpec ==
+
+Results :
+
+Tests run: 223, Failures: 0, Errors: 0, Skipped: 1
+
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Apache Tika parent 1.17-SNAPSHOT:
+[INFO] 
+[INFO] Apache Tika parent ................................. SUCCESS [  0.840 s]
+[INFO] Apache Tika core ................................... SUCCESS [ 19.630 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  20.865 s
+[INFO] Finished at: 2026-10-18T20:15:34+09:00
+[INFO] ------------------------------------------------------------------------

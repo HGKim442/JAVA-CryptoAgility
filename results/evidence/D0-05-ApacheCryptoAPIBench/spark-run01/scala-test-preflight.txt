@@ -1,0 +1,271 @@
+
+=== ROOT_POM ===
+
+PLUGIN: scala-maven-plugin
+LOCATION: ./m:build/m:plugins/m:plugin
+VERSION: 
+
+PLUGIN: maven-surefire-plugin
+LOCATION: ./m:build/m:plugins/m:plugin
+VERSION: 
+
+PLUGIN: scalatest-maven-plugin
+LOCATION: ./m:build/m:plugins/m:plugin
+VERSION: 
+
+PLUGIN: scala-maven-plugin
+LOCATION: ./m:build/m:pluginManagement/m:plugins/m:plugin
+VERSION: 3.2.2
+CONFIG: scalaVersion = ${scala.version}
+CONFIG: recompileMode = incremental
+CONFIG: useZincServer = true
+CONFIG: args = -feature -explaintypes -Yno-adapted-args
+CONFIG: jvmArgs = -Xms1024m -Xmx1024m -XX:ReservedCodeCacheSize=${CodeCacheSize}
+CONFIG: javacArgs = -source ${java.version} -target ${java.version} -Xlint:all,-serial,-path,-try
+EXECUTION: eclipse-add-source
+PHASE: 
+GOALS: ['add-source']
+EXECUTION: scala-compile-first
+PHASE: 
+GOALS: ['compile']
+EXECUTION: scala-test-compile-first
+PHASE: 
+GOALS: ['testCompile']
+
+PLUGIN: maven-surefire-plugin
+LOCATION: ./m:build/m:pluginManagement/m:plugins/m:plugin
+VERSION: 2.20.1
+CONFIG: includes = **/Test*.java **/*Test.java **/*TestCase.java **/*Suite.java
+CONFIG: reportsDirectory = ${project.build.directory}/surefire-reports
+CONFIG: argLine = -ea -Xmx3g -Xss4m -XX:ReservedCodeCacheSize=${CodeCacheSize}
+CONFIG: environmentVariables = ${test_classpath} 1 ${scala.binary.version} 1 ${test.java.home}
+CONFIG: systemProperties = file:src/test/resources/log4j.properties test true ${project.build.directory}/tmp ${spark.test.home} 1 false false false true true src
+CONFIG: failIfNoTests = false
+CONFIG: excludedGroups = ${test.exclude.tags}
+EXECUTION: test
+PHASE: 
+GOALS: ['test']
+
+PLUGIN: scalatest-maven-plugin
+LOCATION: ./m:build/m:pluginManagement/m:plugins/m:plugin
+VERSION: 1.0
+CONFIG: reportsDirectory = ${project.build.directory}/surefire-reports
+CONFIG: junitxml = .
+CONFIG: filereports = SparkTestSuite.txt
+CONFIG: argLine = -ea -Xmx3g -Xss4m -XX:ReservedCodeCacheSize=${CodeCacheSize}
+CONFIG: stderr = 
+CONFIG: environmentVariables = ${test_classpath} 1 ${scala.binary.version} 1 ${test.java.home}
+CONFIG: systemProperties = file:src/test/resources/log4j.properties test true ${project.build.directory}/tmp ${spark.test.home} 1 false false true __not_used__
+CONFIG: tagsToExclude = ${test.exclude.tags}
+EXECUTION: test
+PHASE: 
+GOALS: ['test']
+MATCHED_PLUGINS: 6
+
+=== CORE_POM ===
+MATCHED_PLUGINS: 0
+
+=== CORE_EFFECTIVE_POM ===
+
+PLUGIN: scala-maven-plugin
+LOCATION: ./m:build/m:plugins/m:plugin
+VERSION: 3.2.2
+CONFIG: scalaVersion = 2.11.8
+CONFIG: recompileMode = incremental
+CONFIG: useZincServer = true
+CONFIG: args = -feature -explaintypes -Yno-adapted-args
+CONFIG: jvmArgs = -Xms1024m -Xmx1024m -XX:ReservedCodeCacheSize=512m
+CONFIG: javacArgs = -source 1.8 -target 1.8 -Xlint:all,-serial,-path,-try
+EXECUTION: eclipse-add-source
+PHASE: 
+GOALS: ['add-source']
+EXEC_CONFIG: scalaVersion = 2.11.8
+EXEC_CONFIG: recompileMode = incremental
+EXEC_CONFIG: useZincServer = true
+EXEC_CONFIG: args = -feature -explaintypes -Yno-adapted-args
+EXEC_CONFIG: jvmArgs = -Xms1024m -Xmx1024m -XX:ReservedCodeCacheSize=512m
+EXEC_CONFIG: javacArgs = -source 1.8 -target 1.8 -Xlint:all,-serial,-path,-try
+EXECUTION: scala-compile-first
+PHASE: 
+GOALS: ['compile']
+EXEC_CONFIG: scalaVersion = 2.11.8
+EXEC_CONFIG: recompileMode = incremental
+EXEC_CONFIG: useZincServer = true
+EXEC_CONFIG: args = -feature -explaintypes -Yno-adapted-args
+EXEC_CONFIG: jvmArgs = -Xms1024m -Xmx1024m -XX:ReservedCodeCacheSize=512m
+EXEC_CONFIG: javacArgs = -source 1.8 -target 1.8 -Xlint:all,-serial,-path,-try
+EXECUTION: scala-test-compile-first
+PHASE: 
+GOALS: ['testCompile']
+EXEC_CONFIG: scalaVersion = 2.11.8
+EXEC_CONFIG: recompileMode = incremental
+EXEC_CONFIG: useZincServer = true
+EXEC_CONFIG: args = -feature -explaintypes -Yno-adapted-args
+EXEC_CONFIG: jvmArgs = -Xms1024m -Xmx1024m -XX:ReservedCodeCacheSize=512m
+EXEC_CONFIG: javacArgs = -source 1.8 -target 1.8 -Xlint:all,-serial,-path,-try
+
+PLUGIN: maven-surefire-plugin
+LOCATION: ./m:build/m:plugins/m:plugin
+VERSION: 2.20.1
+CONFIG: argLine = -Xmx4096m -XX:MaxPermSize=1024m -javaagent:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/JavaMOPAgent.jar
+CONFIG: runOrder = alphabetical
+CONFIG: includes = **/Test*.java **/*Test.java **/*TestCase.java **/*Suite.java
+CONFIG: reportsDirectory = /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/surefire-reports
+CONFIG: environmentVariables = ${test_classpath} 1 2.11 1 /home/RESEARCHER/.sdkman/candidates/java/current
+CONFIG: systemProperties = file:src/test/resources/log4j.properties test true /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/tmp ${session.executionRootDirectory} 1 false false false true true src
+CONFIG: failIfNoTests = false
+CONFIG: excludedGroups = 
+EXECUTION: default-test
+PHASE: test
+GOALS: ['test']
+EXEC_CONFIG: argLine = -Xmx4096m -XX:MaxPermSize=1024m -javaagent:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/JavaMOPAgent.jar
+EXEC_CONFIG: runOrder = alphabetical
+EXEC_CONFIG: includes = **/Test*.java **/*Test.java **/*TestCase.java **/*Suite.java
+EXEC_CONFIG: reportsDirectory = /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/surefire-reports
+EXEC_CONFIG: environmentVariables = ${test_classpath} 1 2.11 1 /home/RESEARCHER/.sdkman/candidates/java/current
+EXEC_CONFIG: systemProperties = file:src/test/resources/log4j.properties test true /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/tmp ${session.executionRootDirectory} 1 false false false true true src
+EXEC_CONFIG: failIfNoTests = false
+EXEC_CONFIG: excludedGroups = 
+EXECUTION: test
+PHASE: 
+GOALS: ['test']
+EXEC_CONFIG: argLine = -Xmx4096m -XX:MaxPermSize=1024m -javaagent:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/JavaMOPAgent.jar
+EXEC_CONFIG: runOrder = alphabetical
+EXEC_CONFIG: includes = **/Test*.java **/*Test.java **/*TestCase.java **/*Suite.java
+EXEC_CONFIG: reportsDirectory = /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/surefire-reports
+EXEC_CONFIG: environmentVariables = ${test_classpath} 1 2.11 1 /home/RESEARCHER/.sdkman/candidates/java/current
+EXEC_CONFIG: systemProperties = file:src/test/resources/log4j.properties test true /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/tmp ${session.executionRootDirectory} 1 false false false true true src
+EXEC_CONFIG: failIfNoTests = false
+EXEC_CONFIG: excludedGroups = 
+
+PLUGIN: scalatest-maven-plugin
+LOCATION: ./m:build/m:plugins/m:plugin
+VERSION: 1.0
+CONFIG: argLine = -javaagent:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/JavaMOPAgent.jar
+CONFIG: reportsDirectory = /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/surefire-reports
+CONFIG: junitxml = .
+CONFIG: filereports = SparkTestSuite.txt
+CONFIG: stderr = 
+CONFIG: environmentVariables = ${test_classpath} 1 2.11 1 /home/RESEARCHER/.sdkman/candidates/java/current
+CONFIG: systemProperties = file:src/test/resources/log4j.properties test true /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/tmp ${session.executionRootDirectory} 1 false false true __not_used__
+CONFIG: tagsToExclude = 
+EXECUTION: test
+PHASE: 
+GOALS: ['test']
+EXEC_CONFIG: argLine = -javaagent:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/JavaMOPAgent.jar
+EXEC_CONFIG: reportsDirectory = /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/surefire-reports
+EXEC_CONFIG: junitxml = .
+EXEC_CONFIG: filereports = SparkTestSuite.txt
+EXEC_CONFIG: stderr = 
+EXEC_CONFIG: environmentVariables = ${test_classpath} 1 2.11 1 /home/RESEARCHER/.sdkman/candidates/java/current
+EXEC_CONFIG: systemProperties = file:src/test/resources/log4j.properties test true /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/tmp ${session.executionRootDirectory} 1 false false true __not_used__
+EXEC_CONFIG: tagsToExclude = 
+
+PLUGIN: scala-maven-plugin
+LOCATION: ./m:build/m:pluginManagement/m:plugins/m:plugin
+VERSION: 3.2.2
+CONFIG: scalaVersion = 2.11.8
+CONFIG: recompileMode = incremental
+CONFIG: useZincServer = true
+CONFIG: args = -feature -explaintypes -Yno-adapted-args
+CONFIG: jvmArgs = -Xms1024m -Xmx1024m -XX:ReservedCodeCacheSize=512m
+CONFIG: javacArgs = -source 1.8 -target 1.8 -Xlint:all,-serial,-path,-try
+EXECUTION: eclipse-add-source
+PHASE: 
+GOALS: ['add-source']
+EXEC_CONFIG: scalaVersion = 2.11.8
+EXEC_CONFIG: recompileMode = incremental
+EXEC_CONFIG: useZincServer = true
+EXEC_CONFIG: args = -feature -explaintypes -Yno-adapted-args
+EXEC_CONFIG: jvmArgs = -Xms1024m -Xmx1024m -XX:ReservedCodeCacheSize=512m
+EXEC_CONFIG: javacArgs = -source 1.8 -target 1.8 -Xlint:all,-serial,-path,-try
+EXECUTION: scala-compile-first
+PHASE: 
+GOALS: ['compile']
+EXEC_CONFIG: scalaVersion = 2.11.8
+EXEC_CONFIG: recompileMode = incremental
+EXEC_CONFIG: useZincServer = true
+EXEC_CONFIG: args = -feature -explaintypes -Yno-adapted-args
+EXEC_CONFIG: jvmArgs = -Xms1024m -Xmx1024m -XX:ReservedCodeCacheSize=512m
+EXEC_CONFIG: javacArgs = -source 1.8 -target 1.8 -Xlint:all,-serial,-path,-try
+EXECUTION: scala-test-compile-first
+PHASE: 
+GOALS: ['testCompile']
+EXEC_CONFIG: scalaVersion = 2.11.8
+EXEC_CONFIG: recompileMode = incremental
+EXEC_CONFIG: useZincServer = true
+EXEC_CONFIG: args = -feature -explaintypes -Yno-adapted-args
+EXEC_CONFIG: jvmArgs = -Xms1024m -Xmx1024m -XX:ReservedCodeCacheSize=512m
+EXEC_CONFIG: javacArgs = -source 1.8 -target 1.8 -Xlint:all,-serial,-path,-try
+
+PLUGIN: maven-failsafe-plugin
+LOCATION: ./m:build/m:pluginManagement/m:plugins/m:plugin
+VERSION: 2.19.1
+
+PLUGIN: scalatest-maven-plugin
+LOCATION: ./m:build/m:pluginManagement/m:plugins/m:plugin
+VERSION: 1.0
+CONFIG: reportsDirectory = /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/surefire-reports
+CONFIG: junitxml = .
+CONFIG: filereports = SparkTestSuite.txt
+CONFIG: argLine = -ea -Xmx3g -Xss4m -XX:ReservedCodeCacheSize=512m
+CONFIG: stderr = 
+CONFIG: environmentVariables = ${test_classpath} 1 2.11 1 /home/RESEARCHER/.sdkman/candidates/java/current
+CONFIG: systemProperties = file:src/test/resources/log4j.properties test true /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/tmp ${session.executionRootDirectory} 1 false false true __not_used__
+CONFIG: tagsToExclude = 
+EXECUTION: test
+PHASE: 
+GOALS: ['test']
+EXEC_CONFIG: reportsDirectory = /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/surefire-reports
+EXEC_CONFIG: junitxml = .
+EXEC_CONFIG: filereports = SparkTestSuite.txt
+EXEC_CONFIG: argLine = -ea -Xmx3g -Xss4m -XX:ReservedCodeCacheSize=512m
+EXEC_CONFIG: stderr = 
+EXEC_CONFIG: environmentVariables = ${test_classpath} 1 2.11 1 /home/RESEARCHER/.sdkman/candidates/java/current
+EXEC_CONFIG: systemProperties = file:src/test/resources/log4j.properties test true /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/tmp ${session.executionRootDirectory} 1 false false true __not_used__
+EXEC_CONFIG: tagsToExclude = 
+
+PLUGIN: maven-surefire-plugin
+LOCATION: ./m:build/m:pluginManagement/m:plugins/m:plugin
+VERSION: 2.20.1
+CONFIG: includes = **/Test*.java **/*Test.java **/*TestCase.java **/*Suite.java
+CONFIG: reportsDirectory = /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/surefire-reports
+CONFIG: argLine = -ea -Xmx3g -Xss4m -XX:ReservedCodeCacheSize=512m
+CONFIG: environmentVariables = ${test_classpath} 1 2.11 1 /home/RESEARCHER/.sdkman/candidates/java/current
+CONFIG: systemProperties = file:src/test/resources/log4j.properties test true /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/tmp ${session.executionRootDirectory} 1 false false false true true src
+CONFIG: failIfNoTests = false
+CONFIG: excludedGroups = 
+EXECUTION: test
+PHASE: 
+GOALS: ['test']
+EXEC_CONFIG: includes = **/Test*.java **/*Test.java **/*TestCase.java **/*Suite.java
+EXEC_CONFIG: reportsDirectory = /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/surefire-reports
+EXEC_CONFIG: argLine = -ea -Xmx3g -Xss4m -XX:ReservedCodeCacheSize=512m
+EXEC_CONFIG: environmentVariables = ${test_classpath} 1 2.11 1 /home/RESEARCHER/.sdkman/candidates/java/current
+EXEC_CONFIG: systemProperties = file:src/test/resources/log4j.properties test true /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/tmp ${session.executionRootDirectory} 1 false false false true true src
+EXEC_CONFIG: failIfNoTests = false
+EXEC_CONFIG: excludedGroups = 
+
+PLUGIN: maven-surefire-report-plugin
+LOCATION: ./m:build/m:pluginManagement/m:plugins/m:plugin
+VERSION: 2.19.1
+MATCHED_PLUGINS: 8
+
+=== CRYPTO TEST SUITE ===
+SUITE_EXISTS: True
+30: import org.apache.spark.security.CryptoStreamUtils._
+34: class CryptoStreamUtilsSuite extends SparkFunSuite {
+36: test("crypto configuration conversion") {
+47: val props = CryptoStreamUtils.toCryptoConf(conf)
+52: test("shuffle encryption key length should be 128 by default") {
+54: var key = CryptoStreamUtils.createKey(conf)
+59: test("create 256-bit key") {
+61: var key = CryptoStreamUtils.createKey(conf)
+66: test("create key with invalid length") {
+69: CryptoStreamUtils.createKey(conf)
+73: test("serializer manager integration") {
+80: val key = Some(CryptoStreamUtils.createKey(conf))
+100: test("encryption key propagation to executors") {
+108: val out = CryptoStreamUtils.createCryptoOutputStream(bytes, SparkEnv.get.conf,
+117: val in = CryptoStreamUtils.createCryptoInputStream(new ByteArrayInputStream(encrypted),
+126: test("crypto stream wrappers") {

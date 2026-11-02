@@ -1,0 +1,72 @@
+
+=== CRYPTO_TEST ===
+PATH: core/src/test/scala/org/apache/spark/security/CryptoStreamUtilsSuite.scala
+MATCHING_LINES: 1
+  99: 
+ 100:   test("encryption key propagation to executors") {
+ 101:     val conf = createConf().setAppName("Crypto Test").setMaster("local-cluster[1,1,1024]")
+ 102:     val sc = new SparkContext(conf)
+ 103:     try {
+---
+
+=== EXECUTOR_RUNNER ===
+PATH: core/src/main/scala/org/apache/spark/deploy/worker/ExecutorRunner.scala
+MATCHING_LINES: 4
+ 143:     try {
+ 144:       // Launch the process
+ 145:       val builder = CommandUtils.buildProcessBuilder(appDesc.command, new SecurityManager(conf),
+ 146:         memory, sparkHome.getAbsolutePath, substituteVariables)
+ 147:       val command = builder.command()
+---
+ 148:       val formattedCommand = command.asScala.mkString("\"", "\" \"", "\"")
+ 149:       logInfo(s"Launch command: $formattedCommand")
+ 150: 
+ 151:       builder.directory(executorDir)
+---
+ 165:       builder.environment.put("SPARK_LOG_URL_STDOUT", s"${baseUrl}stdout")
+ 166: 
+ 167:       process = builder.start()
+ 168:       val header = "Spark Executor Command: %s\n%s\n\n".format(
+ 169:         formattedCommand, "=" * 40)
+---
+ 170: 
+---
+
+=== COMMAND_UTILS ===
+PATH: core/src/main/scala/org/apache/spark/deploy/worker/CommandUtils.scala
+MATCHING_LINES: 2
+  39:    * The `env` argument is exposed for testing.
+  40:    */
+  41:   def buildProcessBuilder(
+  42:       command: Command,
+  43:       securityMgr: SecurityManager,
+---
+  99:       Seq.empty, // library path already captured in environment variable
+ 100:       // filter out auth secret from java options
+ 101:       command.javaOpts.filterNot(_.startsWith("-D" + SecurityManager.SPARK_AUTH_SECRET_CONF)))
+ 102:   }
+ 103: 
+---
+
+=== SPARK_CONTEXT ===
+PATH: core/src/main/scala/org/apache/spark/SparkContext.scala
+MATCHING_LINES: 1
+2771:   val LOCAL_N_FAILURES_REGEX = """local\[([0-9]+|\*)\s*,\s*([0-9]+)\]""".r
+2772:   // Regular expression for simulating a Spark cluster of [N, cores, memory] locally
+2773:   val LOCAL_CLUSTER_REGEX = """local-cluster\[\s*([0-9]+)\s*,\s*([0-9]+)\s*,\s*([0-9]+)\s*]""".r
+2774:   // Regular expression for connecting to Spark deploy clusters
+2775:   val SPARK_REGEX = """spark://(.*)""".r
+---
+
+=== LOCAL_SPARK_CLUSTER ===
+PATH: core/src/main/scala/org/apache/spark/deploy/LocalSparkCluster.scala
+MATCHING_LINES: 0
+
+=== JAVA ENVIRONMENT CHECK ===
+JAVA_TOOL_OPTIONS SET: False HAS_JAVAAGENT: False
+_JAVA_OPTIONS SET: False HAS_JAVAAGENT: False
+JDK_JAVA_OPTIONS SET: False HAS_JAVAAGENT: False
+
+=== FINAL ===
+EXECUTOR_STATIC_TRACE_COMPLETE
+NOTE: Static configuration is not runtime proof.

@@ -1,0 +1,560 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.directory.server:apacheds-i18n:bundle:2.0.0-M25-SNAPSHOT
+[WARNING] Reporting configuration should be done in <reporting> section, not in maven-site-plugin <configuration> as reportPlugins parameter.
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.directory.server:apacheds-kerberos-codec:bundle:2.0.0-M25-SNAPSHOT
+[WARNING] Reporting configuration should be done in <reporting> section, not in maven-site-plugin <configuration> as reportPlugins parameter.
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.directory.server:apacheds-parent:pom:2.0.0-M25-SNAPSHOT
+[WARNING] Reporting configuration should be done in <reporting> section, not in maven-site-plugin <configuration> as reportPlugins parameter. @ line 318, column 24
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] ApacheDS                                                           [pom]
+[INFO] ApacheDS I18n                                                   [bundle]
+[INFO] ApacheDS Protocol Kerberos Codec                                [bundle]
+[INFO] 
+[INFO] ------------< org.apache.directory.server:apacheds-parent >-------------
+[INFO] Building ApacheDS 2.0.0-M25-SNAPSHOT                               [1/3]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- checkstyle:2.16:check (validate) @ apacheds-parent ---
+[INFO] 
+[INFO] --- remote-resources:1.5:process (default) @ apacheds-parent ---
+[INFO] 
+[INFO] -------------< org.apache.directory.server:apacheds-i18n >--------------
+[INFO] Building ApacheDS I18n 2.0.0-M25-SNAPSHOT                          [2/3]
+[INFO]   from i18n/pom.xml
+[INFO] -------------------------------[ bundle ]-------------------------------
+[WARNING] Parameter 'showDeprecations' is unknown for plugin 'maven-compiler-plugin:3.3:compile (default-compile)'
+[WARNING] Parameter 'showDeprecations' is unknown for plugin 'maven-compiler-plugin:3.3:testCompile (default-testCompile)'
+[INFO] 
+[INFO] --- checkstyle:2.16:check (validate) @ apacheds-i18n ---
+[INFO] 
+[INFO] --- remote-resources:1.5:process (default) @ apacheds-i18n ---
+[INFO] 
+[INFO] --- resources:2.7:resources (default-resources) @ apacheds-i18n ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 6 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- compiler:3.3:compile (default-compile) @ apacheds-i18n ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:2.7:testResources (default-testResources) @ apacheds-i18n ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/directory-server/i18n/src/test/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- compiler:3.3:testCompile (default-testCompile) @ apacheds-i18n ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:2.18.1:test (default-test) @ apacheds-i18n ---
+[INFO] 
+[INFO] --------< org.apache.directory.server:apacheds-kerberos-codec >---------
+[INFO] Building ApacheDS Protocol Kerberos Codec 2.0.0-M25-SNAPSHOT       [3/3]
+[INFO]   from kerberos-codec/pom.xml
+[INFO] -------------------------------[ bundle ]-------------------------------
+[WARNING] Parameter 'showDeprecations' is unknown for plugin 'maven-compiler-plugin:3.3:compile (default-compile)'
+[WARNING] Parameter 'showDeprecations' is unknown for plugin 'maven-compiler-plugin:3.3:testCompile (default-testCompile)'
+Oct 18, 2026 7:37:04 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=CxuALbltAfjqtYUA.ArjVwSJX9po1Ef_v4yIwqQ5PX0-1792319824.5273478-1.0.1.1-v2jh5CQhIjxJeoIr68F8beDisOLF0BRZ1GVXxRuUi736ZbGUcf.Q2.C6hrv_V52TwEsQgN.Jc.13RBnCheOGOjTh0BY7VBI7SV2Ogt.h6zRjk8Yn7kgjeu2uUfgPC_cw; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 11:07:04 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 11:07:04 GMT
+Oct 18, 2026 7:37:04 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=YPobbShYpsaABMCRX322jQACftt3BoiVuFie1HA4EB8-1792319824.5870812-1.0.1.1-t2FyIoPLAGbaDGvfEVG1CdZ_i89ajz0N4XdXd93yxCsqjF7MbgEErqwuuT_GhbQ8zU_RRJM08KWIBVd0AXijtR47xrh3PL7ItYkcQw7iQBweU_mUNiIZqDSLb.wAnDCk; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 11:07:04 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 11:07:04 GMT
+Oct 18, 2026 7:37:04 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=Ouk3UjTk_dzCc_SntM8nqkQ4aHFioBneCpsM7HarViI-1792319824.6368163-1.0.1.1-gmn0FJUnIQadOKF0afNZEKsPOAbSqP6u92NPH662JrzHPb_R8Jb9CRk2Ttc7hs5026xCJ2hjLcz0.qXK.L8EaT9iTjz__iT3_gDirJKPN39BWUQecRFaclwEy4mVtLfY; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 11:07:04 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 11:07:04 GMT
+Oct 18, 2026 7:37:04 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=mkyHg5P6H28Ay0ZAx66KqlPzxckJodoqTgyrciy1Gbo-1792319824.699659-1.0.1.1-ovJPTr6kHCm2cu_j.VSPDJ7rKbZZoQyqiBzhDbluRQ6mDwZCSGvovOwTDCYzyBsho4Le_XVjw1siI2VhhhN2dPNOrVcRpxgBJaVTqwg0PTSAbdeHyk7eplmen.3u7VaJ; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 11:07:04 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 11:07:04 GMT
+Oct 18, 2026 7:37:05 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=BW71h1EVq4NT4uaVmqFrURN0EW8AttJXOoCK5x1OAOc-1792319824.7825522-1.0.1.1-OFOE2xlI4ZHfs6hOoLjeXlPag.PuTnIpYSiur.b59uRRYllN0L1i4DIbbtP2U1FU1MSv8h5vLOjPi5maOQv9UhJynugRQhYCRoLzlKCawvPrkN0PWN8QgS27SviajK0o; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 11:07:04 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 11:07:04 GMT
+Oct 18, 2026 7:37:05 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=ZKV.t3IE1HO5Gp4cJHR547z6PiEWuILq2UfMx6rGL1Q-1792319824.8467677-1.0.1.1-GqgKXu946yf6byRp8N9hU0Yp7eriFn4cJ_85kTO6nZegqqBMFE40HK6EjruP4IRMdap1VumhEjK6FRK31s_.O18MweFxEpKPRQYN1LGOBAaDBjYJAOE_aQ.Q69iaZ2Fa; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 11:07:04 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 11:07:04 GMT
+Oct 18, 2026 7:37:05 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=xTtxaGHoVP2GKOaOOGJswhDjFKqlFEjY4MnAUxDqtvs-1792319824.9940286-1.0.1.1-RQ5fVe6GpjL3DfLpok1t1eFt.ng2dVCX0ycH5H.qkS4JKQcZ.dpYypGl0Hrl8q_k7Kerm0rshMu80sCBUeMeuCUSC63OsHOAQg_NRqvhouGtOXINuigMBw_CGNjqQ5U_; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 11:07:05 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 11:07:05 GMT
+Oct 18, 2026 7:37:05 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=p5_p1c9WkwAo6X4IxgF4hwhj5NNHfi3RNY8Z8hGfY0w-1792319825.3315086-1.0.1.1-XlsqRft5AY5GYXjXz7Qu86Fys7qMdBjjxrcSQW9hJneaQ9h.CazkYl7sa_NPjBsDJ55UsVC7valNvJa70dE2PpHjDOd7mxRzbXVCPxiADqmAJWPwx23TN5v17ZmjMTSr; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 11:07:05 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 11:07:05 GMT
+[INFO] 
+[INFO] --- checkstyle:2.16:check (validate) @ apacheds-kerberos-codec ---
+[INFO] 
+[INFO] --- remote-resources:1.5:process (default) @ apacheds-kerberos-codec ---
+[INFO] 
+[INFO] --- resources:2.7:resources (default-resources) @ apacheds-kerberos-codec ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/directory-server/kerberos-codec/src/main/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- compiler:3.3:compile (default-compile) @ apacheds-kerberos-codec ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 475 source files to /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/directory-server/kerberos-codec/target/classes
+[INFO] /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/directory-server/kerberos-codec/src/main/java/org/apache/directory/server/kerberos/shared/replay/ReplayCacheImpl.java: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/directory-server/kerberos-codec/src/main/java/org/apache/directory/server/kerberos/shared/replay/ReplayCacheImpl.java uses or overrides a deprecated API.
+[INFO] /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/directory-server/kerberos-codec/src/main/java/org/apache/directory/server/kerberos/shared/replay/ReplayCacheImpl.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- resources:2.7:testResources (default-testResources) @ apacheds-kerberos-codec ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- compiler:3.3:testCompile (default-testCompile) @ apacheds-kerberos-codec ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 74 source files to /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/directory-server/kerberos-codec/target/test-classes
+[INFO] /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/directory-server/kerberos-codec/src/test/java/org/apache/directory/server/kerberos/shared/replay/ReplayCacheImplTest.java: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/directory-server/kerberos-codec/src/test/java/org/apache/directory/server/kerberos/shared/replay/ReplayCacheImplTest.java uses or overrides a deprecated API.
+[INFO] /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/directory-server/kerberos-codec/src/test/java/org/apache/directory/server/kerberos/shared/replay/ReplayCacheImplTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- surefire:2.18.1:test (default-test) @ apacheds-kerberos-codec ---
+[INFO] Surefire report directory: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/directory-server/kerberos-codec/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1024m; support was removed in 8.0
+Running org.apache.directory.server.kerberos.shared.KerberosUtilsTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.212 sec - in org.apache.directory.server.kerberos.shared.KerberosUtilsTest
+Running org.apache.directory.server.kerberos.shared.crypto.encryption.AesEncryptionTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec - in org.apache.directory.server.kerberos.shared.crypto.encryption.AesEncryptionTest
+Running org.apache.directory.server.kerberos.shared.crypto.encryption.CipherTextHandlerTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.183 sec - in org.apache.directory.server.kerberos.shared.crypto.encryption.CipherTextHandlerTest
+Running org.apache.directory.server.kerberos.shared.crypto.encryption.Des3CbcSha1KdEncryptionTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in org.apache.directory.server.kerberos.shared.crypto.encryption.Des3CbcSha1KdEncryptionTest
+Running org.apache.directory.server.kerberos.shared.crypto.encryption.DesCbcCrcEncryptionTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec - in org.apache.directory.server.kerberos.shared.crypto.encryption.DesCbcCrcEncryptionTest
+Running org.apache.directory.server.kerberos.shared.crypto.encryption.DesCbcMd5EncryptionTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec - in org.apache.directory.server.kerberos.shared.crypto.encryption.DesCbcMd5EncryptionTest
+Running org.apache.directory.server.kerberos.shared.crypto.encryption.DesStringToKeyTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec - in org.apache.directory.server.kerberos.shared.crypto.encryption.DesStringToKeyTest
+Running org.apache.directory.server.kerberos.shared.crypto.encryption.KerberosKeyFactoryTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.058 sec - in org.apache.directory.server.kerberos.shared.crypto.encryption.KerberosKeyFactoryTest
+Running org.apache.directory.server.kerberos.shared.crypto.encryption.KeyTypeTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec - in org.apache.directory.server.kerberos.shared.crypto.encryption.KeyTypeTest
+Running org.apache.directory.server.kerberos.shared.crypto.encryption.NFoldTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec - in org.apache.directory.server.kerberos.shared.crypto.encryption.NFoldTest
+Running org.apache.directory.server.kerberos.shared.crypto.encryption.RandomKeyFactoryTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec - in org.apache.directory.server.kerberos.shared.crypto.encryption.RandomKeyFactoryTest
+Running org.apache.directory.server.kerberos.shared.keytab.KeytabTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.04 sec - in org.apache.directory.server.kerberos.shared.keytab.KeytabTest
+Running org.apache.directory.server.kerberos.shared.messages.components.TicketTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 sec - in org.apache.directory.server.kerberos.shared.messages.components.TicketTest
+Running org.apache.directory.server.kerberos.shared.messages.value.AuthorizationDataTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec - in org.apache.directory.server.kerberos.shared.messages.value.AuthorizationDataTest
+Running org.apache.directory.server.kerberos.shared.messages.value.ChecksumTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec - in org.apache.directory.server.kerberos.shared.messages.value.ChecksumTest
+Running org.apache.directory.server.kerberos.shared.messages.value.EncryptedDataTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec - in org.apache.directory.server.kerberos.shared.messages.value.EncryptedDataTest
+Running org.apache.directory.server.kerberos.shared.messages.value.EncryptionKeyTest
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.248 sec - in org.apache.directory.server.kerberos.shared.messages.value.EncryptionKeyTest
+Running org.apache.directory.server.kerberos.shared.messages.value.KdcOptionsTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec - in org.apache.directory.server.kerberos.shared.messages.value.KdcOptionsTest
+Running org.apache.directory.server.kerberos.shared.messages.value.PaDataTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec - in org.apache.directory.server.kerberos.shared.messages.value.PaDataTest
+Running org.apache.directory.server.kerberos.shared.messages.value.PrincipalNameTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.apache.directory.server.kerberos.shared.messages.value.PrincipalNameTest
+Running org.apache.directory.server.kerberos.shared.messages.value.flags.AbstractKerberosFlagsTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.apache.directory.server.kerberos.shared.messages.value.flags.AbstractKerberosFlagsTest
+Running org.apache.directory.server.kerberos.shared.messages.value.flags.TicketFlagsTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.apache.directory.server.kerberos.shared.messages.value.flags.TicketFlagsTest
+Running org.apache.directory.server.kerberos.shared.replay.ReplayCacheImplTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.007 sec - in org.apache.directory.server.kerberos.shared.replay.ReplayCacheImplTest
+Running org.apache.directory.shared.kerberos.codec.AdAndOrDecoderTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.031 sec - in org.apache.directory.shared.kerberos.codec.AdAndOrDecoderTest
+Running org.apache.directory.shared.kerberos.codec.AdIfRelevantDecoderTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in org.apache.directory.shared.kerberos.codec.AdIfRelevantDecoderTest
+Running org.apache.directory.shared.kerberos.codec.AdKdcIssuedDecoderTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 sec - in org.apache.directory.shared.kerberos.codec.AdKdcIssuedDecoderTest
+Running org.apache.directory.shared.kerberos.codec.AdMandatoryForKdcDecoderTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.apache.directory.shared.kerberos.codec.AdMandatoryForKdcDecoderTest
+Running org.apache.directory.shared.kerberos.codec.ApRepDecoderTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec - in org.apache.directory.shared.kerberos.codec.ApRepDecoderTest
+Running org.apache.directory.shared.kerberos.codec.ApReqDecoderTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.019 sec - in org.apache.directory.shared.kerberos.codec.ApReqDecoderTest
+Running org.apache.directory.shared.kerberos.codec.AsRepDecoderTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 sec - in org.apache.directory.shared.kerberos.codec.AsRepDecoderTest
+Running org.apache.directory.shared.kerberos.codec.AsReqDecoderTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.046 sec - in org.apache.directory.shared.kerberos.codec.AsReqDecoderTest
+Running org.apache.directory.shared.kerberos.codec.AuthenticatorDecoderTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 sec - in org.apache.directory.shared.kerberos.codec.AuthenticatorDecoderTest
+Running org.apache.directory.shared.kerberos.codec.AuthorizationDataDecoderTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.apache.directory.shared.kerberos.codec.AuthorizationDataDecoderTest
+Running org.apache.directory.shared.kerberos.codec.ChangePasswdDataDecoderTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec - in org.apache.directory.shared.kerberos.codec.ChangePasswdDataDecoderTest
+Running org.apache.directory.shared.kerberos.codec.ChecksumDecoderTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.directory.shared.kerberos.codec.ChecksumDecoderTest
+Running org.apache.directory.shared.kerberos.codec.ETypeInfo2DecoderTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 sec - in org.apache.directory.shared.kerberos.codec.ETypeInfo2DecoderTest
+Running org.apache.directory.shared.kerberos.codec.ETypeInfo2EntryDecoderTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.apache.directory.shared.kerberos.codec.ETypeInfo2EntryDecoderTest
+Running org.apache.directory.shared.kerberos.codec.ETypeInfoDecoderTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec - in org.apache.directory.shared.kerberos.codec.ETypeInfoDecoderTest
+Running org.apache.directory.shared.kerberos.codec.ETypeInfoEntryDecoderTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.apache.directory.shared.kerberos.codec.ETypeInfoEntryDecoderTest
+Running org.apache.directory.shared.kerberos.codec.EncApRepPartDecoderTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 sec - in org.apache.directory.shared.kerberos.codec.EncApRepPartDecoderTest
+Running org.apache.directory.shared.kerberos.codec.EncAsRepPartDecoderTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.036 sec - in org.apache.directory.shared.kerberos.codec.EncAsRepPartDecoderTest
+Running org.apache.directory.shared.kerberos.codec.EncKdcRepPartDecoderTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in org.apache.directory.shared.kerberos.codec.EncKdcRepPartDecoderTest
+Running org.apache.directory.shared.kerberos.codec.EncKrbCredPartDecoderTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.029 sec - in org.apache.directory.shared.kerberos.codec.EncKrbCredPartDecoderTest
+Running org.apache.directory.shared.kerberos.codec.EncKrbPrivPartDecoderTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.055 sec - in org.apache.directory.shared.kerberos.codec.EncKrbPrivPartDecoderTest
+Running org.apache.directory.shared.kerberos.codec.EncTgsRepPartDecoderTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec - in org.apache.directory.shared.kerberos.codec.EncTgsRepPartDecoderTest
+Running org.apache.directory.shared.kerberos.codec.EncTicketPartDecoderTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 sec - in org.apache.directory.shared.kerberos.codec.EncTicketPartDecoderTest
+Running org.apache.directory.shared.kerberos.codec.EncryptedDataDecoderTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec - in org.apache.directory.shared.kerberos.codec.EncryptedDataDecoderTest
+Running org.apache.directory.shared.kerberos.codec.EncryptionKeyDecoderTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.directory.shared.kerberos.codec.EncryptionKeyDecoderTest
+Running org.apache.directory.shared.kerberos.codec.HostAddressDecoderTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in org.apache.directory.shared.kerberos.codec.HostAddressDecoderTest
+Running org.apache.directory.shared.kerberos.codec.HostAddressesDecoderTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.apache.directory.shared.kerberos.codec.HostAddressesDecoderTest
+Running org.apache.directory.shared.kerberos.codec.KdcRepDecoderTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in org.apache.directory.shared.kerberos.codec.KdcRepDecoderTest
+Running org.apache.directory.shared.kerberos.codec.KdcReqBodyDecoderTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in org.apache.directory.shared.kerberos.codec.KdcReqBodyDecoderTest
+Running org.apache.directory.shared.kerberos.codec.KdcReqDecoderTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec - in org.apache.directory.shared.kerberos.codec.KdcReqDecoderTest
+Running org.apache.directory.shared.kerberos.codec.KerberosMessageDecoderTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.03 sec - in org.apache.directory.shared.kerberos.codec.KerberosMessageDecoderTest
+Running org.apache.directory.shared.kerberos.codec.KrbCredDecoderTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec - in org.apache.directory.shared.kerberos.codec.KrbCredDecoderTest
+Running org.apache.directory.shared.kerberos.codec.KrbCredInfoDecoderTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec - in org.apache.directory.shared.kerberos.codec.KrbCredInfoDecoderTest
+Running org.apache.directory.shared.kerberos.codec.KrbErrorDecoderTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec - in org.apache.directory.shared.kerberos.codec.KrbErrorDecoderTest
+Running org.apache.directory.shared.kerberos.codec.KrbPrivDecoderTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec - in org.apache.directory.shared.kerberos.codec.KrbPrivDecoderTest
+Running org.apache.directory.shared.kerberos.codec.KrbSafeBodyDecoderTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec - in org.apache.directory.shared.kerberos.codec.KrbSafeBodyDecoderTest
+Running org.apache.directory.shared.kerberos.codec.KrbSafeDecoderTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec - in org.apache.directory.shared.kerberos.codec.KrbSafeDecoderTest
+Running org.apache.directory.shared.kerberos.codec.LastReqDecoderTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.apache.directory.shared.kerberos.codec.LastReqDecoderTest
+Running org.apache.directory.shared.kerberos.codec.MethodDataDecoderTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec - in org.apache.directory.shared.kerberos.codec.MethodDataDecoderTest
+Running org.apache.directory.shared.kerberos.codec.PaDataDecoderTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.directory.shared.kerberos.codec.PaDataDecoderTest
+Running org.apache.directory.shared.kerberos.codec.PaEncTimestampDecoderTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec - in org.apache.directory.shared.kerberos.codec.PaEncTimestampDecoderTest
+Running org.apache.directory.shared.kerberos.codec.PaEncTsEncDecoderTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.apache.directory.shared.kerberos.codec.PaEncTsEncDecoderTest
+Running org.apache.directory.shared.kerberos.codec.PrincipalNameDecoderTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec - in org.apache.directory.shared.kerberos.codec.PrincipalNameDecoderTest
+Running org.apache.directory.shared.kerberos.codec.TgsRepDecoderTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec - in org.apache.directory.shared.kerberos.codec.TgsRepDecoderTest
+Running org.apache.directory.shared.kerberos.codec.TgsReqDecoderTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in org.apache.directory.shared.kerberos.codec.TgsReqDecoderTest
+Running org.apache.directory.shared.kerberos.codec.TicketDecoderTest
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec - in org.apache.directory.shared.kerberos.codec.TicketDecoderTest
+Running org.apache.directory.shared.kerberos.codec.TransitedEncodingDecoderTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in org.apache.directory.shared.kerberos.codec.TransitedEncodingDecoderTest
+Running org.apache.directory.shared.kerberos.codec.TypedDataDecoderTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec - in org.apache.directory.shared.kerberos.codec.TypedDataDecoderTest
+Running org.apache.directory.shared.kerberos.codec.flags.TicketFlagsTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.apache.directory.shared.kerberos.codec.flags.TicketFlagsTest
+Running org.apache.directory.shared.kerberos.codec.options.OptionsTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in org.apache.directory.shared.kerberos.codec.options.OptionsTest
+==start SecureRandomSpec ==
+#monitors: 1
+#collected monitors: 0
+#terminated monitors: 0
+#event - next2: 8
+#event - next1: 0
+#event - g1: 0
+#event - g2: 0
+#event - g3: 0
+#event - g4: 0
+#event - c1: 1
+#event - c2: 0
+#event - setSeed3: 0
+#event - c3: 0
+#event - setSeed2: 0
+#event - setSeed1: 0
+#event - genSeed: 0
+#event - ints: 0
+#event - next3: 0
+#category - prop 1 - fail: 7
+#category - prop 1 - match1: 1
+==end SecureRandomSpec ==
+==start KeyGeneratorSpec ==
+#monitors: 18
+#collected monitors: 0
+#terminated monitors: 0
+#event - init: 6
+#event - g1: 18
+#event - g2: 0
+#event - g3: 18
+#event - gk1: 18
+#category - prop 1 - fail: 12
+#category - prop 1 - match: 6
+==end KeyGeneratorSpec ==
+==start KeyStoreSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - ge1: 0
+#event - load: 0
+#event - g1: 0
+#event - g2: 0
+#event - store: 0
+#event - gk1: 0
+#event - se1: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end KeyStoreSpec ==
+==start MacSpec ==
+#monitors: 5
+#collected monitors: 0
+#terminated monitors: 0
+#event - i1: 5
+#event - i2: 0
+#event - update: 0
+#event - g1: 5
+#event - g2: 0
+#event - f1: 5
+#event - g3: 5
+#event - f2: 0
+#category - prop 1 - fail: 5
+#category - prop 1 - match: 0
+==end MacSpec ==
+==start CipherOutputStreamSpec ==
+#monitors: 1
+#collected monitors: 0
+#terminated monitors: 0
+#event - fl: 0
+#event - cl: 0
+#event - w1: 0
+#event - w2: 0
+#event - c1: 0
+#category - prop 1 - fail: 0
+==end CipherOutputStreamSpec ==
+==start DHGenParameterSpecSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - c1: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end DHGenParameterSpecSpec ==
+==start KeyManagerFactorySpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - init: 0
+#event - gkm1: 0
+#event - g1: 0
+#event - g2: 0
+#event - g3: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match1: 0
+==end KeyManagerFactorySpec ==
+==start SecretKeySpecSpec ==
+#monitors: 1
+#collected monitors: 0
+#terminated monitors: 0
+#event - c3: 50
+#event - c4: 0
+#event - c1: 50
+#event - c2: 0
+#category - prop 1 - fail: 50
+#category - prop 1 - match: 0
+==end SecretKeySpecSpec ==
+==start TrustManagerFactorySpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - init: 0
+#event - gtm1: 0
+#event - g1: 0
+#event - g2: 0
+#event - g3: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match1: 0
+==end TrustManagerFactorySpec ==
+==start CipherInputStreamSpec ==
+#monitors: 1
+#collected monitors: 0
+#terminated monitors: 0
+#event - r2: 0
+#event - cl1: 0
+#event - c1: 0
+#event - r1: 0
+#category - prop 1 - fail: 0
+==end CipherInputStreamSpec ==
+==start PBEParameterSpecSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - c3: 0
+#event - c1: 0
+#event - c2: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end PBEParameterSpecSpec ==
+==start RandomStringPasswordSpec ==
+#monitors: 1
+#collected monitors: 0
+#terminated monitors: 0
+#event - vo: 0
+#event - gb: 1870
+#category - prop 1 - match: 0
+==end RandomStringPasswordSpec ==
+==start SSLContextSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - init: 0
+#event - engine: 0
+#event - unsafe_protocol: 0
+#event - g1: 0
+#event - g2: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match1: 0
+==end SSLContextSpec ==
+==start CipherSpec ==
+#monitors: 51
+#collected monitors: 0
+#terminated monitors: 0
+#event - u5: 0
+#event - i1: 0
+#event - i2: 51
+#event - g1: 51
+#event - g2: 0
+#event - f1: 0
+#event - g3: 51
+#event - f2: 46
+#event - f3: 0
+#event - f5: 0
+#event - f6: 0
+#event - f7: 0
+#event - wkb1: 0
+#event - u1: 0
+#event - u2: 0
+#event - u3: 0
+#event - u4: 0
+#category - prop 1 - fail: 46
+#category - prop 1 - match1: 0
+==end CipherSpec ==
+==start GCMParameterSpecSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - c1: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end GCMParameterSpecSpec ==
+==start PBEKeySpecSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - err3: 0
+#event - err2: 0
+#event - err1: 0
+#event - f1: 0
+#event - f2: 0
+#event - c1: 0
+#event - c2: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end PBEKeySpecSpec ==
+==start SignatureSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - i1: 0
+#event - i2: 0
+#event - update: 0
+#event - g1: 0
+#event - i3: 0
+#event - g2: 0
+#event - i4: 0
+#event - v1: 0
+#event - g3: 0
+#event - v2: 0
+#event - s1: 0
+#event - s2: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end SignatureSpec ==
+==start HMACParameterSpecSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - c: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end HMACParameterSpecSpec ==
+==start KeyPairGeneratorSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - gen: 0
+#event - init3: 0
+#event - init2: 0
+#event - g1: 0
+#event - init1: 0
+#event - g2: 0
+#event - g3: 0
+#event - initError: 0
+#event - init4: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end KeyPairGeneratorSpec ==
+==start KeyPairSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - gpr: 0
+#event - gpu: 0
+#event - c1: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end KeyPairSpec ==
+==start IvParameterSpecSpec ==
+#monitors: 47
+#collected monitors: 0
+#terminated monitors: 0
+#event - c3: 47
+#event - c1: 47
+#event - c2: 0
+#category - prop 1 - fail: 47
+#category - prop 1 - match: 0
+==end IvParameterSpecSpec ==
+==start MessageDigestSpec ==
+#monitors: 9
+#collected monitors: 0
+#terminated monitors: 0
+#event - update: 0
+#event - reset: 0
+#event - g1: 9
+#event - g2: 0
+#event - g3: 9
+#event - d1: 0
+#event - d2: 9
+#event - d3: 0
+#category - prop 1 - fail: 9
+#category - prop 1 - match: 0
+==end MessageDigestSpec ==
+
+Results :
+
+Tests run: 376, Failures: 0, Errors: 0, Skipped: 1
+
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for ApacheDS 2.0.0-M25-SNAPSHOT:
+[INFO] 
+[INFO] ApacheDS ........................................... SUCCESS [  0.930 s]
+[INFO] ApacheDS I18n ...................................... SUCCESS [  0.330 s]
+[INFO] ApacheDS Protocol Kerberos Codec ................... SUCCESS [  9.693 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  11.391 s
+[INFO] Finished at: 2026-10-18T19:37:14+09:00
+[INFO] ------------------------------------------------------------------------

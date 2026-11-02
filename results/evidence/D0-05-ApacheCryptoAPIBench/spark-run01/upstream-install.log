@@ -1,0 +1,1046 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.spark:spark-parent_2.11:pom:2.4.0-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.apache.spark:spark-parent_2.11:2.4.0-SNAPSHOT (/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/pom.xml) points at br.unb.cic:mop-test-suite-b04 instead of org.apache:apache, please verify your project structure @ line 22, column 11
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Spark Project Parent POM                                           [pom]
+[INFO] Spark Project Tags                                                 [jar]
+[INFO] Spark Project Local DB                                             [jar]
+[INFO] Spark Project Networking                                           [jar]
+[INFO] Spark Project Shuffle Streaming Service                            [jar]
+[INFO] Spark Project Unsafe                                               [jar]
+[INFO] Spark Project Launcher                                             [jar]
+[INFO] Spark Project Core                                                 [jar]
+[INFO] 
+[INFO] -----------------< org.apache.spark:spark-parent_2.11 >-----------------
+[INFO] Building Spark Project Parent POM 2.4.0-SNAPSHOT                   [1/8]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.0.0-M1:enforce (enforce-versions) @ spark-parent_2.11 ---
+[INFO] 
+[INFO] --- scala:3.2.2:add-source (eclipse-add-source) @ spark-parent_2.11 ---
+[INFO] Add Source directory: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/src/main/scala
+[INFO] Add Test Source directory: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/src/test/scala
+[INFO] 
+[INFO] --- dependency:3.0.2:build-classpath (default-cli) @ spark-parent_2.11 ---
+[INFO] Dependencies classpath:
+/home/RESEARCHER/.m2/repository/org/spark-project/spark/unused/1.0.0/unused-1.0.0.jar
+[INFO] 
+[INFO] --- remote-resources:1.5:process (process-resource-bundles) @ spark-parent_2.11 ---
+[INFO] 
+[INFO] --- scala:3.2.2:compile (scala-compile-first) @ spark-parent_2.11 ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- antrun:1.8:run (create-tmp-dir) @ spark-parent_2.11 ---
+[INFO] Executing tasks
+
+main:
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- dependency:3.0.2:build-classpath (generate-test-classpath) @ spark-parent_2.11 ---
+[INFO] Dependencies classpath:
+/home/RESEARCHER/.m2/repository/org/scala-lang/modules/scala-xml_2.11/1.0.5/scala-xml_2.11-1.0.5.jar:/home/RESEARCHER/.m2/repository/org/scalatest/scalatest_2.11/3.0.3/scalatest_2.11-3.0.3.jar:/home/RESEARCHER/.m2/repository/org/spark-project/spark/unused/1.0.0/unused-1.0.0.jar:/home/RESEARCHER/.m2/repository/org/scala-sbt/test-interface/1.0/test-interface-1.0.jar:/home/RESEARCHER/.m2/repository/com/novocode/junit-interface/0.11/junit-interface-0.11.jar:/home/RESEARCHER/.m2/repository/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8.jar:/home/RESEARCHER/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/RESEARCHER/.m2/repository/org/scalactic/scalactic_2.11/3.0.3/scalactic_2.11-3.0.3.jar:/home/RESEARCHER/.m2/repository/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4.jar:/home/RESEARCHER/.m2/repository/org/scala-lang/scala-reflect/2.11.8/scala-reflect-2.11.8.jar:/home/RESEARCHER/.m2/repository/junit/junit/4.12/junit-4.12.jar
+[INFO] 
+[INFO] --- scala:3.2.2:testCompile (scala-test-compile-first) @ spark-parent_2.11 ---
+[WARNING] Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:2.20.1:test (test) @ spark-parent_2.11 ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- scalatest:1.0:test (test) @ spark-parent_2.11 ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.0.2:test-jar (prepare-test-jar) @ spark-parent_2.11 ---
+[INFO] Building jar: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/target/spark-parent_2.11-2.4.0-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- site:3.5.1:attach-descriptor (attach-descriptor) @ spark-parent_2.11 ---
+[INFO] 
+[INFO] --- shade:3.1.0:shade (default) @ spark-parent_2.11 ---
+[INFO] Including org.spark-project.spark:unused:jar:1.0.0 in the shaded jar.
+[INFO] Replacing original artifact with shaded artifact.
+[INFO] 
+[INFO] --- source:3.0.1:jar-no-fork (create-source-jar) @ spark-parent_2.11 ---
+[INFO] 
+[INFO] --- source:3.0.1:test-jar-no-fork (create-source-jar) @ spark-parent_2.11 ---
+[INFO] 
+[INFO] --- scalastyle:1.0.0:check (default) @ spark-parent_2.11 ---
+[WARNING] sourceDirectory is not specified or does not exist value=/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/src/main/scala
+Saving to outputFile=/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/target/scalastyle-output.xml
+Processed 0 file(s)
+Found 0 errors
+Found 0 warnings
+Found 0 infos
+Finished in 48 ms
+[INFO] 
+[INFO] --- checkstyle:2.17:check (default) @ spark-parent_2.11 ---
+[WARNING]  Parameter 'testSourceDirectory' is deprecated: instead use {@link #testSourceDirectories}
+[INFO] 
+[INFO] --- install:2.5.2:install (default-install) @ spark-parent_2.11 ---
+[INFO] Installing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/pom.xml to /home/RESEARCHER/.m2/repository/org/apache/spark/spark-parent_2.11/2.4.0-SNAPSHOT/spark-parent_2.11-2.4.0-SNAPSHOT.pom
+[INFO] Installing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/target/spark-parent_2.11-2.4.0-SNAPSHOT-tests.jar to /home/RESEARCHER/.m2/repository/org/apache/spark/spark-parent_2.11/2.4.0-SNAPSHOT/spark-parent_2.11-2.4.0-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] ------------------< org.apache.spark:spark-tags_2.11 >------------------
+[INFO] Building Spark Project Tags 2.4.0-SNAPSHOT                         [2/8]
+[INFO]   from common/tags/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.0.0-M1:enforce (enforce-versions) @ spark-tags_2.11 ---
+[INFO] 
+[INFO] --- scala:3.2.2:add-source (eclipse-add-source) @ spark-tags_2.11 ---
+[INFO] Add Source directory: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/tags/src/main/scala
+[INFO] Add Test Source directory: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/tags/src/test/scala
+[INFO] 
+[INFO] --- dependency:3.0.2:build-classpath (default-cli) @ spark-tags_2.11 ---
+[INFO] Dependencies classpath:
+/home/RESEARCHER/.m2/repository/org/spark-project/spark/unused/1.0.0/unused-1.0.0.jar:/home/RESEARCHER/.m2/repository/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8.jar
+[INFO] 
+[INFO] --- remote-resources:1.5:process (process-resource-bundles) @ spark-tags_2.11 ---
+[INFO] 
+[INFO] --- resources:2.7:resources (default-resources) @ spark-tags_2.11 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/tags/src/main/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- compiler:3.7.0:compile (default-compile) @ spark-tags_2.11 ---
+[INFO] Not compiling main sources
+[INFO] 
+[INFO] --- scala:3.2.2:compile (scala-compile-first) @ spark-tags_2.11 ---
+[WARNING] Zinc server is not available at port 3030 - reverting to normal incremental compile
+[INFO] Using incremental compilation
+[INFO] 
+[INFO] --- antrun:1.8:run (create-tmp-dir) @ spark-tags_2.11 ---
+[INFO] Executing tasks
+
+main:
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- resources:2.7:testResources (default-testResources) @ spark-tags_2.11 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/tags/src/test/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- compiler:3.7.0:testCompile (default-testCompile) @ spark-tags_2.11 ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- dependency:3.0.2:build-classpath (generate-test-classpath) @ spark-tags_2.11 ---
+[INFO] Dependencies classpath:
+/home/RESEARCHER/.m2/repository/org/scala-lang/modules/scala-xml_2.11/1.0.5/scala-xml_2.11-1.0.5.jar:/home/RESEARCHER/.m2/repository/org/scalatest/scalatest_2.11/3.0.3/scalatest_2.11-3.0.3.jar:/home/RESEARCHER/.m2/repository/org/spark-project/spark/unused/1.0.0/unused-1.0.0.jar:/home/RESEARCHER/.m2/repository/org/scala-sbt/test-interface/1.0/test-interface-1.0.jar:/home/RESEARCHER/.m2/repository/com/novocode/junit-interface/0.11/junit-interface-0.11.jar:/home/RESEARCHER/.m2/repository/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8.jar:/home/RESEARCHER/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/RESEARCHER/.m2/repository/org/scalactic/scalactic_2.11/3.0.3/scalactic_2.11-3.0.3.jar:/home/RESEARCHER/.m2/repository/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4.jar:/home/RESEARCHER/.m2/repository/org/scala-lang/scala-reflect/2.11.8/scala-reflect-2.11.8.jar:/home/RESEARCHER/.m2/repository/junit/junit/4.12/junit-4.12.jar
+[INFO] 
+[INFO] --- scala:3.2.2:testCompile (scala-test-compile-first) @ spark-tags_2.11 ---
+[WARNING] Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+[WARNING] Zinc server is not available at port 3030 - reverting to normal incremental compile
+[INFO] Using incremental compilation
+[INFO] 
+[INFO] --- surefire:2.20.1:test (default-test) @ spark-tags_2.11 ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- surefire:2.20.1:test (test) @ spark-tags_2.11 ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- scalatest:1.0:test (test) @ spark-tags_2.11 ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.0.2:test-jar (prepare-test-jar) @ spark-tags_2.11 ---
+[INFO] Building jar: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/tags/target/spark-tags_2.11-2.4.0-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- jar:3.0.2:jar (default-jar) @ spark-tags_2.11 ---
+[INFO] Building jar: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/tags/target/spark-tags_2.11-2.4.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- site:3.5.1:attach-descriptor (attach-descriptor) @ spark-tags_2.11 ---
+[INFO] 
+[INFO] --- shade:3.1.0:shade (default) @ spark-tags_2.11 ---
+[INFO] Excluding org.scala-lang:scala-library:jar:2.11.8 from the shaded jar.
+[INFO] Including org.spark-project.spark:unused:jar:1.0.0 in the shaded jar.
+[INFO] Replacing original artifact with shaded artifact.
+[INFO] Replacing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/tags/target/spark-tags_2.11-2.4.0-SNAPSHOT.jar with /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/tags/target/spark-tags_2.11-2.4.0-SNAPSHOT-shaded.jar
+[INFO] Dependency-reduced POM written at: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/tags/dependency-reduced-pom.xml
+[INFO] 
+[INFO] --- source:3.0.1:jar-no-fork (create-source-jar) @ spark-tags_2.11 ---
+[INFO] Building jar: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/tags/target/spark-tags_2.11-2.4.0-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- source:3.0.1:test-jar-no-fork (create-source-jar) @ spark-tags_2.11 ---
+[INFO] Building jar: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/tags/target/spark-tags_2.11-2.4.0-SNAPSHOT-test-sources.jar
+[INFO] 
+[INFO] --- scalastyle:1.0.0:check (default) @ spark-tags_2.11 ---
+Saving to outputFile=/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/tags/target/scalastyle-output.xml
+Processed 2 file(s)
+Found 0 errors
+Found 0 warnings
+Found 0 infos
+Finished in 85 ms
+[INFO] 
+[INFO] --- checkstyle:2.17:check (default) @ spark-tags_2.11 ---
+[WARNING]  Parameter 'testSourceDirectory' is deprecated: instead use {@link #testSourceDirectories}
+[INFO] 
+[INFO] --- install:2.5.2:install (default-install) @ spark-tags_2.11 ---
+[INFO] Installing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/tags/target/spark-tags_2.11-2.4.0-SNAPSHOT.jar to /home/RESEARCHER/.m2/repository/org/apache/spark/spark-tags_2.11/2.4.0-SNAPSHOT/spark-tags_2.11-2.4.0-SNAPSHOT.jar
+[INFO] Installing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/tags/dependency-reduced-pom.xml to /home/RESEARCHER/.m2/repository/org/apache/spark/spark-tags_2.11/2.4.0-SNAPSHOT/spark-tags_2.11-2.4.0-SNAPSHOT.pom
+[INFO] Installing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/tags/target/spark-tags_2.11-2.4.0-SNAPSHOT-tests.jar to /home/RESEARCHER/.m2/repository/org/apache/spark/spark-tags_2.11/2.4.0-SNAPSHOT/spark-tags_2.11-2.4.0-SNAPSHOT-tests.jar
+[INFO] Installing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/tags/target/spark-tags_2.11-2.4.0-SNAPSHOT-sources.jar to /home/RESEARCHER/.m2/repository/org/apache/spark/spark-tags_2.11/2.4.0-SNAPSHOT/spark-tags_2.11-2.4.0-SNAPSHOT-sources.jar
+[INFO] Installing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/tags/target/spark-tags_2.11-2.4.0-SNAPSHOT-test-sources.jar to /home/RESEARCHER/.m2/repository/org/apache/spark/spark-tags_2.11/2.4.0-SNAPSHOT/spark-tags_2.11-2.4.0-SNAPSHOT-test-sources.jar
+[INFO] 
+[INFO] ----------------< org.apache.spark:spark-kvstore_2.11 >-----------------
+[INFO] Building Spark Project Local DB 2.4.0-SNAPSHOT                     [3/8]
+[INFO]   from common/kvstore/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.0.0-M1:enforce (enforce-versions) @ spark-kvstore_2.11 ---
+[INFO] 
+[INFO] --- scala:3.2.2:add-source (eclipse-add-source) @ spark-kvstore_2.11 ---
+[INFO] Add Source directory: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/kvstore/src/main/scala
+[INFO] Add Test Source directory: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/kvstore/src/test/scala
+[INFO] 
+[INFO] --- dependency:3.0.2:build-classpath (default-cli) @ spark-kvstore_2.11 ---
+[INFO] Dependencies classpath:
+/home/RESEARCHER/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.6.7/jackson-annotations-2.6.7.jar:/home/RESEARCHER/.m2/repository/org/spark-project/spark/unused/1.0.0/unused-1.0.0.jar:/home/RESEARCHER/.m2/repository/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8.jar:/home/RESEARCHER/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.6.7.1/jackson-databind-2.6.7.1.jar:/home/RESEARCHER/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.6.7/jackson-core-2.6.7.jar:/home/RESEARCHER/.m2/repository/org/fusesource/leveldbjni/leveldbjni-all/1.8/leveldbjni-all-1.8.jar:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/tags/target/spark-tags_2.11-2.4.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- remote-resources:1.5:process (process-resource-bundles) @ spark-kvstore_2.11 ---
+[INFO] 
+[INFO] --- resources:2.7:resources (default-resources) @ spark-kvstore_2.11 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/kvstore/src/main/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- compiler:3.7.0:compile (default-compile) @ spark-kvstore_2.11 ---
+[INFO] Not compiling main sources
+[INFO] 
+[INFO] --- scala:3.2.2:compile (scala-compile-first) @ spark-kvstore_2.11 ---
+[WARNING] Zinc server is not available at port 3030 - reverting to normal incremental compile
+[INFO] Using incremental compilation
+[INFO] 
+[INFO] --- antrun:1.8:run (create-tmp-dir) @ spark-kvstore_2.11 ---
+[INFO] Executing tasks
+
+main:
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- resources:2.7:testResources (default-testResources) @ spark-kvstore_2.11 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- compiler:3.7.0:testCompile (default-testCompile) @ spark-kvstore_2.11 ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- dependency:3.0.2:build-classpath (generate-test-classpath) @ spark-kvstore_2.11 ---
+[INFO] Dependencies classpath:
+/home/RESEARCHER/.m2/repository/org/slf4j/slf4j-log4j12/1.7.16/slf4j-log4j12-1.7.16.jar:/home/RESEARCHER/.m2/repository/org/scala-lang/modules/scala-xml_2.11/1.0.5/scala-xml_2.11-1.0.5.jar:/home/RESEARCHER/.m2/repository/org/scalatest/scalatest_2.11/3.0.3/scalatest_2.11-3.0.3.jar:/home/RESEARCHER/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.6.7/jackson-annotations-2.6.7.jar:/home/RESEARCHER/.m2/repository/org/spark-project/spark/unused/1.0.0/unused-1.0.0.jar:/home/RESEARCHER/.m2/repository/org/scala-sbt/test-interface/1.0/test-interface-1.0.jar:/home/RESEARCHER/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/home/RESEARCHER/.m2/repository/com/novocode/junit-interface/0.11/junit-interface-0.11.jar:/home/RESEARCHER/.m2/repository/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8.jar:/home/RESEARCHER/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar:/home/RESEARCHER/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.6.7.1/jackson-databind-2.6.7.1.jar:/home/RESEARCHER/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/RESEARCHER/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.6.7/jackson-core-2.6.7.jar:/home/RESEARCHER/.m2/repository/org/scalactic/scalactic_2.11/3.0.3/scalactic_2.11-3.0.3.jar:/home/RESEARCHER/.m2/repository/org/scala-lang/scala-reflect/2.11.8/scala-reflect-2.11.8.jar:/home/RESEARCHER/.m2/repository/junit/junit/4.12/junit-4.12.jar:/home/RESEARCHER/.m2/repository/io/dropwizard/metrics/metrics-core/3.1.5/metrics-core-3.1.5.jar:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/tags/target/spark-tags_2.11-2.4.0-SNAPSHOT-tests.jar:/home/RESEARCHER/.m2/repository/org/fusesource/leveldbjni/leveldbjni-all/1.8/leveldbjni-all-1.8.jar:/home/RESEARCHER/.m2/repository/org/slf4j/slf4j-api/1.7.16/slf4j-api-1.7.16.jar:/home/RESEARCHER/.m2/repository/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4.jar:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/tags/target/spark-tags_2.11-2.4.0-SNAPSHOT.jar:/home/RESEARCHER/.m2/repository/com/google/guava/guava/14.0.1/guava-14.0.1.jar
+[INFO] 
+[INFO] --- scala:3.2.2:testCompile (scala-test-compile-first) @ spark-kvstore_2.11 ---
+[WARNING] Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+[WARNING] Zinc server is not available at port 3030 - reverting to normal incremental compile
+[INFO] Using incremental compilation
+[INFO] 
+[INFO] --- surefire:2.20.1:test (default-test) @ spark-kvstore_2.11 ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- surefire:2.20.1:test (test) @ spark-kvstore_2.11 ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- scalatest:1.0:test (test) @ spark-kvstore_2.11 ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.0.2:test-jar (prepare-test-jar) @ spark-kvstore_2.11 ---
+[INFO] Building jar: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/kvstore/target/spark-kvstore_2.11-2.4.0-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- jar:3.0.2:jar (default-jar) @ spark-kvstore_2.11 ---
+[INFO] Building jar: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/kvstore/target/spark-kvstore_2.11-2.4.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- site:3.5.1:attach-descriptor (attach-descriptor) @ spark-kvstore_2.11 ---
+[INFO] 
+[INFO] --- shade:3.1.0:shade (default) @ spark-kvstore_2.11 ---
+[INFO] Excluding org.apache.spark:spark-tags_2.11:jar:2.4.0-SNAPSHOT from the shaded jar.
+[INFO] Excluding org.scala-lang:scala-library:jar:2.11.8 from the shaded jar.
+[INFO] Excluding org.fusesource.leveldbjni:leveldbjni-all:jar:1.8 from the shaded jar.
+[INFO] Excluding com.fasterxml.jackson.core:jackson-core:jar:2.6.7 from the shaded jar.
+[INFO] Excluding com.fasterxml.jackson.core:jackson-databind:jar:2.6.7.1 from the shaded jar.
+[INFO] Excluding com.fasterxml.jackson.core:jackson-annotations:jar:2.6.7 from the shaded jar.
+[INFO] Including org.spark-project.spark:unused:jar:1.0.0 in the shaded jar.
+[INFO] Replacing original artifact with shaded artifact.
+[INFO] Replacing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/kvstore/target/spark-kvstore_2.11-2.4.0-SNAPSHOT.jar with /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/kvstore/target/spark-kvstore_2.11-2.4.0-SNAPSHOT-shaded.jar
+[INFO] Dependency-reduced POM written at: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/kvstore/dependency-reduced-pom.xml
+[INFO] 
+[INFO] --- source:3.0.1:jar-no-fork (create-source-jar) @ spark-kvstore_2.11 ---
+[INFO] Building jar: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/kvstore/target/spark-kvstore_2.11-2.4.0-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- source:3.0.1:test-jar-no-fork (create-source-jar) @ spark-kvstore_2.11 ---
+[INFO] Building jar: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/kvstore/target/spark-kvstore_2.11-2.4.0-SNAPSHOT-test-sources.jar
+[INFO] 
+[INFO] --- scalastyle:1.0.0:check (default) @ spark-kvstore_2.11 ---
+[WARNING] sourceDirectory is not specified or does not exist value=/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/kvstore/src/main/scala
+Saving to outputFile=/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/kvstore/target/scalastyle-output.xml
+Processed 0 file(s)
+Found 0 errors
+Found 0 warnings
+Found 0 infos
+Finished in 1 ms
+[INFO] 
+[INFO] --- checkstyle:2.17:check (default) @ spark-kvstore_2.11 ---
+[WARNING]  Parameter 'testSourceDirectory' is deprecated: instead use {@link #testSourceDirectories}
+[INFO] 
+[INFO] --- install:2.5.2:install (default-install) @ spark-kvstore_2.11 ---
+[INFO] Installing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/kvstore/target/spark-kvstore_2.11-2.4.0-SNAPSHOT.jar to /home/RESEARCHER/.m2/repository/org/apache/spark/spark-kvstore_2.11/2.4.0-SNAPSHOT/spark-kvstore_2.11-2.4.0-SNAPSHOT.jar
+[INFO] Installing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/kvstore/dependency-reduced-pom.xml to /home/RESEARCHER/.m2/repository/org/apache/spark/spark-kvstore_2.11/2.4.0-SNAPSHOT/spark-kvstore_2.11-2.4.0-SNAPSHOT.pom
+[INFO] Installing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/kvstore/target/spark-kvstore_2.11-2.4.0-SNAPSHOT-tests.jar to /home/RESEARCHER/.m2/repository/org/apache/spark/spark-kvstore_2.11/2.4.0-SNAPSHOT/spark-kvstore_2.11-2.4.0-SNAPSHOT-tests.jar
+[INFO] Installing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/kvstore/target/spark-kvstore_2.11-2.4.0-SNAPSHOT-sources.jar to /home/RESEARCHER/.m2/repository/org/apache/spark/spark-kvstore_2.11/2.4.0-SNAPSHOT/spark-kvstore_2.11-2.4.0-SNAPSHOT-sources.jar
+[INFO] Installing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/kvstore/target/spark-kvstore_2.11-2.4.0-SNAPSHOT-test-sources.jar to /home/RESEARCHER/.m2/repository/org/apache/spark/spark-kvstore_2.11/2.4.0-SNAPSHOT/spark-kvstore_2.11-2.4.0-SNAPSHOT-test-sources.jar
+[INFO] 
+[INFO] -------------< org.apache.spark:spark-network-common_2.11 >-------------
+[INFO] Building Spark Project Networking 2.4.0-SNAPSHOT                   [4/8]
+[INFO]   from common/network-common/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.0.0-M1:enforce (enforce-versions) @ spark-network-common_2.11 ---
+[INFO] 
+[INFO] --- scala:3.2.2:add-source (eclipse-add-source) @ spark-network-common_2.11 ---
+[INFO] Add Source directory: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-common/src/main/scala
+[INFO] Add Test Source directory: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-common/src/test/scala
+[INFO] 
+[INFO] --- dependency:3.0.2:build-classpath (default-cli) @ spark-network-common_2.11 ---
+[INFO] Dependencies classpath:
+/home/RESEARCHER/.m2/repository/org/apache/commons/commons-crypto/1.0.0/commons-crypto-1.0.0.jar:/home/RESEARCHER/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.6.7/jackson-annotations-2.6.7.jar:/home/RESEARCHER/.m2/repository/org/spark-project/spark/unused/1.0.0/unused-1.0.0.jar:/home/RESEARCHER/.m2/repository/io/dropwizard/metrics/metrics-core/3.1.5/metrics-core-3.1.5.jar:/home/RESEARCHER/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/home/RESEARCHER/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.6.7.1/jackson-databind-2.6.7.1.jar:/home/RESEARCHER/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.6.7/jackson-core-2.6.7.jar:/home/RESEARCHER/.m2/repository/org/fusesource/leveldbjni/leveldbjni-all/1.8/leveldbjni-all-1.8.jar:/home/RESEARCHER/.m2/repository/io/netty/netty-all/4.1.17.Final/netty-all-4.1.17.Final.jar:/home/RESEARCHER/.m2/repository/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5.jar:/home/RESEARCHER/.m2/repository/com/google/guava/guava/14.0.1/guava-14.0.1.jar
+[INFO] 
+[INFO] --- remote-resources:1.5:process (process-resource-bundles) @ spark-network-common_2.11 ---
+[INFO] 
+[INFO] --- resources:2.7:resources (default-resources) @ spark-network-common_2.11 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-common/src/main/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- compiler:3.7.0:compile (default-compile) @ spark-network-common_2.11 ---
+[INFO] Not compiling main sources
+[INFO] 
+[INFO] --- scala:3.2.2:compile (scala-compile-first) @ spark-network-common_2.11 ---
+[WARNING] Zinc server is not available at port 3030 - reverting to normal incremental compile
+[INFO] Using incremental compilation
+[INFO] 
+[INFO] --- antrun:1.8:run (create-tmp-dir) @ spark-network-common_2.11 ---
+[INFO] Executing tasks
+
+main:
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- resources:2.7:testResources (default-testResources) @ spark-network-common_2.11 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- compiler:3.7.0:testCompile (default-testCompile) @ spark-network-common_2.11 ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- dependency:3.0.2:build-classpath (generate-test-classpath) @ spark-network-common_2.11 ---
+[INFO] Dependencies classpath:
+/home/RESEARCHER/.m2/repository/org/scala-lang/modules/scala-xml_2.11/1.0.5/scala-xml_2.11-1.0.5.jar:/home/RESEARCHER/.m2/repository/org/scalatest/scalatest_2.11/3.0.3/scalatest_2.11-3.0.3.jar:/home/RESEARCHER/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.6.7/jackson-annotations-2.6.7.jar:/home/RESEARCHER/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/home/RESEARCHER/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/home/RESEARCHER/.m2/repository/com/novocode/junit-interface/0.11/junit-interface-0.11.jar:/home/RESEARCHER/.m2/repository/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8.jar:/home/RESEARCHER/.m2/repository/org/scalactic/scalactic_2.11/3.0.3/scalactic_2.11-3.0.3.jar:/home/RESEARCHER/.m2/repository/org/mockito/mockito-core/1.10.19/mockito-core-1.10.19.jar:/home/RESEARCHER/.m2/repository/io/dropwizard/metrics/metrics-core/3.1.5/metrics-core-3.1.5.jar:/home/RESEARCHER/.m2/repository/org/fusesource/leveldbjni/leveldbjni-all/1.8/leveldbjni-all-1.8.jar:/home/RESEARCHER/.m2/repository/org/slf4j/slf4j-api/1.7.16/slf4j-api-1.7.16.jar:/home/RESEARCHER/.m2/repository/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4.jar:/home/RESEARCHER/.m2/repository/com/google/guava/guava/14.0.1/guava-14.0.1.jar:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/tags/target/spark-tags_2.11-2.4.0-SNAPSHOT.jar:/home/RESEARCHER/.m2/repository/org/objenesis/objenesis/2.1/objenesis-2.1.jar:/home/RESEARCHER/.m2/repository/org/slf4j/slf4j-log4j12/1.7.16/slf4j-log4j12-1.7.16.jar:/home/RESEARCHER/.m2/repository/org/apache/commons/commons-crypto/1.0.0/commons-crypto-1.0.0.jar:/home/RESEARCHER/.m2/repository/org/spark-project/spark/unused/1.0.0/unused-1.0.0.jar:/home/RESEARCHER/.m2/repository/org/scala-sbt/test-interface/1.0/test-interface-1.0.jar:/home/RESEARCHER/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.6.7.1/jackson-databind-2.6.7.1.jar:/home/RESEARCHER/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/RESEARCHER/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.6.7/jackson-core-2.6.7.jar:/home/RESEARCHER/.m2/repository/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5.jar:/home/RESEARCHER/.m2/repository/org/scala-lang/scala-reflect/2.11.8/scala-reflect-2.11.8.jar:/home/RESEARCHER/.m2/repository/junit/junit/4.12/junit-4.12.jar:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/tags/target/spark-tags_2.11-2.4.0-SNAPSHOT-tests.jar:/home/RESEARCHER/.m2/repository/io/netty/netty-all/4.1.17.Final/netty-all-4.1.17.Final.jar
+[INFO] 
+[INFO] --- scala:3.2.2:testCompile (scala-test-compile-first) @ spark-network-common_2.11 ---
+[WARNING] Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+[WARNING] Zinc server is not available at port 3030 - reverting to normal incremental compile
+[INFO] Using incremental compilation
+[INFO] 
+[INFO] --- jar:3.0.2:test-jar (prepare-test-jar) @ spark-network-common_2.11 ---
+[INFO] Building jar: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-common/target/spark-network-common_2.11-2.4.0-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- surefire:2.20.1:test (default-test) @ spark-network-common_2.11 ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- surefire:2.20.1:test (test) @ spark-network-common_2.11 ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- scalatest:1.0:test (test) @ spark-network-common_2.11 ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.0.2:jar (default-jar) @ spark-network-common_2.11 ---
+[INFO] Building jar: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-common/target/spark-network-common_2.11-2.4.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- site:3.5.1:attach-descriptor (attach-descriptor) @ spark-network-common_2.11 ---
+[INFO] 
+[INFO] --- shade:3.1.0:shade (default) @ spark-network-common_2.11 ---
+[INFO] Excluding io.netty:netty-all:jar:4.1.17.Final from the shaded jar.
+[INFO] Excluding org.apache.commons:commons-lang3:jar:3.5 from the shaded jar.
+[INFO] Excluding org.fusesource.leveldbjni:leveldbjni-all:jar:1.8 from the shaded jar.
+[INFO] Excluding com.fasterxml.jackson.core:jackson-databind:jar:2.6.7.1 from the shaded jar.
+[INFO] Excluding com.fasterxml.jackson.core:jackson-core:jar:2.6.7 from the shaded jar.
+[INFO] Excluding com.fasterxml.jackson.core:jackson-annotations:jar:2.6.7 from the shaded jar.
+[INFO] Excluding io.dropwizard.metrics:metrics-core:jar:3.1.5 from the shaded jar.
+[INFO] Excluding com.google.code.findbugs:jsr305:jar:1.3.9 from the shaded jar.
+[INFO] Including com.google.guava:guava:jar:14.0.1 in the shaded jar.
+[INFO] Excluding org.apache.commons:commons-crypto:jar:1.0.0 from the shaded jar.
+[INFO] Including org.spark-project.spark:unused:jar:1.0.0 in the shaded jar.
+[INFO] Replacing original artifact with shaded artifact.
+[INFO] Replacing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-common/target/spark-network-common_2.11-2.4.0-SNAPSHOT.jar with /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-common/target/spark-network-common_2.11-2.4.0-SNAPSHOT-shaded.jar
+[INFO] Dependency-reduced POM written at: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-common/dependency-reduced-pom.xml
+[INFO] 
+[INFO] --- source:3.0.1:jar-no-fork (create-source-jar) @ spark-network-common_2.11 ---
+[INFO] Building jar: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-common/target/spark-network-common_2.11-2.4.0-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- source:3.0.1:test-jar-no-fork (create-source-jar) @ spark-network-common_2.11 ---
+[INFO] Building jar: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-common/target/spark-network-common_2.11-2.4.0-SNAPSHOT-test-sources.jar
+[INFO] 
+[INFO] --- scalastyle:1.0.0:check (default) @ spark-network-common_2.11 ---
+[WARNING] sourceDirectory is not specified or does not exist value=/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-common/src/main/scala
+Saving to outputFile=/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-common/target/scalastyle-output.xml
+Processed 0 file(s)
+Found 0 errors
+Found 0 warnings
+Found 0 infos
+Finished in 0 ms
+[INFO] 
+[INFO] --- checkstyle:2.17:check (default) @ spark-network-common_2.11 ---
+[WARNING]  Parameter 'testSourceDirectory' is deprecated: instead use {@link #testSourceDirectories}
+[INFO] 
+[INFO] --- install:2.5.2:install (default-install) @ spark-network-common_2.11 ---
+[INFO] Installing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-common/target/spark-network-common_2.11-2.4.0-SNAPSHOT.jar to /home/RESEARCHER/.m2/repository/org/apache/spark/spark-network-common_2.11/2.4.0-SNAPSHOT/spark-network-common_2.11-2.4.0-SNAPSHOT.jar
+[INFO] Installing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-common/dependency-reduced-pom.xml to /home/RESEARCHER/.m2/repository/org/apache/spark/spark-network-common_2.11/2.4.0-SNAPSHOT/spark-network-common_2.11-2.4.0-SNAPSHOT.pom
+[INFO] Installing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-common/target/spark-network-common_2.11-2.4.0-SNAPSHOT-tests.jar to /home/RESEARCHER/.m2/repository/org/apache/spark/spark-network-common_2.11/2.4.0-SNAPSHOT/spark-network-common_2.11-2.4.0-SNAPSHOT-tests.jar
+[INFO] Installing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-common/target/spark-network-common_2.11-2.4.0-SNAPSHOT-sources.jar to /home/RESEARCHER/.m2/repository/org/apache/spark/spark-network-common_2.11/2.4.0-SNAPSHOT/spark-network-common_2.11-2.4.0-SNAPSHOT-sources.jar
+[INFO] Installing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-common/target/spark-network-common_2.11-2.4.0-SNAPSHOT-test-sources.jar to /home/RESEARCHER/.m2/repository/org/apache/spark/spark-network-common_2.11/2.4.0-SNAPSHOT/spark-network-common_2.11-2.4.0-SNAPSHOT-test-sources.jar
+[INFO] 
+[INFO] ------------< org.apache.spark:spark-network-shuffle_2.11 >-------------
+[INFO] Building Spark Project Shuffle Streaming Service 2.4.0-SNAPSHOT    [5/8]
+[INFO]   from common/network-shuffle/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.0.0-M1:enforce (enforce-versions) @ spark-network-shuffle_2.11 ---
+[INFO] 
+[INFO] --- scala:3.2.2:add-source (eclipse-add-source) @ spark-network-shuffle_2.11 ---
+[INFO] Add Source directory: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-shuffle/src/main/scala
+[INFO] Add Test Source directory: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-shuffle/src/test/scala
+[INFO] 
+[INFO] --- dependency:3.0.2:build-classpath (default-cli) @ spark-network-shuffle_2.11 ---
+[INFO] Dependencies classpath:
+/home/RESEARCHER/.m2/repository/org/apache/commons/commons-crypto/1.0.0/commons-crypto-1.0.0.jar:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-common/target/spark-network-common_2.11-2.4.0-SNAPSHOT.jar:/home/RESEARCHER/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.6.7/jackson-annotations-2.6.7.jar:/home/RESEARCHER/.m2/repository/org/spark-project/spark/unused/1.0.0/unused-1.0.0.jar:/home/RESEARCHER/.m2/repository/io/dropwizard/metrics/metrics-core/3.1.5/metrics-core-3.1.5.jar:/home/RESEARCHER/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/home/RESEARCHER/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.6.7.1/jackson-databind-2.6.7.1.jar:/home/RESEARCHER/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.6.7/jackson-core-2.6.7.jar:/home/RESEARCHER/.m2/repository/org/fusesource/leveldbjni/leveldbjni-all/1.8/leveldbjni-all-1.8.jar:/home/RESEARCHER/.m2/repository/io/netty/netty-all/4.1.17.Final/netty-all-4.1.17.Final.jar:/home/RESEARCHER/.m2/repository/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5.jar
+[INFO] 
+[INFO] --- remote-resources:1.5:process (process-resource-bundles) @ spark-network-shuffle_2.11 ---
+[INFO] 
+[INFO] --- resources:2.7:resources (default-resources) @ spark-network-shuffle_2.11 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-shuffle/src/main/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- compiler:3.7.0:compile (default-compile) @ spark-network-shuffle_2.11 ---
+[INFO] Not compiling main sources
+[INFO] 
+[INFO] --- scala:3.2.2:compile (scala-compile-first) @ spark-network-shuffle_2.11 ---
+[WARNING] Zinc server is not available at port 3030 - reverting to normal incremental compile
+[INFO] Using incremental compilation
+[INFO] Compiling 20 Java sources to /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-shuffle/target/scala-2.11/classes...
+[INFO] 
+[INFO] --- antrun:1.8:run (create-tmp-dir) @ spark-network-shuffle_2.11 ---
+[INFO] Executing tasks
+
+main:
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- resources:2.7:testResources (default-testResources) @ spark-network-shuffle_2.11 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- compiler:3.7.0:testCompile (default-testCompile) @ spark-network-shuffle_2.11 ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- dependency:3.0.2:build-classpath (generate-test-classpath) @ spark-network-shuffle_2.11 ---
+[INFO] Dependencies classpath:
+/home/RESEARCHER/.m2/repository/org/scala-lang/modules/scala-xml_2.11/1.0.5/scala-xml_2.11-1.0.5.jar:/home/RESEARCHER/.m2/repository/org/scalatest/scalatest_2.11/3.0.3/scalatest_2.11-3.0.3.jar:/home/RESEARCHER/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.6.7/jackson-annotations-2.6.7.jar:/home/RESEARCHER/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/home/RESEARCHER/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/home/RESEARCHER/.m2/repository/com/novocode/junit-interface/0.11/junit-interface-0.11.jar:/home/RESEARCHER/.m2/repository/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8.jar:/home/RESEARCHER/.m2/repository/org/scalactic/scalactic_2.11/3.0.3/scalactic_2.11-3.0.3.jar:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-common/target/spark-network-common_2.11-2.4.0-SNAPSHOT-tests.jar:/home/RESEARCHER/.m2/repository/org/mockito/mockito-core/1.10.19/mockito-core-1.10.19.jar:/home/RESEARCHER/.m2/repository/io/dropwizard/metrics/metrics-core/3.1.5/metrics-core-3.1.5.jar:/home/RESEARCHER/.m2/repository/org/fusesource/leveldbjni/leveldbjni-all/1.8/leveldbjni-all-1.8.jar:/home/RESEARCHER/.m2/repository/org/slf4j/slf4j-api/1.7.16/slf4j-api-1.7.16.jar:/home/RESEARCHER/.m2/repository/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4.jar:/home/RESEARCHER/.m2/repository/com/google/guava/guava/14.0.1/guava-14.0.1.jar:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/tags/target/spark-tags_2.11-2.4.0-SNAPSHOT.jar:/home/RESEARCHER/.m2/repository/org/objenesis/objenesis/2.1/objenesis-2.1.jar:/home/RESEARCHER/.m2/repository/org/apache/commons/commons-crypto/1.0.0/commons-crypto-1.0.0.jar:/home/RESEARCHER/.m2/repository/org/spark-project/spark/unused/1.0.0/unused-1.0.0.jar:/home/RESEARCHER/.m2/repository/org/scala-sbt/test-interface/1.0/test-interface-1.0.jar:/home/RESEARCHER/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.6.7.1/jackson-databind-2.6.7.1.jar:/home/RESEARCHER/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/RESEARCHER/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.6.7/jackson-core-2.6.7.jar:/home/RESEARCHER/.m2/repository/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5.jar:/home/RESEARCHER/.m2/repository/org/scala-lang/scala-reflect/2.11.8/scala-reflect-2.11.8.jar:/home/RESEARCHER/.m2/repository/junit/junit/4.12/junit-4.12.jar:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-common/target/spark-network-common_2.11-2.4.0-SNAPSHOT.jar:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/tags/target/spark-tags_2.11-2.4.0-SNAPSHOT-tests.jar:/home/RESEARCHER/.m2/repository/io/netty/netty-all/4.1.17.Final/netty-all-4.1.17.Final.jar
+[INFO] 
+[INFO] --- scala:3.2.2:testCompile (scala-test-compile-first) @ spark-network-shuffle_2.11 ---
+[WARNING] Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+[WARNING] Zinc server is not available at port 3030 - reverting to normal incremental compile
+[INFO] Using incremental compilation
+[INFO] Compiling 11 Java sources to /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-shuffle/target/scala-2.11/test-classes...
+[INFO] 
+[INFO] --- surefire:2.20.1:test (default-test) @ spark-network-shuffle_2.11 ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- surefire:2.20.1:test (test) @ spark-network-shuffle_2.11 ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- scalatest:1.0:test (test) @ spark-network-shuffle_2.11 ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.0.2:test-jar (prepare-test-jar) @ spark-network-shuffle_2.11 ---
+[INFO] Building jar: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-shuffle/target/spark-network-shuffle_2.11-2.4.0-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- jar:3.0.2:jar (default-jar) @ spark-network-shuffle_2.11 ---
+[INFO] Building jar: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-shuffle/target/spark-network-shuffle_2.11-2.4.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- site:3.5.1:attach-descriptor (attach-descriptor) @ spark-network-shuffle_2.11 ---
+[INFO] 
+[INFO] --- shade:3.1.0:shade (default) @ spark-network-shuffle_2.11 ---
+[INFO] Excluding org.apache.spark:spark-network-common_2.11:jar:2.4.0-SNAPSHOT from the shaded jar.
+[INFO] Excluding io.netty:netty-all:jar:4.1.17.Final from the shaded jar.
+[INFO] Excluding org.apache.commons:commons-lang3:jar:3.5 from the shaded jar.
+[INFO] Excluding org.fusesource.leveldbjni:leveldbjni-all:jar:1.8 from the shaded jar.
+[INFO] Excluding com.fasterxml.jackson.core:jackson-databind:jar:2.6.7.1 from the shaded jar.
+[INFO] Excluding com.fasterxml.jackson.core:jackson-core:jar:2.6.7 from the shaded jar.
+[INFO] Excluding com.fasterxml.jackson.core:jackson-annotations:jar:2.6.7 from the shaded jar.
+[INFO] Excluding com.google.code.findbugs:jsr305:jar:1.3.9 from the shaded jar.
+[INFO] Excluding org.apache.commons:commons-crypto:jar:1.0.0 from the shaded jar.
+[INFO] Excluding io.dropwizard.metrics:metrics-core:jar:3.1.5 from the shaded jar.
+[INFO] Including org.spark-project.spark:unused:jar:1.0.0 in the shaded jar.
+[INFO] Replacing original artifact with shaded artifact.
+[INFO] Replacing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-shuffle/target/spark-network-shuffle_2.11-2.4.0-SNAPSHOT.jar with /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-shuffle/target/spark-network-shuffle_2.11-2.4.0-SNAPSHOT-shaded.jar
+[INFO] Dependency-reduced POM written at: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-shuffle/dependency-reduced-pom.xml
+[INFO] 
+[INFO] --- source:3.0.1:jar-no-fork (create-source-jar) @ spark-network-shuffle_2.11 ---
+[INFO] Building jar: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-shuffle/target/spark-network-shuffle_2.11-2.4.0-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- source:3.0.1:test-jar-no-fork (create-source-jar) @ spark-network-shuffle_2.11 ---
+[INFO] Building jar: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-shuffle/target/spark-network-shuffle_2.11-2.4.0-SNAPSHOT-test-sources.jar
+[INFO] 
+[INFO] --- scalastyle:1.0.0:check (default) @ spark-network-shuffle_2.11 ---
+[WARNING] sourceDirectory is not specified or does not exist value=/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-shuffle/src/main/scala
+Saving to outputFile=/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-shuffle/target/scalastyle-output.xml
+Processed 0 file(s)
+Found 0 errors
+Found 0 warnings
+Found 0 infos
+Finished in 1 ms
+[INFO] 
+[INFO] --- checkstyle:2.17:check (default) @ spark-network-shuffle_2.11 ---
+[WARNING]  Parameter 'testSourceDirectory' is deprecated: instead use {@link #testSourceDirectories}
+[INFO] 
+[INFO] --- install:2.5.2:install (default-install) @ spark-network-shuffle_2.11 ---
+[INFO] Installing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-shuffle/target/spark-network-shuffle_2.11-2.4.0-SNAPSHOT.jar to /home/RESEARCHER/.m2/repository/org/apache/spark/spark-network-shuffle_2.11/2.4.0-SNAPSHOT/spark-network-shuffle_2.11-2.4.0-SNAPSHOT.jar
+[INFO] Installing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-shuffle/dependency-reduced-pom.xml to /home/RESEARCHER/.m2/repository/org/apache/spark/spark-network-shuffle_2.11/2.4.0-SNAPSHOT/spark-network-shuffle_2.11-2.4.0-SNAPSHOT.pom
+[INFO] Installing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-shuffle/target/spark-network-shuffle_2.11-2.4.0-SNAPSHOT-tests.jar to /home/RESEARCHER/.m2/repository/org/apache/spark/spark-network-shuffle_2.11/2.4.0-SNAPSHOT/spark-network-shuffle_2.11-2.4.0-SNAPSHOT-tests.jar
+[INFO] Installing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-shuffle/target/spark-network-shuffle_2.11-2.4.0-SNAPSHOT-sources.jar to /home/RESEARCHER/.m2/repository/org/apache/spark/spark-network-shuffle_2.11/2.4.0-SNAPSHOT/spark-network-shuffle_2.11-2.4.0-SNAPSHOT-sources.jar
+[INFO] Installing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-shuffle/target/spark-network-shuffle_2.11-2.4.0-SNAPSHOT-test-sources.jar to /home/RESEARCHER/.m2/repository/org/apache/spark/spark-network-shuffle_2.11/2.4.0-SNAPSHOT/spark-network-shuffle_2.11-2.4.0-SNAPSHOT-test-sources.jar
+[INFO] 
+[INFO] -----------------< org.apache.spark:spark-unsafe_2.11 >-----------------
+[INFO] Building Spark Project Unsafe 2.4.0-SNAPSHOT                       [6/8]
+[INFO]   from common/unsafe/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.0.0-M1:enforce (enforce-versions) @ spark-unsafe_2.11 ---
+[INFO] 
+[INFO] --- scala:3.2.2:add-source (eclipse-add-source) @ spark-unsafe_2.11 ---
+[INFO] Add Source directory: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/unsafe/src/main/scala
+[INFO] Add Test Source directory: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/unsafe/src/test/scala
+[INFO] 
+[INFO] --- dependency:3.0.2:build-classpath (default-cli) @ spark-unsafe_2.11 ---
+[INFO] Dependencies classpath:
+/home/RESEARCHER/.m2/repository/com/twitter/chill_2.11/0.8.4/chill_2.11-0.8.4.jar:/home/RESEARCHER/.m2/repository/com/esotericsoftware/minlog/1.3.0/minlog-1.3.0.jar:/home/RESEARCHER/.m2/repository/org/spark-project/spark/unused/1.0.0/unused-1.0.0.jar:/home/RESEARCHER/.m2/repository/com/twitter/chill-java/0.8.4/chill-java-0.8.4.jar:/home/RESEARCHER/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/home/RESEARCHER/.m2/repository/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8.jar:/home/RESEARCHER/.m2/repository/com/esotericsoftware/kryo-shaded/3.0.3/kryo-shaded-3.0.3.jar:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/tags/target/spark-tags_2.11-2.4.0-SNAPSHOT.jar:/home/RESEARCHER/.m2/repository/org/objenesis/objenesis/2.1/objenesis-2.1.jar
+[INFO] 
+[INFO] --- remote-resources:1.5:process (process-resource-bundles) @ spark-unsafe_2.11 ---
+[INFO] 
+[INFO] --- resources:2.7:resources (default-resources) @ spark-unsafe_2.11 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/unsafe/src/main/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- compiler:3.7.0:compile (default-compile) @ spark-unsafe_2.11 ---
+[INFO] Not compiling main sources
+[INFO] 
+[INFO] --- scala:3.2.2:compile (scala-compile-first) @ spark-unsafe_2.11 ---
+[WARNING] Zinc server is not available at port 3030 - reverting to normal incremental compile
+[INFO] Using incremental compilation
+[INFO] 
+[INFO] --- antrun:1.8:run (create-tmp-dir) @ spark-unsafe_2.11 ---
+[INFO] Executing tasks
+
+main:
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- resources:2.7:testResources (default-testResources) @ spark-unsafe_2.11 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/unsafe/src/test/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- compiler:3.7.0:testCompile (default-testCompile) @ spark-unsafe_2.11 ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- dependency:3.0.2:build-classpath (generate-test-classpath) @ spark-unsafe_2.11 ---
+[INFO] Dependencies classpath:
+/home/RESEARCHER/.m2/repository/org/scala-lang/modules/scala-xml_2.11/1.0.5/scala-xml_2.11-1.0.5.jar:/home/RESEARCHER/.m2/repository/org/scalatest/scalatest_2.11/3.0.3/scalatest_2.11-3.0.3.jar:/home/RESEARCHER/.m2/repository/org/spark-project/spark/unused/1.0.0/unused-1.0.0.jar:/home/RESEARCHER/.m2/repository/com/twitter/chill-java/0.8.4/chill-java-0.8.4.jar:/home/RESEARCHER/.m2/repository/org/scala-sbt/test-interface/1.0/test-interface-1.0.jar:/home/RESEARCHER/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/home/RESEARCHER/.m2/repository/com/novocode/junit-interface/0.11/junit-interface-0.11.jar:/home/RESEARCHER/.m2/repository/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8.jar:/home/RESEARCHER/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/RESEARCHER/.m2/repository/org/scalactic/scalactic_2.11/3.0.3/scalactic_2.11-3.0.3.jar:/home/RESEARCHER/.m2/repository/com/esotericsoftware/kryo-shaded/3.0.3/kryo-shaded-3.0.3.jar:/home/RESEARCHER/.m2/repository/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5.jar:/home/RESEARCHER/.m2/repository/org/scala-lang/scala-reflect/2.11.8/scala-reflect-2.11.8.jar:/home/RESEARCHER/.m2/repository/junit/junit/4.12/junit-4.12.jar:/home/RESEARCHER/.m2/repository/com/twitter/chill_2.11/0.8.4/chill_2.11-0.8.4.jar:/home/RESEARCHER/.m2/repository/com/esotericsoftware/minlog/1.3.0/minlog-1.3.0.jar:/home/RESEARCHER/.m2/repository/org/mockito/mockito-core/1.10.19/mockito-core-1.10.19.jar:/home/RESEARCHER/.m2/repository/org/scalacheck/scalacheck_2.11/1.13.5/scalacheck_2.11-1.13.5.jar:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/tags/target/spark-tags_2.11-2.4.0-SNAPSHOT-tests.jar:/home/RESEARCHER/.m2/repository/org/slf4j/slf4j-api/1.7.16/slf4j-api-1.7.16.jar:/home/RESEARCHER/.m2/repository/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4.jar:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/tags/target/spark-tags_2.11-2.4.0-SNAPSHOT.jar:/home/RESEARCHER/.m2/repository/com/google/guava/guava/14.0.1/guava-14.0.1.jar:/home/RESEARCHER/.m2/repository/org/objenesis/objenesis/2.1/objenesis-2.1.jar
+[INFO] 
+[INFO] --- scala:3.2.2:testCompile (scala-test-compile-first) @ spark-unsafe_2.11 ---
+[WARNING] Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+[WARNING] Zinc server is not available at port 3030 - reverting to normal incremental compile
+[INFO] Using incremental compilation
+[INFO] 
+[INFO] --- surefire:2.20.1:test (default-test) @ spark-unsafe_2.11 ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- surefire:2.20.1:test (test) @ spark-unsafe_2.11 ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- scalatest:1.0:test (test) @ spark-unsafe_2.11 ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.0.2:test-jar (prepare-test-jar) @ spark-unsafe_2.11 ---
+[INFO] Building jar: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/unsafe/target/spark-unsafe_2.11-2.4.0-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- jar:3.0.2:jar (default-jar) @ spark-unsafe_2.11 ---
+[INFO] Building jar: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/unsafe/target/spark-unsafe_2.11-2.4.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- site:3.5.1:attach-descriptor (attach-descriptor) @ spark-unsafe_2.11 ---
+[INFO] 
+[INFO] --- shade:3.1.0:shade (default) @ spark-unsafe_2.11 ---
+[INFO] Excluding org.apache.spark:spark-tags_2.11:jar:2.4.0-SNAPSHOT from the shaded jar.
+[INFO] Excluding org.scala-lang:scala-library:jar:2.11.8 from the shaded jar.
+[INFO] Excluding com.twitter:chill_2.11:jar:0.8.4 from the shaded jar.
+[INFO] Excluding com.twitter:chill-java:jar:0.8.4 from the shaded jar.
+[INFO] Excluding com.esotericsoftware:kryo-shaded:jar:3.0.3 from the shaded jar.
+[INFO] Excluding com.esotericsoftware:minlog:jar:1.3.0 from the shaded jar.
+[INFO] Excluding com.google.code.findbugs:jsr305:jar:1.3.9 from the shaded jar.
+[INFO] Excluding org.objenesis:objenesis:jar:2.1 from the shaded jar.
+[INFO] Including org.spark-project.spark:unused:jar:1.0.0 in the shaded jar.
+[INFO] Replacing original artifact with shaded artifact.
+[INFO] Replacing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/unsafe/target/spark-unsafe_2.11-2.4.0-SNAPSHOT.jar with /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/unsafe/target/spark-unsafe_2.11-2.4.0-SNAPSHOT-shaded.jar
+[INFO] Dependency-reduced POM written at: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/unsafe/dependency-reduced-pom.xml
+[INFO] 
+[INFO] --- source:3.0.1:jar-no-fork (create-source-jar) @ spark-unsafe_2.11 ---
+[INFO] Building jar: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/unsafe/target/spark-unsafe_2.11-2.4.0-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- source:3.0.1:test-jar-no-fork (create-source-jar) @ spark-unsafe_2.11 ---
+[INFO] Building jar: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/unsafe/target/spark-unsafe_2.11-2.4.0-SNAPSHOT-test-sources.jar
+[INFO] 
+[INFO] --- scalastyle:1.0.0:check (default) @ spark-unsafe_2.11 ---
+[WARNING] sourceDirectory is not specified or does not exist value=/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/unsafe/src/main/scala
+Saving to outputFile=/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/unsafe/target/scalastyle-output.xml
+Processed 0 file(s)
+Found 0 errors
+Found 0 warnings
+Found 0 infos
+Finished in 1 ms
+[INFO] 
+[INFO] --- checkstyle:2.17:check (default) @ spark-unsafe_2.11 ---
+[WARNING]  Parameter 'testSourceDirectory' is deprecated: instead use {@link #testSourceDirectories}
+[INFO] 
+[INFO] --- install:2.5.2:install (default-install) @ spark-unsafe_2.11 ---
+[INFO] Installing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/unsafe/target/spark-unsafe_2.11-2.4.0-SNAPSHOT.jar to /home/RESEARCHER/.m2/repository/org/apache/spark/spark-unsafe_2.11/2.4.0-SNAPSHOT/spark-unsafe_2.11-2.4.0-SNAPSHOT.jar
+[INFO] Installing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/unsafe/dependency-reduced-pom.xml to /home/RESEARCHER/.m2/repository/org/apache/spark/spark-unsafe_2.11/2.4.0-SNAPSHOT/spark-unsafe_2.11-2.4.0-SNAPSHOT.pom
+[INFO] Installing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/unsafe/target/spark-unsafe_2.11-2.4.0-SNAPSHOT-tests.jar to /home/RESEARCHER/.m2/repository/org/apache/spark/spark-unsafe_2.11/2.4.0-SNAPSHOT/spark-unsafe_2.11-2.4.0-SNAPSHOT-tests.jar
+[INFO] Installing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/unsafe/target/spark-unsafe_2.11-2.4.0-SNAPSHOT-sources.jar to /home/RESEARCHER/.m2/repository/org/apache/spark/spark-unsafe_2.11/2.4.0-SNAPSHOT/spark-unsafe_2.11-2.4.0-SNAPSHOT-sources.jar
+[INFO] Installing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/unsafe/target/spark-unsafe_2.11-2.4.0-SNAPSHOT-test-sources.jar to /home/RESEARCHER/.m2/repository/org/apache/spark/spark-unsafe_2.11/2.4.0-SNAPSHOT/spark-unsafe_2.11-2.4.0-SNAPSHOT-test-sources.jar
+[INFO] 
+[INFO] ----------------< org.apache.spark:spark-launcher_2.11 >----------------
+[INFO] Building Spark Project Launcher 2.4.0-SNAPSHOT                     [7/8]
+[INFO]   from launcher/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.0.0-M1:enforce (enforce-versions) @ spark-launcher_2.11 ---
+[INFO] 
+[INFO] --- scala:3.2.2:add-source (eclipse-add-source) @ spark-launcher_2.11 ---
+[INFO] Add Source directory: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/launcher/src/main/scala
+[INFO] Add Test Source directory: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/launcher/src/test/scala
+[INFO] 
+[INFO] --- dependency:3.0.2:build-classpath (default-cli) @ spark-launcher_2.11 ---
+[INFO] Dependencies classpath:
+/home/RESEARCHER/.m2/repository/org/apache/curator/curator-client/2.6.0/curator-client-2.6.0.jar:/home/RESEARCHER/.m2/repository/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8.jar:/home/RESEARCHER/.m2/repository/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0.jar:/home/RESEARCHER/.m2/repository/javax/xml/bind/jaxb-api/2.2.2/jaxb-api-2.2.2.jar:/home/RESEARCHER/.m2/repository/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8.jar:/home/RESEARCHER/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/home/RESEARCHER/.m2/repository/org/apache/commons/commons-compress/1.4.1/commons-compress-1.4.1.jar:/home/RESEARCHER/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar:/home/RESEARCHER/.m2/repository/org/apache/curator/curator-recipes/2.6.0/curator-recipes-2.6.0.jar:/home/RESEARCHER/.m2/repository/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6.jar:/home/RESEARCHER/.m2/repository/org/tukaani/xz/1.0/xz-1.0.jar:/home/RESEARCHER/.m2/repository/commons-cli/commons-cli/1.2/commons-cli-1.2.jar:/home/RESEARCHER/.m2/repository/commons-codec/commons-codec/1.10/commons-codec-1.10.jar:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/tags/target/spark-tags_2.11-2.4.0-SNAPSHOT.jar:/home/RESEARCHER/.m2/repository/org/xerial/snappy/snappy-java/1.1.2.6/snappy-java-1.1.2.6.jar:/home/RESEARCHER/.m2/repository/org/mortbay/jetty/jetty-util/6.1.26/jetty-util-6.1.26.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-yarn-api/2.6.5/hadoop-yarn-api-2.6.5.jar:/home/RESEARCHER/.m2/repository/org/spark-project/spark/unused/1.0.0/unused-1.0.0.jar:/home/RESEARCHER/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar:/home/RESEARCHER/.m2/repository/org/codehaus/jackson/jackson-jaxrs/1.9.13/jackson-jaxrs-1.9.13.jar:/home/RESEARCHER/.m2/repository/io/netty/netty/3.9.9.Final/netty-3.9.9.Final.jar:/home/RESEARCHER/.m2/repository/javax/xml/stream/stax-api/1.0-2/stax-api-1.0-2.jar:/home/RESEARCHER/.m2/repository/org/apache/avro/avro/1.7.7/avro-1.7.7.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-yarn-client/2.6.5/hadoop-yarn-client-2.6.5.jar:/home/RESEARCHER/.m2/repository/org/codehaus/jackson/jackson-xc/1.9.13/jackson-xc-1.9.13.jar:/home/RESEARCHER/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-yarn-common/2.6.5/hadoop-yarn-common-2.6.5.jar:/home/RESEARCHER/.m2/repository/org/apache/curator/curator-framework/2.6.0/curator-framework-2.6.0.jar
+[INFO] 
+[INFO] --- remote-resources:1.5:process (process-resource-bundles) @ spark-launcher_2.11 ---
+[INFO] 
+[INFO] --- resources:2.7:resources (default-resources) @ spark-launcher_2.11 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/launcher/src/main/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- compiler:3.7.0:compile (default-compile) @ spark-launcher_2.11 ---
+[INFO] Not compiling main sources
+[INFO] 
+[INFO] --- scala:3.2.2:compile (scala-compile-first) @ spark-launcher_2.11 ---
+[WARNING] Zinc server is not available at port 3030 - reverting to normal incremental compile
+[INFO] Using incremental compilation
+[INFO] 
+[INFO] --- antrun:1.8:run (create-tmp-dir) @ spark-launcher_2.11 ---
+[INFO] Executing tasks
+
+main:
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- resources:2.7:testResources (default-testResources) @ spark-launcher_2.11 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- compiler:3.7.0:testCompile (default-testCompile) @ spark-launcher_2.11 ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- dependency:3.0.2:build-classpath (generate-test-classpath) @ spark-launcher_2.11 ---
+[INFO] Dependencies classpath:
+/home/RESEARCHER/.m2/repository/org/scalatest/scalatest_2.11/3.0.3/scalatest_2.11-3.0.3.jar:/home/RESEARCHER/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/home/RESEARCHER/.m2/repository/com/novocode/junit-interface/0.11/junit-interface-0.11.jar:/home/RESEARCHER/.m2/repository/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8.jar:/home/RESEARCHER/.m2/repository/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0.jar:/home/RESEARCHER/.m2/repository/org/scalactic/scalactic_2.11/3.0.3/scalactic_2.11-3.0.3.jar:/home/RESEARCHER/.m2/repository/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8.jar:/home/RESEARCHER/.m2/repository/org/mockito/mockito-core/1.10.19/mockito-core-1.10.19.jar:/home/RESEARCHER/.m2/repository/org/apache/commons/commons-compress/1.4.1/commons-compress-1.4.1.jar:/home/RESEARCHER/.m2/repository/org/apache/directory/server/apacheds-kerberos-codec/2.0.0-M15/apacheds-kerberos-codec-2.0.0-M15.jar:/home/RESEARCHER/.m2/repository/org/apache/curator/curator-recipes/2.6.0/curator-recipes-2.6.0.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-hdfs/2.6.5/hadoop-hdfs-2.6.5.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-auth/2.6.5/hadoop-auth-2.6.5.jar:/home/RESEARCHER/.m2/repository/org/slf4j/slf4j-api/1.7.16/slf4j-api-1.7.16.jar:/home/RESEARCHER/.m2/repository/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-shuffle/2.6.5/hadoop-mapreduce-client-shuffle-2.6.5.jar:/home/RESEARCHER/.m2/repository/org/fusesource/leveldbjni/leveldbjni-all/1.8/leveldbjni-all-1.8.jar:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/tags/target/spark-tags_2.11-2.4.0-SNAPSHOT.jar:/home/RESEARCHER/.m2/repository/org/mortbay/jetty/jetty-util/6.1.26/jetty-util-6.1.26.jar:/home/RESEARCHER/.m2/repository/org/scala-sbt/test-interface/1.0/test-interface-1.0.jar:/home/RESEARCHER/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.5/hadoop-mapreduce-client-core-2.6.5.jar:/home/RESEARCHER/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/RESEARCHER/.m2/repository/org/apache/httpcomponents/httpclient/4.5.4/httpclient-4.5.4.jar:/home/RESEARCHER/.m2/repository/org/codehaus/jackson/jackson-jaxrs/1.9.13/jackson-jaxrs-1.9.13.jar:/home/RESEARCHER/.m2/repository/io/netty/netty/3.9.9.Final/netty-3.9.9.Final.jar:/home/RESEARCHER/.m2/repository/org/scala-lang/scala-reflect/2.11.8/scala-reflect-2.11.8.jar:/home/RESEARCHER/.m2/repository/xmlenc/xmlenc/0.52/xmlenc-0.52.jar:/home/RESEARCHER/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar:/home/RESEARCHER/.m2/repository/org/apache/directory/api/api-util/1.0.0-M20/api-util-1.0.0-M20.jar:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/tags/target/spark-tags_2.11-2.4.0-SNAPSHOT-tests.jar:/home/RESEARCHER/.m2/repository/commons-net/commons-net/2.2/commons-net-2.2.jar:/home/RESEARCHER/.m2/repository/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar:/home/RESEARCHER/.m2/repository/org/apache/directory/api/api-asn1-api/1.0.0-M20/api-asn1-api-1.0.0-M20.jar:/home/RESEARCHER/.m2/repository/org/scala-lang/modules/scala-xml_2.11/1.0.5/scala-xml_2.11-1.0.5.jar:/home/RESEARCHER/.m2/repository/org/apache/curator/curator-client/2.6.0/curator-client-2.6.0.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-common/2.6.5/hadoop-mapreduce-client-common-2.6.5.jar:/home/RESEARCHER/.m2/repository/commons-configuration/commons-configuration/1.6/commons-configuration-1.6.jar:/home/RESEARCHER/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/home/RESEARCHER/.m2/repository/org/slf4j/jul-to-slf4j/1.7.16/jul-to-slf4j-1.7.16.jar:/home/RESEARCHER/.m2/repository/commons-digester/commons-digester/1.8/commons-digester-1.8.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-jobclient/2.6.5/hadoop-mapreduce-client-jobclient-2.6.5.jar:/home/RESEARCHER/.m2/repository/org/apache/directory/server/apacheds-i18n/2.0.0-M15/apacheds-i18n-2.0.0-M15.jar:/home/RESEARCHER/.m2/repository/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar:/home/RESEARCHER/.m2/repository/javax/xml/bind/jaxb-api/2.2.2/jaxb-api-2.2.2.jar:/home/RESEARCHER/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/home/RESEARCHER/.m2/repository/org/htrace/htrace-core/3.0.4/htrace-core-3.0.4.jar:/home/RESEARCHER/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar:/home/RESEARCHER/.m2/repository/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6.jar:/home/RESEARCHER/.m2/repository/org/tukaani/xz/1.0/xz-1.0.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-client/2.6.5/hadoop-client-2.6.5.jar:/home/RESEARCHER/.m2/repository/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4.jar:/home/RESEARCHER/.m2/repository/commons-cli/commons-cli/1.2/commons-cli-1.2.jar:/home/RESEARCHER/.m2/repository/commons-codec/commons-codec/1.10/commons-codec-1.10.jar:/home/RESEARCHER/.m2/repository/com/google/guava/guava/14.0.1/guava-14.0.1.jar:/home/RESEARCHER/.m2/repository/xerces/xercesImpl/2.9.1/xercesImpl-2.9.1.jar:/home/RESEARCHER/.m2/repository/org/objenesis/objenesis/2.1/objenesis-2.1.jar:/home/RESEARCHER/.m2/repository/org/slf4j/slf4j-log4j12/1.7.16/slf4j-log4j12-1.7.16.jar:/home/RESEARCHER/.m2/repository/org/xerial/snappy/snappy-java/1.1.2.6/snappy-java-1.1.2.6.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-yarn-api/2.6.5/hadoop-yarn-api-2.6.5.jar:/home/RESEARCHER/.m2/repository/org/apache/httpcomponents/httpcore/4.4.8/httpcore-4.4.8.jar:/home/RESEARCHER/.m2/repository/org/spark-project/spark/unused/1.0.0/unused-1.0.0.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-common/2.6.5/hadoop-common-2.6.5.jar:/home/RESEARCHER/.m2/repository/commons-beanutils/commons-beanutils-core/1.8.0/commons-beanutils-core-1.8.0.jar:/home/RESEARCHER/.m2/repository/org/apache/commons/commons-math3/3.4.1/commons-math3-3.4.1.jar:/home/RESEARCHER/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/home/RESEARCHER/.m2/repository/javax/xml/stream/stax-api/1.0-2/stax-api-1.0-2.jar:/home/RESEARCHER/.m2/repository/junit/junit/4.12/junit-4.12.jar:/home/RESEARCHER/.m2/repository/org/apache/avro/avro/1.7.7/avro-1.7.7.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-yarn-client/2.6.5/hadoop-yarn-client-2.6.5.jar:/home/RESEARCHER/.m2/repository/org/codehaus/jackson/jackson-xc/1.9.13/jackson-xc-1.9.13.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-app/2.6.5/hadoop-mapreduce-client-app-2.6.5.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-yarn-server-common/2.6.5/hadoop-yarn-server-common-2.6.5.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-yarn-common/2.6.5/hadoop-yarn-common-2.6.5.jar:/home/RESEARCHER/.m2/repository/org/apache/curator/curator-framework/2.6.0/curator-framework-2.6.0.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-annotations/2.6.5/hadoop-annotations-2.6.5.jar:/home/RESEARCHER/.m2/repository/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1.jar
+[INFO] 
+[INFO] --- scala:3.2.2:testCompile (scala-test-compile-first) @ spark-launcher_2.11 ---
+[WARNING] Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+[WARNING] Zinc server is not available at port 3030 - reverting to normal incremental compile
+[INFO] Using incremental compilation
+[INFO] 
+[INFO] --- surefire:2.20.1:test (default-test) @ spark-launcher_2.11 ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- surefire:2.20.1:test (test) @ spark-launcher_2.11 ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- scalatest:1.0:test (test) @ spark-launcher_2.11 ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.0.2:test-jar (prepare-test-jar) @ spark-launcher_2.11 ---
+[INFO] Building jar: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/launcher/target/spark-launcher_2.11-2.4.0-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- jar:3.0.2:jar (default-jar) @ spark-launcher_2.11 ---
+[INFO] Building jar: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/launcher/target/spark-launcher_2.11-2.4.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- site:3.5.1:attach-descriptor (attach-descriptor) @ spark-launcher_2.11 ---
+[INFO] 
+[INFO] --- shade:3.1.0:shade (default) @ spark-launcher_2.11 ---
+[INFO] Excluding org.apache.spark:spark-tags_2.11:jar:2.4.0-SNAPSHOT from the shaded jar.
+[INFO] Excluding org.scala-lang:scala-library:jar:2.11.8 from the shaded jar.
+[INFO] Excluding commons-cli:commons-cli:jar:1.2 from the shaded jar.
+[INFO] Excluding commons-codec:commons-codec:jar:1.10 from the shaded jar.
+[INFO] Excluding commons-io:commons-io:jar:2.4 from the shaded jar.
+[INFO] Excluding commons-lang:commons-lang:jar:2.6 from the shaded jar.
+[INFO] Excluding org.codehaus.jackson:jackson-core-asl:jar:1.9.13 from the shaded jar.
+[INFO] Excluding org.apache.avro:avro:jar:1.7.7 from the shaded jar.
+[INFO] Excluding com.thoughtworks.paranamer:paranamer:jar:2.8 from the shaded jar.
+[INFO] Excluding org.xerial.snappy:snappy-java:jar:1.1.2.6 from the shaded jar.
+[INFO] Excluding com.google.protobuf:protobuf-java:jar:2.5.0 from the shaded jar.
+[INFO] Excluding org.apache.curator:curator-framework:jar:2.6.0 from the shaded jar.
+[INFO] Excluding org.apache.curator:curator-client:jar:2.6.0 from the shaded jar.
+[INFO] Excluding org.apache.curator:curator-recipes:jar:2.6.0 from the shaded jar.
+[INFO] Excluding org.apache.zookeeper:zookeeper:jar:3.4.6 from the shaded jar.
+[INFO] Excluding org.apache.commons:commons-compress:jar:1.4.1 from the shaded jar.
+[INFO] Excluding org.tukaani:xz:jar:1.0 from the shaded jar.
+[INFO] Excluding org.mortbay.jetty:jetty-util:jar:6.1.26 from the shaded jar.
+[INFO] Excluding io.netty:netty:jar:3.9.9.Final from the shaded jar.
+[INFO] Excluding org.apache.hadoop:hadoop-yarn-client:jar:2.6.5 from the shaded jar.
+[INFO] Excluding org.apache.hadoop:hadoop-yarn-api:jar:2.6.5 from the shaded jar.
+[INFO] Excluding org.apache.hadoop:hadoop-yarn-common:jar:2.6.5 from the shaded jar.
+[INFO] Excluding javax.xml.bind:jaxb-api:jar:2.2.2 from the shaded jar.
+[INFO] Excluding javax.xml.stream:stax-api:jar:1.0-2 from the shaded jar.
+[INFO] Excluding javax.activation:activation:jar:1.1 from the shaded jar.
+[INFO] Excluding org.codehaus.jackson:jackson-jaxrs:jar:1.9.13 from the shaded jar.
+[INFO] Excluding org.codehaus.jackson:jackson-xc:jar:1.9.13 from the shaded jar.
+[INFO] Including org.spark-project.spark:unused:jar:1.0.0 in the shaded jar.
+[INFO] Replacing original artifact with shaded artifact.
+[INFO] Replacing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/launcher/target/spark-launcher_2.11-2.4.0-SNAPSHOT.jar with /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/launcher/target/spark-launcher_2.11-2.4.0-SNAPSHOT-shaded.jar
+[INFO] Dependency-reduced POM written at: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/launcher/dependency-reduced-pom.xml
+[INFO] 
+[INFO] --- source:3.0.1:jar-no-fork (create-source-jar) @ spark-launcher_2.11 ---
+[INFO] Building jar: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/launcher/target/spark-launcher_2.11-2.4.0-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- source:3.0.1:test-jar-no-fork (create-source-jar) @ spark-launcher_2.11 ---
+[INFO] Building jar: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/launcher/target/spark-launcher_2.11-2.4.0-SNAPSHOT-test-sources.jar
+[INFO] 
+[INFO] --- scalastyle:1.0.0:check (default) @ spark-launcher_2.11 ---
+[WARNING] sourceDirectory is not specified or does not exist value=/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/launcher/src/main/scala
+Saving to outputFile=/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/launcher/target/scalastyle-output.xml
+Processed 0 file(s)
+Found 0 errors
+Found 0 warnings
+Found 0 infos
+Finished in 0 ms
+[INFO] 
+[INFO] --- checkstyle:2.17:check (default) @ spark-launcher_2.11 ---
+[WARNING]  Parameter 'testSourceDirectory' is deprecated: instead use {@link #testSourceDirectories}
+[INFO] 
+[INFO] --- install:2.5.2:install (default-install) @ spark-launcher_2.11 ---
+[INFO] Installing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/launcher/target/spark-launcher_2.11-2.4.0-SNAPSHOT.jar to /home/RESEARCHER/.m2/repository/org/apache/spark/spark-launcher_2.11/2.4.0-SNAPSHOT/spark-launcher_2.11-2.4.0-SNAPSHOT.jar
+[INFO] Installing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/launcher/dependency-reduced-pom.xml to /home/RESEARCHER/.m2/repository/org/apache/spark/spark-launcher_2.11/2.4.0-SNAPSHOT/spark-launcher_2.11-2.4.0-SNAPSHOT.pom
+[INFO] Installing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/launcher/target/spark-launcher_2.11-2.4.0-SNAPSHOT-tests.jar to /home/RESEARCHER/.m2/repository/org/apache/spark/spark-launcher_2.11/2.4.0-SNAPSHOT/spark-launcher_2.11-2.4.0-SNAPSHOT-tests.jar
+[INFO] Installing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/launcher/target/spark-launcher_2.11-2.4.0-SNAPSHOT-sources.jar to /home/RESEARCHER/.m2/repository/org/apache/spark/spark-launcher_2.11/2.4.0-SNAPSHOT/spark-launcher_2.11-2.4.0-SNAPSHOT-sources.jar
+[INFO] Installing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/launcher/target/spark-launcher_2.11-2.4.0-SNAPSHOT-test-sources.jar to /home/RESEARCHER/.m2/repository/org/apache/spark/spark-launcher_2.11/2.4.0-SNAPSHOT/spark-launcher_2.11-2.4.0-SNAPSHOT-test-sources.jar
+[INFO] 
+[INFO] ------------------< org.apache.spark:spark-core_2.11 >------------------
+[INFO] Building Spark Project Core 2.4.0-SNAPSHOT                         [8/8]
+[INFO]   from core/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.0.0-M1:enforce (enforce-versions) @ spark-core_2.11 ---
+[INFO] 
+[INFO] --- scala:3.2.2:add-source (eclipse-add-source) @ spark-core_2.11 ---
+[INFO] Add Source directory: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/src/main/scala
+[INFO] Add Test Source directory: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/src/test/scala
+[INFO] 
+[INFO] --- dependency:3.0.2:build-classpath (default-cli) @ spark-core_2.11 ---
+[INFO] Dependencies classpath:
+/home/RESEARCHER/.m2/repository/com/fasterxml/jackson/module/jackson-module-scala_2.11/2.6.7.1/jackson-module-scala_2.11-2.6.7.1.jar:/home/RESEARCHER/.m2/repository/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0.jar:/home/RESEARCHER/.m2/repository/org/lz4/lz4-java/1.4.0/lz4-java-1.4.0.jar:/home/RESEARCHER/.m2/repository/com/fasterxml/jackson/module/jackson-module-paranamer/2.7.9/jackson-module-paranamer-2.7.9.jar:/home/RESEARCHER/.m2/repository/org/json4s/json4s-ast_2.11/3.5.3/json4s-ast_2.11-3.5.3.jar:/home/RESEARCHER/.m2/repository/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8.jar:/home/RESEARCHER/.m2/repository/com/twitter/chill_2.11/0.8.4/chill_2.11-0.8.4.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/jetty-continuation/9.3.20.v20170531/jetty-continuation-9.3.20.v20170531.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-hdfs/2.6.5/hadoop-hdfs-2.6.5.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/jetty-servlets/9.3.20.v20170531/jetty-servlets-9.3.20.v20170531.jar:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/kvstore/target/spark-kvstore_2.11-2.4.0-SNAPSHOT.jar:/home/RESEARCHER/.m2/repository/org/fusesource/leveldbjni/leveldbjni-all/1.8/leveldbjni-all-1.8.jar:/home/RESEARCHER/.m2/repository/org/glassfish/jersey/bundles/repackaged/jersey-guava/2.22.2/jersey-guava-2.22.2.jar:/home/RESEARCHER/.m2/repository/org/apache/commons/commons-crypto/1.0.0/commons-crypto-1.0.0.jar:/home/RESEARCHER/.m2/repository/com/twitter/chill-java/0.8.4/chill-java-0.8.4.jar:/home/RESEARCHER/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar:/home/RESEARCHER/.m2/repository/org/apache/httpcomponents/httpclient/4.5.4/httpclient-4.5.4.jar:/home/RESEARCHER/.m2/repository/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5.jar:/home/RESEARCHER/.m2/repository/org/codehaus/jackson/jackson-jaxrs/1.9.13/jackson-jaxrs-1.9.13.jar:/home/RESEARCHER/.m2/repository/org/scala-lang/scala-reflect/2.11.8/scala-reflect-2.11.8.jar:/home/RESEARCHER/.m2/repository/com/esotericsoftware/minlog/1.3.0/minlog-1.3.0.jar:/home/RESEARCHER/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/jetty-xml/9.3.20.v20170531/jetty-xml-9.3.20.v20170531.jar:/home/RESEARCHER/.m2/repository/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar:/home/RESEARCHER/.m2/repository/org/bouncycastle/bcprov-jdk15on/1.58/bcprov-jdk15on-1.58.jar:/home/RESEARCHER/.m2/repository/org/glassfish/jersey/core/jersey-common/2.22.2/jersey-common-2.22.2.jar:/home/RESEARCHER/.m2/repository/org/scala-lang/modules/scala-xml_2.11/1.0.5/scala-xml_2.11-1.0.5.jar:/home/RESEARCHER/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/home/RESEARCHER/.m2/repository/javax/xml/bind/jaxb-api/2.2.2/jaxb-api-2.2.2.jar:/home/RESEARCHER/.m2/repository/org/glassfish/hk2/hk2-api/2.4.0-b34/hk2-api-2.4.0-b34.jar:/home/RESEARCHER/.m2/repository/org/glassfish/jersey/core/jersey-server/2.22.2/jersey-server-2.22.2.jar:/home/RESEARCHER/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/jetty-server/9.3.20.v20170531/jetty-server-9.3.20.v20170531.jar:/home/RESEARCHER/.m2/repository/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6.jar:/home/RESEARCHER/.m2/repository/org/tukaani/xz/1.0/xz-1.0.jar:/home/RESEARCHER/.m2/repository/javax/activation/activation/1.1.1/activation-1.1.1.jar:/home/RESEARCHER/.m2/repository/commons-codec/commons-codec/1.10/commons-codec-1.10.jar:/home/RESEARCHER/.m2/repository/org/json4s/json4s-jackson_2.11/3.5.3/json4s-jackson_2.11-3.5.3.jar:/home/RESEARCHER/.m2/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/jetty-client/9.3.20.v20170531/jetty-client-9.3.20.v20170531.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-yarn-api/2.6.5/hadoop-yarn-api-2.6.5.jar:/home/RESEARCHER/.m2/repository/org/apache/httpcomponents/httpcore/4.4.8/httpcore-4.4.8.jar:/home/RESEARCHER/.m2/repository/org/apache/ivy/ivy/2.4.0/ivy-2.4.0.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-common/2.6.5/hadoop-common-2.6.5.jar:/home/RESEARCHER/.m2/repository/commons-beanutils/commons-beanutils-core/1.8.0/commons-beanutils-core-1.8.0.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/jetty-util/9.3.20.v20170531/jetty-util-9.3.20.v20170531.jar:/home/RESEARCHER/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar:/home/RESEARCHER/.m2/repository/org/glassfish/hk2/osgi-resource-locator/1.0.1/osgi-resource-locator-1.0.1.jar:/home/RESEARCHER/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.6.7/jackson-core-2.6.7.jar:/home/RESEARCHER/.m2/repository/org/apache/commons/commons-math3/3.4.1/commons-math3-3.4.1.jar:/home/RESEARCHER/.m2/repository/io/dropwizard/metrics/metrics-graphite/3.1.5/metrics-graphite-3.1.5.jar:/home/RESEARCHER/.m2/repository/javax/xml/stream/stax-api/1.0-2/stax-api-1.0-2.jar:/home/RESEARCHER/.m2/repository/org/apache/avro/avro/1.7.7/avro-1.7.7.jar:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-shuffle/target/spark-network-shuffle_2.11-2.4.0-SNAPSHOT.jar:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/unsafe/target/spark-unsafe_2.11-2.4.0-SNAPSHOT.jar:/home/RESEARCHER/.m2/repository/org/codehaus/jackson/jackson-xc/1.9.13/jackson-xc-1.9.13.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-app/2.6.5/hadoop-mapreduce-client-app-2.6.5.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-yarn-server-common/2.6.5/hadoop-yarn-server-common-2.6.5.jar:/home/RESEARCHER/.m2/repository/org/glassfish/hk2/hk2-utils/2.4.0-b34/hk2-utils-2.4.0-b34.jar:/home/RESEARCHER/.m2/repository/org/glassfish/hk2/external/aopalliance-repackaged/2.4.0-b34/aopalliance-repackaged-2.4.0-b34.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-yarn-common/2.6.5/hadoop-yarn-common-2.6.5.jar:/home/RESEARCHER/.m2/repository/org/json4s/json4s-scalap_2.11/3.5.3/json4s-scalap_2.11-3.5.3.jar:/home/RESEARCHER/.m2/repository/org/glassfish/hk2/external/javax.inject/2.4.0-b34/javax.inject-2.4.0-b34.jar:/home/RESEARCHER/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.22.2/jersey-container-servlet-core-2.22.2.jar:/home/RESEARCHER/.m2/repository/oro/oro/2.0.8/oro-2.0.8.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-annotations/2.6.5/hadoop-annotations-2.6.5.jar:/home/RESEARCHER/.m2/repository/org/apache/curator/curator-framework/2.6.0/curator-framework-2.6.0.jar:/home/RESEARCHER/.m2/repository/org/roaringbitmap/RoaringBitmap/0.5.11/RoaringBitmap-0.5.11.jar:/home/RESEARCHER/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/home/RESEARCHER/.m2/repository/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8.jar:/home/RESEARCHER/.m2/repository/com/twitter/parquet-hadoop-bundle/1.6.0/parquet-hadoop-bundle-1.6.0.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/jetty-proxy/9.3.20.v20170531/jetty-proxy-9.3.20.v20170531.jar:/home/RESEARCHER/.m2/repository/io/dropwizard/metrics/metrics-json/3.1.5/metrics-json-3.1.5.jar:/home/RESEARCHER/.m2/repository/org/apache/commons/commons-compress/1.4.1/commons-compress-1.4.1.jar:/home/RESEARCHER/.m2/repository/org/apache/directory/server/apacheds-kerberos-codec/2.0.0-M15/apacheds-kerberos-codec-2.0.0-M15.jar:/home/RESEARCHER/.m2/repository/org/apache/curator/curator-recipes/2.6.0/curator-recipes-2.6.0.jar:/home/RESEARCHER/.m2/repository/io/dropwizard/metrics/metrics-core/3.1.5/metrics-core-3.1.5.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-auth/2.6.5/hadoop-auth-2.6.5.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-shuffle/2.6.5/hadoop-mapreduce-client-shuffle-2.6.5.jar:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/launcher/target/spark-launcher_2.11-2.4.0-SNAPSHOT.jar:/home/RESEARCHER/.m2/repository/org/slf4j/slf4j-api/1.7.16/slf4j-api-1.7.16.jar:/home/RESEARCHER/.m2/repository/org/apache/xbean/xbean-asm5-shaded/4.4/xbean-asm5-shaded-4.4.jar:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/tags/target/spark-tags_2.11-2.4.0-SNAPSHOT.jar:/home/RESEARCHER/.m2/repository/org/mortbay/jetty/jetty-util/6.1.26/jetty-util-6.1.26.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.5/hadoop-mapreduce-client-core-2.6.5.jar:/home/RESEARCHER/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.6.7.1/jackson-databind-2.6.7.1.jar:/home/RESEARCHER/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.jar:/home/RESEARCHER/.m2/repository/net/sf/py4j/py4j/0.10.6/py4j-0.10.6.jar:/home/RESEARCHER/.m2/repository/com/esotericsoftware/kryo-shaded/3.0.3/kryo-shaded-3.0.3.jar:/home/RESEARCHER/.m2/repository/javax/ws/rs/javax.ws.rs-api/2.0.1/javax.ws.rs-api-2.0.1.jar:/home/RESEARCHER/.m2/repository/org/glassfish/jersey/core/jersey-client/2.22.2/jersey-client-2.22.2.jar:/home/RESEARCHER/.m2/repository/io/netty/netty/3.9.9.Final/netty-3.9.9.Final.jar:/home/RESEARCHER/.m2/repository/org/apache/avro/avro-mapred/1.7.7/avro-mapred-1.7.7-hadoop2.jar:/home/RESEARCHER/.m2/repository/xmlenc/xmlenc/0.52/xmlenc-0.52.jar:/home/RESEARCHER/.m2/repository/com/ning/compress-lzf/1.0.3/compress-lzf-1.0.3.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/jetty-webapp/9.3.20.v20170531/jetty-webapp-9.3.20.v20170531.jar:/home/RESEARCHER/.m2/repository/org/apache/directory/api/api-util/1.0.0-M20/api-util-1.0.0-M20.jar:/home/RESEARCHER/.m2/repository/commons-net/commons-net/2.2/commons-net-2.2.jar:/home/RESEARCHER/.m2/repository/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar:/home/RESEARCHER/.m2/repository/org/apache/directory/api/api-asn1-api/1.0.0-M20/api-asn1-api-1.0.0-M20.jar:/home/RESEARCHER/.m2/repository/com/clearspring/analytics/stream/2.7.0/stream-2.7.0.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/jetty-http/9.3.20.v20170531/jetty-http-9.3.20.v20170531.jar:/home/RESEARCHER/.m2/repository/org/apache/curator/curator-client/2.6.0/curator-client-2.6.0.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/jetty-security/9.3.20.v20170531/jetty-security-9.3.20.v20170531.jar:/home/RESEARCHER/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.6.7/jackson-annotations-2.6.7.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-common/2.6.5/hadoop-mapreduce-client-common-2.6.5.jar:/home/RESEARCHER/.m2/repository/commons-configuration/commons-configuration/1.6/commons-configuration-1.6.jar:/home/RESEARCHER/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet/2.22.2/jersey-container-servlet-2.22.2.jar:/home/RESEARCHER/.m2/repository/commons-digester/commons-digester/1.8/commons-digester-1.8.jar:/home/RESEARCHER/.m2/repository/org/slf4j/jul-to-slf4j/1.7.16/jul-to-slf4j-1.7.16.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-jobclient/2.6.5/hadoop-mapreduce-client-jobclient-2.6.5.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/jetty-io/9.3.20.v20170531/jetty-io-9.3.20.v20170531.jar:/home/RESEARCHER/.m2/repository/org/apache/directory/server/apacheds-i18n/2.0.0-M15/apacheds-i18n-2.0.0-M15.jar:/home/RESEARCHER/.m2/repository/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar:/home/RESEARCHER/.m2/repository/org/htrace/htrace-core/3.0.4/htrace-core-3.0.4.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-client/2.6.5/hadoop-client-2.6.5.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/jetty-plus/9.3.20.v20170531/jetty-plus-9.3.20.v20170531.jar:/home/RESEARCHER/.m2/repository/commons-cli/commons-cli/1.2/commons-cli-1.2.jar:/home/RESEARCHER/.m2/repository/xerces/xercesImpl/2.9.1/xercesImpl-2.9.1.jar:/home/RESEARCHER/.m2/repository/net/iharder/base64/2.3.8/base64-2.3.8.jar:/home/RESEARCHER/.m2/repository/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.jar:/home/RESEARCHER/.m2/repository/org/objenesis/objenesis/2.1/objenesis-2.1.jar:/home/RESEARCHER/.m2/repository/org/slf4j/slf4j-log4j12/1.7.16/slf4j-log4j12-1.7.16.jar:/home/RESEARCHER/.m2/repository/org/xerial/snappy/snappy-java/1.1.2.6/snappy-java-1.1.2.6.jar:/home/RESEARCHER/.m2/repository/org/glassfish/jersey/media/jersey-media-jaxb/2.22.2/jersey-media-jaxb-2.22.2.jar:/home/RESEARCHER/.m2/repository/org/spark-project/spark/unused/1.0.0/unused-1.0.0.jar:/home/RESEARCHER/.m2/repository/net/java/dev/jets3t/jets3t/0.9.4/jets3t-0.9.4.jar:/home/RESEARCHER/.m2/repository/io/dropwizard/metrics/metrics-jvm/3.1.5/metrics-jvm-3.1.5.jar:/home/RESEARCHER/.m2/repository/org/apache/avro/avro-ipc/1.7.7/avro-ipc-1.7.7.jar:/home/RESEARCHER/.m2/repository/com/github/luben/zstd-jni/1.3.2-2/zstd-jni-1.3.2-2.jar:/home/RESEARCHER/.m2/repository/org/json4s/json4s-core_2.11/3.5.3/json4s-core_2.11-3.5.3.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/jetty-jndi/9.3.20.v20170531/jetty-jndi-9.3.20.v20170531.jar:/home/RESEARCHER/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/home/RESEARCHER/.m2/repository/org/glassfish/hk2/hk2-locator/2.4.0-b34/hk2-locator-2.4.0-b34.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-yarn-client/2.6.5/hadoop-yarn-client-2.6.5.jar:/home/RESEARCHER/.m2/repository/net/razorvine/pyrolite/4.13/pyrolite-4.13.jar:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-common/target/spark-network-common_2.11-2.4.0-SNAPSHOT.jar:/home/RESEARCHER/.m2/repository/com/jamesmurty/utils/java-xmlbuilder/1.1/java-xmlbuilder-1.1.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/jetty-servlet/9.3.20.v20170531/jetty-servlet-9.3.20.v20170531.jar:/home/RESEARCHER/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.16/jcl-over-slf4j-1.7.16.jar:/home/RESEARCHER/.m2/repository/io/netty/netty-all/4.1.17.Final/netty-all-4.1.17.Final.jar:/home/RESEARCHER/.m2/repository/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1.jar
+[INFO] 
+[INFO] --- remote-resources:1.5:process (process-resource-bundles) @ spark-core_2.11 ---
+[INFO] 
+[INFO] --- antrun:1.8:run (default) @ spark-core_2.11 ---
+[INFO] Executing tasks
+
+main:
+     [exec] fatal: not a git repository (or any of the parent directories): .git
+     [exec] fatal: not a git repository (or any of the parent directories): .git
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- resources:2.7:resources (default-resources) @ spark-core_2.11 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 37 resources
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- compiler:3.7.0:compile (default-compile) @ spark-core_2.11 ---
+[INFO] Not compiling main sources
+[INFO] 
+[INFO] --- scala:3.2.2:compile (scala-compile-first) @ spark-core_2.11 ---
+[WARNING] Zinc server is not available at port 3030 - reverting to normal incremental compile
+[INFO] Using incremental compilation
+[INFO] Compiling 165 Scala sources and 17 Java sources to /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/classes...
+[WARNING] there were 6 deprecation warnings; re-run with -deprecation for details
+[WARNING] one warning found
+[INFO] 
+[INFO] --- antrun:1.8:run (create-tmp-dir) @ spark-core_2.11 ---
+[INFO] Executing tasks
+
+main:
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- resources:2.7:testResources (default-testResources) @ spark-core_2.11 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 68 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- compiler:3.7.0:testCompile (default-testCompile) @ spark-core_2.11 ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- dependency:3.0.2:build-classpath (generate-test-classpath) @ spark-core_2.11 ---
+[INFO] Dependencies classpath:
+/home/RESEARCHER/.m2/repository/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0.jar:/home/RESEARCHER/.m2/repository/org/lz4/lz4-java/1.4.0/lz4-java-1.4.0.jar:/home/RESEARCHER/.m2/repository/org/scalactic/scalactic_2.11/3.0.3/scalactic_2.11-3.0.3.jar:/home/RESEARCHER/.m2/repository/com/fasterxml/jackson/module/jackson-module-paranamer/2.7.9/jackson-module-paranamer-2.7.9.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/jetty-continuation/9.3.20.v20170531/jetty-continuation-9.3.20.v20170531.jar:/home/RESEARCHER/.m2/repository/org/seleniumhq/selenium/selenium-leg-rc/2.52.0/selenium-leg-rc-2.52.0.jar:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/kvstore/target/spark-kvstore_2.11-2.4.0-SNAPSHOT.jar:/home/RESEARCHER/.m2/repository/org/antlr/stringtemplate/3.2.1/stringtemplate-3.2.1.jar:/home/RESEARCHER/.m2/repository/org/apache/commons/commons-math/2.2/commons-math-2.2.jar:/home/RESEARCHER/.m2/repository/org/glassfish/jersey/bundles/repackaged/jersey-guava/2.22.2/jersey-guava-2.22.2.jar:/home/RESEARCHER/.m2/repository/org/apache/commons/commons-crypto/1.0.0/commons-crypto-1.0.0.jar:/home/RESEARCHER/.m2/repository/net/sourceforge/htmlunit/htmlunit-core-js/2.17/htmlunit-core-js-2.17.jar:/home/RESEARCHER/.m2/repository/commons-dbcp/commons-dbcp/1.4/commons-dbcp-1.4.jar:/home/RESEARCHER/.m2/repository/org/codehaus/jackson/jackson-jaxrs/1.9.13/jackson-jaxrs-1.9.13.jar:/home/RESEARCHER/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/2.52.0/selenium-firefox-driver-2.52.0.jar:/home/RESEARCHER/.m2/repository/org/antlr/ST4/4.0.4/ST4-4.0.4.jar:/home/RESEARCHER/.m2/repository/org/scalacheck/scalacheck_2.11/1.13.5/scalacheck_2.11-1.13.5.jar:/home/RESEARCHER/.m2/repository/org/glassfish/jersey/core/jersey-common/2.22.2/jersey-common-2.22.2.jar:/home/RESEARCHER/.m2/repository/net/sf/opencsv/opencsv/2.3/opencsv-2.3.jar:/home/RESEARCHER/.m2/repository/org/glassfish/jersey/core/jersey-server/2.22.2/jersey-server-2.22.2.jar:/home/RESEARCHER/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/jetty-server/9.3.20.v20170531/jetty-server-9.3.20.v20170531.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/websocket/websocket-common/9.2.12.v20150709/websocket-common-9.2.12.v20150709.jar:/home/RESEARCHER/.m2/repository/org/tukaani/xz/1.0/xz-1.0.jar:/home/RESEARCHER/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/home/RESEARCHER/.m2/repository/javax/activation/activation/1.1.1/activation-1.1.1.jar:/home/RESEARCHER/.m2/repository/javolution/javolution/5.5.1/javolution-5.5.1.jar:/home/RESEARCHER/.m2/repository/org/json4s/json4s-jackson_2.11/3.5.3/json4s-jackson_2.11-3.5.3.jar:/home/RESEARCHER/.m2/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-yarn-api/2.6.5/hadoop-yarn-api-2.6.5.jar:/home/RESEARCHER/.m2/repository/org/apache/ivy/ivy/2.4.0/ivy-2.4.0.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-common/2.6.5/hadoop-common-2.6.5.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/jetty-util/9.3.20.v20170531/jetty-util-9.3.20.v20170531.jar:/home/RESEARCHER/.m2/repository/org/glassfish/hk2/osgi-resource-locator/1.0.1/osgi-resource-locator-1.0.1.jar:/home/RESEARCHER/.m2/repository/io/dropwizard/metrics/metrics-graphite/3.1.5/metrics-graphite-3.1.5.jar:/home/RESEARCHER/.m2/repository/org/apache/avro/avro/1.7.7/avro-1.7.7.jar:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-shuffle/target/spark-network-shuffle_2.11-2.4.0-SNAPSHOT.jar:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/unsafe/target/spark-unsafe_2.11-2.4.0-SNAPSHOT.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-app/2.6.5/hadoop-mapreduce-client-app-2.6.5.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-yarn-server-common/2.6.5/hadoop-yarn-server-common-2.6.5.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-yarn-common/2.6.5/hadoop-yarn-common-2.6.5.jar:/home/RESEARCHER/.m2/repository/org/json4s/json4s-scalap_2.11/3.5.3/json4s-scalap_2.11-3.5.3.jar:/home/RESEARCHER/.m2/repository/org/glassfish/hk2/external/javax.inject/2.4.0-b34/javax.inject-2.4.0-b34.jar:/home/RESEARCHER/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.22.2/jersey-container-servlet-core-2.22.2.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-annotations/2.6.5/hadoop-annotations-2.6.5.jar:/home/RESEARCHER/.m2/repository/org/apache/calcite/calcite-avatica/1.2.0-incubating/calcite-avatica-1.2.0-incubating.jar:/home/RESEARCHER/.m2/repository/org/scalatest/scalatest_2.11/3.0.3/scalatest_2.11-3.0.3.jar:/home/RESEARCHER/.m2/repository/net/java/dev/jna/jna-platform/4.1.0/jna-platform-4.1.0.jar:/home/RESEARCHER/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/home/RESEARCHER/.m2/repository/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8.jar:/home/RESEARCHER/.m2/repository/com/twitter/parquet-hadoop-bundle/1.6.0/parquet-hadoop-bundle-1.6.0.jar:/home/RESEARCHER/.m2/repository/org/seleniumhq/selenium/selenium-api/2.52.0/selenium-api-2.52.0.jar:/home/RESEARCHER/.m2/repository/org/datanucleus/datanucleus-core/3.2.10/datanucleus-core-3.2.10.jar:/home/RESEARCHER/.m2/repository/org/apache/directory/server/apacheds-kerberos-codec/2.0.0-M15/apacheds-kerberos-codec-2.0.0-M15.jar:/home/RESEARCHER/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-auth/2.6.5/hadoop-auth-2.6.5.jar:/home/RESEARCHER/.m2/repository/org/slf4j/slf4j-api/1.7.16/slf4j-api-1.7.16.jar:/home/RESEARCHER/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/2.52.0/selenium-edge-driver-2.52.0.jar:/home/RESEARCHER/.m2/repository/org/apache/xbean/xbean-asm5-shaded/4.4/xbean-asm5-shaded-4.4.jar:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/tags/target/spark-tags_2.11-2.4.0-SNAPSHOT.jar:/home/RESEARCHER/.m2/repository/org/jodd/jodd-core/3.5.2/jodd-core-3.5.2.jar:/home/RESEARCHER/.m2/repository/org/scala-sbt/test-interface/1.0/test-interface-1.0.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.5/hadoop-mapreduce-client-core-2.6.5.jar:/home/RESEARCHER/.m2/repository/org/seleniumhq/selenium/selenium-htmlunit-driver/2.52.0/selenium-htmlunit-driver-2.52.0.jar:/home/RESEARCHER/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.jar:/home/RESEARCHER/.m2/repository/net/sf/py4j/py4j/0.10.6/py4j-0.10.6.jar:/home/RESEARCHER/.m2/repository/javax/ws/rs/javax.ws.rs-api/2.0.1/javax.ws.rs-api-2.0.1.jar:/home/RESEARCHER/.m2/repository/org/glassfish/jersey/core/jersey-client/2.22.2/jersey-client-2.22.2.jar:/home/RESEARCHER/.m2/repository/org/apache/avro/avro-ipc/1.7.7/avro-ipc-1.7.7-tests.jar:/home/RESEARCHER/.m2/repository/com/ning/compress-lzf/1.0.3/compress-lzf-1.0.3.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/jetty-webapp/9.3.20.v20170531/jetty-webapp-9.3.20.v20170531.jar:/home/RESEARCHER/.m2/repository/org/apache/derby/derby/10.12.1.1/derby-10.12.1.1.jar:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/tags/target/spark-tags_2.11-2.4.0-SNAPSHOT-tests.jar:/home/RESEARCHER/.m2/repository/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/jetty-security/9.3.20.v20170531/jetty-security-9.3.20.v20170531.jar:/home/RESEARCHER/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.6.7/jackson-annotations-2.6.7.jar:/home/RESEARCHER/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/2.52.0/selenium-chrome-driver-2.52.0.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-common/2.6.5/hadoop-mapreduce-client-common-2.6.5.jar:/home/RESEARCHER/.m2/repository/org/apache/httpcomponents/httpmime/4.5.4/httpmime-4.5.4.jar:/home/RESEARCHER/.m2/repository/commons-configuration/commons-configuration/1.6/commons-configuration-1.6.jar:/home/RESEARCHER/.m2/repository/commons-digester/commons-digester/1.8/commons-digester-1.8.jar:/home/RESEARCHER/.m2/repository/org/slf4j/jul-to-slf4j/1.7.16/jul-to-slf4j-1.7.16.jar:/home/RESEARCHER/.m2/repository/org/seleniumhq/selenium/selenium-support/2.52.0/selenium-support-2.52.0.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-jobclient/2.6.5/hadoop-mapreduce-client-jobclient-2.6.5.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/jetty-io/9.3.20.v20170531/jetty-io-9.3.20.v20170531.jar:/home/RESEARCHER/.m2/repository/org/apache/directory/server/apacheds-i18n/2.0.0-M15/apacheds-i18n-2.0.0-M15.jar:/home/RESEARCHER/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/2.52.0/selenium-safari-driver-2.52.0.jar:/home/RESEARCHER/.m2/repository/org/htrace/htrace-core/3.0.4/htrace-core-3.0.4.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/jetty-plus/9.3.20.v20170531/jetty-plus-9.3.20.v20170531.jar:/home/RESEARCHER/.m2/repository/commons-cli/commons-cli/1.2/commons-cli-1.2.jar:/home/RESEARCHER/.m2/repository/xerces/xercesImpl/2.9.1/xercesImpl-2.9.1.jar:/home/RESEARCHER/.m2/repository/org/objenesis/objenesis/2.1/objenesis-2.1.jar:/home/RESEARCHER/.m2/repository/org/slf4j/slf4j-log4j12/1.7.16/slf4j-log4j12-1.7.16.jar:/home/RESEARCHER/.m2/repository/org/seleniumhq/selenium/selenium-java/2.52.0/selenium-java-2.52.0.jar:/home/RESEARCHER/.m2/repository/org/spark-project/spark/unused/1.0.0/unused-1.0.0.jar:/home/RESEARCHER/.m2/repository/io/dropwizard/metrics/metrics-jvm/3.1.5/metrics-jvm-3.1.5.jar:/home/RESEARCHER/.m2/repository/com/github/luben/zstd-jni/1.3.2-2/zstd-jni-1.3.2-2.jar:/home/RESEARCHER/.m2/repository/org/json4s/json4s-core_2.11/3.5.3/json4s-core_2.11-3.5.3.jar:/home/RESEARCHER/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/launcher/target/spark-launcher_2.11-2.4.0-SNAPSHOT-tests.jar:/home/RESEARCHER/.m2/repository/org/webbitserver/webbit/0.4.14/webbit-0.4.14.jar:/home/RESEARCHER/.m2/repository/net/razorvine/pyrolite/4.13/pyrolite-4.13.jar:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-common/target/spark-network-common_2.11-2.4.0-SNAPSHOT.jar:/home/RESEARCHER/.m2/repository/org/datanucleus/datanucleus-api-jdo/3.2.6/datanucleus-api-jdo-3.2.6.jar:/home/RESEARCHER/.m2/repository/com/jamesmurty/utils/java-xmlbuilder/1.1/java-xmlbuilder-1.1.jar:/home/RESEARCHER/.m2/repository/net/sourceforge/nekohtml/nekohtml/1.9.22/nekohtml-1.9.22.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/jetty-servlet/9.3.20.v20170531/jetty-servlet-9.3.20.v20170531.jar:/home/RESEARCHER/.m2/repository/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/websocket/websocket-api/9.2.12.v20150709/websocket-api-9.2.12.v20150709.jar:/home/RESEARCHER/.m2/repository/org/w3c/css/sac/1.3/sac-1.3.jar:/home/RESEARCHER/.m2/repository/com/fasterxml/jackson/module/jackson-module-scala_2.11/2.6.7.1/jackson-module-scala_2.11-2.6.7.1.jar:/home/RESEARCHER/.m2/repository/org/json4s/json4s-ast_2.11/3.5.3/json4s-ast_2.11-3.5.3.jar:/home/RESEARCHER/.m2/repository/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8.jar:/home/RESEARCHER/.m2/repository/com/twitter/chill_2.11/0.8.4/chill_2.11-0.8.4.jar:/home/RESEARCHER/.m2/repository/org/mockito/mockito-core/1.10.19/mockito-core-1.10.19.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-hdfs/2.6.5/hadoop-hdfs-2.6.5.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/jetty-servlets/9.3.20.v20170531/jetty-servlets-9.3.20.v20170531.jar:/home/RESEARCHER/.m2/repository/com/googlecode/javaewah/JavaEWAH/0.3.2/JavaEWAH-0.3.2.jar:/home/RESEARCHER/.m2/repository/org/fusesource/leveldbjni/leveldbjni-all/1.8/leveldbjni-all-1.8.jar:/home/RESEARCHER/.m2/repository/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar:/home/RESEARCHER/.m2/repository/com/twitter/chill-java/0.8.4/chill-java-0.8.4.jar:/home/RESEARCHER/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar:/home/RESEARCHER/.m2/repository/org/apache/httpcomponents/httpclient/4.5.4/httpclient-4.5.4.jar:/home/RESEARCHER/.m2/repository/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5.jar:/home/RESEARCHER/.m2/repository/xalan/serializer/2.7.2/serializer-2.7.2.jar:/home/RESEARCHER/.m2/repository/org/scala-lang/scala-reflect/2.11.8/scala-reflect-2.11.8.jar:/home/RESEARCHER/.m2/repository/com/esotericsoftware/minlog/1.3.0/minlog-1.3.0.jar:/home/RESEARCHER/.m2/repository/xalan/xalan/2.7.2/xalan-2.7.2.jar:/home/RESEARCHER/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/jetty-xml/9.3.20.v20170531/jetty-xml-9.3.20.v20170531.jar:/home/RESEARCHER/.m2/repository/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar:/home/RESEARCHER/.m2/repository/org/bouncycastle/bcprov-jdk15on/1.58/bcprov-jdk15on-1.58.jar:/home/RESEARCHER/.m2/repository/org/scala-lang/modules/scala-xml_2.11/1.0.5/scala-xml_2.11-1.0.5.jar:/home/RESEARCHER/.m2/repository/org/iq80/snappy/snappy/0.2/snappy-0.2.jar:/home/RESEARCHER/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/home/RESEARCHER/.m2/repository/org/apache/curator/curator-test/2.6.0/curator-test-2.6.0.jar:/home/RESEARCHER/.m2/repository/javax/xml/bind/jaxb-api/2.2.2/jaxb-api-2.2.2.jar:/home/RESEARCHER/.m2/repository/org/apache/thrift/libthrift/0.9.3/libthrift-0.9.3.jar:/home/RESEARCHER/.m2/repository/org/glassfish/hk2/hk2-api/2.4.0-b34/hk2-api-2.4.0-b34.jar:/home/RESEARCHER/.m2/repository/org/spark-project/hive/hive-exec/1.2.1.spark2/hive-exec-1.2.1.spark2.jar:/home/RESEARCHER/.m2/repository/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6.jar:/home/RESEARCHER/.m2/repository/com/jolbox/bonecp/0.8.0.RELEASE/bonecp-0.8.0.RELEASE.jar:/home/RESEARCHER/.m2/repository/commons-codec/commons-codec/1.10/commons-codec-1.10.jar:/home/RESEARCHER/.m2/repository/com/google/guava/guava/14.0.1/guava-14.0.1.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/jetty-client/9.3.20.v20170531/jetty-client-9.3.20.v20170531.jar:/home/RESEARCHER/.m2/repository/org/apache/httpcomponents/httpcore/4.4.8/httpcore-4.4.8.jar:/home/RESEARCHER/.m2/repository/commons-beanutils/commons-beanutils-core/1.8.0/commons-beanutils-core-1.8.0.jar:/home/RESEARCHER/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar:/home/RESEARCHER/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.6.7/jackson-core-2.6.7.jar:/home/RESEARCHER/.m2/repository/org/apache/commons/commons-math3/3.4.1/commons-math3-3.4.1.jar:/home/RESEARCHER/.m2/repository/javax/transaction/jta/1.1/jta-1.1.jar:/home/RESEARCHER/.m2/repository/javax/xml/stream/stax-api/1.0-2/stax-api-1.0-2.jar:/home/RESEARCHER/.m2/repository/org/codehaus/jackson/jackson-xc/1.9.13/jackson-xc-1.9.13.jar:/home/RESEARCHER/.m2/repository/net/sourceforge/htmlunit/htmlunit/2.18/htmlunit-2.18.jar:/home/RESEARCHER/.m2/repository/log4j/apache-log4j-extras/1.2.17/apache-log4j-extras-1.2.17.jar:/home/RESEARCHER/.m2/repository/org/glassfish/hk2/hk2-utils/2.4.0-b34/hk2-utils-2.4.0-b34.jar:/home/RESEARCHER/.m2/repository/org/glassfish/hk2/external/aopalliance-repackaged/2.4.0-b34/aopalliance-repackaged-2.4.0-b34.jar:/home/RESEARCHER/.m2/repository/oro/oro/2.0.8/oro-2.0.8.jar:/home/RESEARCHER/.m2/repository/javax/jdo/jdo-api/3.0.1/jdo-api-3.0.1.jar:/home/RESEARCHER/.m2/repository/org/apache/curator/curator-framework/2.6.0/curator-framework-2.6.0.jar:/home/RESEARCHER/.m2/repository/org/antlr/antlr-runtime/3.4/antlr-runtime-3.4.jar:/home/RESEARCHER/.m2/repository/stax/stax-api/1.0.1/stax-api-1.0.1.jar:/home/RESEARCHER/.m2/repository/org/roaringbitmap/RoaringBitmap/0.5.11/RoaringBitmap-0.5.11.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/websocket/websocket-client/9.2.12.v20150709/websocket-client-9.2.12.v20150709.jar:/home/RESEARCHER/.m2/repository/com/novocode/junit-interface/0.11/junit-interface-0.11.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/jetty-proxy/9.3.20.v20170531/jetty-proxy-9.3.20.v20170531.jar:/home/RESEARCHER/.m2/repository/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.jar:/home/RESEARCHER/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/2.52.0/selenium-ie-driver-2.52.0.jar:/home/RESEARCHER/.m2/repository/io/dropwizard/metrics/metrics-json/3.1.5/metrics-json-3.1.5.jar:/home/RESEARCHER/.m2/repository/org/apache/commons/commons-compress/1.4.1/commons-compress-1.4.1.jar:/home/RESEARCHER/.m2/repository/org/apache/curator/curator-recipes/2.6.0/curator-recipes-2.6.0.jar:/home/RESEARCHER/.m2/repository/io/dropwizard/metrics/metrics-core/3.1.5/metrics-core-3.1.5.jar:/home/RESEARCHER/.m2/repository/commons-pool/commons-pool/1.5.4/commons-pool-1.5.4.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-shuffle/2.6.5/hadoop-mapreduce-client-shuffle-2.6.5.jar:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/launcher/target/spark-launcher_2.11-2.4.0-SNAPSHOT.jar:/home/RESEARCHER/.m2/repository/cglib/cglib-nodep/2.1_3/cglib-nodep-2.1_3.jar:/home/RESEARCHER/.m2/repository/org/mortbay/jetty/jetty-util/6.1.26/jetty-util-6.1.26.jar:/home/RESEARCHER/.m2/repository/net/sourceforge/cssparser/cssparser/0.9.16/cssparser-0.9.16.jar:/home/RESEARCHER/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.6.7.1/jackson-databind-2.6.7.1.jar:/home/RESEARCHER/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/RESEARCHER/.m2/repository/com/esotericsoftware/kryo-shaded/3.0.3/kryo-shaded-3.0.3.jar:/home/RESEARCHER/.m2/repository/io/netty/netty/3.9.9.Final/netty-3.9.9.Final.jar:/home/RESEARCHER/.m2/repository/org/apache/avro/avro-mapred/1.7.7/avro-mapred-1.7.7-hadoop2.jar:/home/RESEARCHER/.m2/repository/xmlenc/xmlenc/0.52/xmlenc-0.52.jar:/home/RESEARCHER/.m2/repository/org/spark-project/hive/hive-metastore/1.2.1.spark2/hive-metastore-1.2.1.spark2.jar:/home/RESEARCHER/.m2/repository/org/apache/directory/api/api-util/1.0.0-M20/api-util-1.0.0-M20.jar:/home/RESEARCHER/.m2/repository/commons-net/commons-net/2.2/commons-net-2.2.jar:/home/RESEARCHER/.m2/repository/org/apache/directory/api/api-asn1-api/1.0.0-M20/api-asn1-api-1.0.0-M20.jar:/home/RESEARCHER/.m2/repository/com/clearspring/analytics/stream/2.7.0/stream-2.7.0.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/jetty-http/9.3.20.v20170531/jetty-http-9.3.20.v20170531.jar:/home/RESEARCHER/.m2/repository/org/apache/curator/curator-client/2.6.0/curator-client-2.6.0.jar:/home/RESEARCHER/.m2/repository/org/apache/thrift/libfb303/0.9.3/libfb303-0.9.3.jar:/home/RESEARCHER/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet/2.22.2/jersey-container-servlet-2.22.2.jar:/home/RESEARCHER/.m2/repository/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-client/2.6.5/hadoop-client-2.6.5.jar:/home/RESEARCHER/.m2/repository/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4.jar:/home/RESEARCHER/.m2/repository/net/iharder/base64/2.3.8/base64-2.3.8.jar:/home/RESEARCHER/.m2/repository/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.jar:/home/RESEARCHER/.m2/repository/org/xerial/snappy/snappy-java/1.1.2.6/snappy-java-1.1.2.6.jar:/home/RESEARCHER/.m2/repository/org/glassfish/jersey/media/jersey-media-jaxb/2.22.2/jersey-media-jaxb-2.22.2.jar:/home/RESEARCHER/.m2/repository/net/java/dev/jets3t/jets3t/0.9.4/jets3t-0.9.4.jar:/home/RESEARCHER/.m2/repository/org/apache/avro/avro-ipc/1.7.7/avro-ipc-1.7.7.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/jetty-jndi/9.3.20.v20170531/jetty-jndi-9.3.20.v20170531.jar:/home/RESEARCHER/.m2/repository/org/datanucleus/datanucleus-rdbms/3.2.9/datanucleus-rdbms-3.2.9.jar:/home/RESEARCHER/.m2/repository/junit/junit/4.12/junit-4.12.jar:/home/RESEARCHER/.m2/repository/org/glassfish/hk2/hk2-locator/2.4.0-b34/hk2-locator-2.4.0-b34.jar:/home/RESEARCHER/.m2/repository/org/apache/hadoop/hadoop-yarn-client/2.6.5/hadoop-yarn-client-2.6.5.jar:/home/RESEARCHER/.m2/repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar:/home/RESEARCHER/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/2.52.0/selenium-remote-driver-2.52.0.jar:/home/RESEARCHER/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.16/jcl-over-slf4j-1.7.16.jar:/home/RESEARCHER/.m2/repository/net/java/dev/jna/jna/4.1.0/jna-4.1.0.jar:/home/RESEARCHER/.m2/repository/io/netty/netty-all/4.1.17.Final/netty-all-4.1.17.Final.jar
+[INFO] 
+[INFO] --- scala:3.2.2:testCompile (scala-test-compile-first) @ spark-core_2.11 ---
+[WARNING] Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+[WARNING] Zinc server is not available at port 3030 - reverting to normal incremental compile
+[INFO] Using incremental compilation
+[INFO] Compiling 25 Scala sources and 8 Java sources to /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/test-classes...
+[WARNING] there were 9 deprecation warnings; re-run with -deprecation for details
+[WARNING] one warning found
+[INFO] 
+[INFO] --- surefire:2.20.1:test (default-test) @ spark-core_2.11 ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- surefire:2.20.1:test (test) @ spark-core_2.11 ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- scalatest:1.0:test (test) @ spark-core_2.11 ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.0.2:test-jar (prepare-test-jar) @ spark-core_2.11 ---
+[INFO] Building jar: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/spark-core_2.11-2.4.0-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- jar:3.0.2:jar (default-jar) @ spark-core_2.11 ---
+[INFO] Building jar: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/spark-core_2.11-2.4.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- site:3.5.1:attach-descriptor (attach-descriptor) @ spark-core_2.11 ---
+[INFO] 
+[INFO] --- dependency:3.0.2:copy-dependencies (copy-dependencies) @ spark-core_2.11 ---
+[INFO] 
+[INFO] --- shade:3.1.0:shade (default) @ spark-core_2.11 ---
+[INFO] Excluding org.apache.avro:avro:jar:1.7.7 from the shaded jar.
+[INFO] Excluding org.codehaus.jackson:jackson-core-asl:jar:1.9.13 from the shaded jar.
+[INFO] Excluding org.codehaus.jackson:jackson-mapper-asl:jar:1.9.13 from the shaded jar.
+[INFO] Excluding com.thoughtworks.paranamer:paranamer:jar:2.8 from the shaded jar.
+[INFO] Excluding org.apache.commons:commons-compress:jar:1.4.1 from the shaded jar.
+[INFO] Excluding org.tukaani:xz:jar:1.0 from the shaded jar.
+[INFO] Excluding org.apache.avro:avro-mapred:jar:hadoop2:1.7.7 from the shaded jar.
+[INFO] Excluding org.apache.avro:avro-ipc:jar:1.7.7 from the shaded jar.
+[INFO] Excluding com.twitter:chill_2.11:jar:0.8.4 from the shaded jar.
+[INFO] Excluding com.esotericsoftware:kryo-shaded:jar:3.0.3 from the shaded jar.
+[INFO] Excluding com.esotericsoftware:minlog:jar:1.3.0 from the shaded jar.
+[INFO] Excluding com.twitter:chill-java:jar:0.8.4 from the shaded jar.
+[INFO] Excluding org.apache.xbean:xbean-asm5-shaded:jar:4.4 from the shaded jar.
+[INFO] Excluding org.apache.hadoop:hadoop-client:jar:2.6.5 from the shaded jar.
+[INFO] Excluding org.apache.hadoop:hadoop-common:jar:2.6.5 from the shaded jar.
+[INFO] Excluding xmlenc:xmlenc:jar:0.52 from the shaded jar.
+[INFO] Excluding commons-httpclient:commons-httpclient:jar:3.1 from the shaded jar.
+[INFO] Excluding commons-configuration:commons-configuration:jar:1.6 from the shaded jar.
+[INFO] Excluding commons-digester:commons-digester:jar:1.8 from the shaded jar.
+[INFO] Excluding commons-beanutils:commons-beanutils:jar:1.7.0 from the shaded jar.
+[INFO] Excluding commons-beanutils:commons-beanutils-core:jar:1.8.0 from the shaded jar.
+[INFO] Excluding com.google.protobuf:protobuf-java:jar:2.5.0 from the shaded jar.
+[INFO] Excluding com.google.code.gson:gson:jar:2.2.4 from the shaded jar.
+[INFO] Excluding org.apache.hadoop:hadoop-auth:jar:2.6.5 from the shaded jar.
+[INFO] Excluding org.apache.directory.server:apacheds-kerberos-codec:jar:2.0.0-M15 from the shaded jar.
+[INFO] Excluding org.apache.directory.server:apacheds-i18n:jar:2.0.0-M15 from the shaded jar.
+[INFO] Excluding org.apache.directory.api:api-asn1-api:jar:1.0.0-M20 from the shaded jar.
+[INFO] Excluding org.apache.directory.api:api-util:jar:1.0.0-M20 from the shaded jar.
+[INFO] Excluding org.apache.curator:curator-client:jar:2.6.0 from the shaded jar.
+[INFO] Excluding org.htrace:htrace-core:jar:3.0.4 from the shaded jar.
+[INFO] Excluding org.apache.hadoop:hadoop-hdfs:jar:2.6.5 from the shaded jar.
+[INFO] Excluding org.mortbay.jetty:jetty-util:jar:6.1.26 from the shaded jar.
+[INFO] Excluding xerces:xercesImpl:jar:2.9.1 from the shaded jar.
+[INFO] Excluding org.apache.hadoop:hadoop-mapreduce-client-app:jar:2.6.5 from the shaded jar.
+[INFO] Excluding org.apache.hadoop:hadoop-mapreduce-client-common:jar:2.6.5 from the shaded jar.
+[INFO] Excluding org.apache.hadoop:hadoop-yarn-client:jar:2.6.5 from the shaded jar.
+[INFO] Excluding org.apache.hadoop:hadoop-yarn-server-common:jar:2.6.5 from the shaded jar.
+[INFO] Excluding org.apache.hadoop:hadoop-mapreduce-client-shuffle:jar:2.6.5 from the shaded jar.
+[INFO] Excluding org.apache.hadoop:hadoop-yarn-api:jar:2.6.5 from the shaded jar.
+[INFO] Excluding org.apache.hadoop:hadoop-mapreduce-client-core:jar:2.6.5 from the shaded jar.
+[INFO] Excluding org.apache.hadoop:hadoop-yarn-common:jar:2.6.5 from the shaded jar.
+[INFO] Excluding javax.xml.bind:jaxb-api:jar:2.2.2 from the shaded jar.
+[INFO] Excluding javax.xml.stream:stax-api:jar:1.0-2 from the shaded jar.
+[INFO] Excluding org.codehaus.jackson:jackson-jaxrs:jar:1.9.13 from the shaded jar.
+[INFO] Excluding org.codehaus.jackson:jackson-xc:jar:1.9.13 from the shaded jar.
+[INFO] Excluding org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:2.6.5 from the shaded jar.
+[INFO] Excluding org.apache.hadoop:hadoop-annotations:jar:2.6.5 from the shaded jar.
+[INFO] Excluding org.apache.spark:spark-launcher_2.11:jar:2.4.0-SNAPSHOT from the shaded jar.
+[INFO] Excluding org.apache.spark:spark-kvstore_2.11:jar:2.4.0-SNAPSHOT from the shaded jar.
+[INFO] Excluding org.fusesource.leveldbjni:leveldbjni-all:jar:1.8 from the shaded jar.
+[INFO] Excluding com.fasterxml.jackson.core:jackson-core:jar:2.6.7 from the shaded jar.
+[INFO] Excluding com.fasterxml.jackson.core:jackson-annotations:jar:2.6.7 from the shaded jar.
+[INFO] Excluding org.apache.spark:spark-network-common_2.11:jar:2.4.0-SNAPSHOT from the shaded jar.
+[INFO] Excluding org.apache.spark:spark-network-shuffle_2.11:jar:2.4.0-SNAPSHOT from the shaded jar.
+[INFO] Excluding org.apache.spark:spark-unsafe_2.11:jar:2.4.0-SNAPSHOT from the shaded jar.
+[INFO] Excluding net.java.dev.jets3t:jets3t:jar:0.9.4 from the shaded jar.
+[INFO] Excluding org.apache.httpcomponents:httpcore:jar:4.4.8 from the shaded jar.
+[INFO] Excluding org.apache.httpcomponents:httpclient:jar:4.5.4 from the shaded jar.
+[INFO] Excluding commons-codec:commons-codec:jar:1.10 from the shaded jar.
+[INFO] Excluding javax.activation:activation:jar:1.1.1 from the shaded jar.
+[INFO] Excluding org.bouncycastle:bcprov-jdk15on:jar:1.58 from the shaded jar.
+[INFO] Excluding com.jamesmurty.utils:java-xmlbuilder:jar:1.1 from the shaded jar.
+[INFO] Excluding net.iharder:base64:jar:2.3.8 from the shaded jar.
+[INFO] Excluding org.apache.curator:curator-recipes:jar:2.6.0 from the shaded jar.
+[INFO] Excluding org.apache.curator:curator-framework:jar:2.6.0 from the shaded jar.
+[INFO] Excluding org.apache.zookeeper:zookeeper:jar:3.4.6 from the shaded jar.
+[INFO] Including org.eclipse.jetty:jetty-plus:jar:9.3.20.v20170531 in the shaded jar.
+[INFO] Excluding org.eclipse.jetty:jetty-webapp:jar:9.3.20.v20170531 from the shaded jar.
+[INFO] Excluding org.eclipse.jetty:jetty-xml:jar:9.3.20.v20170531 from the shaded jar.
+[INFO] Excluding org.eclipse.jetty:jetty-jndi:jar:9.3.20.v20170531 from the shaded jar.
+[INFO] Including org.eclipse.jetty:jetty-security:jar:9.3.20.v20170531 in the shaded jar.
+[INFO] Including org.eclipse.jetty:jetty-util:jar:9.3.20.v20170531 in the shaded jar.
+[INFO] Including org.eclipse.jetty:jetty-server:jar:9.3.20.v20170531 in the shaded jar.
+[INFO] Including org.eclipse.jetty:jetty-io:jar:9.3.20.v20170531 in the shaded jar.
+[INFO] Including org.eclipse.jetty:jetty-http:jar:9.3.20.v20170531 in the shaded jar.
+[INFO] Including org.eclipse.jetty:jetty-continuation:jar:9.3.20.v20170531 in the shaded jar.
+[INFO] Including org.eclipse.jetty:jetty-servlet:jar:9.3.20.v20170531 in the shaded jar.
+[INFO] Including org.eclipse.jetty:jetty-proxy:jar:9.3.20.v20170531 in the shaded jar.
+[INFO] Including org.eclipse.jetty:jetty-client:jar:9.3.20.v20170531 in the shaded jar.
+[INFO] Including org.eclipse.jetty:jetty-servlets:jar:9.3.20.v20170531 in the shaded jar.
+[INFO] Excluding javax.servlet:javax.servlet-api:jar:3.1.0 from the shaded jar.
+[INFO] Excluding org.apache.commons:commons-lang3:jar:3.5 from the shaded jar.
+[INFO] Excluding org.apache.commons:commons-math3:jar:3.4.1 from the shaded jar.
+[INFO] Excluding com.google.code.findbugs:jsr305:jar:1.3.9 from the shaded jar.
+[INFO] Excluding org.slf4j:slf4j-api:jar:1.7.16 from the shaded jar.
+[INFO] Excluding org.slf4j:jul-to-slf4j:jar:1.7.16 from the shaded jar.
+[INFO] Excluding org.slf4j:jcl-over-slf4j:jar:1.7.16 from the shaded jar.
+[INFO] Excluding log4j:log4j:jar:1.2.17 from the shaded jar.
+[INFO] Excluding org.slf4j:slf4j-log4j12:jar:1.7.16 from the shaded jar.
+[INFO] Excluding com.ning:compress-lzf:jar:1.0.3 from the shaded jar.
+[INFO] Excluding org.xerial.snappy:snappy-java:jar:1.1.2.6 from the shaded jar.
+[INFO] Excluding org.lz4:lz4-java:jar:1.4.0 from the shaded jar.
+[INFO] Excluding com.github.luben:zstd-jni:jar:1.3.2-2 from the shaded jar.
+[INFO] Excluding org.roaringbitmap:RoaringBitmap:jar:0.5.11 from the shaded jar.
+[INFO] Excluding commons-net:commons-net:jar:2.2 from the shaded jar.
+[INFO] Excluding org.scala-lang:scala-library:jar:2.11.8 from the shaded jar.
+[INFO] Excluding org.json4s:json4s-jackson_2.11:jar:3.5.3 from the shaded jar.
+[INFO] Excluding org.json4s:json4s-core_2.11:jar:3.5.3 from the shaded jar.
+[INFO] Excluding org.json4s:json4s-ast_2.11:jar:3.5.3 from the shaded jar.
+[INFO] Excluding org.json4s:json4s-scalap_2.11:jar:3.5.3 from the shaded jar.
+[INFO] Excluding org.glassfish.jersey.core:jersey-client:jar:2.22.2 from the shaded jar.
+[INFO] Excluding javax.ws.rs:javax.ws.rs-api:jar:2.0.1 from the shaded jar.
+[INFO] Excluding org.glassfish.hk2:hk2-api:jar:2.4.0-b34 from the shaded jar.
+[INFO] Excluding org.glassfish.hk2:hk2-utils:jar:2.4.0-b34 from the shaded jar.
+[INFO] Excluding org.glassfish.hk2.external:aopalliance-repackaged:jar:2.4.0-b34 from the shaded jar.
+[INFO] Excluding org.glassfish.hk2.external:javax.inject:jar:2.4.0-b34 from the shaded jar.
+[INFO] Excluding org.glassfish.hk2:hk2-locator:jar:2.4.0-b34 from the shaded jar.
+[INFO] Excluding org.glassfish.jersey.core:jersey-common:jar:2.22.2 from the shaded jar.
+[INFO] Excluding javax.annotation:javax.annotation-api:jar:1.2 from the shaded jar.
+[INFO] Excluding org.glassfish.jersey.bundles.repackaged:jersey-guava:jar:2.22.2 from the shaded jar.
+[INFO] Excluding org.glassfish.hk2:osgi-resource-locator:jar:1.0.1 from the shaded jar.
+[INFO] Excluding org.glassfish.jersey.core:jersey-server:jar:2.22.2 from the shaded jar.
+[INFO] Excluding org.glassfish.jersey.media:jersey-media-jaxb:jar:2.22.2 from the shaded jar.
+[INFO] Excluding javax.validation:validation-api:jar:1.1.0.Final from the shaded jar.
+[INFO] Excluding org.glassfish.jersey.containers:jersey-container-servlet:jar:2.22.2 from the shaded jar.
+[INFO] Excluding org.glassfish.jersey.containers:jersey-container-servlet-core:jar:2.22.2 from the shaded jar.
+[INFO] Excluding io.netty:netty-all:jar:4.1.17.Final from the shaded jar.
+[INFO] Excluding io.netty:netty:jar:3.9.9.Final from the shaded jar.
+[INFO] Excluding com.clearspring.analytics:stream:jar:2.7.0 from the shaded jar.
+[INFO] Excluding io.dropwizard.metrics:metrics-core:jar:3.1.5 from the shaded jar.
+[INFO] Excluding io.dropwizard.metrics:metrics-jvm:jar:3.1.5 from the shaded jar.
+[INFO] Excluding io.dropwizard.metrics:metrics-json:jar:3.1.5 from the shaded jar.
+[INFO] Excluding io.dropwizard.metrics:metrics-graphite:jar:3.1.5 from the shaded jar.
+[INFO] Excluding com.fasterxml.jackson.core:jackson-databind:jar:2.6.7.1 from the shaded jar.
+[INFO] Excluding com.fasterxml.jackson.module:jackson-module-scala_2.11:jar:2.6.7.1 from the shaded jar.
+[INFO] Excluding org.scala-lang:scala-reflect:jar:2.11.8 from the shaded jar.
+[INFO] Excluding com.fasterxml.jackson.module:jackson-module-paranamer:jar:2.7.9 from the shaded jar.
+[INFO] Excluding org.apache.ivy:ivy:jar:2.4.0 from the shaded jar.
+[INFO] Excluding oro:oro:jar:2.0.8 from the shaded jar.
+[INFO] Excluding commons-collections:commons-collections:jar:3.2.2 from the shaded jar.
+[INFO] Excluding org.objenesis:objenesis:jar:2.1 from the shaded jar.
+[INFO] Excluding org.javassist:javassist:jar:3.18.1-GA from the shaded jar.
+[INFO] Excluding net.razorvine:pyrolite:jar:4.13 from the shaded jar.
+[INFO] Excluding net.sf.py4j:py4j:jar:0.10.6 from the shaded jar.
+[INFO] Excluding org.apache.spark:spark-tags_2.11:jar:2.4.0-SNAPSHOT from the shaded jar.
+[INFO] Excluding org.apache.commons:commons-crypto:jar:1.0.0 from the shaded jar.
+[INFO] Excluding com.twitter:parquet-hadoop-bundle:jar:1.6.0 from the shaded jar.
+[INFO] Excluding commons-io:commons-io:jar:2.4 from the shaded jar.
+[INFO] Excluding commons-lang:commons-lang:jar:2.6 from the shaded jar.
+[INFO] Excluding commons-cli:commons-cli:jar:1.2 from the shaded jar.
+[INFO] Including org.spark-project.spark:unused:jar:1.0.0 in the shaded jar.
+[INFO] Excluding org.scala-lang.modules:scala-xml_2.11:jar:1.0.5 from the shaded jar.
+[INFO] Replacing original artifact with shaded artifact.
+[INFO] Replacing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/spark-core_2.11-2.4.0-SNAPSHOT.jar with /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/spark-core_2.11-2.4.0-SNAPSHOT-shaded.jar
+[INFO] Dependency-reduced POM written at: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/dependency-reduced-pom.xml
+[INFO] 
+[INFO] --- source:3.0.1:jar-no-fork (create-source-jar) @ spark-core_2.11 ---
+[INFO] Building jar: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/spark-core_2.11-2.4.0-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- source:3.0.1:test-jar-no-fork (create-source-jar) @ spark-core_2.11 ---
+[INFO] Building jar: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/spark-core_2.11-2.4.0-SNAPSHOT-test-sources.jar
+[INFO] 
+[INFO] --- scalastyle:1.0.0:check (default) @ spark-core_2.11 ---
+Saving to outputFile=/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scalastyle-output.xml
+Processed 486 file(s)
+Found 0 errors
+Found 0 warnings
+Found 0 infos
+Finished in 4588 ms
+[INFO] 
+[INFO] --- checkstyle:2.17:check (default) @ spark-core_2.11 ---
+[WARNING]  Parameter 'testSourceDirectory' is deprecated: instead use {@link #testSourceDirectories}
+[INFO] There are 3 errors reported by Checkstyle 8.2 with dev/checkstyle.xml ruleset.
+[ERROR] src/test/java/org/apache/spark/launcher/SparkLauncherSuite.java:[22,8] (imports) UnusedImports: Unused import - java.util.ArrayList.
+[ERROR] src/test/java/org/apache/spark/launcher/SparkLauncherSuite.java:[24,8] (imports) UnusedImports: Unused import - java.util.List.
+[ERROR] src/test/java/org/apache/spark/launcher/SparkLauncherSuite.java:[180] (indentation) CommentsIndentation: Comment has incorrect indentation level 0, expected is 2, indentation should be the same level as line 181.
+[WARNING] checkstyle:check violations detected but failOnViolation set to false
+[INFO] 
+[INFO] --- install:2.5.2:install (default-install) @ spark-core_2.11 ---
+[INFO] Installing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/spark-core_2.11-2.4.0-SNAPSHOT.jar to /home/RESEARCHER/.m2/repository/org/apache/spark/spark-core_2.11/2.4.0-SNAPSHOT/spark-core_2.11-2.4.0-SNAPSHOT.jar
+[INFO] Installing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/dependency-reduced-pom.xml to /home/RESEARCHER/.m2/repository/org/apache/spark/spark-core_2.11/2.4.0-SNAPSHOT/spark-core_2.11-2.4.0-SNAPSHOT.pom
+[INFO] Installing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/spark-core_2.11-2.4.0-SNAPSHOT-tests.jar to /home/RESEARCHER/.m2/repository/org/apache/spark/spark-core_2.11/2.4.0-SNAPSHOT/spark-core_2.11-2.4.0-SNAPSHOT-tests.jar
+[INFO] Installing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/spark-core_2.11-2.4.0-SNAPSHOT-sources.jar to /home/RESEARCHER/.m2/repository/org/apache/spark/spark-core_2.11/2.4.0-SNAPSHOT/spark-core_2.11-2.4.0-SNAPSHOT-sources.jar
+[INFO] Installing /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/spark-core_2.11-2.4.0-SNAPSHOT-test-sources.jar to /home/RESEARCHER/.m2/repository/org/apache/spark/spark-core_2.11/2.4.0-SNAPSHOT/spark-core_2.11-2.4.0-SNAPSHOT-test-sources.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Spark Project Parent POM 2.4.0-SNAPSHOT:
+[INFO] 
+[INFO] Spark Project Parent POM ........................... SUCCESS [ 12.297 s]
+[INFO] Spark Project Tags ................................. SUCCESS [  0.780 s]
+[INFO] Spark Project Local DB ............................. SUCCESS [  0.480 s]
+[INFO] Spark Project Networking ........................... SUCCESS [  1.163 s]
+[INFO] Spark Project Shuffle Streaming Service ............ SUCCESS [  1.564 s]
+[INFO] Spark Project Unsafe ............................... SUCCESS [  0.293 s]
+[INFO] Spark Project Launcher ............................. SUCCESS [  0.940 s]
+[INFO] Spark Project Core ................................. SUCCESS [ 38.971 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  56.656 s
+[INFO] Finished at: 2026-10-18T20:55:08+09:00
+[INFO] ------------------------------------------------------------------------

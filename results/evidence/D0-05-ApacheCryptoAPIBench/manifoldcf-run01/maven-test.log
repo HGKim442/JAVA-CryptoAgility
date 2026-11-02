@@ -1,0 +1,683 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.manifoldcf:mcf-parent:pom:2.9-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.apache.manifoldcf:mcf-parent:2.9-SNAPSHOT (/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/manifoldcf/pom.xml) points at br.unb.cic:mop-test-suite-b04 instead of org.apache:apache, please verify your project structure @ line 21, column 11
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] ManifoldCF                                                         [pom]
+[INFO] ManifoldCF - Framework                                             [pom]
+[INFO] ManifoldCF - Framework - Core                                      [jar]
+[INFO] 
+[INFO] ------------------< org.apache.manifoldcf:mcf-parent >------------------
+[INFO] Building ManifoldCF 2.9-SNAPSHOT                                   [1/3]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- remote-resources:1.5:process (default) @ mcf-parent ---
+[INFO] 
+[INFO] ----------------< org.apache.manifoldcf:mcf-framework >-----------------
+[INFO] Building ManifoldCF - Framework 2.9-SNAPSHOT                       [2/3]
+[INFO]   from framework/pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- remote-resources:1.5:process (default) @ mcf-framework ---
+[INFO] 
+[INFO] -------------------< org.apache.manifoldcf:mcf-core >-------------------
+[INFO] Building ManifoldCF - Framework - Core 2.9-SNAPSHOT                [3/3]
+[INFO]   from framework/core/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Could not transfer metadata org.seleniumhq.selenium:selenium-support/maven-metadata.xml from/to maven-default-http-blocker (http://0.0.0.0/): Blocked mirror for repositories: [apache.snapshots (http://repository.apache.org/snapshots, default, snapshots)]
+[INFO] 
+[INFO] --- remote-resources:1.5:process (default) @ mcf-core ---
+[INFO] artifact org.seleniumhq.selenium:selenium-support: checking for updates from central
+[INFO] 
+[INFO] --- resources:2.5:resources (default-resources) @ mcf-core ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/manifoldcf/framework/core/src/main/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- compiler:2.3.2:compile (default-compile) @ mcf-core ---
+[INFO] Compiling 126 source files to /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/manifoldcf/framework/core/target/classes
+[INFO] 
+[INFO] --- resources:2.5:testResources (default-testResources) @ mcf-core ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- compiler:2.3.2:testCompile (default-testCompile) @ mcf-core ---
+[INFO] Compiling 15 source files to /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/manifoldcf/framework/core/target/test-classes
+[INFO] 
+[INFO] --- surefire:2.17:test (default-test) @ mcf-core ---
+[INFO] Surefire report directory: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/manifoldcf/framework/core/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1024m; support was removed in 8.0
+Running org.apache.manifoldcf.core.common.DateTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.166 sec - in org.apache.manifoldcf.core.common.DateTest
+Running org.apache.manifoldcf.core.interfaces.ConfigurationTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.164 sec - in org.apache.manifoldcf.core.interfaces.ConfigurationTest
+Running org.apache.manifoldcf.core.lockmanager.TestZooKeeperLocks
+[Thread-3] INFO org.apache.zookeeper.server.ZooKeeperServerMain - Starting server
+[Thread-3] INFO org.apache.zookeeper.server.ZooKeeperServer - Server environment:zookeeper.version=3.4.10-39d3a4f269333c922ed3db283be479f9deacaa0f, built on 03/23/2017 10:13 GMT
+[Thread-3] INFO org.apache.zookeeper.server.ZooKeeperServer - Server environment:host.name=RESEARCH-HOST.localdomain
+[Thread-3] INFO org.apache.zookeeper.server.ZooKeeperServer - Server environment:java.version=1.8.0_504
+[Thread-3] INFO org.apache.zookeeper.server.ZooKeeperServer - Server environment:java.vendor=Temurin
+[Thread-3] INFO org.apache.zookeeper.server.ZooKeeperServer - Server environment:java.home=/home/RESEARCHER/.sdkman/candidates/java/8.0.504+1-tem/jre
+[Thread-3] INFO org.apache.zookeeper.server.ZooKeeperServer - Server environment:java.class.path=/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/manifoldcf/framework/core/target/test-classes:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/manifoldcf/framework/core/target/classes:/home/RESEARCHER/.m2/repository/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar:/home/RESEARCHER/.m2/repository/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3.jar:/home/RESEARCHER/.m2/repository/org/apache/httpcomponents/httpcore/4.4.6/httpcore-4.4.6.jar:/home/RESEARCHER/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/RESEARCHER/.m2/repository/commons-codec/commons-codec/1.9/commons-codec-1.9.jar:/home/RESEARCHER/.m2/repository/org/apache/logging/log4j/log4j-core/2.4.1/log4j-core-2.4.1.jar:/home/RESEARCHER/.m2/repository/org/apache/logging/log4j/log4j-api/2.4.1/log4j-api-2.4.1.jar:/home/RESEARCHER/.m2/repository/org/apache/logging/log4j/log4j-1.2-api/2.4.1/log4j-1.2-api-2.4.1.jar:/home/RESEARCHER/.m2/repository/org/apache/velocity/velocity/1.7/velocity-1.7.jar:/home/RESEARCHER/.m2/repository/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar:/home/RESEARCHER/.m2/repository/commons-lang/commons-lang/2.4/commons-lang-2.4.jar:/home/RESEARCHER/.m2/repository/org/apache/zookeeper/zookeeper/3.4.10/zookeeper-3.4.10.jar:/home/RESEARCHER/.m2/repository/io/netty/netty/3.10.5.Final/netty-3.10.5.Final.jar:/home/RESEARCHER/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/home/RESEARCHER/.m2/repository/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar:/home/RESEARCHER/.m2/repository/com/google/guava/guava/21.0/guava-21.0.jar:/home/RESEARCHER/.m2/repository/net/java/dev/jna/jna-platform/4.1.0/jna-platform-4.1.0.jar:/home/RESEARCHER/.m2/repository/net/java/dev/jna/jna/4.1.0/jna-4.1.0.jar:/home/RESEARCHER/.m2/repository/javax/mail/mail/1.4.5/mail-1.4.5.jar:/home/RESEARCHER/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar:/home/RESEARCHER/.m2/repository/commons-discovery/commons-discovery/0.5/commons-discovery-0.5.jar:/home/RESEARCHER/.m2/repository/commons-el/commons-el/1.0/commons-el-1.0.jar:/home/RESEARCHER/.m2/repository/xalan/serializer/2.7.1/serializer-2.7.1.jar:/home/RESEARCHER/.m2/repository/xerces/xercesImpl/2.10.0/xercesImpl-2.10.0.jar:/home/RESEARCHER/.m2/repository/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar:/home/RESEARCHER/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar:/home/RESEARCHER/.m2/repository/junit/junit/4.12/junit-4.12.jar:/home/RESEARCHER/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/RESEARCHER/.m2/repository/org/seleniumhq/selenium/selenium-java/3.3.1/selenium-java-3.3.1.jar:/home/RESEARCHER/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/3.3.1/selenium-chrome-driver-3.3.1.jar:/home/RESEARCHER/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/3.3.1/selenium-remote-driver-3.3.1.jar:/home/RESEARCHER/.m2/repository/org/seleniumhq/selenium/selenium-api/3.3.1/selenium-api-3.3.1.jar:/home/RESEARCHER/.m2/repository/cglib/cglib-nodep/3.2.4/cglib-nodep-3.2.4.jar:/home/RESEARCHER/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/3.3.1/selenium-edge-driver-3.3.1.jar:/home/RESEARCHER/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/3.3.1/selenium-firefox-driver-3.3.1.jar:/home/RESEARCHER/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/3.3.1/selenium-ie-driver-3.3.1.jar:/home/RESEARCHER/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/3.3.1/selenium-opera-driver-3.3.1.jar:/home/RESEARCHER/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/3.3.1/selenium-safari-driver-3.3.1.jar:/home/RESEARCHER/.m2/repository/com/codeborne/phantomjsdriver/1.4.0/phantomjsdriver-1.4.0.jar:/home/RESEARCHER/.m2/repository/org/seleniumhq/selenium/htmlunit-driver/2.24/htmlunit-driver-2.24.jar:/home/RESEARCHER/.m2/repository/org/seleniumhq/selenium/selenium-support/4.0.0-rc-3/selenium-support-4.0.0-rc-3.jar:/home/RESEARCHER/.m2/repository/com/google/auto/service/auto-service-annotations/1.0/auto-service-annotations-1.0.jar:/home/RESEARCHER/.m2/repository/com/google/auto/service/auto-service/1.0/auto-service-1.0.jar:/home/RESEARCHER/.m2/repository/com/google/auto/auto-common/1.0/auto-common-1.0.jar:/home/RESEARCHER/.m2/repository/org/seleniumhq/selenium/selenium-json/4.0.0-rc-3/selenium-json-4.0.0-rc-3.jar:/home/RESEARCHER/.m2/repository/net/sourceforge/htmlunit/htmlunit/2.24/htmlunit-2.24.jar:/home/RESEARCHER/.m2/repository/xalan/xalan/2.7.2/xalan-2.7.2.jar:/home/RESEARCHER/.m2/repository/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5.jar:/home/RESEARCHER/.m2/repository/org/apache/httpcomponents/httpmime/4.5.2/httpmime-4.5.2.jar:/home/RESEARCHER/.m2/repository/net/sourceforge/htmlunit/htmlunit-core-js/2.23/htmlunit-core-js-2.23.jar:/home/RESEARCHER/.m2/repository/net/sourceforge/htmlunit/neko-htmlunit/2.24/neko-htmlunit-2.24.jar:/home/RESEARCHER/.m2/repository/net/sourceforge/cssparser/cssparser/0.9.21/cssparser-0.9.21.jar:/home/RESEARCHER/.m2/repository/org/w3c/css/sac/1.3/sac-1.3.jar:/home/RESEARCHER/.m2/repository/commons-io/commons-io/2.5/commons-io-2.5.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/websocket/websocket-client/9.2.20.v20161216/websocket-client-9.2.20.v20161216.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/jetty-util/9.2.20.v20161216/jetty-util-9.2.20.v20161216.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/jetty-io/9.2.20.v20161216/jetty-io-9.2.20.v20161216.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/websocket/websocket-common/9.2.20.v20161216/websocket-common-9.2.20.v20161216.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/websocket/websocket-api/9.2.20.v20161216/websocket-api-9.2.20.v20161216.jar:/home/RESEARCHER/.m2/repository/org/postgresql/postgresql/42.1.3/postgresql-42.1.3.jar:/home/RESEARCHER/.m2/repository/org/hsqldb/hsqldb/2.3.2/hsqldb-2.3.2.jar:/home/RESEARCHER/.m2/repository/org/slf4j/slf4j-simple/1.7.7/slf4j-simple-1.7.7.jar:/home/RESEARCHER/.m2/repository/org/slf4j/slf4j-api/1.7.7/slf4j-api-1.7.7.jar:
+[Thread-3] INFO org.apache.zookeeper.server.ZooKeeperServer - Server environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+[Thread-3] INFO org.apache.zookeeper.server.ZooKeeperServer - Server environment:java.io.tmpdir=/tmp
+[Thread-3] INFO org.apache.zookeeper.server.ZooKeeperServer - Server environment:java.compiler=<NA>
+[Thread-3] INFO org.apache.zookeeper.server.ZooKeeperServer - Server environment:os.name=Linux
+[Thread-3] INFO org.apache.zookeeper.server.ZooKeeperServer - Server environment:os.arch=amd64
+[Thread-3] INFO org.apache.zookeeper.server.ZooKeeperServer - Server environment:os.version=6.18.33.1-microsoft-standard-WSL2
+[Thread-3] INFO org.apache.zookeeper.server.ZooKeeperServer - Server environment:user.name=hscho
+[Thread-3] INFO org.apache.zookeeper.server.ZooKeeperServer - Server environment:user.home=/home/hscho
+[Thread-3] INFO org.apache.zookeeper.server.ZooKeeperServer - Server environment:user.dir=/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/manifoldcf/framework/core
+[Thread-3] INFO org.apache.zookeeper.server.ZooKeeperServer - tickTime set to 2000
+[Thread-3] INFO org.apache.zookeeper.server.ZooKeeperServer - minSessionTimeout set to -1
+[Thread-3] INFO org.apache.zookeeper.server.ZooKeeperServer - maxSessionTimeout set to -1
+[Thread-3] INFO org.apache.zookeeper.server.NIOServerCnxnFactory - binding to port 0.0.0.0/0.0.0.0:8348
+Entering read lock
+Entering read lock
+Entering read lock
+Entering read lock
+Entering read lock
+Entering read lock
+Entering read lock
+Entering read lock
+Entering read lock
+Entering read lock
+ Read lock entered!
+ Read lock entered!
+ Read lock entered!
+ Read lock entered!
+ Read lock entered!
+ Read lock entered!
+ Read lock entered!
+ Read lock entered!
+ Read lock entered!
+ Read lock entered!
+Leaving read lock
+ Left read lock!
+Waiting for all write threads to succeed...
+Leaving read lock
+Leaving read lock
+ Left read lock!
+Waiting for all write threads to succeed...
+Leaving read lock
+Leaving read lock
+Leaving read lock
+Leaving read lock
+Leaving read lock
+Leaving read lock
+Leaving read lock
+ Left read lock!
+Waiting for all write threads to succeed...
+ Left read lock!
+Waiting for all write threads to succeed...
+ Left read lock!
+Waiting for all write threads to succeed...
+ Left read lock!
+Waiting for all write threads to succeed...
+ Left read lock!
+Waiting for all write threads to succeed...
+ Left read lock!
+Waiting for all write threads to succeed...
+ Left read lock!
+Waiting for all write threads to succeed...
+ Left read lock!
+Waiting for all write threads to succeed...
+Waiting for all write threads to succeed...
+Waiting for all write threads to succeed...
+Waiting for all write threads to succeed...
+Waiting for all write threads to succeed...
+Waiting for all write threads to succeed...
+Updated write count
+Waiting for all write threads to succeed...
+Waiting for all write threads to succeed...
+Waiting for all write threads to succeed...
+Waiting for all write threads to succeed...
+Waiting for all write threads to succeed...
+Updated write count
+Updated write count
+Updated write count
+Updated write count
+Done with reader thread
+Done with reader thread
+Done with reader thread
+Done with reader thread
+Done with reader thread
+Done with reader thread
+Done with reader thread
+Done with reader thread
+Done with reader thread
+Done with reader thread
+[Thread-3] WARN org.apache.zookeeper.server.ZooKeeperServerMain - Server interrupted
+java.lang.InterruptedException
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireSharedInterruptibly(AbstractQueuedSynchronizer.java:998)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly(AbstractQueuedSynchronizer.java:1304)
+	at java.util.concurrent.CountDownLatch.await(CountDownLatch.java:231)
+	at org.apache.zookeeper.server.ZooKeeperServerMain.runFromConfig(ZooKeeperServerMain.java:122)
+	at org.apache.manifoldcf.core.lockmanager.ZooKeeperInstance$ZooKeeperThread.run(ZooKeeperInstance.java:107)
+[Thread-20] INFO org.apache.zookeeper.server.ZooKeeperServerMain - Starting server
+[Thread-20] INFO org.apache.zookeeper.server.ZooKeeperServer - tickTime set to 2000
+[Thread-20] INFO org.apache.zookeeper.server.ZooKeeperServer - minSessionTimeout set to -1
+[Thread-20] INFO org.apache.zookeeper.server.ZooKeeperServer - maxSessionTimeout set to -1
+[Thread-20] INFO org.apache.zookeeper.server.NIOServerCnxnFactory - binding to port 0.0.0.0/0.0.0.0:8348
+Entering read lock
+Entering read lock
+Entering read lock
+Entering read lock
+Entering read lock
+Entering read lock
+Entering read lock
+Entering read lock
+Entering read lock
+Entering read lock
+[reader] INFO org.apache.zookeeper.ZooKeeper - Client environment:zookeeper.version=3.4.10-39d3a4f269333c922ed3db283be479f9deacaa0f, built on 03/23/2017 10:13 GMT
+[reader] INFO org.apache.zookeeper.ZooKeeper - Client environment:host.name=RESEARCH-HOST.localdomain
+[reader] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.version=1.8.0_504
+[reader] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.vendor=Temurin
+[reader] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.home=/home/RESEARCHER/.sdkman/candidates/java/8.0.504+1-tem/jre
+[reader] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.class.path=/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/manifoldcf/framework/core/target/test-classes:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/manifoldcf/framework/core/target/classes:/home/RESEARCHER/.m2/repository/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar:/home/RESEARCHER/.m2/repository/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3.jar:/home/RESEARCHER/.m2/repository/org/apache/httpcomponents/httpcore/4.4.6/httpcore-4.4.6.jar:/home/RESEARCHER/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/RESEARCHER/.m2/repository/commons-codec/commons-codec/1.9/commons-codec-1.9.jar:/home/RESEARCHER/.m2/repository/org/apache/logging/log4j/log4j-core/2.4.1/log4j-core-2.4.1.jar:/home/RESEARCHER/.m2/repository/org/apache/logging/log4j/log4j-api/2.4.1/log4j-api-2.4.1.jar:/home/RESEARCHER/.m2/repository/org/apache/logging/log4j/log4j-1.2-api/2.4.1/log4j-1.2-api-2.4.1.jar:/home/RESEARCHER/.m2/repository/org/apache/velocity/velocity/1.7/velocity-1.7.jar:/home/RESEARCHER/.m2/repository/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar:/home/RESEARCHER/.m2/repository/commons-lang/commons-lang/2.4/commons-lang-2.4.jar:/home/RESEARCHER/.m2/repository/org/apache/zookeeper/zookeeper/3.4.10/zookeeper-3.4.10.jar:/home/RESEARCHER/.m2/repository/io/netty/netty/3.10.5.Final/netty-3.10.5.Final.jar:/home/RESEARCHER/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/home/RESEARCHER/.m2/repository/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar:/home/RESEARCHER/.m2/repository/com/google/guava/guava/21.0/guava-21.0.jar:/home/RESEARCHER/.m2/repository/net/java/dev/jna/jna-platform/4.1.0/jna-platform-4.1.0.jar:/home/RESEARCHER/.m2/repository/net/java/dev/jna/jna/4.1.0/jna-4.1.0.jar:/home/RESEARCHER/.m2/repository/javax/mail/mail/1.4.5/mail-1.4.5.jar:/home/RESEARCHER/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar:/home/RESEARCHER/.m2/repository/commons-discovery/commons-discovery/0.5/commons-discovery-0.5.jar:/home/RESEARCHER/.m2/repository/commons-el/commons-el/1.0/commons-el-1.0.jar:/home/RESEARCHER/.m2/repository/xalan/serializer/2.7.1/serializer-2.7.1.jar:/home/RESEARCHER/.m2/repository/xerces/xercesImpl/2.10.0/xercesImpl-2.10.0.jar:/home/RESEARCHER/.m2/repository/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar:/home/RESEARCHER/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar:/home/RESEARCHER/.m2/repository/junit/junit/4.12/junit-4.12.jar:/home/RESEARCHER/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/RESEARCHER/.m2/repository/org/seleniumhq/selenium/selenium-java/3.3.1/selenium-java-3.3.1.jar:/home/RESEARCHER/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/3.3.1/selenium-chrome-driver-3.3.1.jar:/home/RESEARCHER/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/3.3.1/selenium-remote-driver-3.3.1.jar:/home/RESEARCHER/.m2/repository/org/seleniumhq/selenium/selenium-api/3.3.1/selenium-api-3.3.1.jar:/home/RESEARCHER/.m2/repository/cglib/cglib-nodep/3.2.4/cglib-nodep-3.2.4.jar:/home/RESEARCHER/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/3.3.1/selenium-edge-driver-3.3.1.jar:/home/RESEARCHER/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/3.3.1/selenium-firefox-driver-3.3.1.jar:/home/RESEARCHER/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/3.3.1/selenium-ie-driver-3.3.1.jar:/home/RESEARCHER/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/3.3.1/selenium-opera-driver-3.3.1.jar:/home/RESEARCHER/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/3.3.1/selenium-safari-driver-3.3.1.jar:/home/RESEARCHER/.m2/repository/com/codeborne/phantomjsdriver/1.4.0/phantomjsdriver-1.4.0.jar:/home/RESEARCHER/.m2/repository/org/seleniumhq/selenium/htmlunit-driver/2.24/htmlunit-driver-2.24.jar:/home/RESEARCHER/.m2/repository/org/seleniumhq/selenium/selenium-support/4.0.0-rc-3/selenium-support-4.0.0-rc-3.jar:/home/RESEARCHER/.m2/repository/com/google/auto/service/auto-service-annotations/1.0/auto-service-annotations-1.0.jar:/home/RESEARCHER/.m2/repository/com/google/auto/service/auto-service/1.0/auto-service-1.0.jar:/home/RESEARCHER/.m2/repository/com/google/auto/auto-common/1.0/auto-common-1.0.jar:/home/RESEARCHER/.m2/repository/org/seleniumhq/selenium/selenium-json/4.0.0-rc-3/selenium-json-4.0.0-rc-3.jar:/home/RESEARCHER/.m2/repository/net/sourceforge/htmlunit/htmlunit/2.24/htmlunit-2.24.jar:/home/RESEARCHER/.m2/repository/xalan/xalan/2.7.2/xalan-2.7.2.jar:/home/RESEARCHER/.m2/repository/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5.jar:/home/RESEARCHER/.m2/repository/org/apache/httpcomponents/httpmime/4.5.2/httpmime-4.5.2.jar:/home/RESEARCHER/.m2/repository/net/sourceforge/htmlunit/htmlunit-core-js/2.23/htmlunit-core-js-2.23.jar:/home/RESEARCHER/.m2/repository/net/sourceforge/htmlunit/neko-htmlunit/2.24/neko-htmlunit-2.24.jar:/home/RESEARCHER/.m2/repository/net/sourceforge/cssparser/cssparser/0.9.21/cssparser-0.9.21.jar:/home/RESEARCHER/.m2/repository/org/w3c/css/sac/1.3/sac-1.3.jar:/home/RESEARCHER/.m2/repository/commons-io/commons-io/2.5/commons-io-2.5.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/websocket/websocket-client/9.2.20.v20161216/websocket-client-9.2.20.v20161216.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/jetty-util/9.2.20.v20161216/jetty-util-9.2.20.v20161216.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/jetty-io/9.2.20.v20161216/jetty-io-9.2.20.v20161216.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/websocket/websocket-common/9.2.20.v20161216/websocket-common-9.2.20.v20161216.jar:/home/RESEARCHER/.m2/repository/org/eclipse/jetty/websocket/websocket-api/9.2.20.v20161216/websocket-api-9.2.20.v20161216.jar:/home/RESEARCHER/.m2/repository/org/postgresql/postgresql/42.1.3/postgresql-42.1.3.jar:/home/RESEARCHER/.m2/repository/org/hsqldb/hsqldb/2.3.2/hsqldb-2.3.2.jar:/home/RESEARCHER/.m2/repository/org/slf4j/slf4j-simple/1.7.7/slf4j-simple-1.7.7.jar:/home/RESEARCHER/.m2/repository/org/slf4j/slf4j-api/1.7.7/slf4j-api-1.7.7.jar:
+[reader] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+[reader] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.io.tmpdir=/tmp
+[reader] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.compiler=<NA>
+[reader] INFO org.apache.zookeeper.ZooKeeper - Client environment:os.name=Linux
+[reader] INFO org.apache.zookeeper.ZooKeeper - Client environment:os.arch=amd64
+[reader] INFO org.apache.zookeeper.ZooKeeper - Client environment:os.version=6.18.33.1-microsoft-standard-WSL2
+[reader] INFO org.apache.zookeeper.ZooKeeper - Client environment:user.name=hscho
+[reader] INFO org.apache.zookeeper.ZooKeeper - Client environment:user.home=/home/hscho
+[reader] INFO org.apache.zookeeper.ZooKeeper - Client environment:user.dir=/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/manifoldcf/framework/core
+[reader] INFO org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=localhost:8348 sessionTimeout=2000 watcher=org.apache.manifoldcf.core.lockmanager.ZooKeeperConnection$ZooKeeperWatcher@1c03912
+[reader] INFO org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=localhost:8348 sessionTimeout=2000 watcher=org.apache.manifoldcf.core.lockmanager.ZooKeeperConnection$ZooKeeperWatcher@521f9e31
+[reader] INFO org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=localhost:8348 sessionTimeout=2000 watcher=org.apache.manifoldcf.core.lockmanager.ZooKeeperConnection$ZooKeeperWatcher@52d5e9df
+[reader] INFO org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=localhost:8348 sessionTimeout=2000 watcher=org.apache.manifoldcf.core.lockmanager.ZooKeeperConnection$ZooKeeperWatcher@4bfa75f1
+[reader] INFO org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=localhost:8348 sessionTimeout=2000 watcher=org.apache.manifoldcf.core.lockmanager.ZooKeeperConnection$ZooKeeperWatcher@4de78763
+[reader] INFO org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=localhost:8348 sessionTimeout=2000 watcher=org.apache.manifoldcf.core.lockmanager.ZooKeeperConnection$ZooKeeperWatcher@c5877f2
+[reader] INFO org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=localhost:8348 sessionTimeout=2000 watcher=org.apache.manifoldcf.core.lockmanager.ZooKeeperConnection$ZooKeeperWatcher@29dce7f
+[reader] INFO org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=localhost:8348 sessionTimeout=2000 watcher=org.apache.manifoldcf.core.lockmanager.ZooKeeperConnection$ZooKeeperWatcher@5304c7a1
+[reader] INFO org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=localhost:8348 sessionTimeout=2000 watcher=org.apache.manifoldcf.core.lockmanager.ZooKeeperConnection$ZooKeeperWatcher@7c9cd809
+[reader] INFO org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=localhost:8348 sessionTimeout=2000 watcher=org.apache.manifoldcf.core.lockmanager.ZooKeeperConnection$ZooKeeperWatcher@3f33029f
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:8348. Will not attempt to authenticate using SASL (unknown error)
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:8348. Will not attempt to authenticate using SASL (unknown error)
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:8348. Will not attempt to authenticate using SASL (unknown error)
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:8348. Will not attempt to authenticate using SASL (unknown error)
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:8348. Will not attempt to authenticate using SASL (unknown error)
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:8348. Will not attempt to authenticate using SASL (unknown error)
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:8348. Will not attempt to authenticate using SASL (unknown error)
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:8348. Will not attempt to authenticate using SASL (unknown error)
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:8348. Will not attempt to authenticate using SASL (unknown error)
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:8348. Will not attempt to authenticate using SASL (unknown error)
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Socket connection established to localhost/127.0.0.1:8348, initiating session
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Socket connection established to localhost/127.0.0.1:8348, initiating session
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Socket connection established to localhost/127.0.0.1:8348, initiating session
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Socket connection established to localhost/127.0.0.1:8348, initiating session
+[NIOServerCxn.Factory:0.0.0.0/0.0.0.0:8348] INFO org.apache.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:33346
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Socket connection established to localhost/127.0.0.1:8348, initiating session
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Socket connection established to localhost/127.0.0.1:8348, initiating session
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Socket connection established to localhost/127.0.0.1:8348, initiating session
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Socket connection established to localhost/127.0.0.1:8348, initiating session
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Socket connection established to localhost/127.0.0.1:8348, initiating session
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Socket connection established to localhost/127.0.0.1:8348, initiating session
+[NIOServerCxn.Factory:0.0.0.0/0.0.0.0:8348] INFO org.apache.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:33340
+[NIOServerCxn.Factory:0.0.0.0/0.0.0.0:8348] INFO org.apache.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:33346
+[NIOServerCxn.Factory:0.0.0.0/0.0.0.0:8348] INFO org.apache.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:33340
+[SyncThread:0] INFO org.apache.zookeeper.server.persistence.FileTxnLog - Creating new log file: log.1
+[NIOServerCxn.Factory:0.0.0.0/0.0.0.0:8348] INFO org.apache.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:33344
+[NIOServerCxn.Factory:0.0.0.0/0.0.0.0:8348] INFO org.apache.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:33338
+[NIOServerCxn.Factory:0.0.0.0/0.0.0.0:8348] INFO org.apache.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:33344
+[NIOServerCxn.Factory:0.0.0.0/0.0.0.0:8348] INFO org.apache.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:33342
+[NIOServerCxn.Factory:0.0.0.0/0.0.0.0:8348] INFO org.apache.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:33338
+[NIOServerCxn.Factory:0.0.0.0/0.0.0.0:8348] INFO org.apache.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:33342
+[NIOServerCxn.Factory:0.0.0.0/0.0.0.0:8348] INFO org.apache.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:33348
+[NIOServerCxn.Factory:0.0.0.0/0.0.0.0:8348] INFO org.apache.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:33350
+[NIOServerCxn.Factory:0.0.0.0/0.0.0.0:8348] INFO org.apache.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:33348
+[NIOServerCxn.Factory:0.0.0.0/0.0.0.0:8348] INFO org.apache.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:33350
+[NIOServerCxn.Factory:0.0.0.0/0.0.0.0:8348] INFO org.apache.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:33392
+[NIOServerCxn.Factory:0.0.0.0/0.0.0.0:8348] INFO org.apache.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:33352
+[NIOServerCxn.Factory:0.0.0.0/0.0.0.0:8348] INFO org.apache.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:33392
+[NIOServerCxn.Factory:0.0.0.0/0.0.0.0:8348] INFO org.apache.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:33354
+[NIOServerCxn.Factory:0.0.0.0/0.0.0.0:8348] INFO org.apache.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:33352
+[NIOServerCxn.Factory:0.0.0.0/0.0.0.0:8348] INFO org.apache.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:33354
+[SyncThread:0] INFO org.apache.zookeeper.server.ZooKeeperServer - Established session 0x1a14e9ba5b60000 with negotiated timeout 4000 for client /127.0.0.1:33346
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:8348, sessionid = 0x1a14e9ba5b60000, negotiated timeout = 4000
+[SyncThread:0] INFO org.apache.zookeeper.server.ZooKeeperServer - Established session 0x1a14e9ba5b60001 with negotiated timeout 4000 for client /127.0.0.1:33340
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:8348, sessionid = 0x1a14e9ba5b60001, negotiated timeout = 4000
+[SyncThread:0] INFO org.apache.zookeeper.server.ZooKeeperServer - Established session 0x1a14e9ba5b60002 with negotiated timeout 4000 for client /127.0.0.1:33344
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:8348, sessionid = 0x1a14e9ba5b60002, negotiated timeout = 4000
+[SyncThread:0] INFO org.apache.zookeeper.server.ZooKeeperServer - Established session 0x1a14e9ba5b60003 with negotiated timeout 4000 for client /127.0.0.1:33338
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:8348, sessionid = 0x1a14e9ba5b60004, negotiated timeout = 4000
+[SyncThread:0] INFO org.apache.zookeeper.server.ZooKeeperServer - Established session 0x1a14e9ba5b60004 with negotiated timeout 4000 for client /127.0.0.1:33342
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:8348, sessionid = 0x1a14e9ba5b60003, negotiated timeout = 4000
+[SyncThread:0] INFO org.apache.zookeeper.server.ZooKeeperServer - Established session 0x1a14e9ba5b60005 with negotiated timeout 4000 for client /127.0.0.1:33348
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:8348, sessionid = 0x1a14e9ba5b60005, negotiated timeout = 4000
+[SyncThread:0] INFO org.apache.zookeeper.server.ZooKeeperServer - Established session 0x1a14e9ba5b60006 with negotiated timeout 4000 for client /127.0.0.1:33350
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:8348, sessionid = 0x1a14e9ba5b60006, negotiated timeout = 4000
+[SyncThread:0] INFO org.apache.zookeeper.server.ZooKeeperServer - Established session 0x1a14e9ba5b60007 with negotiated timeout 4000 for client /127.0.0.1:33392
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:8348, sessionid = 0x1a14e9ba5b60007, negotiated timeout = 4000
+[SyncThread:0] INFO org.apache.zookeeper.server.ZooKeeperServer - Established session 0x1a14e9ba5b60008 with negotiated timeout 4000 for client /127.0.0.1:33352
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:8348, sessionid = 0x1a14e9ba5b60008, negotiated timeout = 4000
+[SyncThread:0] INFO org.apache.zookeeper.server.ZooKeeperServer - Established session 0x1a14e9ba5b60009 with negotiated timeout 4000 for client /127.0.0.1:33354
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:8348, sessionid = 0x1a14e9ba5b60009, negotiated timeout = 4000
+[ProcessThread(sid:0 cport:8348):] INFO org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x1a14e9ba5b60007 type:create cxid:0x1 zxid:0xb txntype:-1 reqpath:n/a Error Path:/org.apache.manifoldcf.locks-testkey Error:KeeperErrorCode = NoNode for /org.apache.manifoldcf.locks-testkey
+[ProcessThread(sid:0 cport:8348):] INFO org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x1a14e9ba5b60001 type:create cxid:0x1 zxid:0xc txntype:-1 reqpath:n/a Error Path:/org.apache.manifoldcf.locks-testkey Error:KeeperErrorCode = NoNode for /org.apache.manifoldcf.locks-testkey
+[ProcessThread(sid:0 cport:8348):] INFO org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x1a14e9ba5b60006 type:create cxid:0x1 zxid:0xd txntype:-1 reqpath:n/a Error Path:/org.apache.manifoldcf.locks-testkey Error:KeeperErrorCode = NoNode for /org.apache.manifoldcf.locks-testkey
+[ProcessThread(sid:0 cport:8348):] INFO org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x1a14e9ba5b60003 type:create cxid:0x1 zxid:0xe txntype:-1 reqpath:n/a Error Path:/org.apache.manifoldcf.locks-testkey Error:KeeperErrorCode = NoNode for /org.apache.manifoldcf.locks-testkey
+[ProcessThread(sid:0 cport:8348):] INFO org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x1a14e9ba5b60004 type:create cxid:0x1 zxid:0xf txntype:-1 reqpath:n/a Error Path:/org.apache.manifoldcf.locks-testkey Error:KeeperErrorCode = NoNode for /org.apache.manifoldcf.locks-testkey
+[ProcessThread(sid:0 cport:8348):] INFO org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x1a14e9ba5b60008 type:create cxid:0x1 zxid:0x10 txntype:-1 reqpath:n/a Error Path:/org.apache.manifoldcf.locks-testkey Error:KeeperErrorCode = NoNode for /org.apache.manifoldcf.locks-testkey
+[ProcessThread(sid:0 cport:8348):] INFO org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x1a14e9ba5b60005 type:create cxid:0x1 zxid:0x11 txntype:-1 reqpath:n/a Error Path:/org.apache.manifoldcf.locks-testkey Error:KeeperErrorCode = NoNode for /org.apache.manifoldcf.locks-testkey
+[ProcessThread(sid:0 cport:8348):] INFO org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x1a14e9ba5b60009 type:create cxid:0x1 zxid:0x12 txntype:-1 reqpath:n/a Error Path:/org.apache.manifoldcf.locks-testkey Error:KeeperErrorCode = NoNode for /org.apache.manifoldcf.locks-testkey
+[ProcessThread(sid:0 cport:8348):] INFO org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x1a14e9ba5b60000 type:create cxid:0x1 zxid:0x13 txntype:-1 reqpath:n/a Error Path:/org.apache.manifoldcf.locks-testkey Error:KeeperErrorCode = NoNode for /org.apache.manifoldcf.locks-testkey
+[ProcessThread(sid:0 cport:8348):] INFO org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x1a14e9ba5b60002 type:create cxid:0x1 zxid:0x14 txntype:-1 reqpath:n/a Error Path:/org.apache.manifoldcf.locks-testkey Error:KeeperErrorCode = NoNode for /org.apache.manifoldcf.locks-testkey
+[ProcessThread(sid:0 cport:8348):] INFO org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x1a14e9ba5b60003 type:create cxid:0x2 zxid:0x16 txntype:-1 reqpath:n/a Error Path:/org.apache.manifoldcf.locks-testkey Error:KeeperErrorCode = NodeExists for /org.apache.manifoldcf.locks-testkey
+[ProcessThread(sid:0 cport:8348):] INFO org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x1a14e9ba5b60007 type:create cxid:0x2 zxid:0x17 txntype:-1 reqpath:n/a Error Path:/org.apache.manifoldcf.locks-testkey Error:KeeperErrorCode = NodeExists for /org.apache.manifoldcf.locks-testkey
+[ProcessThread(sid:0 cport:8348):] INFO org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x1a14e9ba5b60006 type:create cxid:0x2 zxid:0x18 txntype:-1 reqpath:n/a Error Path:/org.apache.manifoldcf.locks-testkey Error:KeeperErrorCode = NodeExists for /org.apache.manifoldcf.locks-testkey
+[ProcessThread(sid:0 cport:8348):] INFO org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x1a14e9ba5b60004 type:create cxid:0x2 zxid:0x19 txntype:-1 reqpath:n/a Error Path:/org.apache.manifoldcf.locks-testkey Error:KeeperErrorCode = NodeExists for /org.apache.manifoldcf.locks-testkey
+[ProcessThread(sid:0 cport:8348):] INFO org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x1a14e9ba5b60008 type:create cxid:0x2 zxid:0x1a txntype:-1 reqpath:n/a Error Path:/org.apache.manifoldcf.locks-testkey Error:KeeperErrorCode = NodeExists for /org.apache.manifoldcf.locks-testkey
+[ProcessThread(sid:0 cport:8348):] INFO org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x1a14e9ba5b60002 type:create cxid:0x2 zxid:0x1b txntype:-1 reqpath:n/a Error Path:/org.apache.manifoldcf.locks-testkey Error:KeeperErrorCode = NodeExists for /org.apache.manifoldcf.locks-testkey
+[ProcessThread(sid:0 cport:8348):] INFO org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x1a14e9ba5b60000 type:create cxid:0x2 zxid:0x1c txntype:-1 reqpath:n/a Error Path:/org.apache.manifoldcf.locks-testkey Error:KeeperErrorCode = NodeExists for /org.apache.manifoldcf.locks-testkey
+[ProcessThread(sid:0 cport:8348):] INFO org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x1a14e9ba5b60005 type:create cxid:0x2 zxid:0x1d txntype:-1 reqpath:n/a Error Path:/org.apache.manifoldcf.locks-testkey Error:KeeperErrorCode = NodeExists for /org.apache.manifoldcf.locks-testkey
+[ProcessThread(sid:0 cport:8348):] INFO org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x1a14e9ba5b60009 type:create cxid:0x2 zxid:0x1e txntype:-1 reqpath:n/a Error Path:/org.apache.manifoldcf.locks-testkey Error:KeeperErrorCode = NodeExists for /org.apache.manifoldcf.locks-testkey
+ Read lock entered!
+ Read lock entered!
+ Read lock entered!
+ Read lock entered!
+ Read lock entered!
+ Read lock entered!
+ Read lock entered!
+ Read lock entered!
+ Read lock entered!
+ Read lock entered!
+Leaving read lock
+ Left read lock!
+Waiting for all write threads to succeed...
+Leaving read lock
+Leaving read lock
+Leaving read lock
+Leaving read lock
+Leaving read lock
+Leaving read lock
+Leaving read lock
+Leaving read lock
+Leaving read lock
+ Left read lock!
+Waiting for all write threads to succeed...
+ Left read lock!
+Waiting for all write threads to succeed...
+ Left read lock!
+Waiting for all write threads to succeed...
+ Left read lock!
+Waiting for all write threads to succeed...
+ Left read lock!
+Waiting for all write threads to succeed...
+ Left read lock!
+Waiting for all write threads to succeed...
+ Left read lock!
+Waiting for all write threads to succeed...
+ Left read lock!
+Waiting for all write threads to succeed...
+ Left read lock!
+Waiting for all write threads to succeed...
+Updated write count
+Waiting for all write threads to succeed...
+Waiting for all write threads to succeed...
+Waiting for all write threads to succeed...
+Waiting for all write threads to succeed...
+Waiting for all write threads to succeed...
+Waiting for all write threads to succeed...
+Waiting for all write threads to succeed...
+[reader] INFO org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=localhost:8348 sessionTimeout=2000 watcher=org.apache.manifoldcf.core.lockmanager.ZooKeeperConnection$ZooKeeperWatcher@5dc333b1
+Waiting for all write threads to succeed...
+[reader] INFO org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=localhost:8348 sessionTimeout=2000 watcher=org.apache.manifoldcf.core.lockmanager.ZooKeeperConnection$ZooKeeperWatcher@5cd86a02
+Waiting for all write threads to succeed...
+Waiting for all write threads to succeed...
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:8348. Will not attempt to authenticate using SASL (unknown error)
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:8348. Will not attempt to authenticate using SASL (unknown error)
+[NIOServerCxn.Factory:0.0.0.0/0.0.0.0:8348] INFO org.apache.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:33442
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Socket connection established to localhost/127.0.0.1:8348, initiating session
+[reader] INFO org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=localhost:8348 sessionTimeout=2000 watcher=org.apache.manifoldcf.core.lockmanager.ZooKeeperConnection$ZooKeeperWatcher@1eff8961
+[NIOServerCxn.Factory:0.0.0.0/0.0.0.0:8348] INFO org.apache.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:33442
+[NIOServerCxn.Factory:0.0.0.0/0.0.0.0:8348] INFO org.apache.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:33450
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Socket connection established to localhost/127.0.0.1:8348, initiating session
+[NIOServerCxn.Factory:0.0.0.0/0.0.0.0:8348] INFO org.apache.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:33450
+[reader] INFO org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=localhost:8348 sessionTimeout=2000 watcher=org.apache.manifoldcf.core.lockmanager.ZooKeeperConnection$ZooKeeperWatcher@7eea48d8
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:8348. Will not attempt to authenticate using SASL (unknown error)
+[NIOServerCxn.Factory:0.0.0.0/0.0.0.0:8348] INFO org.apache.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:33452
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Socket connection established to localhost/127.0.0.1:8348, initiating session
+[SyncThread:0] INFO org.apache.zookeeper.server.ZooKeeperServer - Established session 0x1a14e9ba5b6000a with negotiated timeout 4000 for client /127.0.0.1:33442
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:8348. Will not attempt to authenticate using SASL (unknown error)
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:8348, sessionid = 0x1a14e9ba5b6000a, negotiated timeout = 4000
+[NIOServerCxn.Factory:0.0.0.0/0.0.0.0:8348] INFO org.apache.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:33452
+[SyncThread:0] INFO org.apache.zookeeper.server.ZooKeeperServer - Established session 0x1a14e9ba5b6000b with negotiated timeout 4000 for client /127.0.0.1:33450
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Socket connection established to localhost/127.0.0.1:8348, initiating session
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:8348, sessionid = 0x1a14e9ba5b6000b, negotiated timeout = 4000
+[NIOServerCxn.Factory:0.0.0.0/0.0.0.0:8348] INFO org.apache.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:33464
+[NIOServerCxn.Factory:0.0.0.0/0.0.0.0:8348] INFO org.apache.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:33464
+[SyncThread:0] INFO org.apache.zookeeper.server.ZooKeeperServer - Established session 0x1a14e9ba5b6000c with negotiated timeout 4000 for client /127.0.0.1:33452
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:8348, sessionid = 0x1a14e9ba5b6000c, negotiated timeout = 4000
+[SyncThread:0] INFO org.apache.zookeeper.server.ZooKeeperServer - Established session 0x1a14e9ba5b6000d with negotiated timeout 4000 for client /127.0.0.1:33464
+[reader-SendThread(localhost:8348)] INFO org.apache.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:8348, sessionid = 0x1a14e9ba5b6000d, negotiated timeout = 4000
+Updated write count
+Updated write count
+Updated write count
+Updated write count
+Done with reader thread
+Done with reader thread
+Done with reader thread
+Done with reader thread
+Done with reader thread
+Done with reader thread
+Done with reader thread
+Done with reader thread
+Done with reader thread
+Done with reader thread
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.396 sec - in org.apache.manifoldcf.core.lockmanager.TestZooKeeperLocks
+==start SecureRandomSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - next2: 0
+#event - next1: 0
+#event - g1: 0
+#event - g2: 0
+#event - g3: 0
+#event - g4: 0
+#event - c1: 0
+#event - c2: 0
+#event - setSeed3: 0
+#event - c3: 0
+#event - setSeed2: 0
+#event - setSeed1: 0
+#event - genSeed: 0
+#event - ints: 0
+#event - next3: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match1: 0
+==end SecureRandomSpec ==
+==start KeyGeneratorSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - init: 0
+#event - g1: 0
+#event - g2: 0
+#event - g3: 0
+#event - gk1: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end KeyGeneratorSpec ==
+==start KeyStoreSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - ge1: 0
+#event - load: 0
+#event - g1: 0
+#event - g2: 0
+#event - store: 0
+#event - gk1: 0
+#event - se1: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end KeyStoreSpec ==
+==start MacSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - i1: 0
+#event - i2: 0
+#event - update: 0
+#event - g1: 0
+#event - g2: 0
+#event - f1: 0
+#event - g3: 0
+#event - f2: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end MacSpec ==
+==start CipherOutputStreamSpec ==
+#monitors: 1
+#collected monitors: 0
+#terminated monitors: 0
+#event - fl: 0
+#event - cl: 0
+#event - w1: 0
+#event - w2: 0
+#event - c1: 0
+#category - prop 1 - fail: 0
+==end CipherOutputStreamSpec ==
+==start DHGenParameterSpecSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - c1: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end DHGenParameterSpecSpec ==
+==start KeyManagerFactorySpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - init: 0
+#event - gkm1: 0
+#event - g1: 0
+#event - g2: 0
+#event - g3: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match1: 0
+==end KeyManagerFactorySpec ==
+==start SecretKeySpecSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - c3: 0
+#event - c4: 0
+#event - c1: 0
+#event - c2: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end SecretKeySpecSpec ==
+==start TrustManagerFactorySpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - init: 0
+#event - gtm1: 0
+#event - g1: 0
+#event - g2: 0
+#event - g3: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match1: 0
+==end TrustManagerFactorySpec ==
+==start CipherInputStreamSpec ==
+#monitors: 1
+#collected monitors: 0
+#terminated monitors: 0
+#event - r2: 0
+#event - cl1: 0
+#event - c1: 0
+#event - r1: 0
+#category - prop 1 - fail: 0
+==end CipherInputStreamSpec ==
+==start PBEParameterSpecSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - c3: 0
+#event - c1: 0
+#event - c2: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end PBEParameterSpecSpec ==
+==start RandomStringPasswordSpec ==
+#monitors: 1
+#collected monitors: 0
+#terminated monitors: 0
+#event - vo: 388
+#event - gb: 198
+#category - prop 1 - match: 0
+==end RandomStringPasswordSpec ==
+==start SSLContextSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - init: 0
+#event - engine: 0
+#event - unsafe_protocol: 0
+#event - g1: 0
+#event - g2: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match1: 0
+==end SSLContextSpec ==
+==start CipherSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - u5: 0
+#event - i1: 0
+#event - i2: 0
+#event - g1: 0
+#event - g2: 0
+#event - f1: 0
+#event - g3: 0
+#event - f2: 0
+#event - f3: 0
+#event - f5: 0
+#event - f6: 0
+#event - f7: 0
+#event - wkb1: 0
+#event - u1: 0
+#event - u2: 0
+#event - u3: 0
+#event - u4: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match1: 0
+==end CipherSpec ==
+==start GCMParameterSpecSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - c1: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end GCMParameterSpecSpec ==
+==start PBEKeySpecSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - err3: 0
+#event - err2: 0
+#event - err1: 0
+#event - f1: 0
+#event - f2: 0
+#event - c1: 0
+#event - c2: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end PBEKeySpecSpec ==
+==start SignatureSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - i1: 0
+#event - i2: 0
+#event - update: 0
+#event - g1: 0
+#event - i3: 0
+#event - g2: 0
+#event - i4: 0
+#event - v1: 0
+#event - g3: 0
+#event - v2: 0
+#event - s1: 0
+#event - s2: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end SignatureSpec ==
+==start HMACParameterSpecSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - c: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end HMACParameterSpecSpec ==
+==start KeyPairGeneratorSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - gen: 0
+#event - init3: 0
+#event - init2: 0
+#event - g1: 0
+#event - init1: 0
+#event - g2: 0
+#event - g3: 0
+#event - initError: 0
+#event - init4: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end KeyPairGeneratorSpec ==
+==start KeyPairSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - gpr: 0
+#event - gpu: 0
+#event - c1: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end KeyPairSpec ==
+==start IvParameterSpecSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - c3: 0
+#event - c1: 0
+#event - c2: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end IvParameterSpecSpec ==
+==start MessageDigestSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - update: 0
+#event - reset: 0
+#event - g1: 0
+#event - g2: 0
+#event - g3: 0
+#event - d1: 0
+#event - d2: 0
+#event - d3: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end MessageDigestSpec ==
+
+Results :
+
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for ManifoldCF 2.9-SNAPSHOT:
+[INFO] 
+[INFO] ManifoldCF ......................................... SUCCESS [  0.376 s]
+[INFO] ManifoldCF - Framework ............................. SUCCESS [  0.007 s]
+[INFO] ManifoldCF - Framework - Core ...................... SUCCESS [01:29 min]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:29 min
+[INFO] Finished at: 2026-10-18T19:43:18+09:00
+[INFO] ------------------------------------------------------------------------

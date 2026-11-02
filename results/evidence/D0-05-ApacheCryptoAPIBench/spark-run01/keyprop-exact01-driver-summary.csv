@@ -1,0 +1,8 @@
+spec,class,className,method,location,error
+KeyGeneratorSpec,org.apache.spark.security.CryptoStreamUtils$,CryptoStreamUtils$,createKey,CryptoStreamUtils.scala:119,InvalidSequenceOfMethodCalls
+KeyGeneratorSpec,org.apache.spark.security.CryptoStreamUtils$,CryptoStreamUtils$,createKey,CryptoStreamUtils.scala:120,UnsafeAlgorithm
+KeyGeneratorSpec,org.apache.spark.security.CryptoStreamUtils$,CryptoStreamUtils$,createKey,CryptoStreamUtils.scala:120,InvalidSequenceOfMethodCalls
+SecretKeySpecSpec,org.apache.spark.security.CryptoStreamUtils$CryptoParams,CryptoStreamUtils$CryptoParams,<init>,CryptoStreamUtils.scala:162,UnsatisfiedConstraint
+SecretKeySpecSpec,org.apache.spark.security.CryptoStreamUtils$CryptoParams,CryptoStreamUtils$CryptoParams,<init>,CryptoStreamUtils.scala:162,InvalidSequenceOfMethodCalls
+IvParameterSpecSpec,org.apache.spark.security.CryptoStreamUtils$,CryptoStreamUtils$,createCryptoInputStream,CryptoStreamUtils.scala:88,UnsatisfiedConstraint
+IvParameterSpecSpec,org.apache.spark.security.CryptoStreamUtils$,CryptoStreamUtils$,createCryptoInputStream,CryptoStreamUtils.scala:88,InvalidSequenceOfMethodCalls

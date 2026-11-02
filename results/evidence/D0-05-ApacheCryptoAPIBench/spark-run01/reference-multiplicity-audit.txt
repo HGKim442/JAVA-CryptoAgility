@@ -1,0 +1,153 @@
+=== REFERENCE STRUCTURE ===
+REFERENCE_TOTAL: 55
+REFERENCE_DISTINCT_ROWS: 43
+REFERENCE_REPEATED_OCCURRENCES: 12
+
+=== INDEPENDENT RUNS ===
+CRYPTO: 13 events
+SSL: 3 events
+AUTH: 8 events
+INTEGRATION: 12 events
+SECURITY: 1 events
+DISKSTORE: 9 events
+FILE: 3 events
+
+=== TWO COUNTING METHODS ===
+MAX_METHOD_SPARK: 32
+MAX_METHOD_APACHE: 127
+CAPPED_SUM_SPARK: 37
+CAPPED_SUM_APACHE: 132
+DIFFERENCE: 5
+
+=== REPEATED REFERENCE ROWS ===
+REPEATED_ROW_TYPES: 12
+
+CLASS: org.apache.hadoop.io.SequenceFile$Writer
+EVENT: MessageDigestSpec|org.apache.hadoop.io.SequenceFile$Writer|SequenceFile$Writer|<init>|SequenceFile.java:854|UnsafeAlgorithm
+REFERENCE_COUNT: 2
+MAX_COUNT: 1
+SUM_COUNT: 1
+PER_RUN: FILE=1
+
+CLASS: org.apache.hadoop.io.SequenceFile$Writer
+EVENT: MessageDigestSpec|org.apache.hadoop.io.SequenceFile$Writer|SequenceFile$Writer|<init>|SequenceFile.java:854|InvalidSequenceOfMethodCalls
+REFERENCE_COUNT: 2
+MAX_COUNT: 1
+SUM_COUNT: 1
+PER_RUN: FILE=1
+
+CLASS: org.apache.hadoop.io.SequenceFile$Writer
+EVENT: MessageDigestSpec|org.apache.hadoop.io.SequenceFile$Writer|SequenceFile$Writer|<init>|SequenceFile.java:855|InvalidSequenceOfMethodCalls
+REFERENCE_COUNT: 2
+MAX_COUNT: 1
+SUM_COUNT: 1
+PER_RUN: FILE=1
+
+CLASS: org.apache.spark.security.CryptoStreamUtils$
+EVENT: KeyGeneratorSpec|org.apache.spark.security.CryptoStreamUtils$|CryptoStreamUtils$|createKey|CryptoStreamUtils.scala:119|InvalidSequenceOfMethodCalls
+REFERENCE_COUNT: 2
+MAX_COUNT: 1
+SUM_COUNT: 2
+PER_RUN: CRYPTO=1 DISKSTORE=1
+
+CLASS: org.apache.spark.security.CryptoStreamUtils$
+EVENT: KeyGeneratorSpec|org.apache.spark.security.CryptoStreamUtils$|CryptoStreamUtils$|createKey|CryptoStreamUtils.scala:120|UnsafeAlgorithm
+REFERENCE_COUNT: 2
+MAX_COUNT: 1
+SUM_COUNT: 2
+PER_RUN: CRYPTO=1 DISKSTORE=1
+
+CLASS: org.apache.spark.security.CryptoStreamUtils$
+EVENT: KeyGeneratorSpec|org.apache.spark.security.CryptoStreamUtils$|CryptoStreamUtils$|createKey|CryptoStreamUtils.scala:120|InvalidSequenceOfMethodCalls
+REFERENCE_COUNT: 2
+MAX_COUNT: 1
+SUM_COUNT: 2
+PER_RUN: CRYPTO=1 DISKSTORE=1
+
+CLASS: org.apache.spark.security.CryptoStreamUtils$
+EVENT: IvParameterSpecSpec|org.apache.spark.security.CryptoStreamUtils$|CryptoStreamUtils$|createCryptoOutputStream|CryptoStreamUtils.scala:58|UnsatisfiedConstraint
+REFERENCE_COUNT: 2
+MAX_COUNT: 1
+SUM_COUNT: 1
+PER_RUN: CRYPTO=1
+
+CLASS: org.apache.spark.security.CryptoStreamUtils$
+EVENT: IvParameterSpecSpec|org.apache.spark.security.CryptoStreamUtils$|CryptoStreamUtils$|createCryptoOutputStream|CryptoStreamUtils.scala:58|InvalidSequenceOfMethodCalls
+REFERENCE_COUNT: 2
+MAX_COUNT: 1
+SUM_COUNT: 1
+PER_RUN: CRYPTO=1
+
+CLASS: org.apache.spark.security.CryptoStreamUtils$
+EVENT: IvParameterSpecSpec|org.apache.spark.security.CryptoStreamUtils$|CryptoStreamUtils$|createCryptoInputStream|CryptoStreamUtils.scala:88|UnsatisfiedConstraint
+REFERENCE_COUNT: 2
+MAX_COUNT: 1
+SUM_COUNT: 1
+PER_RUN: CRYPTO=1
+
+CLASS: org.apache.spark.security.CryptoStreamUtils$
+EVENT: IvParameterSpecSpec|org.apache.spark.security.CryptoStreamUtils$|CryptoStreamUtils$|createCryptoInputStream|CryptoStreamUtils.scala:88|InvalidSequenceOfMethodCalls
+REFERENCE_COUNT: 2
+MAX_COUNT: 1
+SUM_COUNT: 1
+PER_RUN: CRYPTO=1
+
+CLASS: org.apache.spark.security.CryptoStreamUtils$CryptoParams
+EVENT: SecretKeySpecSpec|org.apache.spark.security.CryptoStreamUtils$CryptoParams|CryptoStreamUtils$CryptoParams|<init>|CryptoStreamUtils.scala:162|UnsatisfiedConstraint
+REFERENCE_COUNT: 2
+MAX_COUNT: 1
+SUM_COUNT: 2
+PER_RUN: CRYPTO=1 DISKSTORE=1
+
+CLASS: org.apache.spark.security.CryptoStreamUtils$CryptoParams
+EVENT: SecretKeySpecSpec|org.apache.spark.security.CryptoStreamUtils$CryptoParams|CryptoStreamUtils$CryptoParams|<init>|CryptoStreamUtils.scala:162|InvalidSequenceOfMethodCalls
+REFERENCE_COUNT: 2
+MAX_COUNT: 1
+SUM_COUNT: 2
+PER_RUN: CRYPTO=1 DISKSTORE=1
+
+=== COVERAGE INCREASE UNDER CAPPED SUM ===
+  3 org.apache.spark.security.CryptoStreamUtils$
+  2 org.apache.spark.security.CryptoStreamUtils$CryptoParams
+
+=== REMAINING BY METHOD ===
+MAX MISSING: 23
+    7 org.apache.spark.security.CryptoStreamUtils$
+    4 org.eclipse.jetty.util.ssl.SslContextFactory
+    3 org.apache.hadoop.io.SequenceFile$Writer
+    3 com.gargoylesoftware.htmlunit.httpclient.HtmlUnitSSLConnectionSocketFactory
+    3 org.apache.spark.TestUtils$
+    2 org.apache.spark.security.CryptoStreamUtils$CryptoParams
+    1 org.apache.spark.launcher.LauncherServer
+CAPPED_SUM MISSING: 18
+    4 org.apache.spark.security.CryptoStreamUtils$
+    4 org.eclipse.jetty.util.ssl.SslContextFactory
+    3 org.apache.hadoop.io.SequenceFile$Writer
+    3 com.gargoylesoftware.htmlunit.httpclient.HtmlUnitSSLConnectionSocketFactory
+    3 org.apache.spark.TestUtils$
+    1 org.apache.spark.launcher.LauncherServer
+
+=== SUM OVERPRODUCTION CHECK ===
+OCCURRENCES_ABOVE_REFERENCE: 12
+ROW_TYPES_ABOVE_REFERENCE: 12
+OVER: 1 IvParameterSpecSpec|org.apache.spark.security.CryptoStreamUtils$|CryptoStreamUtils$|createWritableChannel|CryptoStreamUtils.scala:74|UnsatisfiedConstraint
+OVER: 1 IvParameterSpecSpec|org.apache.spark.security.CryptoStreamUtils$|CryptoStreamUtils$|createWritableChannel|CryptoStreamUtils.scala:74|InvalidSequenceOfMethodCalls
+OVER: 1 IvParameterSpecSpec|org.apache.spark.security.CryptoStreamUtils$|CryptoStreamUtils$|createReadableChannel|CryptoStreamUtils.scala:104|UnsatisfiedConstraint
+OVER: 1 IvParameterSpecSpec|org.apache.spark.security.CryptoStreamUtils$|CryptoStreamUtils$|createReadableChannel|CryptoStreamUtils.scala:104|InvalidSequenceOfMethodCalls
+OVER: 1 PBEKeySpec|org.apache.spark.network.crypto.AuthEngine|AuthEngine|generateKey|AuthEngine.java:232|UnsatisfiedConstraint
+OVER: 1 PBEKeySpec|org.apache.spark.network.crypto.AuthEngine|AuthEngine|generateKey|AuthEngine.java:232|InvalidSequenceOfMethodCalls
+OVER: 1 SecretKeySpecSpec|org.apache.spark.network.crypto.AuthEngine|AuthEngine|generateKey|AuthEngine.java:241|UnsatisfiedConstraint
+OVER: 1 SecretKeySpecSpec|org.apache.spark.network.crypto.AuthEngine|AuthEngine|generateKey|AuthEngine.java:241|InvalidSequenceOfMethodCalls
+OVER: 1 IvParameterSpecSpec|org.apache.spark.network.crypto.AuthEngine|AuthEngine|initializeForAuth|AuthEngine.java:209|UnsatisfiedConstraint
+OVER: 1 IvParameterSpecSpec|org.apache.spark.network.crypto.AuthEngine|AuthEngine|initializeForAuth|AuthEngine.java:209|InvalidSequenceOfMethodCalls
+OVER: 1 IvParameterSpecSpec|org.apache.spark.network.crypto.AuthEngine|AuthEngine|initializeForAuth|AuthEngine.java:212|UnsatisfiedConstraint
+OVER: 1 IvParameterSpecSpec|org.apache.spark.network.crypto.AuthEngine|AuthEngine|initializeForAuth|AuthEngine.java:212|InvalidSequenceOfMethodCalls
+
+=== UNEXPECTED EVENT TYPES ===
+UNEXPECTED_ROW_TYPES: 0
+
+=== INTERPRETATION ===
+MAX = conservative cross-run coverage.
+CAPPED_SUM = potential aggregate coverage.
+Neither alone proves one full-run reproduction.
+AUDIT_COMPLETE

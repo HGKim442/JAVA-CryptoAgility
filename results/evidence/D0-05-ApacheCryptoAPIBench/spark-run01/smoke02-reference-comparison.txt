@@ -1,0 +1,38 @@
+=== EVENT COUNTS ===
+REFERENCE: 55
+REPRODUCED: 13
+MATCHED_WITH_MULTIPLICITY: 13
+MISSING: 42
+EXTRA: 0
+
+=== REPRODUCTION VERDICT ===
+EXACT_SUBSET_OF_REFERENCE
+
+=== MATCHED EVENTS BY SPEC ===
+  8 IvParameterSpecSpec
+  3 KeyGeneratorSpec
+  2 SecretKeySpecSpec
+
+=== MISSING EVENTS BY CLASS ===
+  8 org.apache.spark.network.crypto.AuthEngine
+  7 org.apache.spark.security.CryptoStreamUtils$
+  6 org.apache.hadoop.io.SequenceFile$Writer
+  4 org.apache.spark.network.crypto.TransportCipher
+  4 org.eclipse.jetty.util.ssl.SslContextFactory
+  3 com.gargoylesoftware.htmlunit.httpclient.HtmlUnitSSLConnectionSocketFactory
+  3 org.apache.spark.TestUtils$
+  2 org.apache.spark.security.CryptoStreamUtils$CryptoParams
+  2 org.apache.spark.SSLOptions.liftedTree1$1(SSLOptions.scala:108)
+  1 org.apache.spark.launcher.LauncherServer
+  1 org.apache.spark.SecurityManager$$anonfun$2
+  1 org.apache.spark.SSLOptions.liftedTree1$1(SSLOptions.scala:105)
+
+=== UNEXPECTED EVENTS ===
+NONE
+
+=== FINAL ===
+REFERENCE_EVENT_COUNT: 55
+REPRODUCED_EVENT_COUNT: 13
+VERIFIED_MATCH_COUNT: 13
+UNVERIFIED_REFERENCE_COUNT: 42
+UNEXPECTED_EVENT_COUNT: 0

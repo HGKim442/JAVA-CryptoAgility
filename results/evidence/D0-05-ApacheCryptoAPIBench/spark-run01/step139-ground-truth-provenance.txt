@@ -1,0 +1,395 @@
+=== 1. CSV STRUCTURE ===
+
+FILE: /home/RESEARCHER/pqc-research/D0-rvsec/RVSec-replication-package/ApacheCryptoAPIBench/results/gt.csv
+DATA_ROWS: 51
+HEADER: ['Project', 'Rule', 'ClassName', 'MethodName']
+FIRST_ROWS:
+['DeltaSpike', 'Cipher', 'DefaultCipherService', 'aesEncrypt']
+['DeltaSpike', 'Cipher', 'DefaultCipherService', 'aesDecrypt']
+['Directory-serverKerberos-codec', 'SecretKeySpec', 'HmacMd5Checksum', 'calculateChecksum']
+['Directory-serverKerberos-codec', 'Mac', 'HmacMd5Checksum', 'calculateChecksum']
+ROWS_CONTAINING_SPARK: 0
+
+FILE: /home/RESEARCHER/pqc-research/D0-rvsec/RVSec-replication-package/ApacheCryptoAPIBench/results/gt-FIXED.csv
+DATA_ROWS: 198
+HEADER: ['Project', 'Spec', 'Class', 'Method', 'Tool', 'Vulnerability', 'RelatedWarnings', 'TestClass', 'ExternalClass', 'Observation']
+FIRST_ROWS:
+['Artemis', 'PBEKeySpecSpec', 'DefaultSensitiveStringCodec$PBKDF2Algorithm', 'encode', 'RV', 'TRUE', '1', 'FALSE', 'FALSE', '']
+['Artemis', 'PBEKeySpecSpec', 'DefaultSensitiveStringCodec$PBKDF2Algorithm', 'verify', 'RV', 'TRUE', '1', 'FALSE', 'FALSE', '']
+['Artemis', 'SecretKeySpecSpec', 'DefaultSensitiveStringCodec$BlowfishAlgorithm', 'encode', 'RV', 'TRUE', '1', 'FALSE', 'FALSE', '']
+['Artemis', 'CipherSpec', 'DefaultSensitiveStringCodec$BlowfishAlgorithm', 'encode', 'RV', 'TRUE', '1', 'FALSE', 'FALSE', '']
+ROWS_CONTAINING_SPARK: 76
+LINE: 49 ['Spark', 'KeyGeneratorSpec', 'CryptoStreamUtils$', 'createKey', 'RV', 'TRUE', '3', 'FALSE', 'FALSE', '']
+LINE: 50 ['Spark', 'SecretKeySpecSpec', 'CryptoStreamUtils$CryptoParams', '<init>', 'RV', 'TRUE', '2', 'FALSE', 'FALSE', '']
+LINE: 51 ['Spark', 'IvParameterSpecSpec', 'CryptoStreamUtils$', 'createCryptoOutputStream', 'RV', 'TRUE', '2', 'FALSE', 'FALSE', '']
+LINE: 52 ['Spark', 'IvParameterSpecSpec', 'CryptoStreamUtils$', 'createCryptoInputStream', 'RV', 'TRUE', '2', 'FALSE', 'FALSE', '']
+LINE: 53 ['Spark', 'MessageDigestSpec', 'SequenceFile$Writer', '<init>', 'RV', '-', '3', 'FALSE', 'TRUE', '']
+LINE: 54 ['Spark', 'SSLContextSpec', 'HtmlUnitSSLConnectionSocketFactory', 'buildSSLSocketFactory', 'RV', '-', '3', 'FALSE', 'TRUE', '']
+LINE: 55 ['Spark', 'PBEKeySpecSpec', 'AuthEngine', 'generateKey', 'RV', '-', '2', 'FALSE', 'TRUE', '']
+LINE: 56 ['Spark', 'SecretKeySpecSpec', 'AuthEngine', 'generateKey', 'RV', '-', '2', 'FALSE', 'TRUE', '']
+
+FILE: /home/RESEARCHER/pqc-research/D0-rvsec/RVSec-replication-package/ApacheCryptoAPIBench/results/projects.csv
+DATA_ROWS: 8
+HEADER: ['group', 'latex', 'module', 'test_cases', 'sloc', 'misuses', 'monitors', 'events']
+FIRST_ROWS:
+['ApacheDS Protocol Kerberos Codec', '\\directory', 'ApachedsKerberosCodec', '376', '42185', '19', '135', '2379']
+['ActiveMQ Artemis Commons', '\\artemis', 'ArtemisCommons', '110', '11737', '15', '14', '73']
+['Apache DeltaSpike Core-Implementation', '\\deltaspike', 'DeltaSpikeCore', '155', '13515', '2', '31', '3954']
+['ManifoldCF - Framework - Core', '\\manifold', 'DeltaMcfCore', '5', '21281', '3', '39', '744']
+ROWS_CONTAINING_SPARK: 1
+LINE: 7 ['Spark Project Core', '\\spark', 'SparkCore', '2045', '164335', '27', '123', '181548']
+
+FILE: /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/spark-reference/summary.csv
+DATA_ROWS: 55
+HEADER: ['spec', 'class', 'className', 'method', 'location', 'error']
+FIRST_ROWS:
+['KeyGeneratorSpec', 'org.apache.spark.security.CryptoStreamUtils$', 'CryptoStreamUtils$', 'createKey', 'CryptoStreamUtils.scala:119', 'InvalidSequenceOfMethodCalls']
+['KeyGeneratorSpec', 'org.apache.spark.security.CryptoStreamUtils$', 'CryptoStreamUtils$', 'createKey', 'CryptoStreamUtils.scala:120', 'UnsafeAlgorithm']
+['KeyGeneratorSpec', 'org.apache.spark.security.CryptoStreamUtils$', 'CryptoStreamUtils$', 'createKey', 'CryptoStreamUtils.scala:120', 'InvalidSequenceOfMethodCalls']
+['SecretKeySpecSpec', 'org.apache.spark.security.CryptoStreamUtils$CryptoParams', 'CryptoStreamUtils$CryptoParams', '<init>', 'CryptoStreamUtils.scala:162', 'UnsatisfiedConstraint']
+ROWS_CONTAINING_SPARK: 42
+LINE: 2 ['KeyGeneratorSpec', 'org.apache.spark.security.CryptoStreamUtils$', 'CryptoStreamUtils$', 'createKey', 'CryptoStreamUtils.scala:119', 'InvalidSequenceOfMethodCalls']
+LINE: 3 ['KeyGeneratorSpec', 'org.apache.spark.security.CryptoStreamUtils$', 'CryptoStreamUtils$', 'createKey', 'CryptoStreamUtils.scala:120', 'UnsafeAlgorithm']
+LINE: 4 ['KeyGeneratorSpec', 'org.apache.spark.security.CryptoStreamUtils$', 'CryptoStreamUtils$', 'createKey', 'CryptoStreamUtils.scala:120', 'InvalidSequenceOfMethodCalls']
+LINE: 5 ['SecretKeySpecSpec', 'org.apache.spark.security.CryptoStreamUtils$CryptoParams', 'CryptoStreamUtils$CryptoParams', '<init>', 'CryptoStreamUtils.scala:162', 'UnsatisfiedConstraint']
+LINE: 6 ['SecretKeySpecSpec', 'org.apache.spark.security.CryptoStreamUtils$CryptoParams', 'CryptoStreamUtils$CryptoParams', '<init>', 'CryptoStreamUtils.scala:162', 'InvalidSequenceOfMethodCalls']
+LINE: 7 ['IvParameterSpecSpec', 'org.apache.spark.security.CryptoStreamUtils$', 'CryptoStreamUtils$', 'createCryptoOutputStream', 'CryptoStreamUtils.scala:58', 'UnsatisfiedConstraint']
+LINE: 8 ['IvParameterSpecSpec', 'org.apache.spark.security.CryptoStreamUtils$', 'CryptoStreamUtils$', 'createCryptoOutputStream', 'CryptoStreamUtils.scala:58', 'InvalidSequenceOfMethodCalls']
+LINE: 9 ['IvParameterSpecSpec', 'org.apache.spark.security.CryptoStreamUtils$', 'CryptoStreamUtils$', 'createCryptoInputStream', 'CryptoStreamUtils.scala:88', 'UnsatisfiedConstraint']
+
+=== 2. ANALYSIS SCRIPT REFERENCES ===
+
+FILE: scripts/analysis-ApacheCryptoAPIBench-Fixed.Rmd
+TOTAL_LINES: 469
+MATCHES: 77
+  22: ```{r load}
+  23: final_ds <- read.csv("../results/gt-FIXED-new.csv", head=T, sep=',')
+  24: colnames(final_ds)
+---
+  32: 
+  33: ### Remove duplicated records
+  34: 
+---
+  35: ```{r remove-dups}
+  36: final_ds = distinct(final_ds)
+  37: ```
+---
+  43: 
+  44: t1 = sqldf("select Tool, count(*) as FullDataSet
+  45:        from final_ds 
+---
+  51: ```{r remove-external-observations}
+  52: sqldf("select count(*) 
+  53:        from final_ds 
+---
+  65: ```{r remove-test-observations}
+  66: sqldf("select TestClass, count(*) 
+  67:        from final_ds 
+---
+  76: 
+  77: t2 = sqldf("select Tool, count(*) as CuratedDataSet
+  78:        from final_ds 
+---
+  81: 
+  82: xtable(merge(t1, t2))
+  83: 
+---
+  84: sqldf("select spec, count(*) total 
+  85:        from final_ds
+---
+  87: 
+  88: sqldf("select Project, count(*) 
+  89:        from final_ds 
+---
+  98: ```{r warnings-projects}
+  99: warnings_projects = sqldf("select Project, Tool, count(*) as Warnings
+ 100:                            from final_ds group by Project, Tool")
+---
+ 111: ```{r true-positives}
+ 112: tp = sqldf("select distinct Project, Spec, Class, Method, CWE
+ 113:             from final_ds 
+---
+ 116: 
+ 117: sqldf("select count(distinct class) from tp")
+ 118: 
+---
+ 124: ```{r mop-assessment}
+ 125: mop_tp = sqldf("select distinct Project, Spec, Class, Method, CWE 
+ 126:                 from final_ds 
+---
+ 128: 
+ 129: mop_fp = sqldf("select distinct Project, Spec, Class, Method, CWE 
+ 130:                 from final_ds 
+---
+ 149: ```{r cc-assessment}
+ 150: cc_tp = sqldf("select distinct Project, Spec, Class, Method, CWE 
+ 151:                 from final_ds 
+---
+ 153: 
+ 154: cc_fp = sqldf("select distinct Project, Spec, Class, Method, CWE 
+ 155:                 from final_ds 
+---
+ 174: ```{r cg-assessment}
+ 175: cg_tp = sqldf("select distinct Project, Spec, Class, Method, CWE 
+ 176:                 from final_ds 
+---
+ 178: 
+ 179: cg_fp = sqldf("select distinct Project, Spec, Class, Method, CWE 
+ 180:                 from final_ds 
+---
+ 201: ```{r load-crylogger}
+ 202: clogger_deltaspyke <- read.csv("../results/crylogger/CryLogger-deltaspyke.csv", head=T, sep=",")
+ 203: clogger_mcf <- read.csv("../results/crylogger/CryLogger-mcf-core.csv", head=T, sep=",")
+---
+ 204: clogger_meecrowave <- read.csv("../results/crylogger/CryLogger-meecrowave-core.csv", head=T, sep=",")
+---
+ 205: clogger_ds_kerberos_codec <- read.csv("../results/crylogger/CryLogger-apacheds-kerberos-codec.csv", head=T, sep=",")
+---
+ 206: clogger_tika <- read.csv("../results/crylogger/CryLogger-tika-core.csv", head=T, sep=",")
+---
+ 207: 
+---
+ 208: 
+ 209: clogger_deltaspyke <- sqldf("select distinct spec, cwe, class, classname, method from clogger_deltaspyke")
+ 210: clogger_mcf <- sqldf("select distinct spec, cwe, class, classname, method from clogger_mcf")
+---
+ 211: clogger_meecrowave <- sqldf("select distinct spec, cwe, class, classname, method from clogger_meecrowave")
+---
+ 212: clogger_ds_kerberos_codec <- sqldf("select distinct spec, cwe, class, classname, method from clogger_ds_kerberos_codec")
+---
+ 213: clogger_tika <- sqldf("select distinct spec, cwe, class, classname, method from clogger_tika")
+---
+ 214: 
+---
+ 215: 
+ 216: clogger <- rbind(clogger_mcf, clogger_meecrowave)
+ 217: clogger <- rbind(clogger, clogger_ds_kerberos_codec)
+---
+ 218: clogger <- rbind(clogger, clogger_tika)
+---
+ 219: clogger <- rbind(clogger,clogger_deltaspyke)
+---
+ 220: 
+---
+ 225: 
+ 226: ### Approximate the CryLogger outcomes with the ground truth
+ 227: 
+---
+ 228: ```{r}
+ 229: gt_clogger <- sqldf("select distinct spec, project, class as 'className', method, vulnerability , cwe
+ 230:                      from final_ds")
+---
+ADDITIONAL_MATCHES: 42
+
+FILE: scripts/analysis-ApacheCryptoAPIBench.Rmd
+TOTAL_LINES: 272
+MATCHES: 80
+   1: ---
+   2: title: "JavaMOP"
+   3: author: "Rodrigo Bonifácio et al."
+---
+  27: ```{r load-projects}
+  28: projects <- read.csv("../results/projects.csv")
+  29: 
+---
+  35: 
+  36: mopArtemisCommons <- read.csv("../apache_codes/activemq-artemis/artemis-commons/output/summary.csv", head=T, sep=",")
+  37: mopArtemisCommons['module'] <- 'ArtemisCommons'
+---
+  38: 
+  39: mopDeltaSpikeCore <- read.csv("../apache_codes/deltaspike/deltaspike/core/impl/output/summary.csv", head=T, sep=",")
+  40: mopDeltaSpikeCore['module'] <- 'DeltaSpikeCore'
+---
+  41: 
+  42: mopApachedsKerberosCodec <- read.csv("../apache_codes/directory-server/kerberos-codec/output/summary.csv", head=T, sep=",")
+  43: mopApachedsKerberosCodec['module'] <- 'ApachedsKerberosCodec'
+---
+  44: 
+  45: mopMcfCore <- read.csv("../apache_codes/manifoldcf/framework/core/output/summary.csv", head=T, sep=",")
+  46: mopMcfCore['module'] <- 'DeltaMcfCore'
+---
+  47: 
+  48: mopMeecrowaveCore <- read.csv("../apache_codes/openwebbeans-meecrowave/meecrowave-core/output/summary.csv", head=T, sep=",")
+  49: mopMeecrowaveCore['module'] <- 'MeecrowaveCore'
+---
+  50: 
+  51: mopSparkCore <- read.csv("../apache_codes/spark/core/output/summary.csv", head=T, sep=",")
+  52: mopSparkCore['module'] <- 'SparkCore'
+---
+  53: 
+---
+  54: mopTikaCore <- read.csv("../apache_codes/tika/tika-core/output/summary.csv", head=T, sep=",")
+  55: mopTikaCore['module'] <- 'TikaCore'
+---
+  56: 
+  57: mopWicketUtil <- read.csv("../apache_codes/wicket/wicket-util/output/summary.csv", head=T, sep=",")
+  58: mopWicketUtil['module'] <- 'WicketUtil'
+---
+  60: 
+  61: mop <- rbind(mopArtemisCommons, mopDeltaSpikeCore)
+  62: mop <- rbind(mop, mopApachedsKerberosCodec)
+---
+  63: mop <- rbind(mop, mopMcfCore)
+---
+  64: mop <- rbind(mop, mopMeecrowaveCore)
+---
+  65: mop <- rbind(mop, mopSparkCore)
+---
+  66: mop <- rbind(mop, mopTikaCore)
+---
+  67: mop <- rbind(mop, mopWicketUtil)
+---
+  68: 
+---
+  69: mop <- sqldf("select module, count(*) as RVSec from mop group by module order by 1,2")
+  70: 
+---
+  75: ```{r load-cc}
+  76: ccArtemisCommons <- read.csv("../results/CogniCrypt-artemis-commons.csv", head=T, sep=",")
+  77: ccArtemisCommons['module'] <- 'ArtemisCommons'
+---
+  78: 
+  79: ccDeltaSpikeCore <- read.csv("../results/CogniCrypt-deltaspike-core-impl.csv", head=T, sep=",")
+  80: ccDeltaSpikeCore['module'] <- 'DeltaSpikeCore'
+---
+  81: 
+  82: ccApachedsKerberosCodec <- read.csv("../results/CogniCrypt-apacheds-kerberos-codec.csv", head=T, sep=",")
+  83: ccApachedsKerberosCodec['module'] <- 'ApachedsKerberosCodec'
+---
+  84: 
+  85: ccMcfCore <- read.csv("../results/CogniCrypt-mcf-core.csv", head=T, sep=",")
+  86: ccMcfCore['module'] <- 'DeltaMcfCore'
+---
+  87: 
+  88: ccMeecrowaveCore <- read.csv("../results/CogniCrypt-meecrowave-core.csv", head=T, sep=",")
+  89: ccMeecrowaveCore['module'] <- 'MeecrowaveCore'
+---
+  90: 
+  91: ccSparkCore <- read.csv("../results/CogniCrypt-spark-core_2.11.csv", head=T, sep=",")
+  92: ccSparkCore['module'] <- 'SparkCore'
+---
+  93: 
+---
+  94: ccTikaCore <- read.csv("../results/CogniCrypt-tika-core.csv", head=T, sep=",")
+  95: ccTikaCore['module'] <- 'TikaCore'
+---
+  96: 
+  97: ccWicketUtil <- read.csv("../results/CogniCrypt-wicket-util.csv", head=T, sep=",")
+  98: ccWicketUtil['module'] <- 'WicketUtil'
+---
+  99: 
+ 100: cc <- rbind(ccArtemisCommons, ccDeltaSpikeCore)
+ 101: cc <- rbind(cc, ccApachedsKerberosCodec)
+---
+ 102: cc <- rbind(cc, ccMcfCore)
+---
+ 103: cc <- rbind(cc, ccMeecrowaveCore)
+---
+ 104: cc <- rbind(cc, ccSparkCore)
+---
+ 105: cc <- rbind(cc, ccTikaCore)
+---
+ 106: cc <- rbind(cc, ccWicketUtil)
+---
+ 107: 
+---
+ADDITIONAL_MATCHES: 45
+
+FILE: results/analysis-bench04.Rmd
+TOTAL_LINES: 69
+MATCHES: 27
+   1: ---
+   2: title: "JavaMOP"
+   3: author: "Rodrigo Bonifácio et al."
+---
+  17: ```{r load}
+  18: bench04mop_apacheds <- read.csv("MOP-apacheds-kerberos-codec.csv", head=T, sep=",")
+  19: bench04mop_artemis <- read.csv("MOP-artemis-commons.csv", head=T, sep=",")
+---
+  20: bench04mop_deltaspike <- read.csv("MOP-deltaspike-core-impl.csv", head=T, sep=",")
+---
+  21: bench04mop_meecrowave <- read.csv("MOP-meecrowave-core.csv", head=T, sep=",")
+---
+  22: bench04mop_spark <- read.csv("MOP-spark-core_2.11.csv", head=T, sep=",")
+---
+  23: bench04mop_wicket <- read.csv("MOP-wicket-util.csv", head=T, sep=",")
+---
+  24: 
+---
+  26: colnames(bench04mop_apacheds)
+  27: nrow(sqldf("select distinct className, method, error from bench04mop_apacheds"))
+  28: nrow(sqldf("select distinct className, method, error from bench04mop_artemis"))
+---
+  29: nrow(sqldf("select distinct className, method, error from bench04mop_deltaspike")) 
+---
+  30: nrow(sqldf("select distinct className, method, error from bench04mop_meecrowave"))
+---
+  31: nrow(sqldf("select distinct className, method, error from bench04mop_spark"))
+---
+  32: nrow(sqldf("select distinct className, method, error from bench04mop_wicket"))
+---
+  33: ```
+---
+  37: ```{r loadcc}
+  38: bench04cc_apacheds <- read.csv("CogniCrypt-apacheds-kerberos-codec.csv", head=T, sep=",")
+  39: bench04cc_artemis <- read.csv("CogniCrypt-artemis-commons.csv", head=T, sep=",")
+---
+  40: bench04cc_deltaspike <- read.csv("CogniCrypt-deltaspike-core-impl.csv", head=T, sep=",")
+---
+  41: bench04cc_meecrowave <- read.csv("CogniCrypt-meecrowave-core.csv", head=T, sep=",")
+---
+  42: bench04cc_spark <- read.csv("CogniCrypt-spark-core_2.11.csv", head=T, sep=",")
+---
+  43: bench04cc_wicket <- read.csv("CogniCrypt-wicket-util.csv", head=T, sep=",")
+---
+  44: 
+---
+  48: nrow(bench04cc_meecrowave)
+  49: nrow(bench04cc_spark)
+  50: nrow(bench04cc_wicket)
+---
+  55: ```{r loadcg}
+  56: bench04cg_apacheds <- read.csv("CryptoGuard-apacheds-kerberos-codec.csv", head=T, sep=",")
+  57: bench04cg_artemis <- read.csv("CryptoGuard-artemis-commons.csv", head=T, sep=",")
+---
+  58: bench04cg_deltaspike <- read.csv("CryptoGuard-deltaspike-core-impl.csv", head=T, sep=",")
+---
+  59: bench04cg_meecrowave <- read.csv("CryptoGuard-meecrowave-core.csv", head=T, sep=",")
+---
+  60: bench04cg_spark <- read.csv("CryptoGuard-spark-core_2.11.csv", head=T, sep=",")
+---
+  61: bench04cg_wicket <- read.csv("CryptoGuard-wicket-util.csv", head=T, sep=",")
+---
+  62: 
+---
+  66: nrow(bench04cg_meecrowave)
+  67: nrow(bench04cg_spark)
+  68: nrow(bench04cg_wicket)
+---
+
+FILE: results/results-analysis.py
+TOTAL_LINES: 28
+MATCHES: 2
+   4: output = pd.DataFrame(columns=output_header)
+   5: df = pd.read_csv("results.csv")
+   6: 
+---
+   7: analysed_projects = df.project.unique()
+   8: 
+---
+
+FILE: results/convertJsonFiles2CSV.sh
+TOTAL_LINES: 16
+MATCHES: 2
+   5: python3 ../../scripts/process-cc-report.py CogniCrypt-meecrowave-core.json CogniCrypt-meecrowave-core.csv
+   6: python3 ../../scripts/process-cc-report.py CogniCrypt-spark-core_2.11.json CogniCrypt-spark-core_2.11.csv
+   7: python3 ../../scripts/process-cc-report.py CogniCrypt-tika-core.json CogniCrypt-tika-core.csv
+---
+  13: python3 ../../scripts/process-cg-report.py CryptoGuard-meecrowave-core.json CryptoGuard-meecrowave-core.csv
+  14: python3 ../../scripts/process-cg-report.py CryptoGuard-spark-core_2.11.json CryptoGuard-spark-core_2.11.csv
+  15: python3 ../../scripts/process-cg-report.py CryptoGuard-tika-core.json CryptoGuard-tika-core.csv
+---
+
+=== FINAL ===
+GROUND_TRUTH_PROVENANCE_AUDIT_COMPLETE
+READ_ONLY

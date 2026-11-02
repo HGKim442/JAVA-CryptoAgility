@@ -1,0 +1,253 @@
+=== 1. EXACT ORIGINAL RECORDS ===
+
+=== GROUP 07 ===
+GT:
+  Project: 'Spark'
+  Spec: 'PBEKeySpecSpec'
+  Class: 'AuthEngine'
+  Method: 'generateKey'
+  Tool: 'RV'
+  Vulnerability: '-'
+  RelatedWarnings: '2'
+  TestClass: 'FALSE'
+  ExternalClass: 'TRUE'
+  Observation: ''
+RAW RECORDS:
+
+  RAW_ROW=16
+    spec: 'PBEKeySpec'
+    class: 'org.apache.spark.network.crypto.AuthEngine'
+    className: 'AuthEngine'
+    method: 'generateKey'
+    location: 'AuthEngine.java:232'
+    error: 'UnsatisfiedConstraint'
+
+  RAW_ROW=17
+    spec: 'PBEKeySpec'
+    class: 'org.apache.spark.network.crypto.AuthEngine'
+    className: 'AuthEngine'
+    method: 'generateKey'
+    location: 'AuthEngine.java:232'
+    error: 'InvalidSequenceOfMethodCalls'
+
+=== GROUP 10 ===
+GT:
+  Project: 'Spark'
+  Spec: 'IvParameterSpecSpec'
+  Class: 'TransportCipher'
+  Method: 'createOutputStream'
+  Tool: 'RV'
+  Vulnerability: '-'
+  RelatedWarnings: '4'
+  TestClass: 'FALSE'
+  ExternalClass: 'TRUE'
+  Observation: ''
+RAW RECORDS:
+
+  RAW_ROW=24
+    spec: 'IvParameterSpecSpec'
+    class: 'org.apache.spark.network.crypto.TransportCipher'
+    className: 'TransportCipher'
+    method: 'createOutputStream'
+    location: 'TransportCipher.java:88'
+    error: 'UnsatisfiedConstraint'
+
+  RAW_ROW=25
+    spec: 'IvParameterSpecSpec'
+    class: 'org.apache.spark.network.crypto.TransportCipher'
+    className: 'TransportCipher'
+    method: 'createOutputStream'
+    location: 'TransportCipher.java:88'
+    error: 'InvalidSequenceOfMethodCalls'
+
+  RAW_ROW=26
+    spec: 'IvParameterSpecSpec'
+    class: 'org.apache.spark.network.crypto.TransportCipher'
+    className: 'TransportCipher'
+    method: 'createInputStream'
+    location: 'TransportCipher.java:92'
+    error: 'UnsatisfiedConstraint'
+
+  RAW_ROW=27
+    spec: 'IvParameterSpecSpec'
+    class: 'org.apache.spark.network.crypto.TransportCipher'
+    className: 'TransportCipher'
+    method: 'createInputStream'
+    location: 'TransportCipher.java:92'
+    error: 'InvalidSequenceOfMethodCalls'
+
+=== GROUP 22 ===
+GT:
+  Project: 'Spark'
+  Spec: 'SSLContextSpec'
+  Class: 'SSLOptions.liftedTree1$1'
+  Method: '<init>'
+  Tool: 'RV'
+  Vulnerability: 'TRUE'
+  RelatedWarnings: '3'
+  TestClass: 'FALSE'
+  ExternalClass: 'FALSE'
+  Observation: ''
+RAW RECORDS:
+
+  RAW_ROW=50
+    spec: 'SSLContextSpec'
+    class: 'org.apache.spark.SSLOptions.liftedTree1$1(SSLOptions.scala:105)'
+    className: 'scala:105)'
+    method: 'org.apache.spark.SSLOptions.liftedTree1$1(SSLOptions.scala:105)'
+    location: 'org.apache.spark.SSLOptions.liftedTree1$1(SSLOptions.scala:105)'
+    error: 'InvalidSequenceOfMethodCalls'
+
+  RAW_ROW=51
+    spec: 'SSLContextSpec'
+    class: 'org.apache.spark.SSLOptions.liftedTree1$1(SSLOptions.scala:108)'
+    className: 'scala:108)'
+    method: 'org.apache.spark.SSLOptions.liftedTree1$1(SSLOptions.scala:108)'
+    location: 'org.apache.spark.SSLOptions.liftedTree1$1(SSLOptions.scala:108)'
+    error: 'UnsafeProtocol'
+
+  RAW_ROW=52
+    spec: 'SSLContextSpec'
+    class: 'org.apache.spark.SSLOptions.liftedTree1$1(SSLOptions.scala:108)'
+    className: 'scala:108)'
+    method: 'org.apache.spark.SSLOptions.liftedTree1$1(SSLOptions.scala:108)'
+    location: 'org.apache.spark.SSLOptions.liftedTree1$1(SSLOptions.scala:108)'
+    error: 'InvalidSequenceOfMethodCalls'
+
+=== 2. SPARK SOURCE LOCATIONS ===
+
+SOURCE_NAME=AuthEngine.java
+PATH: common/network-common/src/main/java/org/apache/spark/network/crypto/AuthEngine.java
+  84:   ClientChallenge challenge() throws GeneralSecurityException {
+  85:     this.authNonce = randomBytes(conf.encryptionKeyLength() / Byte.SIZE);
+  86:     SecretKeySpec authKey = generateKey(conf.keyFactoryAlgorithm(), conf.keyFactoryIterations(),
+  87:       authNonce, conf.encryptionKeyLength());
+  88:     initializeForAuth(conf.cipherTransformation(), authNonce, authKey);
+  89: 
+---
+ 108:     throws GeneralSecurityException {
+ 109: 
+ 110:     SecretKeySpec authKey = generateKey(clientChallenge.kdf, clientChallenge.iterations,
+ 111:       clientChallenge.nonce, clientChallenge.keyLength);
+ 112:     initializeForAuth(clientChallenge.cipher, clientChallenge.nonce, authKey);
+ 113: 
+---
+ 118:     byte[] outputIv = randomBytes(conf.ivLength());
+ 119: 
+ 120:     SecretKeySpec sessionKey = generateKey(clientChallenge.kdf, clientChallenge.iterations,
+ 121:       sessionNonce, clientChallenge.keyLength);
+ 122:     this.sessionCipher = new TransportCipher(cryptoConf, clientChallenge.cipher, sessionKey,
+ 123:       inputIv, outputIv);
+---
+ 142:     byte[] outputIv = decrypt(serverResponse.outputIv);
+ 143: 
+ 144:     SecretKeySpec sessionKey = generateKey(conf.keyFactoryAlgorithm(), conf.keyFactoryIterations(),
+ 145:       nonce, conf.encryptionKeyLength());
+ 146:     this.sessionCipher = new TransportCipher(cryptoConf, conf.cipherTransformation(), sessionKey,
+ 147:       inputIv, outputIv);
+---
+ 226:   }
+ 227: 
+ 228:   private SecretKeySpec generateKey(String kdf, int iterations, byte[] salt, int keyLength)
+ 229:     throws GeneralSecurityException {
+ 230: 
+ 231:     SecretKeyFactory factory = SecretKeyFactory.getInstance(kdf);
+---
+
+SOURCE_NAME=TransportCipher.java
+PATH: common/network-common/src/main/java/org/apache/spark/network/crypto/TransportCipher.java
+  85:   }
+  86: 
+  87:   private CryptoOutputStream createOutputStream(WritableByteChannel ch) throws IOException {
+  88:     return new CryptoOutputStream(cipher, conf, ch, key, new IvParameterSpec(outIv));
+  89:   }
+  90: 
+---
+  89:   }
+  90: 
+  91:   private CryptoInputStream createInputStream(ReadableByteChannel ch) throws IOException {
+  92:     return new CryptoInputStream(cipher, conf, ch, key, new IvParameterSpec(inIv));
+  93:   }
+  94: 
+---
+ 111:     EncryptionHandler(TransportCipher cipher) throws IOException {
+ 112:       byteChannel = new ByteArrayWritableChannel(STREAM_BUFFER_SIZE);
+ 113:       cos = cipher.createOutputStream(byteChannel);
+ 114:     }
+ 115: 
+ 116:     @Override
+---
+ 136:     DecryptionHandler(TransportCipher cipher) throws IOException {
+ 137:       byteChannel = new ByteArrayReadableChannel();
+ 138:       cis = cipher.createInputStream(byteChannel);
+ 139:     }
+ 140: 
+ 141:     @Override
+---
+
+SOURCE_NAME=SSLOptions.scala
+PATH: core/src/main/scala/org/apache/spark/SSLOptions.scala
+  20: import java.io.File
+  21: import java.security.NoSuchAlgorithmException
+  22: import javax.net.ssl.SSLContext
+  23: 
+  24: import org.eclipse.jetty.util.ssl.SslContextFactory
+  25: 
+---
+  97:     Set.empty
+  98:   } else {
+  99:     var context: SSLContext = null
+ 100:     if (protocol.isEmpty) {
+ 101:       logDebug("No SSL protocol specified")
+ 102:       context = SSLContext.getDefault
+---
+ 100:     if (protocol.isEmpty) {
+ 101:       logDebug("No SSL protocol specified")
+ 102:       context = SSLContext.getDefault
+ 103:     } else {
+ 104:       try {
+ 105:         context = SSLContext.getInstance(protocol.get)
+---
+ 103:     } else {
+ 104:       try {
+ 105:         context = SSLContext.getInstance(protocol.get)
+ 106:         /* The set of supported algorithms does not depend upon the keys, trust, or
+ 107:          rng, although they will influence which algorithms are eventually used. */
+ 108:         context.init(null, null, null)
+---
+ 110:         case nsa: NoSuchAlgorithmException =>
+ 111:           logDebug(s"No support for requested SSL protocol ${protocol.get}")
+ 112:           context = SSLContext.getDefault
+ 113:       }
+ 114:     }
+ 115: 
+---
+ 123:     val supported = enabledAlgorithms & providerAlgorithms
+ 124:     require(supported.nonEmpty || sys.env.contains("SPARK_TESTING"),
+ 125:       "SSLContext does not support any of the enabled algorithms: " +
+ 126:         enabledAlgorithms.mkString(","))
+ 127:     supported
+ 128:   }
+---
+SSLOPTIONS_LINES_100_TO_112:
+ 100:     if (protocol.isEmpty) {
+ 101:       logDebug("No SSL protocol specified")
+ 102:       context = SSLContext.getDefault
+ 103:     } else {
+ 104:       try {
+ 105:         context = SSLContext.getInstance(protocol.get)
+ 106:         /* The set of supported algorithms does not depend upon the keys, trust, or
+ 107:          rng, although they will influence which algorithms are eventually used. */
+ 108:         context.init(null, null, null)
+ 109:       } catch {
+ 110:         case nsa: NoSuchAlgorithmException =>
+ 111:           logDebug(s"No support for requested SSL protocol ${protocol.get}")
+ 112:           context = SSLContext.getDefault
+
+=== 3. FIXED ANALYSIS INPUT ===
+FILE: /home/RESEARCHER/pqc-research/D0-rvsec/RVSec-replication-package/ApacheCryptoAPIBench/results/gt-FIXED-new.csv
+EXISTS: False
+
+=== FINAL ===
+STEP_142_COMPLETE
+READ_ONLY

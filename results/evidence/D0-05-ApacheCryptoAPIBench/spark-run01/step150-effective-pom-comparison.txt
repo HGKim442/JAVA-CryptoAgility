@@ -1,0 +1,51 @@
+=== 1. GENERATE ORIGINAL EFFECTIVE POM ===
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.spark:spark-parent_2.11:pom:2.4.0-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.apache.spark:spark-parent_2.11:2.4.0-SNAPSHOT (/home/RESEARCHER/pqc-research/D0-rvsec/RVSec-replication-package/ApacheCryptoAPIBench/apache_codes/spark/pom.xml) points at br.unb.cic:mop-test-suite-b04 instead of org.apache:apache, please verify your project structure @ line 22, column 11
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ------------------< org.apache.spark:spark-core_2.11 >------------------
+[INFO] Building Spark Project Core 2.4.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- help:3.5.2:effective-pom (default-cli) @ spark-core_2.11 ---
+[INFO] Effective-POM written to: /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/spark-run01/step150-original-effective-pom.xml
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.461 s
+[INFO] Finished at: 2026-10-19T17:01:06+09:00
+[INFO] ------------------------------------------------------------------------
+
+=== 2. COMPARE EFFECTIVE PLUGINS ===
+=== ORIGINAL EFFECTIVE CONFIG ===
+
+PLUGIN: maven-surefire-plugin
+ORIGINAL: {'argLine': '-javaagent:/home/RESEARCHER/pqc-research/D0-rvsec/RVSec-replication-package/ApacheCryptoAPIBench/apache_codes/spark/core/JavaMOPAgent.jar', 'runOrder': 'alphabetical'}
+WORKING: {'argLine': '-Xmx4096m -XX:MaxPermSize=1024m -javaagent:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/JavaMOPAgent.jar', 'runOrder': 'alphabetical'}
+
+PLUGIN: scalatest-maven-plugin
+ORIGINAL: {'argLine': '-javaagent:/home/RESEARCHER/pqc-research/D0-rvsec/RVSec-replication-package/ApacheCryptoAPIBench/apache_codes/spark/core/JavaMOPAgent.jar'}
+WORKING: {'argLine': '-javaagent:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/JavaMOPAgent.jar'}
+
+=== COMPARISON RESULT ===
+PLUGIN: maven-surefire-plugin
+CONFIG_EQUAL: False
+DIFFERENT_OPTION: argLine
+ ORIGINAL: -javaagent:/home/RESEARCHER/pqc-research/D0-rvsec/RVSec-replication-package/ApacheCryptoAPIBench/apache_codes/spark/core/JavaMOPAgent.jar
+ WORKING : -Xmx4096m -XX:MaxPermSize=1024m -javaagent:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/JavaMOPAgent.jar
+PLUGIN: scalatest-maven-plugin
+CONFIG_EQUAL: False
+DIFFERENT_OPTION: argLine
+ ORIGINAL: -javaagent:/home/RESEARCHER/pqc-research/D0-rvsec/RVSec-replication-package/ApacheCryptoAPIBench/apache_codes/spark/core/JavaMOPAgent.jar
+ WORKING : -javaagent:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/JavaMOPAgent.jar
+
+STEP_150_COMPLETE
+NO_TEST_EXECUTION
+SOURCE_FILES_UNCHANGED

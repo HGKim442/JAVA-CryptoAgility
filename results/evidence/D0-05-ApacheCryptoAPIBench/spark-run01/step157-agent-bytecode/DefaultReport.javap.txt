@@ -1,0 +1,136 @@
+Compiled from "DefaultReport.java"
+public class br.unb.cic.mop.eh.report.DefaultReport implements br.unb.cic.mop.eh.report.IErrorReport {
+  public static final java.lang.String HEADER;
+
+  public br.unb.cic.mop.eh.report.DefaultReport();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public void exportErrors(java.util.Set<br.unb.cic.mop.eh.ErrorDescription>) throws java.lang.Exception;
+    Code:
+       0: new           #2                  // class java/util/HashSet
+       3: dup
+       4: invokespecial #3                  // Method java/util/HashSet."<init>":()V
+       7: astore_2
+       8: aload_1
+       9: invokeinterface #4,  1            // InterfaceMethod java/util/Set.iterator:()Ljava/util/Iterator;
+      14: astore_3
+      15: aload_3
+      16: invokeinterface #5,  1            // InterfaceMethod java/util/Iterator.hasNext:()Z
+      21: ifeq          54
+      24: aload_3
+      25: invokeinterface #6,  1            // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+      30: checkcast     #7                  // class br/unb/cic/mop/eh/ErrorDescription
+      33: astore        4
+      35: aload         4
+      37: invokevirtual #8                  // Method br/unb/cic/mop/eh/ErrorDescription.getErrorSummary:()Lbr/unb/cic/mop/eh/ErrorSummary;
+      40: astore        5
+      42: aload_2
+      43: aload         5
+      45: invokeinterface #9,  2            // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+      50: pop
+      51: goto          15
+      54: new           #10                 // class java/io/File
+      57: dup
+      58: ldc           #11                 // String output
+      60: invokespecial #12                 // Method java/io/File."<init>":(Ljava/lang/String;)V
+      63: astore_3
+      64: aload_3
+      65: invokevirtual #13                 // Method java/io/File.exists:()Z
+      68: ifne          76
+      71: aload_3
+      72: invokevirtual #14                 // Method java/io/File.mkdir:()Z
+      75: pop
+      76: new           #10                 // class java/io/File
+      79: dup
+      80: aload_0
+      81: invokespecial #15                 // Method generateFileName:()Ljava/lang/String;
+      84: invokespecial #12                 // Method java/io/File."<init>":(Ljava/lang/String;)V
+      87: astore        4
+      89: new           #16                 // class java/io/PrintWriter
+      92: dup
+      93: aload         4
+      95: invokespecial #17                 // Method java/io/PrintWriter."<init>":(Ljava/io/File;)V
+      98: astore        5
+     100: aconst_null
+     101: astore        6
+     103: aload         5
+     105: ldc           #19                 // String spec,error,class,className,method
+     107: invokevirtual #20                 // Method java/io/PrintWriter.println:(Ljava/lang/String;)V
+     110: aload_2
+     111: invokeinterface #21,  1           // InterfaceMethod java/util/Set.stream:()Ljava/util/stream/Stream;
+     116: aload         5
+     118: dup
+     119: invokevirtual #22                 // Method java/lang/Object.getClass:()Ljava/lang/Class;
+     122: pop
+     123: invokedynamic #23,  0             // InvokeDynamic #0:accept:(Ljava/io/PrintWriter;)Ljava/util/function/Consumer;
+     128: invokeinterface #24,  2           // InterfaceMethod java/util/stream/Stream.forEach:(Ljava/util/function/Consumer;)V
+     133: aload         5
+     135: ifnull        220
+     138: aload         6
+     140: ifnull        163
+     143: aload         5
+     145: invokevirtual #25                 // Method java/io/PrintWriter.close:()V
+     148: goto          220
+     151: astore        7
+     153: aload         6
+     155: aload         7
+     157: invokevirtual #27                 // Method java/lang/Throwable.addSuppressed:(Ljava/lang/Throwable;)V
+     160: goto          220
+     163: aload         5
+     165: invokevirtual #25                 // Method java/io/PrintWriter.close:()V
+     168: goto          220
+     171: astore        7
+     173: aload         7
+     175: astore        6
+     177: aload         7
+     179: athrow
+     180: astore        8
+     182: aload         5
+     184: ifnull        217
+     187: aload         6
+     189: ifnull        212
+     192: aload         5
+     194: invokevirtual #25                 // Method java/io/PrintWriter.close:()V
+     197: goto          217
+     200: astore        9
+     202: aload         6
+     204: aload         9
+     206: invokevirtual #27                 // Method java/lang/Throwable.addSuppressed:(Ljava/lang/Throwable;)V
+     209: goto          217
+     212: aload         5
+     214: invokevirtual #25                 // Method java/io/PrintWriter.close:()V
+     217: aload         8
+     219: athrow
+     220: return
+    Exception table:
+       from    to  target type
+         143   148   151   Class java/lang/Throwable
+         103   133   171   Class java/lang/Throwable
+         103   133   180   any
+         192   197   200   Class java/lang/Throwable
+         171   182   180   any
+
+  private java.lang.String generateFileName();
+    Code:
+       0: ldc           #28                 // String yyyyMMddHHmmss
+       2: invokestatic  #29                 // Method java/time/format/DateTimeFormatter.ofPattern:(Ljava/lang/String;)Ljava/time/format/DateTimeFormatter;
+       5: astore_1
+       6: invokestatic  #30                 // Method java/time/LocalDateTime.now:()Ljava/time/LocalDateTime;
+       9: astore_2
+      10: new           #31                 // class java/lang/StringBuilder
+      13: dup
+      14: invokespecial #32                 // Method java/lang/StringBuilder."<init>":()V
+      17: ldc           #33                 // String output/report-
+      19: invokevirtual #34                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      22: aload_1
+      23: aload_2
+      24: invokevirtual #35                 // Method java/time/format/DateTimeFormatter.format:(Ljava/time/temporal/TemporalAccessor;)Ljava/lang/String;
+      27: invokevirtual #34                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      30: ldc           #36                 // String .csv
+      32: invokevirtual #34                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      35: invokevirtual #37                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+      38: areturn
+}

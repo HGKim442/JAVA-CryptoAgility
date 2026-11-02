@@ -1,0 +1,24 @@
+=== HEADER ===
+REFERENCE: ['spec', 'class', 'className', 'method', 'location', 'error']
+REPRODUCED: ['spec', 'class', 'className', 'method', 'location', 'error']
+HEADER_MATCH: True
+
+=== EVENT COUNTS ===
+REFERENCE_EVENTS: 10
+REPRODUCED_EVENTS: 10
+REFERENCE_UNIQUE: 10
+REPRODUCED_UNIQUE: 10
+
+=== EXACT COMPARISON ===
+ORDERED_ROWS_EQUAL: True
+MULTISET_EQUAL: True
+MISSING_EVENTS: 0
+EXTRA_EVENTS: 0
+
+=== PER-SPECIFICATION COUNTS ===
+CipherSpec: reference=2, reproduced=2
+PBEKeySpec: reference=4, reproduced=4
+SecretKeySpecSpec: reference=4, reproduced=4
+
+=== FINAL VERDICT ===
+EXACT_REPRODUCTION

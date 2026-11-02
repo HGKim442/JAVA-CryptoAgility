@@ -1,0 +1,40 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.spark:spark-parent_2.11:pom:2.4.0-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.apache.spark:spark-parent_2.11:2.4.0-SNAPSHOT (/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/pom.xml) points at br.unb.cic:mop-test-suite-b04 instead of org.apache:apache, please verify your project structure @ line 22, column 11
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ------------------< org.apache.spark:spark-core_2.11 >------------------
+[INFO] Building Spark Project Core 2.4.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- scalatest:1.0:test (default-cli) @ spark-core_2.11 ---
+Discovery starting.
+Discovery completed in 39 seconds, 342 milliseconds.
+Run starting. Expected test count is: 8
+CryptoStreamUtilsSuite:
+- crypto configuration conversion
+- shuffle encryption key length should be 128 by default
+- create 256-bit key
+- create key with invalid length
+- serializer manager integration
+- encryption key propagation to executors
+- crypto stream wrappers
+CryptoStreamUtilsSuite:
+- crypto stream wrappers
+Run completed in 43 seconds, 742 milliseconds.
+Total number of tests run: 8
+Suites: completed 2, aborted 0
+Tests: succeeded 8, failed 0, canceled 0, ignored 0, pending 0
+All tests passed.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  48.716 s
+[INFO] Finished at: 2026-10-19T12:33:51+09:00
+[INFO] ------------------------------------------------------------------------

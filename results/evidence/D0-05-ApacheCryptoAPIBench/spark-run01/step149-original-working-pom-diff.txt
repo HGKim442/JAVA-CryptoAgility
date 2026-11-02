@@ -1,0 +1,65 @@
+
+=== FILE: pom.xml ===
+ORIGINAL_SHA256: 6298327fdf32d6d812c97019cc46536d6e4542b88905b1b2a5dc78d685de9e8f
+WORKING_SHA256: 6298327fdf32d6d812c97019cc46536d6e4542b88905b1b2a5dc78d685de9e8f
+BYTE_EQUAL: True
+DIFF_LINES: 0
+ADDED_LINES: 0
+REMOVED_LINES: 0
+
+=== UNIFIED DIFF ===
+
+=== FILE: core/pom.xml ===
+ORIGINAL_SHA256: 6f48c82f57651cfc7c8aa09705d45f5416bbeed7f1d3e67807f8da1b3242fd0f
+WORKING_SHA256: d0d37f37fe7afd25c0396966caa619c0870d43636857c300e9583218df392409
+BYTE_EQUAL: False
+DIFF_LINES: 14
+ADDED_LINES: 1
+REMOVED_LINES: 2
+
+=== UNIFIED DIFF ===
+--- ORIGINAL/core/pom.xml
++++ WORKING/core/pom.xml
+@@ -479,10 +479,9 @@
+ 					<plugin>
+ 						<groupId>org.apache.maven.plugins</groupId>
+ 						<artifactId>maven-surefire-plugin</artifactId>
+ 						<configuration>
+-							<argLine>-Xmx4096m -XX:MaxPermSize=1024m</argLine>
+-							<argLine>-javaagent:${basedir}/JavaMOPAgent.jar</argLine>
++							<argLine>-Xmx4096m -XX:MaxPermSize=1024m -javaagent:${basedir}/JavaMOPAgent.jar</argLine>
+ 							<runOrder>alphabetical</runOrder>
+ 						</configuration>
+ 					</plugin>
+ 					<plugin>
+
+=== MOP PROFILE CONFIGURATION ===
+
+SOURCE: ORIGINAL
+MOP_PROFILE_EXISTS: True
+artifactId: maven-surefire-plugin
+argLine: -Xmx4096m -XX:MaxPermSize=1024m
+argLine: -javaagent:${basedir}/JavaMOPAgent.jar
+runOrder: alphabetical
+artifactId: scalatest-maven-plugin
+argLine: -javaagent:${basedir}/JavaMOPAgent.jar
+
+SOURCE: WORKING
+MOP_PROFILE_EXISTS: True
+artifactId: maven-surefire-plugin
+argLine: -Xmx4096m -XX:MaxPermSize=1024m -javaagent:${basedir}/JavaMOPAgent.jar
+runOrder: alphabetical
+artifactId: scalatest-maven-plugin
+argLine: -javaagent:${basedir}/JavaMOPAgent.jar
+
+=== JAVA AGENT FILES ===
+ORIGINAL_SPARK_AGENT
+SHA256: 34ce5560e377ac8b482025abd9d60c95e7e3380994a51250f6ebe4ff1bc5f675
+WORKING_SPARK_AGENT
+SHA256: 34ce5560e377ac8b482025abd9d60c95e7e3380994a51250f6ebe4ff1bc5f675
+
+=== FINAL ===
+STEP_149_COMPLETE
+STATIC_COMPARISON_ONLY
+NO_TEST_EXECUTION
+NO_SOURCE_MODIFICATION

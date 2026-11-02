@@ -1,0 +1,15 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------< org.apache.activemq:artemis-commons >-----------------
+[INFO] Building ActiveMQ Artemis Commons 2.5.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- help:2.2:effective-pom (default-cli) @ artemis-commons ---
+[INFO] Effective-POM written to: /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/artemis-effective-pom-fixed.xml
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.698 s
+[INFO] Finished at: 2026-10-18T18:58:26+09:00
+[INFO] ------------------------------------------------------------------------

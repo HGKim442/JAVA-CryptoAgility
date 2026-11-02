@@ -1,0 +1,80 @@
+=== 1. ORIGINAL CONTIGUOUS BLOCKS ===
+
+BLOCK_1 ROWS=1-9 COUNT=9
+  <init> CryptoStreamUtils.scala:162 COUNT: 2
+  createCryptoInputStream CryptoStreamUtils.scala:88 COUNT: 2
+  createCryptoOutputStream CryptoStreamUtils.scala:58 COUNT: 2
+  createKey CryptoStreamUtils.scala:119 COUNT: 1
+  createKey CryptoStreamUtils.scala:120 COUNT: 2
+
+BLOCK_2 ROWS=28-40 COUNT=13
+  <init> CryptoStreamUtils.scala:162 COUNT: 2
+  createCryptoInputStream CryptoStreamUtils.scala:88 COUNT: 2
+  createCryptoOutputStream CryptoStreamUtils.scala:58 COUNT: 2
+  createKey CryptoStreamUtils.scala:119 COUNT: 1
+  createKey CryptoStreamUtils.scala:120 COUNT: 2
+  createReadableChannel CryptoStreamUtils.scala:104 COUNT: 2
+  createWritableChannel CryptoStreamUtils.scala:74 COUNT: 2
+
+TOTAL_BLOCKS: 2
+
+=== 2. HISTORICAL ISOLATED EXECUTIONS ===
+
+COMPARISON: SECOND_BLOCK_VS_WRAPPER
+EXPECTED: 13
+OBSERVED: 13
+EXACT: True
+MISSING: 0
+EXTRA: 0
+
+COMPARISON: FIRST_BLOCK_VS_KEYPROP_DRIVER
+EXPECTED: 9
+OBSERVED: 7
+EXACT: False
+MISSING: 2
+EXTRA: 0
+MISSING_EVENT: 1 createCryptoOutputStream CryptoStreamUtils.scala:58 InvalidSequenceOfMethodCalls
+MISSING_EVENT: 1 createCryptoOutputStream CryptoStreamUtils.scala:58 UnsatisfiedConstraint
+
+COMPARISON: FIRST_BLOCK_VS_DRIVER_PLUS_WORKER
+EXPECTED: 9
+OBSERVED: 11
+EXACT: False
+MISSING: 0
+EXTRA: 2
+EXTRA_EVENT: 1 <init> CryptoStreamUtils.scala:162 InvalidSequenceOfMethodCalls
+EXTRA_EVENT: 1 <init> CryptoStreamUtils.scala:162 UnsatisfiedConstraint
+
+=== 3. INTEGRATED EXECUTION ===
+INTEGRATED_WORKER_FILES: 1
+
+COMPARISON: INTEGRATED_DRIVER_VS_WRAPPER
+EXPECTED: 13
+OBSERVED: 13
+EXACT: True
+MISSING: 0
+EXTRA: 0
+
+COMPARISON: ORIGINAL_22_VS_INTEGRATED_17
+EXPECTED: 22
+OBSERVED: 17
+EXACT: False
+MISSING: 5
+EXTRA: 0
+MISSING_EVENT: 1 createCryptoInputStream CryptoStreamUtils.scala:88 InvalidSequenceOfMethodCalls
+MISSING_EVENT: 1 createCryptoInputStream CryptoStreamUtils.scala:88 UnsatisfiedConstraint
+MISSING_EVENT: 1 createKey CryptoStreamUtils.scala:119 InvalidSequenceOfMethodCalls
+MISSING_EVENT: 1 createKey CryptoStreamUtils.scala:120 InvalidSequenceOfMethodCalls
+MISSING_EVENT: 1 createKey CryptoStreamUtils.scala:120 UnsafeAlgorithm
+
+=== 4. KEY PROPAGATION OVERLAP ===
+KEYPROP_DRIVER_EVENTS: 7
+WRAPPER_EVENTS: 13
+OVERLAPPING_EVENTS: 7
+KEYPROP_DRIVER_SUBSET_OF_WRAPPER: True
+
+=== FINAL ===
+STEP_154_COMPLETE
+NO_TEST_EXECUTION
+NO_SOURCE_MODIFICATION
+NO_EVENT_FILTERING_FOR_REPRODUCTION

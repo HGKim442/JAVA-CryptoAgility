@@ -1,0 +1,287 @@
+=== 1. REFERENCE ===
+ROWS: 55
+UNIQUE_EVENTS: 43
+
+=== 2. STEP 136 FINAL REPORT ===
+  1: === ISOLATED CRYPTO VERIFICATION ===
+  2: REFERENCE_CRYPTO_EVENTS: 22
+  3: OBSERVED_CRYPTO_EVENTS: 24
+  4: MATCHED_CRYPTO_EVENTS: 22
+  5: MISSING_CRYPTO_EVENTS: 0
+  6: EXTRA_CRYPTO_EVENTS: 2
+  7: 
+  8: === CRYPTO EVENTS BY SIX-FIELD KEY ===
+  9: METHOD=createCryptoInputStream ERROR=InvalidSequenceOfMethodCalls REFERENCE=2 OBSERVED=2 DELTA=0
+ 10: METHOD=createCryptoInputStream ERROR=UnsatisfiedConstraint REFERENCE=2 OBSERVED=2 DELTA=0
+ 11: METHOD=createCryptoOutputStream ERROR=InvalidSequenceOfMethodCalls REFERENCE=2 OBSERVED=2 DELTA=0
+ 12: METHOD=createCryptoOutputStream ERROR=UnsatisfiedConstraint REFERENCE=2 OBSERVED=2 DELTA=0
+ 13: METHOD=createReadableChannel ERROR=InvalidSequenceOfMethodCalls REFERENCE=1 OBSERVED=1 DELTA=0
+ 14: METHOD=createReadableChannel ERROR=UnsatisfiedConstraint REFERENCE=1 OBSERVED=1 DELTA=0
+ 15: METHOD=createWritableChannel ERROR=InvalidSequenceOfMethodCalls REFERENCE=1 OBSERVED=1 DELTA=0
+ 16: METHOD=createWritableChannel ERROR=UnsatisfiedConstraint REFERENCE=1 OBSERVED=1 DELTA=0
+ 17: METHOD=createKey ERROR=InvalidSequenceOfMethodCalls REFERENCE=2 OBSERVED=2 DELTA=0
+ 18: METHOD=createKey ERROR=InvalidSequenceOfMethodCalls REFERENCE=2 OBSERVED=2 DELTA=0
+ 19: METHOD=createKey ERROR=UnsafeAlgorithm REFERENCE=2 OBSERVED=2 DELTA=0
+ 20: METHOD=<init> ERROR=InvalidSequenceOfMethodCalls REFERENCE=2 OBSERVED=3 DELTA=1
+ 21: METHOD=<init> ERROR=UnsatisfiedConstraint REFERENCE=2 OBSERVED=3 DELTA=1
+ 22: 
+ 23: === COMPLETE SPARK COMPARISON ===
+ 24: REFERENCE_SPARK: 55
+ 25: MATCHED_SPARK_BOUNDED: 55
+ 26: MISSING_SPARK: 0
+ 27: EXTRA_SPARK: 19
+ 28: SPARK_DISTINCT_REFERENCE: 43
+ 29: SPARK_DISTINCT_MATCHED: 43
+ 30: 
+ 31: === APACHE TOTAL ===
+ 32: PREVIOUS_SEVEN_PROJECTS: 95
+ 33: SPARK_BOUNDED_MATCHES: 55
+ 34: APACHE_BOUNDED_MATCHES: 150
+ 35: APACHE_REFERENCE: 150
+ 36: 
+ 37: === INPUT FILE SHA256 ===
+ 38: 9792a9d9dc54ec4bb1d9e9aeccb7088a448e180d5345b996443800861bedffb5  /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/spark-reference/summary.csv
+ 39: 3aaaf149a8376e319ebca9a560506742c3f4afc5c04b2b2e3ee6dec105f516c1  /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/spark-run01/crypto-wrapper-exact01-summary.csv
+ 40: 8da5c416dfee9abcb2b12fcf5fba8da0776804e7602a538fc313c12d0c12263b  /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/spark-run01/keyprop-exact01-driver-summary.csv
+ 41: ea522439e125fd3578f80df7522727cac7158c66a5a3522cb81bdd5b0654c59a  /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/spark-run01/keyprop-exact01-worker-summary.csv
+ 42: 34a1f541f3fb2ca95e99d79d34dad485907c8eb2fb662a13684b20d4363d9e74  /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/spark-run01/sslop-suite01-summary.csv
+ 43: 835570b43327d898b271a95e8df60308fcb9d41681b4463b1f54b5bdeaeba090  /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/spark-run01/authengine-suite02-summary.csv
+ 44: 4b8ff5dd6981e85db43d37151d2c7324fd97468a23bcfe5c8986f92280d1a8d8  /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/spark-run01/authintegration-suite01-summary.csv
+ 45: 91c9fce3fbf59c5b9b94872c3154e9eddde9f009c4f3047f485c32f428d9850a  /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/spark-run01/securitymanager-suite01-summary.csv
+ 46: 7b37bc6e4e91bb83f6abf891e11744668c5b3c19520513515396fdd44840747c  /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/spark-run01/diskstore-suite01-summary.csv
+ 47: 39a2d83af475892a5fe82fccc1d04a27e4004d42fa9b3b430b0ca6313a057c94  /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/spark-run01/filesuite01-summary.csv
+ 48: 39a2d83af475892a5fe82fccc1d04a27e4004d42fa9b3b430b0ca6313a057c94  /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/spark-run01/javaapi-suite01-summary.csv
+ 49: d9ba26e880567d3c811e33c93d128db1ec356ea2db21cd063940aea26f10baa5  /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/spark-run01/uisuite01-summary.csv
+ 50: 7923ee76f64ab221f5735943a6a785ea04f724e23537625e40c59aeaa7900aea  /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/spark-run01/uiselenium01-summary.csv
+ 51: 6fb0e09e859143fa7879ef9be7e949579ac540b2152297f1c0ff437bd35f4aa7  /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/spark-run01/launcher-suite01-summary.csv
+ 52: 
+ 53: === FINAL VERDICT ===
+ 54: ALL_REFERENCE_MULTIPLICITIES_COVERED
+ 55: OVERPRODUCTION_PRESENT
+ 56: NOT_AN_EXACT_SINGLE_RUN_REPRODUCTION
+ 57: STEP_136_COMPLETE
+
+=== 3. SAVED EXECUTION CSV FILES ===
+SIX_FIELD_CSV_FILES: 30
+
+FILE: pre-smoke-summary.csv
+ROWS: 55
+MATCHED_BOUNDED: 55
+MISSING: 0
+EXTRA: 0
+UNEXPECTED_EVENT_TYPES: 0
+
+FILE: crypto-suite-smoke02-summary.csv
+ROWS: 13
+MATCHED_BOUNDED: 13
+MISSING: 42
+EXTRA: 0
+UNEXPECTED_EVENT_TYPES: 0
+
+FILE: crypto-wrapper-exact01-summary.csv
+ROWS: 13
+MATCHED_BOUNDED: 13
+MISSING: 42
+EXTRA: 0
+UNEXPECTED_EVENT_TYPES: 0
+
+FILE: crypto-wrapper-isolated01-summary.csv
+ROWS: 13
+MATCHED_BOUNDED: 13
+MISSING: 42
+EXTRA: 0
+UNEXPECTED_EVENT_TYPES: 0
+
+FILE: executor-agent01-summary.csv
+ROWS: 13
+MATCHED_BOUNDED: 13
+MISSING: 42
+EXTRA: 0
+UNEXPECTED_EVENT_TYPES: 0
+
+FILE: pre-keyprop-exact01-summary.csv
+ROWS: 13
+MATCHED_BOUNDED: 13
+MISSING: 42
+EXTRA: 0
+UNEXPECTED_EVENT_TYPES: 0
+
+FILE: pre-split-wrapper01-summary.csv
+ROWS: 13
+MATCHED_BOUNDED: 13
+MISSING: 42
+EXTRA: 0
+UNEXPECTED_EVENT_TYPES: 0
+
+FILE: pre-sslop-suite01-summary.csv
+ROWS: 13
+MATCHED_BOUNDED: 13
+MISSING: 42
+EXTRA: 0
+UNEXPECTED_EVENT_TYPES: 0
+
+FILE: pre-wrapper-exact01-summary.csv
+ROWS: 13
+MATCHED_BOUNDED: 13
+MISSING: 42
+EXTRA: 0
+UNEXPECTED_EVENT_TYPES: 0
+
+FILE: authintegration-suite01-summary.csv
+ROWS: 12
+MATCHED_BOUNDED: 12
+MISSING: 43
+EXTRA: 0
+UNEXPECTED_EVENT_TYPES: 0
+
+FILE: diskstore-suite01-summary.csv
+ROWS: 9
+MATCHED_BOUNDED: 9
+MISSING: 46
+EXTRA: 0
+UNEXPECTED_EVENT_TYPES: 0
+
+FILE: pre-filesuite01-summary.csv
+ROWS: 9
+MATCHED_BOUNDED: 9
+MISSING: 46
+EXTRA: 0
+UNEXPECTED_EVENT_TYPES: 0
+
+FILE: authengine-suite02-summary.csv
+ROWS: 8
+MATCHED_BOUNDED: 8
+MISSING: 47
+EXTRA: 0
+UNEXPECTED_EVENT_TYPES: 0
+
+FILE: pre-authintegration-suite01-summary.csv
+ROWS: 8
+MATCHED_BOUNDED: 8
+MISSING: 47
+EXTRA: 0
+UNEXPECTED_EVENT_TYPES: 0
+
+FILE: keyprop-exact01-driver-summary.csv
+ROWS: 7
+MATCHED_BOUNDED: 7
+MISSING: 48
+EXTRA: 0
+UNEXPECTED_EVENT_TYPES: 0
+
+FILE: pre-uiselenium01-summary.csv
+ROWS: 7
+MATCHED_BOUNDED: 7
+MISSING: 48
+EXTRA: 0
+UNEXPECTED_EVENT_TYPES: 0
+
+FILE: uisuite01-summary.csv
+ROWS: 7
+MATCHED_BOUNDED: 7
+MISSING: 48
+EXTRA: 0
+UNEXPECTED_EVENT_TYPES: 0
+
+FILE: executor-agent01-worker-summary.csv
+ROWS: 4
+MATCHED_BOUNDED: 4
+MISSING: 51
+EXTRA: 0
+UNEXPECTED_EVENT_TYPES: 0
+
+FILE: keyprop-exact01-worker-summary.csv
+ROWS: 4
+MATCHED_BOUNDED: 4
+MISSING: 51
+EXTRA: 0
+UNEXPECTED_EVENT_TYPES: 0
+
+FILE: filesuite01-summary.csv
+ROWS: 3
+MATCHED_BOUNDED: 3
+MISSING: 52
+EXTRA: 0
+UNEXPECTED_EVENT_TYPES: 0
+
+FILE: javaapi-suite01-summary.csv
+ROWS: 3
+MATCHED_BOUNDED: 3
+MISSING: 52
+EXTRA: 0
+UNEXPECTED_EVENT_TYPES: 0
+
+FILE: pre-auth-core-summary.csv
+ROWS: 3
+MATCHED_BOUNDED: 3
+MISSING: 52
+EXTRA: 0
+UNEXPECTED_EVENT_TYPES: 0
+
+FILE: pre-executor-agent01-summary.csv
+ROWS: 3
+MATCHED_BOUNDED: 3
+MISSING: 52
+EXTRA: 0
+UNEXPECTED_EVENT_TYPES: 0
+
+FILE: pre-javaapi-suite01-summary.csv
+ROWS: 3
+MATCHED_BOUNDED: 3
+MISSING: 52
+EXTRA: 0
+UNEXPECTED_EVENT_TYPES: 0
+
+FILE: pre-uisuite01-summary.csv
+ROWS: 3
+MATCHED_BOUNDED: 3
+MISSING: 52
+EXTRA: 0
+UNEXPECTED_EVENT_TYPES: 0
+
+FILE: sslop-suite01-summary.csv
+ROWS: 3
+MATCHED_BOUNDED: 3
+MISSING: 52
+EXTRA: 0
+UNEXPECTED_EVENT_TYPES: 0
+
+FILE: uiselenium01-summary.csv
+ROWS: 3
+MATCHED_BOUNDED: 3
+MISSING: 52
+EXTRA: 0
+UNEXPECTED_EVENT_TYPES: 0
+
+FILE: launcher-suite01-summary.csv
+ROWS: 1
+MATCHED_BOUNDED: 1
+MISSING: 54
+EXTRA: 0
+UNEXPECTED_EVENT_TYPES: 0
+
+FILE: pre-diskstore-suite01-summary.csv
+ROWS: 1
+MATCHED_BOUNDED: 1
+MISSING: 54
+EXTRA: 0
+UNEXPECTED_EVENT_TYPES: 0
+
+FILE: securitymanager-suite01-summary.csv
+ROWS: 1
+MATCHED_BOUNDED: 1
+MISSING: 54
+EXTRA: 0
+UNEXPECTED_EVENT_TYPES: 0
+
+=== 4. EXACT SINGLE-FILE CANDIDATES ===
+EXACT_MULTISET_CANDIDATES: 1
+FILE: pre-smoke-summary.csv
+
+=== 5. EXCESS-19 CANDIDATES ===
+CANDIDATES: 0
+
+=== FINAL ===
+STEP_143_DIAGNOSTIC_COMPLETE
+INDEPENDENT_RUNS_NOT_AUTOMATICALLY_MERGED
+READ_ONLY_SOURCE_ANALYSIS

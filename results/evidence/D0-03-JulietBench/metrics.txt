@@ -1,0 +1,37 @@
+Ground truth class-method pairs: 102
+
+[ORIGINAL]
+Detected class-method pairs: 100
+TP: 100 FP: 0 FN: 2
+Precision: 1.0
+Recall: 0.9804
+F1: 0.9901
+Missing versus original: 0
+Extra versus original: 0
+
+[RUN-01]
+Detected class-method pairs: 98
+TP: 98 FP: 0 FN: 4
+Precision: 1.0
+Recall: 0.9608
+F1: 0.98
+Missing versus original: 3
+Extra versus original: 1
+
+[RUN-02]
+Detected class-method pairs: 100
+TP: 100 FP: 0 FN: 2
+Precision: 1.0
+Recall: 0.9804
+F1: 0.9901
+Missing versus original: 1
+Extra versus original: 1
+
+[RUN-03]
+Detected class-method pairs: 100
+TP: 100 FP: 0 FN: 2
+Precision: 1.0
+Recall: 0.9804
+F1: 0.9901
+Missing versus original: 1
+Extra versus original: 1

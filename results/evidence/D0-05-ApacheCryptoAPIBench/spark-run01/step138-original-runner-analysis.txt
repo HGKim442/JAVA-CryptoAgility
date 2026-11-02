@@ -1,0 +1,285 @@
+=== ORIGINAL EXECUTION FILES ===
+
+=== FILE: run-experiment.sh ===
+TOTAL_LINES: 32
+   1: if [[ -z "${JAVA_HOME}" ]]; then
+   2: 	echo "Please set JAVA_HOME path before running the script."
+   3: 	exit -1
+   4: fi
+   5: 
+   6: PATH_RVSEC=$(mvn help:evaluate -Dexpression=settings.localRepository -q -DforceStdout)/br/unb/cic
+   7: if [[ ! -d $PATH_RVSEC ]]; then
+   8: 	../scripts/build_rvsec.sh
+   9: fi
+  10: 
+  11: #echo "Running RVSec"
+  12: 
+  13: 
+  14: echo "Running CogniCrypt"
+  15: ./run_ca.sh
+  16: 
+  17: echo "Running CryptoGuard"
+  18: ./run_cg.sh
+  19: 
+  20: #echo "Standardizing CogniCrypt and CryptoGuard output"
+  21: #cd results
+  22: #python3 ../scripts/process-cc-report.py CryptoAnalysis-Report.json cc.csv
+  23: #(head -n1 cc.csv && tail -n+2 cc.csv | sort) > cognicrypt.csv 
+  24: #rm cc.csv
+  25: 
+  26: #python3 ../../scripts/process-cg-report.py CryptoGuard-Report.json cg.csv
+  27: #(head -n1 cg.csv && tail -n+2 cg.csv | sort) > cryptoguard.csv
+  28: #rm cg.csv
+  29: #rm CryptoAnalysis-Report.json
+  30: #rm CryptoGuard-Report.json
+  31: 
+  32: #echo "The outputs have been exported to the results folder"
+
+=== FILE: run-experiment.py ===
+TOTAL_LINES: 26
+   1: import os
+   2: from os import walk
+   3: 
+   4: import time
+   5: 
+   6: 
+   7: cmd01 = """java -Xss4096m -Xmx12000m -Xms4096m -cp ../tools/CryptoAnalysis-3a78193.jar crypto.HeadlessCryptoScanner --rulesDir ../tools/rules/ --appPath ./assets/{} --reportFormat SARIF""" 
+   8: 
+   9: cmd02= """java -Xss4096m -Xmx12000m -Xms4096m -jar ../tools/cryptoguard-develop.jar -in jar -s ./assets/{} -o CryptoGuard-Report.json"""
+  10: 
+  11: h = open("results.csv", 'w')
+  12: 
+  13: def runAnalysis(tool, cmd, idx, program):
+  14:   start = round(time.time() * 1000)
+  15:   os.system(cmd.format(program))
+  16:   # print(cmd.format(program))
+  17:   end = round(time.time() * 1000)
+  18:   h.write(f'{tool},{idx},{f},{end-start}\n') 
+  19:     
+  20: for (dirpath, dirnames, filenames) in walk("./assets"):
+  21:   for f in filenames:					       
+  22:     for idx in range(1,1):					       
+  23:       runAnalysis('cc', cmd01, idx, f)
+  24:       runAnalysis('cg', cmd02, idx, f)
+  25: 
+  26: h.close()      
+
+=== FILE: execute.sh ===
+TOTAL_LINES: 56
+   1: #!/bin/bash
+   2: 
+   3: cd apache_codes
+   4: 
+   5: ##### ARTEMIS #############################################################
+   6: cd activemq-artemis/
+   7: mvn clean test -pl artemis-commons --also-make 
+   8: cd ..
+   9: 
+  10: 
+  11: ##### DELTASPIKE #############################################################
+  12: cd deltaspike/
+  13: mvn clean test -pl deltaspike/core/impl --also-make 
+  14: cd ..
+  15: 
+  16: 
+  17: ##### KERBEROS-CODEC #############################################################
+  18: cd directory-server/
+  19: mvn clean test -pl kerberos-codec --also-make
+  20: cd ..
+  21: 
+  22: 
+  23: ##### MANIFOLD #############################################################
+  24: cd manifoldcf/
+  25: mvn clean test -pl framework/core --also-make
+  26: cd ..
+  27: 
+  28: 
+  29: ##### MEECROWAVE #############################################################
+  30: cd openwebbeans-meecrowave/
+  31: mvn clean test -pl meecrowave-core -am
+  32: cd ..
+  33: 
+  34: 
+  35: ##### SPARK #############################################################
+  36: cd spark/
+  37: mvn clean test -pl core -am
+  38: cd ..
+  39: 
+  40: 
+  41: ##### TIKA #############################################################
+  42: cd tika/
+  43: mvn clean test -pl tika-core -am
+  44: cd ..
+  45: 
+  46: 
+  47: ##### TOMEE #############################################################
+  48: #cd tomee
+  49: #mvn clean test -pl container/openejb-core -am
+  50: #cd ..
+  51: 
+  52: 
+  53: ##### WICKET #############################################################
+  54: cd wicket/
+  55: mvn clean test -pl wicket-util -am
+  56: cd ..
+
+=== FILE: README.md ===
+TOTAL_LINES: 41
+   1: # Bench04
+   2: 
+   3: ### Bench04
+   4: 
+   5:    * Description: 
+   6: 
+   7: ### Run
+   8: 
+   9: ```
+  10: sh execute.sh
+  11: ```
+  12: 
+  13: Or: 
+  14: 
+  15: ```
+  16: mvn -am
+  17: 
+  18: cd spark/
+  19: mvn clean test -pl core -am
+  20: cd ..
+  21: ```
+  22: 
+  23: ### Scripts
+  24: 
+  25:    * download.sh: download all projects (should not be used. It only serves to show the commands used)
+  26:    * build.sh: initial build of all projects (only used the first time, to install the dependencies)
+  27:    * execute.sh: test the projects 
+  28:    
+  29:    
+  30: ### Projects
+  31: 
+  32:    * **activemq-artemis**: OK!  
+  33:    * **deltaspike**: OK!  
+  34:    * directory-ldap-api: necessário (apenas) para compilar o "directory-server".
+  35:    * **directory-server**: OK!  
+  36:    * **manifoldcf**: original não compila (classe deletada: SeleniumTester). **OBS:.** Não há testes cobrindo JCA (método de teste adicionado manualmente: DateTest.testHash()), então não gera(va) o relatório no diretório "output".
+  37:    * **openwebbeans-meecrowave**: OK!  
+  38:    * **spark**: classe deletada: StatsdSinkSuite.scala e método comentado: SparkLauncherSuite.inProcessLauncherTestImpl(). **OBS:.** Não executa pelo pom, provavelmente por causa de um diretório "work" criado durante os testes na pasta errada (era para ser criada dentro de spark, mas cria na raiz do pom).  
+  39:    * **tika**: métodos de teste comentados: TestMetadata.testMultithreadedDates:400 e AnnotationUtilsTest.testParamValueInheritance:181. **OBS:.** Não há testes cobrindo JCA (classe de teste criada: CryptoParserTest), então não gera(va) o relatório no diretório "output".   
+  40:    * **tomee**: executa os testes no original, mas entra em "deadlock" com o JavaMOPAgent.  
+  41:    * **wicket**: teste comentado: ConnectionsTest
+
+=== FILE: run_ca.sh ===
+TOTAL_LINES: 21
+   1: #!/bin/bash
+   2: 
+   3: for FILE in assets/*; do
+   4:     java -Xss4096m -Xmx12000m -Xms4096m \
+   5:          -cp ../tools/CryptoAnalysis-3a78193.jar crypto.HeadlessCryptoScanner \
+   6:          --reportFormat SARIF --reportPath results \
+   7:          --rulesDir ../tools/rules/ \
+   8:          --appPath $FILE 
+   9:     
+  10:     OUTPUT_FILE=results/CogniCrypt-$(basename $FILE | sed -e 's/-[0-9].*$//g')
+  11:     mv results/CryptoAnalysis-Report.json $OUTPUT_FILE.json
+  12:     python3 ../scripts/process-cc-report.py $OUTPUT_FILE.json $OUTPUT_FILE.csv
+  13: done
+  14: 
+  15: #java -Xss4096m -Xmx12000m -Xms4096m -cp ../tools/CryptoAnalysis.jar crypto.HeadlessCryptoScanner \
+  16: #            --sarifReport --reportDir results \
+  17: #            --rulesDir ../tools/rules \
+  18: #            --applicationCp $FILE 
+  19: #    OUTPUT_FILE=results/CogniCrypt-$(basename $FILE | sed -e 's/-[0-9].*$//g')_old
+  20: #    mv results/CogniCrypt-SARIF-Report.txt $OUTPUT_FILE.json
+  21: #    python3 ../scripts/process-cc-report.py $OUTPUT_FILE.json $OUTPUT_FILE.csv
+
+=== FILE: run_cg.sh ===
+TOTAL_LINES: 9
+   1: #!/bin/bash
+   2: 
+   3: for FILE in assets/*; do
+   4:     OUTPUT_FILE=results/CryptoGuard-$(basename $FILE | sed -e 's/-[0-9].*$//g')
+   5:     java -jar ../tools/cryptoguard-develop.jar -in jar \
+   6:          -s $FILE \
+   7:          -o $OUTPUT_FILE.json
+   8:     python3 ../scripts/process-cg-report.py $OUTPUT_FILE.json $OUTPUT_FILE.csv
+   9: done
+
+=== RESULTS DIRECTORY INVENTORY ===
+TOTAL_FILES: 64
+FILE: results/CogniCrypt-apacheds-kerberos-codec.csv BYTES: 10717
+FILE: results/CogniCrypt-apacheds-kerberos-codec.json BYTES: 28139
+FILE: results/CogniCrypt-artemis-commons.csv BYTES: 5054
+FILE: results/CogniCrypt-artemis-commons.json BYTES: 12481
+FILE: results/CogniCrypt-deltaspike-core-impl.csv BYTES: 1296
+FILE: results/CogniCrypt-deltaspike-core-impl.json BYTES: 3888
+FILE: results/CogniCrypt-mcf-core-core.json BYTES: 11208
+FILE: results/CogniCrypt-mcf-core.csv BYTES: 4195
+FILE: results/CogniCrypt-mcf-core.json BYTES: 11208
+FILE: results/CogniCrypt-meecrowave-core.csv BYTES: 1284
+FILE: results/CogniCrypt-meecrowave-core.json BYTES: 3253
+FILE: results/CogniCrypt-spark-core_2.11.csv BYTES: 11081
+FILE: results/CogniCrypt-spark-core_2.11.json BYTES: 31455
+FILE: results/CogniCrypt-tika-core.csv BYTES: 2981
+FILE: results/CogniCrypt-tika-core.json BYTES: 7852
+FILE: results/CogniCrypt-wicket-util.csv BYTES: 1498
+FILE: results/CogniCrypt-wicket-util.json BYTES: 4498
+FILE: results/CryptoGuard-apacheds-kerberos-codec.csv BYTES: 2655
+FILE: results/CryptoGuard-apacheds-kerberos-codec.json BYTES: 14555
+FILE: results/CryptoGuard-artemis-commons.csv BYTES: 459
+FILE: results/CryptoGuard-artemis-commons.json BYTES: 1911
+FILE: results/CryptoGuard-deltaspike-core-impl.csv BYTES: 152
+FILE: results/CryptoGuard-deltaspike-core-impl.json BYTES: 1300
+FILE: results/CryptoGuard-mcf-core.csv BYTES: 307
+FILE: results/CryptoGuard-mcf-core.json BYTES: 1997
+FILE: results/CryptoGuard-meecrowave-core.csv BYTES: 2215
+FILE: results/CryptoGuard-meecrowave-core.json BYTES: 7726
+FILE: results/CryptoGuard-spark-core_2.11.csv BYTES: 2532
+FILE: results/CryptoGuard-spark-core_2.11.json BYTES: 9053
+FILE: results/CryptoGuard-tika-core.csv BYTES: 34
+FILE: results/CryptoGuard-tika-core.json BYTES: 671
+FILE: results/CryptoGuard-wicket-util.csv BYTES: 563
+FILE: results/CryptoGuard-wicket-util.json BYTES: 3814
+FILE: results/analysis-bench04.Rmd BYTES: 2681
+FILE: results/convertJsonFiles2CSV.sh BYTES: 1696
+FILE: results/crylogger/CryLogger-apacheds-kerberos-codec.csv BYTES: 39
+FILE: results/crylogger/CryLogger-deltaspyke.csv BYTES: 5678
+FILE: results/crylogger/CryLogger-mcf-core.csv BYTES: 25057
+FILE: results/crylogger/CryLogger-meecrowave-core.csv BYTES: 2175
+FILE: results/crylogger/CryLogger-tika-core.csv BYTES: 123
+FILE: results/crylogger/specs.csv BYTES: 298
+FILE: results/crylogger-check.csv BYTES: 337
+FILE: results/crylogger-check.ods BYTES: 19152
+FILE: results/crylogger-maven.csv BYTES: 437
+FILE: results/execution-time.csv BYTES: 5300
+FILE: results/gt-FIXED-new.ods BYTES: 41024
+FILE: results/gt-FIXED.csv BYTES: 20278
+FILE: results/gt.csv BYTES: 3055
+FILE: results/gt.csv~ BYTES: 135
+FILE: results/gt.xlsx BYTES: 32382
+FILE: results/jacoco-apacheds-kerberos-codec.csv BYTES: 60104
+FILE: results/jacoco-artemis-commons.csv BYTES: 23052
+FILE: results/jacoco-deltaspike-core-impl.csv BYTES: 12702
+FILE: results/jacoco-mcf-core.csv BYTES: 15440
+FILE: results/jacoco-meecrowave-core.csv BYTES: 7856
+FILE: results/jacoco-spark-core_2.11.csv BYTES: 865872
+FILE: results/jacoco-tika-core.csv BYTES: 23377
+FILE: results/jacoco-wicket-util.csv BYTES: 20817
+FILE: results/overhead-analysis.csv BYTES: 1312
+FILE: results/overhead-assessment.csv BYTES: 5237
+FILE: results/projects.csv BYTES: 595
+FILE: results/results-analysis.py BYTES: 1505
+FILE: results/results-jacoco.csv BYTES: 359
+FILE: results/results-jacoco.py BYTES: 835
+
+=== SCRIPTS DIRECTORY INVENTORY ===
+FILE: scripts/analysis-ApacheCryptoAPIBench-Fixed.Rmd
+FILE: scripts/analysis-ApacheCryptoAPIBench.Rmd
+FILE: scripts/analysis-Overhead.Rmd
+FILE: scripts/executionTimeSAST.Rmd
+FILE: scripts/figures/unnamed-chunk-1-1.pdf
+FILE: scripts/install_evosuite_plugin.sh
+FILE: scripts/install_randoop_plugin.sh
+TOTAL_FILES: 7
+
+=== FINAL ===
+ORIGINAL_RUNNER_ANALYSIS_COMPLETE
+READ_ONLY

@@ -1,0 +1,326 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.directory.server:apacheds-i18n:bundle:2.0.0-M25-SNAPSHOT
+[WARNING] Reporting configuration should be done in <reporting> section, not in maven-site-plugin <configuration> as reportPlugins parameter.
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.directory.server:apacheds-kerberos-codec:bundle:2.0.0-M25-SNAPSHOT
+[WARNING] Reporting configuration should be done in <reporting> section, not in maven-site-plugin <configuration> as reportPlugins parameter.
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.directory.server:apacheds-parent:pom:2.0.0-M25-SNAPSHOT
+[WARNING] Reporting configuration should be done in <reporting> section, not in maven-site-plugin <configuration> as reportPlugins parameter. @ line 318, column 24
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] ApacheDS                                                           [pom]
+[INFO] ApacheDS I18n                                                   [bundle]
+[INFO] ApacheDS Protocol Kerberos Codec                                [bundle]
+[INFO] 
+[INFO] ------------< org.apache.directory.server:apacheds-parent >-------------
+[INFO] Building ApacheDS 2.0.0-M25-SNAPSHOT                               [1/3]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-site-plugin/3.4/maven-site-plugin-3.4.pom
+Oct 18, 2026 7:28:37 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=4QGZqZkL9.M0M_d8sfFER..m230DP8R00TOYuvbcNL0-1792319317.5679948-1.0.1.1-R_Siu34FIMHs8hHC7oPuTtaIyQkDY4qAffS4Ko.eNEodK.ZmJtc_XPKNKo.orbBhNA0oMVqrHB6YINGO_SFqg5PYk72jAhvOs_AMVeDldV1Ypj6nlXtdeSs8dzptDboi; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:37 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:37 GMT
+Oct 18, 2026 7:28:37 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=7JJaFaJnQj5bgWuODe.8vx6HoUEBTcQSxRzzMoMSCmY-1792319317.6471825-1.0.1.1-aBPXqkv9SFJcCxiEyQacR5PH42v6YrX.yRnVsE4lvWHXhJqZPxuFC9QD0B2SHweM__MDzVWZl4ATWo8lSq3cXGlnKhH7ulavFC.pJI_yEh9yR9.RsDkTdgI5J0poJbeR; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:37 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:37 GMT
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-site-plugin/3.4/maven-site-plugin-3.4.pom (20 kB at 61 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-site-plugin/3.4/maven-site-plugin-3.4.jar
+Oct 18, 2026 7:28:37 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=f8g7sGsx697EcAfGXTnQFr9QW88FKk3QVPpy7BLkViI-1792319317.7070007-1.0.1.1-6i9IrKFoeSzbDkx.XL6IrMlu.XfvX3J3ve.R.KUIIm9dbbIkNu_HHXWazWfQmVvr9x.3nxi2uChrbN_MoHI9uIiQ2wkmnFQfYsD0_Ug4Zrn1jgZZnNcIxXhQO8K_XH9P; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:37 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:37 GMT
+Oct 18, 2026 7:28:38 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=W8Hcpd2ANvVBGURV83X7PihOIVGI.4SiX70zL.d0Jw8-1792319317.7920218-1.0.1.1-I_n8bUckXE7QhQR3XPrTrpV7LACBo0WfDBkwkHpaIPZC20NSERKVF.K3PMsapDd9ulq5uRULpLz0HPctkyRUxss179WDt5LFW5l3tO2NSYMJeS3jGplLubWhL9c0JNJh; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:37 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:37 GMT
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-site-plugin/3.4/maven-site-plugin-3.4.jar (127 kB at 872 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-checkstyle-plugin/2.16/maven-checkstyle-plugin-2.16.pom
+Oct 18, 2026 7:28:38 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=360mA.4eCQz8ogX1ClWTviU9HPfc5U7GBbIi3HYlI.0-1792319317.8568006-1.0.1.1-.AByhyVLObbYxYJI83lnq3.rub1TWi3zWaJuo1DZzKcQcq6rr6J_JPQOqXMmaVFSCnHg94nbJGQF_QyJrdiHF7acakn9z3UO3Fle5sCXjXzOZEpXjvOyAWRHmGfNObGb; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:37 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:37 GMT
+Oct 18, 2026 7:28:38 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=L924hiqle.1yrBM3mLSkpyZziVcPaqB07YY5_zbH92E-1792319317.901704-1.0.1.1-Ct_tK375I6KU6ErgvZm_9WHlpIBbxnt0sLbMuPvEtQ3srquCqP5OvPEQ6XHNwSJ36pNqVslK1RcHjk_a5YOKB5Xgxs4XWmC41d1ZYKZk.VNAJ6kvL5XqcjA4ReT7a3hp; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:37 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:37 GMT
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-checkstyle-plugin/2.16/maven-checkstyle-plugin-2.16.pom (13 kB at 129 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-checkstyle-plugin/2.16/maven-checkstyle-plugin-2.16.jar
+Oct 18, 2026 7:28:38 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=harvKsDTU4wXg0xEbTvxhzEcjegKDTUgSGK4nvc376o-1792319317.9618773-1.0.1.1-HETGTVkGj2mkuUq_m2QzI.e8nyZrDXd1ygJ.uxftcJWV6.uJAV4ycAp6088ktjlpYpnGi4YP3T8jDmnvB4Erx.lGMObGRWXJaOpaWpZDZWf8B54RbIZrDzTISX6y5Sta; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:37 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:37 GMT
+Oct 18, 2026 7:28:38 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=c.OttCLS3HdXLdI30tA6T75kGTaNJ1zLQIFmoTS7Fk4-1792319318.0414262-1.0.1.1-KdXK5PfagU4bEmMIEkl7Z0lNNYK6jENmmdwOegA9hXrV.7Ba.eDlKPPcKag3o12HlQJOQJJxy5jRq43bdDiZERVfNR47Dq2OkiwX_4px9O4He6L7uO37QIRDPmlr0u0k; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:38 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:38 GMT
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-checkstyle-plugin/2.16/maven-checkstyle-plugin-2.16.jar (109 kB at 883 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/findbugs/annotations/1.0.0/annotations-1.0.0.pom
+Oct 18, 2026 7:28:38 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=yDeCyW7B6ojNVSgdiPlYpgS1LX1a4xNpF_88BHGlBAU-1792319318.0976481-1.0.1.1-pFg8AXldNPxucX06QSLCb0a81noJP_B_3ar5Y8aRTGx64SdCuIr8n0aj3cOzI3x1bOtLJaBuG70cMto6MO7uYfpr6l7c7Y5v4Y3.1HLY7LxZIVoJvIIcWVbZbQJc5JB.; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:38 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:38 GMT
+Oct 18, 2026 7:28:38 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=aX5ZjNKH531.wEFEbbf7GwxvabE.QlrGsREZpwF3f1w-1792319318.1425028-1.0.1.1-lhW1YxmxzxY3AUd4.DSJJuqBNE3KrMAC88RmjOtFdFAgYNUIH3gixn09fwr0jLYiTDjaJQr1KRPTvLhuNV.IVMiB4kKT42YeYhiPs4zp9Sn8IF0LEjyZMUSfI2bzzUa.; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:38 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:38 GMT
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/findbugs/annotations/1.0.0/annotations-1.0.0.pom (376 B at 4.1 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-log4j12/1.7.25/slf4j-log4j12-1.7.25.pom
+Oct 18, 2026 7:28:38 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=UYiU0w3HsFj_W0u5TOv2YGYpTrQvA_ZEG8qNisi9sX0-1792319318.1915648-1.0.1.1-J7FPhzEXQXgLos.yr3NkmVs8aOn6aPN5S5wFTrcZZCt13VR30xy65CQ0nl4.gCF1xiL4AyuxCQjCbOFhVdB9B.8LLgYykx2aDWNO44T3SKCjTAIl9e_ReGC.dJELC8Rb; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:38 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:38 GMT
+Oct 18, 2026 7:28:38 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=GFvn7tKNCmlls.qiMy5beN8Fm5LcRxlDOkFArWvcawE-1792319318.236774-1.0.1.1-oTGxNhumq0BeZs9nxw8cEXws2f0h37tObxNzrTFnVphHLacGNV7nBw20lrg6bYdxHEykB6IKDNSJ5JVaalfj8QyNWrxBC_khdQCzM2OjUgDQ8eX7JR81wHD3ZzTzaN7w; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:38 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:38 GMT
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-log4j12/1.7.25/slf4j-log4j12-1.7.25.pom (1.1 kB at 11 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/findbugs/annotations/1.0.0/annotations-1.0.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-log4j12/1.7.25/slf4j-log4j12-1.7.25.jar
+Oct 18, 2026 7:28:38 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=OBxisk1dBZoMO7sg7fmzXIK1bitgBYnO57raW2LPTLI-1792319318.3116934-1.0.1.1-KxNmXHG_lYH7QXu9DNS3_8jz7jjiBaY1emj1eVQkVM0WmhYYqLEqtnbK3yl9HMzWVFJ6EqhUkDOewexeZC6vUyClUBJWkXBZBzqdhUnGqO8zdNrrJNjJK5sPGZbI1oAS; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:38 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:38 GMT
+Oct 18, 2026 7:28:38 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=m27Has.LBQbDJRfol9uXT.HIg9ICERdoqnEqR6CR8qM-1792319318.3515503-1.0.1.1-IcnTZzjQIIbdZDtK9j2uB5d3Gcn4hfyt2ovY2EJ72AQulxT_IdWBkGINEdY7zCgv.ZnRLmZYoUsxdu7O1B_UNCF9H_Q.9T9RnBBm8r..hp6eWNpIvRNB7hwKB2zu71qD; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:38 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:38 GMT
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/findbugs/annotations/1.0.0/annotations-1.0.0.jar (27 kB at 297 kB/s)
+Oct 18, 2026 7:28:38 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=WdTJ2vuIqzvyLwfI_91FBbSY2wmbdfCvXYV9GZuxSNA-1792319318.3671756-1.0.1.1-8BoVJ_VxLgqNFet68M_B4prSYf5kExxM5X0.FVc2GdmBvrLQso7RtsqIPit231.F1U5ENIhLuNn4sVEqE_ptb9QxkTZnNZ4K2OHBib16sUiFGUcoyumbA5.37QKBUsIA; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:38 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:38 GMT
+Oct 18, 2026 7:28:38 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=BGNcdJrs1_.j_cr31_phSZ3o6ZV7EkfeujWhSEQiBKI-1792319318.4222643-1.0.1.1-axqsqh7EQjHke9zGVUieL5Q9YGmVhwM2imJirPf.JlDRHlyQqvCmaG26GUtcKkK8NI6N2oqxUOvWp4RkvDUng6MJoV3vBELjolWVb8QJZh3Ql7m2ppEl_NkKnzyo3Qwq; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:38 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:38 GMT
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-log4j12/1.7.25/slf4j-log4j12-1.7.25.jar (12 kB at 76 kB/s)
+[INFO] 
+[INFO] --- checkstyle:2.16:check (validate) @ apacheds-parent ---
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/puppycrawl/tools/checkstyle/6.8.1/checkstyle-6.8.1.pom
+Oct 18, 2026 7:28:38 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=iiZBk7r9GHpqySu7DKYJbYBvdNIrRSfFv3aneY59EeM-1792319318.4818099-1.0.1.1-Z.32HZIYI.eG7enPc3NK5synWFHLiMo.cwwz015WrF5fK8MO2wa_v4s9mKcctqrS9C4_nnhyGjXuPOxq1ZHGcUv2DIVP9oqYvmp8FlJWb0l.lsExmvybyCSjK2j2pPh3; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:38 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:38 GMT
+Oct 18, 2026 7:28:39 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=Xugarejm4s76lMS5s1Fems6QcdIgow2gWUslMC8ww2w-1792319318.636872-1.0.1.1-gYnDS6aAX49AQ9mnOQCcXZ7mkoLLyXBy99pMP7eHqqqDQ0p2R0Pe8Wu08sYFRcMB0i.uziGb.Hm7Gzlsw49kLhp819Q2Cs5gMyXztN3y4TF61idoH7Nkiy.swKylcIX8; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:38 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:38 GMT
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/puppycrawl/tools/checkstyle/6.8.1/checkstyle-6.8.1.pom (61 kB at 118 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/antlr/antlr4-runtime/4.5/antlr4-runtime-4.5.pom
+Oct 18, 2026 7:28:39 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=5s732axgoQ8TVBb0vS5bLKCRKvwgUIjDmmpSTUoEsuM-1792319319.0118833-1.0.1.1-I7z6WEk7xvngmJWAJzHTrMmm3c2PBVJxiB3ZBng1RwguzZte5yZALIrOFGLxpShekexl_MROlQvYijPhml1nYH9icA7SOTEkLYvhAknq_fYrL5O9lelt_6TJo6lVt8t.; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:39 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:39 GMT
+Oct 18, 2026 7:28:39 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=BrEk7rM2G6R2AIXC1upc5O2O.r9v5hg56Pki7BIvbbI-1792319319.0670154-1.0.1.1-XM9_mkmSweIQBztpxwdxmxeoyiijrq623I5uJEGR9A5gnFIxmSTdZb2NhNTcf.0I_nqiVpJggTkJr3fwLPH49z8UQJW9f6H2O6XjxZ2Fj4Oh6HAh99g_C.CneGwoSuVU; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:39 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:39 GMT
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/antlr/antlr4-runtime/4.5/antlr4-runtime-4.5.pom (2.7 kB at 25 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/directory/buildtools/checkstyle-configuration/0.3/checkstyle-configuration-0.3.pom
+Oct 18, 2026 7:28:39 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=s_MXLsp1h9UAzSedn93rnbzUXa7Y1SF3Bv1myzurFqM-1792319319.1269915-1.0.1.1-DwbxEF_MqPkRa0us8sC83eyqxQ6l8rF0oNwrph3FZKgNw5Vj1FCmDkRLd0FvF8rBaxAnbbY9H3EcoDzXHy.gBAHiyEXv2DNHccM7.ywgEXUsbcGGwZ7rbyCsQHYT53pB; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:39 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:39 GMT
+Oct 18, 2026 7:28:40 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=3QEMG13g0x5rB64ShKrxHShF3rz8X63QqC0E43Q4FYA-1792319319.3045602-1.0.1.1-jVNpiU.qQ3Xvm_jV8Om3kX.WdWfdzC7Tpcr2ZdicavUlYYtqH9vYQ6dGG9wJ1zNw49AGWXqe6IuDk3EmrpH4Zw.yY6.Tgtgfo_6tvp7rlQVBrxgLdJ4pw8H3g0t3a.w.; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:39 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:39 GMT
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/directory/buildtools/checkstyle-configuration/0.3/checkstyle-configuration-0.3.pom (2.4 kB at 3.7 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/directory/project/project/34/project-34.pom
+Oct 18, 2026 7:28:40 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=WLmw35I0gU7lQJpmXRPvZfhfKGlb7Kw7OMXKRF29paI-1792319319.7916405-1.0.1.1-hwIA7oWdVXe5e06j0ezLUMiamUsRtYxRGkdf3nvqyc6BsYzjS9lVv0iBmzYg60L05Yf83eJoLNsnxBD6rlFiHzxqvIxpwNUrUNf9r_Wcl_xEV3PiO5oN54Y0j0o1UdrL; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:39 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:39 GMT
+Oct 18, 2026 7:28:40 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=L5lfqxtT1UqKk5x68oPVcIWUyNKciZO_dP3dqzu5ZW0-1792319319.9524014-1.0.1.1-CUrzrhICz94wlLjRTWGMvcWGALqQoNRG7QHFgdQ1HklVjvP_g_IQNI2p5U8zcpQ2KD2W82JvFUDMUhZ0LHkH.hDmpVbIBHqoGdDV6xUDlThkGyL5_c.2v2ZfVZ7zLalD; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:39 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:39 GMT
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/directory/project/project/34/project-34.pom (29 kB at 140 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/puppycrawl/tools/checkstyle/6.8.1/checkstyle-6.8.1.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/antlr/antlr4-runtime/4.5/antlr4-runtime-4.5.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-cli/commons-cli/1.3.1/commons-cli-1.3.1.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/directory/buildtools/checkstyle-configuration/0.3/checkstyle-configuration-0.3.jar
+Oct 18, 2026 7:28:40 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=UOxud5vKiUme0rkphUNAVVJYfBESlJ9SAFrWWPVbAiI-1792319320.201984-1.0.1.1-3R8IGZvZjypACZjHhoh_SY5mKl99.v0X46HIM9hT0x1MRisj9K2PMtr94Fne09WOuLnnm_qAPfPcFKF7ZD4T0Qz4U6PYo7vnFxeckxzYQYqMsIJWXZ5PH9763UhT61Nw; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:40 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:40 GMT
+Oct 18, 2026 7:28:40 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=oKiaEdQLkM0TfysZcTmBe.s2ON9Q_7ypryn2Nvw6x24-1792319320.265517-1.0.1.1-U2fVEezertlyLrDQN.W17brHIU44B9zuaS2ZThcwM2n7ZvV9WmqwNBcCwQYcILUqE0oVKxpP2K0tm3jA8m6kR3b6Fr0yB7IOgiCxlBmaNUl.6AhJOWtGTuG6wzPziibb; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:40 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:40 GMT
+Oct 18, 2026 7:28:40 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=eL8Vn_nEjdnjGRAUJJXyYHaYJ_V6tcY26ItFF0zqBlg-1792319320.2019372-1.0.1.1-3oq5SEqfyGOR89gdE50RspvYzY51dAhr8C.09sdeI7YO0as3XkzLRe735ka3spvh0_cS8YsQe7A3zSxEqE0uzRF9RP73kUSFfn54w0ygjAU8BHe_PNcOn_PVKWlNym_H; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:40 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:40 GMT
+Oct 18, 2026 7:28:40 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=Js7uvAQK.Nh.MaYk2kSsx7cWr3Cj.1822vWLeaFdsQk-1792319320.3269415-1.0.1.1-3_vNvgjlKEFpGkim9iASInbbN38MBdktExOsAljELo_2CEszNn9asrf9Y9TM_SBLAW6SUwgaAEkqf_HukeCKYffWyPk1f_liLjydBwN_LBxHpJwJoB5iKgA8PaMFu07s; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:40 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:40 GMT
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-cli/commons-cli/1.3.1/commons-cli-1.3.1.jar (53 kB at 283 kB/s)
+Oct 18, 2026 7:28:40 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=zYxhb2938of.zsx1FJoh8G46qfN8QXRs5IKV0F39Kpc-1792319320.3016405-1.0.1.1-yqbegsXHnVG8jMqMY2tKEq_d8HYXt1CQ1dgW.Y5m3o1zU5Fg7reQfgDh7Lg4VgGhNha.v.z1mb5VFcN3zo8YCw4rTjAnCshw3.kkr5D0A8UbLx0HbBnafQX8XOGQqYSI; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:40 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:40 GMT
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/antlr/antlr4-runtime/4.5/antlr4-runtime-4.5.jar (374 kB at 1.5 MB/s)
+Oct 18, 2026 7:28:40 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=eIrByl.hxPEKwkLoZynojCuGSrQVIzazwIy_qseSnqA-1792319320.2636533-1.0.1.1-qCGGqkvuIMxDpYwa5xKdnI37SCyklqoDS9iZVgBorW_YpFyVzoYFcMHITMc8O09VV9lEOTzCVMu5hmkIhis4vKbpY_L3rPRMrmlJ0c0PmWoupI78sdG5WFarU4pKHrL0; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:40 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:40 GMT
+Oct 18, 2026 7:28:41 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=q_4SNU4G_pemd6DwwLAwIFqjXCb0b18.pxxgYmmc7SI-1792319320.5020118-1.0.1.1-EbXfoM1RAaZ6lOHl5oZo_sB6mIg9.nOZqjVwyx8TWIVBK_2ZpaXKuksbG8uC8XzPsT_lKWPkKrbw1gWA4Qipcj2k.3JlLB1ZfCyuI1vDegr82Y.bqcJM4HUtuhzpq7V1; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:40 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:40 GMT
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/puppycrawl/tools/checkstyle/6.8.1/checkstyle-6.8.1.jar (1.0 MB at 1.4 MB/s)
+Oct 18, 2026 7:28:41 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=1x.F3_IKsfXXoAPg0lFzwlXlL3znmBtQT.M4Y_doiPk-1792319320.4818463-1.0.1.1-x._XcIFW9Cm5fdOwWm14Kcd5iagNiTMNSEaLDCibwTVTU6FKMfxLdNk2MfDRayE0QxUxvnCvdgNeDkTb7LUnPfKBzHxzh1kiK99EiGhgxfQnFJmYfMTQv_ZwcK6O_6CS; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:40 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:40 GMT
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/directory/buildtools/checkstyle-configuration/0.3/checkstyle-configuration-0.3.jar (10.0 kB at 13 kB/s)
+[INFO] 
+[INFO] --- remote-resources:1.5:process (default) @ apacheds-parent ---
+[INFO] 
+[INFO] -------------< org.apache.directory.server:apacheds-i18n >--------------
+[INFO] Building ApacheDS I18n 2.0.0-M25-SNAPSHOT                          [2/3]
+[INFO]   from i18n/pom.xml
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.3/maven-compiler-plugin-3.3.pom
+Oct 18, 2026 7:28:41 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=QRtTb8UJXxXl00oewCEkBE9MoB7gshxw748RsotSjiw-1792319321.5918825-1.0.1.1-ShS_79VRPxZu4wPbyl9wAf9r6kPGyzNkKO297PyPJwEJamTWgz6pFPTB_Xv3kmiYxvYLpeDDIRVvYtCVnAheVbfxedueNudKCKtin.8tiFvbDrGRqltFwgfsbvf4vgnb; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:41 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:41 GMT
+Oct 18, 2026 7:28:41 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=Fk321SOpm9.AM8hKUgmu90J7rL2y_mb4NHNJv15F9e8-1792319321.6419086-1.0.1.1-T.5wrBXUp4taGmlvF5oPomA96rHQ8UVTg_OJkr_.HoBt4ZfIuJXWfD6FIujCWjeDrWMtoPb5oYrGSInlYRmcNR8r6MOhLGZhUiYji_kFGB2VdtEpdEn.ywq1wqiKYLr.; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:41 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:41 GMT
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.3/maven-compiler-plugin-3.3.pom (11 kB at 107 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.3/maven-compiler-plugin-3.3.jar
+Oct 18, 2026 7:28:41 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=XQjSD2vQHn6b1Ys3HCPNPL2XM.C.vmtCo06743L.tXE-1792319321.6919055-1.0.1.1-TJGGt1rDFFs1QcdXs4QT.7WkUANcoNs2i9Keydb21lJ7mLpiCjGVYjWjpvK.5soQqNNU6M3O1HkKpbBRPY4lAsDt9U174eX3RPPkAd1YpJBTPb0gARLwK_e9uOqUSQ70; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:41 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:41 GMT
+Oct 18, 2026 7:28:42 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=Kvs2.J0CWiGhfW6Q4YlmhD0xFCRenEj0uc8DtofEhSo-1792319321.772211-1.0.1.1-aP7Kvt4F5OIdwsVUqIojqdjTi59PnJmz80BYqmJqM5k7l7HD6rfJWc5AuMopAsz0whBy3RIrVIiabxAuFS.KfkwFzbmDuI2WcMpnIVLu4UhqgBBVQ5H9h0UosHOxPuFY; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:41 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:41 GMT
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.3/maven-compiler-plugin-3.3.jar (46 kB at 362 kB/s)
+[WARNING] Parameter 'showDeprecations' is unknown for plugin 'maven-compiler-plugin:3.3:compile (default-compile)'
+[WARNING] Parameter 'showDeprecations' is unknown for plugin 'maven-compiler-plugin:3.3:testCompile (default-testCompile)'
+[INFO] 
+[INFO] --- checkstyle:2.16:check (validate) @ apacheds-i18n ---
+[INFO] 
+[INFO] --- remote-resources:1.5:process (default) @ apacheds-i18n ---
+[INFO] 
+[INFO] --- resources:2.7:resources (default-resources) @ apacheds-i18n ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 6 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- compiler:3.3:compile (default-compile) @ apacheds-i18n ---
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.5/plexus-compiler-api-2.5.pom
+Oct 18, 2026 7:28:42 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=5vPMTufTihGTNCDh1t4OL7MFvNGImLs.PJkzbFJyKAc-1792319322.1074486-1.0.1.1-ZbjtAzSbdaKYIW7vEneACltNWeLlKZlGZM11ereR_sDPn3eV78QhPgt9zaNjogLSkfBSt11dtBJI6gstQSWt0adZcJBN47UF.FbBSG8.x1Sw7_waRSCnRnQ_hfqizPIM; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:42 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:42 GMT
+Oct 18, 2026 7:28:42 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=EydRL2Edzs5vJqD5ib_Xce5YQI2ay7epBd1VzOQi6yY-1792319322.1668675-1.0.1.1-W6NsDMdl4MeuCwtOhx4RMtGErsNyeeN_1.ZcZEjLi0WKrlijs2yhsnUeci3JLWw6wxjCnIQeV3m7QH5efrDFcg_xLjHDgBq0j15W6hp6Rqtvju5YiGjX6JDCQXWqXKUS; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:42 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:42 GMT
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.5/plexus-compiler-api-2.5.pom (865 B at 7.0 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler/2.5/plexus-compiler-2.5.pom
+Oct 18, 2026 7:28:42 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=SiOBbOOufs.aXfD8OeTkDDzEfAQrAVgmviNINOZ2ezc-1792319322.2219768-1.0.1.1-V0_XcdsGB9KALGyAOVbb_pvr1YSNpW5yLZ5cjSaAW.UjSKDZFWgtpmrqbMBsF1hQr7A4Be_VxOs0Zju2PQ7QvRrD_y3tAQzQffVpk3ztnPlRVDRMx1EQuBNTqU4J4rkb; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:42 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:42 GMT
+Oct 18, 2026 7:28:42 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=mP47_6FIsY4SA.Ze_yWTKYfO2awN0SecCJNd_L5SBc0-1792319322.2821445-1.0.1.1-1IqJ3_AnaKfcLMJytbnrLC8Esv04HrD.v3aGv0velqHDDtLP6RgYa.HGb3TC16Cx84zYlZSGbHhxNT8IN4huN6q2d2VIcvZEZW2TsRU7QHcckaSBYSlDXsGxHKFu7vPg; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:42 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:42 GMT
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler/2.5/plexus-compiler-2.5.pom (5.3 kB at 39 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.5/plexus-compiler-manager-2.5.pom
+Oct 18, 2026 7:28:42 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=Ab7934Wb_ftOtgr2JSlhjte5umusHIynM0mT5G4HN5I-1792319322.3718777-1.0.1.1-Hpf1qMExLJNAPyYLZS.mnely9a5q4QpnqExRz6DtAQqVgGPPVEDVf8Cuc3U9Oqq6OUx3hKa03PmMUIy4iw97LLc.SlJ4Fe4dHBLW6sENRIDwO7hnFAHhaAGHn4HymMsn; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:42 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:42 GMT
+Oct 18, 2026 7:28:42 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=VlsIE2WgSSpAIR6ZysFv0ET55T2vFtKsA.bC1ZIiOFA-1792319322.4215045-1.0.1.1-nqi6dS4VvIPkTUqY_xtTZFyExCloG39asq2W0ap2jdCz.SRtgYtzUr6qznmJoaO1AI6fRWFkAb2iiG1VyhPdtpPdcdSV3JLKSquPYufC1NNy0aLb._9d43puo9diC8uH; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:42 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:42 GMT
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.5/plexus-compiler-manager-2.5.pom (690 B at 6.5 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.5/plexus-compiler-javac-2.5.pom
+Oct 18, 2026 7:28:42 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=OniT5234QjwmJROiUoqJ9VPTykqGgSuJ2OuhTafEoTs-1792319322.472083-1.0.1.1-1mEPNwZq30v6Qq3MOvl0HCkyrvFW7y4YEM3sRrU7gDEDMyJx0_UitpOsARcz3ihP6vUrPArO4dKaDYc2G0zc3aTM87wGO1n4lcXUWq4Il1B5wpDQofQfz46Qblk6FXf5; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:42 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:42 GMT
+Oct 18, 2026 7:28:42 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=FwwVXzlRT4iHHZoMBlq_CA4722t49o6UG7XQjeIndV8-1792319322.5119047-1.0.1.1-ZA3fBSsjoXTEBudcc6w7oXPD1kjXFH9XI8sSXLgxZgo8zLcKxV74E7lYQwaXaJq3M6TcvV0y0WMziWNwcp1RHg05BsPriH1EXM7GLOqOAZfcZcNe6st5lPO5K3Ae2JdX; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:42 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:42 GMT
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.5/plexus-compiler-javac-2.5.pom (769 B at 7.9 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compilers/2.5/plexus-compilers-2.5.pom
+Oct 18, 2026 7:28:42 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=NaB0tqgrUlOrwpsZJUnzjnPPmCYmpY1L5mFwoGXerIk-1792319322.5719922-1.0.1.1-wQgWXVGUyqC00wiatT8W_vKKWJTXMaFUudzd5aVWAum2DjXM4b2OaR5b9VJ0lTzMaIfegAl1_PevimWIf3paV5TpLmD4kbKO5tKXYtsElJpic2G4TJaCVrKo6vTu0SF8; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:42 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:42 GMT
+Oct 18, 2026 7:28:42 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=JnOn43BNymas_aoZIKUmpfTUfL6XEhMJySux_zCyIGk-1792319322.629222-1.0.1.1-oIA_H87vGgcPuf4N568WmnUXWWooYSzXKuy.6cBpbtNBWHhTsNy3vw7fRNMVwNuHl3d1.aH1zid.zu8L6k9EcYptfk2Om8ZWfS8dWqe94LQfx7dt.XAorZId5QCFvbZ_; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:42 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:42 GMT
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compilers/2.5/plexus-compilers-2.5.pom (1.3 kB at 11 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.5/plexus-compiler-api-2.5.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.5/plexus-compiler-manager-2.5.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.5/plexus-compiler-javac-2.5.jar
+Oct 18, 2026 7:28:42 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=YPiTcrGdqhhAhXqjSrA8rE1ClS6PM9GvgJDj7j6awSY-1792319322.6975484-1.0.1.1-WYc3HRSY6C.lKLN1zb32JWcHluDxNCWkw51K2uuItzMuJQ9_pvrGaOYre2gk2UVNC5PAIjWy8hLkbGLvoWk3DpsyGN9dH19G0QoFhThcWSg3UC.9AtPUklYjmFsBQZvG; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:42 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:42 GMT
+Oct 18, 2026 7:28:42 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=5_L5IHCsY26vXj_an81uAD60fMViJOBfOA_1KDxp4_I-1792319322.6971023-1.0.1.1-ARftJs.Jetgb4UYCs5m0FDcSs1p38Lnn6OzL3Z7a3f4F6fVaxkV.HacRU2dVKBJ7iJTGiD53E7eA2rQXpUwtRb5hbFJVThk7_wi46TJfTHwbbf6co7tomoZhDdRG52oU; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:42 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:42 GMT
+Oct 18, 2026 7:28:42 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=AWTWa8YthnCgbVVKZQWUDED7Ul0PtQHbROSOFLlfPL8-1792319322.6968632-1.0.1.1-qqwtuCLAUm42oLgxhPpRRaHIGZ.1m5ikQXX1wHmPSNLSs_tXvilHtNLlqMgNdjK0OeN3_Wr6S.lX.P6GTwwi3D84MjMviI.LY8dfC0i6Uh4Ti5yQBIA_esexlE0Rpvkv; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:42 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:42 GMT
+Oct 18, 2026 7:28:43 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=zSKCIp47jwg37QShGFVbfkU9iWPQlt2zV_e5Ud..8.8-1792319322.7423904-1.0.1.1-_xGT4Gg0rpIqS6wpzqBE7zaM0H0_1O6qFGO62iKfZ_ZlVzwcqgWN5zHTuHgaq34hZWiNrYckcYy8XfUTgxhJCoOsTLM.b9eGNynX6J2nydpDind_fMRa7miKBZC0PyYg; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:42 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:42 GMT
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.5/plexus-compiler-manager-2.5.jar (4.6 kB at 45 kB/s)
+Oct 18, 2026 7:28:43 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=l0AxSMFzihUuv_.O.vZwGcsjiL9IHR1MhSrjoJQYLAE-1792319322.7898834-1.0.1.1-u0rhhxxsUMKO5aSbkrJFRbpOKPGFxT4nQ4ubZr12GQKHiiplFFMecg4bcBu8TV8yNbrGd.i.zlotMGFmekh6p2lhEwGTqT5n8s58QJXORuWSO7aD6u0YuG.OTeSIqCNu; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:42 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:42 GMT
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.5/plexus-compiler-api-2.5.jar (25 kB at 180 kB/s)
+Oct 18, 2026 7:28:43 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=YGeHtjdJqG.RKcFqgcf1o0.4X7PafyXvWU9xR5B.Zx4-1792319322.7956972-1.0.1.1-DVY4hr2W618ONAGArxZ6vAoBu2oiMzqPMrRhBZSlTbFcA4vDjSIUqGyKblap5_Avn8l2ZYnmHMSanUhIkvfh1ncORJ01CYbdFug_WMJb3C6Gzz4zkWvEUyx_aBMzb3E8; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:42 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:42 GMT
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.5/plexus-compiler-javac-2.5.jar (19 kB at 120 kB/s)
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/directory-server/i18n/target/classes
+[INFO] 
+[INFO] --- resources:2.7:testResources (default-testResources) @ apacheds-i18n ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/directory-server/i18n/src/test/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- compiler:3.3:testCompile (default-testCompile) @ apacheds-i18n ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:2.18.1:test (default-test) @ apacheds-i18n ---
+[INFO] 
+[INFO] --------< org.apache.directory.server:apacheds-kerberos-codec >---------
+[INFO] Building ApacheDS Protocol Kerberos Codec 2.0.0-M25-SNAPSHOT       [3/3]
+[INFO]   from kerberos-codec/pom.xml
+[INFO] -------------------------------[ bundle ]-------------------------------
+[WARNING] Parameter 'showDeprecations' is unknown for plugin 'maven-compiler-plugin:3.3:compile (default-compile)'
+[WARNING] Parameter 'showDeprecations' is unknown for plugin 'maven-compiler-plugin:3.3:testCompile (default-testCompile)'
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/directory/junit/junit-addons/0.1/junit-addons-0.1.pom
+Oct 18, 2026 7:28:43 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=jYTF0xEyHRCRMbBezeEDxZWrhZJI9OXFP7apL720UoE-1792319323.2419379-1.0.1.1-lADg4pnc2Gr5x5w_JOvsufmQdLEI950lQRxVTNmG6Dd3Ds536.yFrYx3gFnYqnLiXkkKF.tqgHeJj17z3O8o1R76z_g6eFdHZ0lp9FXvWR0j99uZp5UPUv68A5icpjnY; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:43 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:43 GMT
+Oct 18, 2026 7:28:44 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=EM5RJ9XitU1DFk0K0qiYhS7bM5FRZwRR5p4XQguLpL0-1792319323.3578458-1.0.1.1-NG_aUijyqGnlGr_mW0csUrtoEhBssUt2lkSEr3ZEEL6uqCu26OxhmSRSLlYTc2ToOPXqBPwwCu.VSsYTLj1amUrmOW6Lq7T5PUtIn3xVLkSKUvlWBUAEh9oohjsbSkVx; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:43 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:43 GMT
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/directory/junit/junit-addons/0.1/junit-addons-0.1.pom (2.3 kB at 2.6 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/directory/project/project/20/project-20.pom
+Oct 18, 2026 7:28:44 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=ww7auZduk6Vt2DupM5KGsGlQRlPNphS_Yj3uqvUQtNk-1792319324.1321592-1.0.1.1-N6AlgWYlDEJNalqKbYJiO8S4Q7Aa3kLulHGsDjm0HV232YLO13yTPqNtn2tsS2.CaXLaf_HLtUyBmAcInTtcVzOfRPj0TDMc8XXNmk16WhrqSrz8SFe.iHFBxLkaGo2K; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:44 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:44 GMT
+Oct 18, 2026 7:28:44 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=7rGRC7tTPojWPIUuN8CaMhicsyY3fJiBUoPdDd9YZlw-1792319324.2198403-1.0.1.1-vFZgmFxAyC7CI0TijaNa_8Y487lK9FPrzhTFDma3djkxK0BMg4dHMnfF_Fpr2peIlH1wogRGUEXLpf.OmyO_iOpqHLSEY13.eymw_rC9HXa7INhWFPA89jJF8391lfuq; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:44 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:44 GMT
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/directory/project/project/20/project-20.pom (30 kB at 47 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/8/apache-8.pom
+Oct 18, 2026 7:28:45 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=MI_qvyxx7R9GFeBa0tkmIVoueI6pBcp09KGwoDI42Kk-1792319324.762268-1.0.1.1-hY8kWkJ0XZXansk24pjqCR.bufO2SFZABjTBDX1zhX8giL3l9u8ukp2MLkwAf6XgTHr8kNG0db_ZR1YDspH3hNK8zmJpz7FPYlyuOS1JzeS5tt1HfPryvhXM68NAJJwb; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:44 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:44 GMT
+Oct 18, 2026 7:28:45 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=3Hy.Ow0EQAJ7IgqyhiLMG79W7WDEC5Ln.5CF.XM2epk-1792319324.8071797-1.0.1.1-4N16vRe44pWQBN64H6whYbeN_h0TVzgyXl42xVIeND21Qj2teE1F4tLgGuLDzH3KZNVphE6EjCGnUet9IGlGXdao_pEeJmDbRmwHUDKomM9Y08NIwiGakhTimmkbMwUJ; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:44 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:44 GMT
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/8/apache-8.pom (14 kB at 160 kB/s)
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/content/repositories/snapshots/org/apache/directory/api/api-asn1-api/2.0.0-M1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/content/repositories/snapshots/org/apache/directory/api/api-asn1-api/2.0.0-M1-SNAPSHOT/maven-metadata.xml (1.0 kB at 689 B/s)
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/content/repositories/snapshots/org/apache/directory/api/api-asn1-api/2.0.0-M1-SNAPSHOT/api-asn1-api-2.0.0-M1-20170804.121531-3.pom
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/content/repositories/snapshots/org/apache/directory/api/api-asn1-api/2.0.0-M1-SNAPSHOT/api-asn1-api-2.0.0-M1-20170804.121531-3.pom (3.3 kB at 5.0 kB/s)
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/content/repositories/snapshots/org/apache/directory/api/api-asn1-parent/2.0.0-M1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/content/repositories/snapshots/org/apache/directory/api/api-asn1-parent/2.0.0-M1-SNAPSHOT/maven-metadata.xml (836 B at 1.3 kB/s)
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/content/repositories/snapshots/org/apache/directory/api/api-asn1-parent/2.0.0-M1-SNAPSHOT/api-asn1-parent-2.0.0-M1-20170804.121522-3.pom
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/content/repositories/snapshots/org/apache/directory/api/api-asn1-parent/2.0.0-M1-SNAPSHOT/api-asn1-parent-2.0.0-M1-20170804.121522-3.pom (1.5 kB at 2.4 kB/s)
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/content/repositories/snapshots/org/apache/directory/api/api-parent/2.0.0-M1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/content/repositories/snapshots/org/apache/directory/api/api-parent/2.0.0-M1-SNAPSHOT/maven-metadata.xml (831 B at 1.3 kB/s)
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/content/repositories/snapshots/org/apache/directory/api/api-parent/2.0.0-M1-SNAPSHOT/api-parent-2.0.0-M1-20170804.101024-1.pom
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/content/repositories/snapshots/org/apache/directory/api/api-parent/2.0.0-M1-SNAPSHOT/api-parent-2.0.0-M1-20170804.101024-1.pom (25 kB at 26 kB/s)
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/content/repositories/snapshots/org/apache/directory/project/project/41-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/content/repositories/snapshots/org/apache/directory/project/project/41-SNAPSHOT/project-41-SNAPSHOT.pom
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/content/repositories/snapshots/org/apache/directory/api/api-asn1-ber/2.0.0-M1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/content/repositories/snapshots/org/apache/directory/api/api-asn1-ber/2.0.0-M1-SNAPSHOT/maven-metadata.xml (1.0 kB at 1.1 kB/s)
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/content/repositories/snapshots/org/apache/directory/api/api-asn1-ber/2.0.0-M1-SNAPSHOT/api-asn1-ber-2.0.0-M1-20170804.121542-3.pom
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/content/repositories/snapshots/org/apache/directory/api/api-asn1-ber/2.0.0-M1-SNAPSHOT/api-asn1-ber-2.0.0-M1-20170804.121542-3.pom (4.0 kB at 6.2 kB/s)
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/content/repositories/snapshots/org/apache/directory/api/api-i18n/2.0.0-M1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/content/repositories/snapshots/org/apache/directory/api/api-i18n/2.0.0-M1-SNAPSHOT/maven-metadata.xml (1.0 kB at 1.6 kB/s)
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/content/repositories/snapshots/org/apache/directory/api/api-i18n/2.0.0-M1-SNAPSHOT/api-i18n-2.0.0-M1-20170804.121459-3.pom
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/content/repositories/snapshots/org/apache/directory/api/api-i18n/2.0.0-M1-SNAPSHOT/api-i18n-2.0.0-M1-20170804.121459-3.pom (2.6 kB at 4.1 kB/s)
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/content/repositories/snapshots/org/apache/directory/api/api-ldap-model/2.0.0-M1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/content/repositories/snapshots/org/apache/directory/api/api-ldap-model/2.0.0-M1-SNAPSHOT/maven-metadata.xml (1.0 kB at 1.6 kB/s)
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/content/repositories/snapshots/org/apache/directory/api/api-ldap-model/2.0.0-M1-SNAPSHOT/api-ldap-model-2.0.0-M1-20170804.121613-3.pom
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/content/repositories/snapshots/org/apache/directory/api/api-ldap-model/2.0.0-M1-SNAPSHOT/api-ldap-model-2.0.0-M1-20170804.121613-3.pom (8.7 kB at 14 kB/s)
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/content/repositories/snapshots/org/apache/directory/api/api-ldap-parent/2.0.0-M1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/content/repositories/snapshots/org/apache/directory/api/api-ldap-parent/2.0.0-M1-SNAPSHOT/maven-metadata.xml (836 B at 1.3 kB/s)
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/content/repositories/snapshots/org/apache/directory/api/api-ldap-parent/2.0.0-M1-SNAPSHOT/api-ldap-parent-2.0.0-M1-20170804.121551-3.pom
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/content/repositories/snapshots/org/apache/directory/api/api-ldap-parent/2.0.0-M1-SNAPSHOT/api-ldap-parent-2.0.0-M1-20170804.121551-3.pom (1.6 kB at 2.6 kB/s)
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/content/repositories/snapshots/org/apache/directory/api/api-util/2.0.0-M1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/content/repositories/snapshots/org/apache/directory/api/api-util/2.0.0-M1-SNAPSHOT/maven-metadata.xml (1.0 kB at 1.3 kB/s)
+[INFO] Downloading from apache.snapshots: https://repository.apache.org/content/repositories/snapshots/org/apache/directory/api/api-util/2.0.0-M1-SNAPSHOT/api-util-2.0.0-M1-20170804.121512-3.pom
+[INFO] Downloaded from apache.snapshots: https://repository.apache.org/content/repositories/snapshots/org/apache/directory/api/api-util/2.0.0-M1-SNAPSHOT/api-util-2.0.0-M1-20170804.121512-3.pom (3.4 kB at 4.2 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/sf/ehcache/ehcache/2.10.4/ehcache-2.10.4.pom
+Oct 18, 2026 7:28:57 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=FeIlpPWsY_dw13CqWSyL0l0lGHRbSOOAfu2eSiwr0UU-1792319337.5618095-1.0.1.1-unRnGjV3uA7N7P.RRMsHE_HRhCN7BjFvlpIzy4mO5lWjVn_R4_N_QHR8l_eO3LqSmev0sMGBIbkLq0soq_NqtIoQIgmBq_oWWYXzT_BF5aZmM6UIJiS3.Kmd29dVHAze; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:57 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:57 GMT
+Oct 18, 2026 7:28:57 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=hEVx_S11f7eyDrhpDrXTQts4ABRy5Xd.aYvtII1Madk-1792319337.6070473-1.0.1.1-nQK_oQbFCoBNGQ4AHwKfFNW_30Tq4RGuigorwK6q8TQNk02BmvFsMojkTAau0dkelpdKtF4GkQFxT9sFbTF2XKqcbPPJ7U8DqIsMOdmc86Yb8NBYO80.nfoVKEIugYez; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:57 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:57 GMT
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/sf/ehcache/ehcache/2.10.4/ehcache-2.10.4.pom (19 kB at 211 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/sf/ehcache/ehcache-root/2.10.4/ehcache-root-2.10.4.pom
+Oct 18, 2026 7:28:57 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=56FmD6FqZ8yT204EAkXhVuv3Mys2fFYRprEL.wsFgd0-1792319337.6521668-1.0.1.1-nvsasmhQ06Rn8QbuOA7tLpPrmRYMt4exRzw3wF3muwoUYkfpbEJphWSEjBnaQl9Bcou4c1nan5BsDGlnIRA85q1UiL6PyCeVYIxr4TrF1VIxwcaVs2_e5R81_winyY27; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:57 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:57 GMT
+Oct 18, 2026 7:28:57 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=47GRL2Tei8GM_pQnZUIVB80uTRApKPgIiKDPzmCCTBs-1792319337.7074819-1.0.1.1-JjVEk6jwFhuZk0z3a24aNneqJQkdqy0zOgvgVJClC8E48MIHfyyTcfOxfsw6VT21gLvKWf2lZnYQVK8M7fgTEpKDM9Q.XzJf7AY9YjUeU_GOdLv9tc8efDI6Q4MaibSM; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:57 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:57 GMT
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/sf/ehcache/ehcache-root/2.10.4/ehcache-root-2.10.4.pom (17 kB at 156 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/sf/ehcache/ehcache-parent/2.18/ehcache-parent-2.18.pom
+Oct 18, 2026 7:28:58 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=Inq.xCuIybHbj__uG2yKVlddqAIbkznIXg0hWXGh0NI-1792319337.756976-1.0.1.1-oGtAuj3iEEx3QgqZquYpzFEODROW6O5G6IyfUFXOOAllRLbMksqJykeHQ8gerD_73j5rLCONcJFa1LPSivIASn0cdzStiwVS2z8ryQVuTi38fiZEsvBtjNPKRt23N3o5; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:57 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:57 GMT
+Oct 18, 2026 7:28:58 PM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+WARNING: Invalid cookie header: "set-cookie: __cf_bm=MIUx7QUnOGU6RlEF.q4Yv0OwlX2XU3uSPqj.7FuABhw-1792319337.8020375-1.0.1.1-ozsWoxfSISpEuxT5IXvWoWzYQUdTe7dyselUlNxply4dSvsRDOXhLX_CN65HkAA4jgNgzKCAkxLXgQvYWs7miiBGFhE_VejB.qpOiV2MhqZOtnolPKrlfu2HUYYJ9m9w; HttpOnly; SameSite=None; Secure; Path=/; Domain=repo.maven.apache.org; Expires=Sun, 18 Oct 2026 10:58:57 GMT". Invalid 'expires' attribute: Sun, 18 Oct 2026 10:58:57 GMT
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/sf/ehcache/ehcache-parent/2.18/ehcache-parent-2.18.pom (17 kB at 180 kB/s)
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for ApacheDS 2.0.0-M25-SNAPSHOT:
+[INFO] 
+[INFO] ApacheDS ........................................... SUCCESS [  4.365 s]
+[INFO] ApacheDS I18n ...................................... SUCCESS [  1.646 s]
+[INFO] ApacheDS Protocol Kerberos Codec ................... FAILURE [ 14.626 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  21.056 s
+[INFO] Finished at: 2026-10-18T19:28:58+09:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project apacheds-kerberos-codec: Could not collect dependencies for project org.apache.directory.server:apacheds-kerberos-codec:bundle:2.0.0-M25-SNAPSHOT
+[ERROR] Failed to read artifact descriptor for org.apache.directory.api:api-asn1-api:jar:2.0.0-M1-SNAPSHOT
+[ERROR] 	Caused by: The following artifacts could not be resolved: org.apache.directory.project:project:pom:41-SNAPSHOT (absent): Could not find artifact org.apache.directory.project:project:pom:41-SNAPSHOT in apache.snapshots (https://repository.apache.org/content/repositories/snapshots/)
+[ERROR] Failed to read artifact descriptor for org.apache.directory.api:api-asn1-ber:jar:2.0.0-M1-SNAPSHOT
+[ERROR] 	Caused by: The following artifacts could not be resolved: org.apache.directory.project:project:pom:41-SNAPSHOT (absent): org.apache.directory.project:project:pom:41-SNAPSHOT was not found in https://repository.apache.org/content/repositories/snapshots/ during a previous attempt. This failure was cached in the local repository and resolution is not reattempted until the update interval of apache.snapshots has elapsed or updates are forced
+[ERROR] Failed to read artifact descriptor for org.apache.directory.api:api-i18n:jar:2.0.0-M1-SNAPSHOT
+[ERROR] 	Caused by: The following artifacts could not be resolved: org.apache.directory.project:project:pom:41-SNAPSHOT (absent): org.apache.directory.project:project:pom:41-SNAPSHOT was not found in https://repository.apache.org/content/repositories/snapshots/ during a previous attempt. This failure was cached in the local repository and resolution is not reattempted until the update interval of apache.snapshots has elapsed or updates are forced
+[ERROR] Failed to read artifact descriptor for org.apache.directory.api:api-ldap-model:jar:2.0.0-M1-SNAPSHOT
+[ERROR] 	Caused by: The following artifacts could not be resolved: org.apache.directory.project:project:pom:41-SNAPSHOT (absent): org.apache.directory.project:project:pom:41-SNAPSHOT was not found in https://repository.apache.org/content/repositories/snapshots/ during a previous attempt. This failure was cached in the local repository and resolution is not reattempted until the update interval of apache.snapshots has elapsed or updates are forced
+[ERROR] Failed to read artifact descriptor for org.apache.directory.api:api-util:jar:2.0.0-M1-SNAPSHOT
+[ERROR] 	Caused by: The following artifacts could not be resolved: org.apache.directory.project:project:pom:41-SNAPSHOT (absent): org.apache.directory.project:project:pom:41-SNAPSHOT was not found in https://repository.apache.org/content/repositories/snapshots/ during a previous attempt. This failure was cached in the local repository and resolution is not reattempted until the update interval of apache.snapshots has elapsed or updates are forced
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :apacheds-kerberos-codec

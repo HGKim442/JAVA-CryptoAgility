@@ -1,0 +1,43 @@
+[INFO] Scanning for projects...
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/directory/project/project/35/project-35.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/directory/project/project/35/project-35.pom (32 kB at 59 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/felix/maven-bundle-plugin/2.5.3/maven-bundle-plugin-2.5.3.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/felix/maven-bundle-plugin/2.5.3/maven-bundle-plugin-2.5.3.pom (4.7 kB at 59 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/felix/maven-bundle-plugin/2.5.3/maven-bundle-plugin-2.5.3.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/felix/maven-bundle-plugin/2.5.3/maven-bundle-plugin-2.5.3.jar (176 kB at 1.2 MB/s)
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.directory.server:apacheds-i18n:bundle:2.0.0-M25-SNAPSHOT
+[WARNING] Reporting configuration should be done in <reporting> section, not in maven-site-plugin <configuration> as reportPlugins parameter.
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.directory.server:apacheds-kerberos-codec:bundle:2.0.0-M25-SNAPSHOT
+[WARNING] Reporting configuration should be done in <reporting> section, not in maven-site-plugin <configuration> as reportPlugins parameter.
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.directory.server:apacheds-parent:pom:2.0.0-M25-SNAPSHOT
+[WARNING] Reporting configuration should be done in <reporting> section, not in maven-site-plugin <configuration> as reportPlugins parameter. @ line 318, column 24
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/xbean/maven-metadata.xml
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/modello/maven-metadata.xml
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/geronimo/genesis/plugins/maven-metadata.xml
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/agilejava/docbkx/maven-metadata.xml
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/modello/maven-metadata.xml (237 B at 313 B/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/agilejava/docbkx/maven-metadata.xml (562 B at 701 B/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/xbean/maven-metadata.xml (395 B at 477 B/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/geronimo/genesis/plugins/maven-metadata.xml (535 B at 610 B/s)
+[INFO] 
+[INFO] --------< org.apache.directory.server:apacheds-kerberos-codec >---------
+[INFO] Building ApacheDS Protocol Kerberos Codec 2.0.0-M25-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- help:3.5.2:effective-pom (default-cli) @ apacheds-kerberos-codec ---
+[INFO] Effective-POM written to: /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/directory-server-run01/effective-pom.xml
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.388 s
+[INFO] Finished at: 2026-10-18T19:27:17+09:00
+[INFO] ------------------------------------------------------------------------

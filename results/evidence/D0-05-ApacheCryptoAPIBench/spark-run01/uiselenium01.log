@@ -1,0 +1,46 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.spark:spark-parent_2.11:pom:2.4.0-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.apache.spark:spark-parent_2.11:2.4.0-SNAPSHOT (/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/pom.xml) points at br.unb.cic:mop-test-suite-b04 instead of org.apache:apache, please verify your project structure @ line 22, column 11
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ------------------< org.apache.spark:spark-core_2.11 >------------------
+[INFO] Building Spark Project Core 2.4.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- scalatest:1.0:test (default-cli) @ spark-core_2.11 ---
+Run starting. Expected test count is: 15
+UISeleniumSuite:
+[See bug 406167] Bad class file signature encountered, nested types appear package qualified, ignoring those incorrect pieces. Signature: Ljersey/repackaged/com/google/common/cache/LocalCache<TK;TV;>.jersey/repackaged/com/google/common/cache/LocalCache$AbstractCacheSet<TK;>;
+[See bug 406167] Bad class file signature encountered, nested types appear package qualified, ignoring those incorrect pieces. Signature: Ljersey/repackaged/com/google/common/cache/LocalCache<TK;TV;>.jersey/repackaged/com/google/common/cache/LocalCache$AbstractCacheSet<Ljava/util/Map$Entry<TK;TV;>;>;
+- effects of unpersist() / persist() should be reflected
+- failed stages should not appear to be active
+- spark.ui.killEnabled should properly control kill button display
+- jobs page should not display job group name unless some job was submitted in a job group
+- job progress bars should handle stage / task failures
+- job details page should display useful information for stages that haven't started
+- job progress bars / cells reflect skipped stages / tasks
+- stages that aren't run appear as 'skipped stages' after a job finishes
+- jobs with stages that are skipped should show correct link descriptions on all jobs page
+- attaching and detaching a new tab
+- kill stage POST/GET response is correct
+- kill job POST/GET response is correct
+- stage & job retention
+- live UI json application list
+- job stages should have expected dotfile under DAG visualization
+Run completed in 23 seconds, 866 milliseconds.
+Total number of tests run: 15
+Suites: completed 1, aborted 0
+Tests: succeeded 15, failed 0, canceled 0, ignored 0, pending 0
+All tests passed.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  28.863 s
+[INFO] Finished at: 2026-10-19T11:44:14+09:00
+[INFO] ------------------------------------------------------------------------

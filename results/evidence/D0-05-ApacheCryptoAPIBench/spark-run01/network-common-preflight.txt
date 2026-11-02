@@ -1,0 +1,54 @@
+=== MODULE ===
+MODULE: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-common
+AGENT_EXISTS: True
+AGENT_PATH: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/JavaMOPAgent.jar
+
+=== TEST OUTPUT DIRECTORY ===
+TEST_OUTPUT: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-common/target/scala-2.11/test-classes
+
+=== SUREFIRE CONFIGURATION ===
+VERSION: 2.20.1
+argLine: -ea -Xmx3g -Xss4m -XX:ReservedCodeCacheSize=512m
+forkCount: NOT_SPECIFIED
+forkMode: NOT_SPECIFIED
+reuseForks: NOT_SPECIFIED
+workingDirectory: NOT_SPECIFIED
+skipTests: NOT_SPECIFIED
+testFailureIgnore: NOT_SPECIFIED
+JAVAMOP_CONFIGURED: False
+EXECUTION: default-test
+EXECUTION_ARGLINE: -ea -Xmx3g -Xss4m -XX:ReservedCodeCacheSize=512m
+EXECUTION: test
+EXECUTION_ARGLINE: -ea -Xmx3g -Xss4m -XX:ReservedCodeCacheSize=512m
+
+=== TEST CLASSES ===
+AuthEngineSuite COMPILED: True
+CLASS_PATH: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-common/target/scala-2.11/test-classes/org/apache/spark/network/crypto/AuthEngineSuite.class
+AuthEngineSuite SOURCE_EXISTS: True
+SOURCE: import org.junit.BeforeClass;
+SOURCE: import org.junit.Test;
+SOURCE: import static org.junit.Assert.*;
+SOURCE: public class AuthEngineSuite {
+SOURCE: @Test
+SOURCE: @Test
+SOURCE: @Test(expected = IllegalArgumentException.class)
+SOURCE: @Test(expected = IllegalArgumentException.class)
+SOURCE: @Test(expected = IllegalArgumentException.class)
+AuthIntegrationSuite COMPILED: True
+CLASS_PATH: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-common/target/scala-2.11/test-classes/org/apache/spark/network/crypto/AuthIntegrationSuite.class
+AuthIntegrationSuite SOURCE_EXISTS: True
+SOURCE: import org.junit.After;
+SOURCE: import org.junit.Test;
+SOURCE: import static org.junit.Assert.*;
+SOURCE: public class AuthIntegrationSuite {
+SOURCE: @Test
+SOURCE: @Test
+SOURCE: @Test
+SOURCE: @Test
+SOURCE: @Test
+
+=== EXISTING MODULE OUTPUT ===
+SUMMARY_EXISTS: False
+
+=== FINAL ===
+NETWORK_COMMON_PREFLIGHT_COMPLETE

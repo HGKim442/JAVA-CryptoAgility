@@ -1,0 +1,449 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< br.unb.cic.crypto:mascBench >---------------------
+[INFO] Building mascBench 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/3.3.1/maven-resources-plugin-3.3.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/3.3.1/maven-resources-plugin-3.3.1.pom (8.2 kB at 51 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/39/maven-plugins-39.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/39/maven-plugins-39.pom (8.1 kB at 165 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/3.3.1/maven-resources-plugin-3.3.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/3.3.1/maven-resources-plugin-3.3.1.jar (31 kB at 884 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.13.0/maven-compiler-plugin-3.13.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.13.0/maven-compiler-plugin-3.13.0.pom (10 kB at 243 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/41/maven-plugins-41.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/41/maven-plugins-41.pom (7.4 kB at 199 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.13.0/maven-compiler-plugin-3.13.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.13.0/maven-compiler-plugin-3.13.0.jar (83 kB at 2.1 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/3.1.2/maven-jar-plugin-3.1.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/3.1.2/maven-jar-plugin-3.1.2.pom (7.3 kB at 192 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/33/maven-plugins-33.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/33/maven-plugins-33.pom (11 kB at 324 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/3.1.2/maven-jar-plugin-3.1.2.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/3.1.2/maven-jar-plugin-3.1.2.jar (28 kB at 798 kB/s)
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ mascBench ---
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.5.1/plexus-utils-3.5.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.5.1/plexus-utils-3.5.1.pom (8.8 kB at 251 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/3.3.1/maven-filtering-3.3.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/3.3.1/maven-filtering-3.3.1.pom (6.0 kB at 183 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.5.0/plexus-utils-3.5.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.5.0/plexus-utils-3.5.0.pom (8.0 kB at 229 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.5.1/plexus-utils-3.5.1.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/3.3.1/maven-filtering-3.3.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.5.1/plexus-utils-3.5.1.jar (269 kB at 6.1 MB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/3.3.1/maven-filtering-3.3.1.jar (55 kB at 1.1 MB/s)
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/RESEARCHER/pqc-research/D0-rvsec/runs/MASCBench-run01/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ mascBench ---
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/1.2.0/plexus-java-1.2.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/1.2.0/plexus-java-1.2.0.pom (4.3 kB at 112 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-languages/1.2.0/plexus-languages-1.2.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-languages/1.2.0/plexus-languages-1.2.0.pom (3.2 kB at 78 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/15/plexus-15.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/15/plexus-15.pom (28 kB at 794 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.6/asm-9.6.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.6/asm-9.6.pom (2.4 kB at 79 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/thoughtworks/qdox/qdox/2.0.3/qdox-2.0.3.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/thoughtworks/qdox/qdox/2.0.3/qdox-2.0.3.pom (17 kB at 479 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.15.0/plexus-compiler-api-2.15.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.15.0/plexus-compiler-api-2.15.0.pom (1.4 kB at 37 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler/2.15.0/plexus-compiler-2.15.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler/2.15.0/plexus-compiler-2.15.0.pom (7.6 kB at 181 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/4.0.0/plexus-utils-4.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/4.0.0/plexus-utils-4.0.0.pom (8.7 kB at 270 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.15.0/plexus-compiler-manager-2.15.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.15.0/plexus-compiler-manager-2.15.0.pom (1.3 kB at 35 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.15.0/plexus-compiler-javac-2.15.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.15.0/plexus-compiler-javac-2.15.0.pom (1.3 kB at 28 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compilers/2.15.0/plexus-compilers-2.15.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compilers/2.15.0/plexus-compilers-2.15.0.pom (1.6 kB at 49 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/1.2.0/plexus-java-1.2.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.6/asm-9.6.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/thoughtworks/qdox/qdox/2.0.3/qdox-2.0.3.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.15.0/plexus-compiler-api-2.15.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.15.0/plexus-compiler-manager-2.15.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.15.0/plexus-compiler-api-2.15.0.jar (29 kB at 881 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.15.0/plexus-compiler-javac-2.15.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.6/asm-9.6.jar (124 kB at 3.1 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/4.0.0/plexus-utils-4.0.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.15.0/plexus-compiler-manager-2.15.0.jar (5.2 kB at 111 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/thoughtworks/qdox/qdox/2.0.3/qdox-2.0.3.jar (334 kB at 5.6 MB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/1.2.0/plexus-java-1.2.0.jar (58 kB at 899 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.15.0/plexus-compiler-javac-2.15.0.jar (26 kB at 402 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/4.0.0/plexus-utils-4.0.0.jar (192 kB at 2.6 MB/s)
+[INFO] Recompiling the module because of changed source code.
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 30 source files with javac [debug target 8] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ mascBench ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/RESEARCHER/pqc-research/D0-rvsec/runs/MASCBench-run01/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ mascBench ---
+[INFO] Recompiling the module because of changed dependency.
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 3 source files with javac [debug target 8] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.0.0-M7:test (default-test) @ mascBench ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junit4.JUnit4Provider
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/junit/junit/4.0/junit-4.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/junit/junit/4.0/junit-4.0.pom (210 B at 4.5 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.pom (820 B at 20 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-core/3.22.0/assertj-core-3.22.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-core/3.22.0/assertj-core-3.22.0.pom (31 kB at 929 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-parent-pom/2.2.14/assertj-parent-pom-2.2.14.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-parent-pom/2.2.14/assertj-parent-pom-2.2.14.pom (25 kB at 663 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.8.0/junit-bom-5.8.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.8.0/junit-bom-5.8.0.pom (5.6 kB at 182 kB/s)
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running br.unb.cic.crypto.MascBenchTest
+Oct 18, 2026 2:12:33 PM java.util.logging.LogManager$RootLogger log
+WARNING: number of classes: 30
+Oct 18, 2026 2:12:33 PM java.util.logging.LogManager$RootLogger log
+WARNING: number of distinct classes: 30
+Oct 18, 2026 2:12:33 PM java.util.logging.LogManager$RootLogger log
+WARNING: number of executed methods: 29
+Oct 18, 2026 2:12:33 PM java.util.logging.LogManager$RootLogger log
+WARNING: number of executions with errors: 0
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.878 s - in br.unb.cic.crypto.MascBenchTest
+==start GCMParameterSpecSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - c1: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end GCMParameterSpecSpec ==
+==start PBEParameterSpecSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - c3: 0
+#event - c1: 0
+#event - c2: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end PBEParameterSpecSpec ==
+==start KeyPairSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - gpr: 0
+#event - gpu: 0
+#event - c1: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end KeyPairSpec ==
+==start SSLContextSpec ==
+#monitors: 2
+#collected monitors: 0
+#terminated monitors: 0
+#event - init: 0
+#event - engine: 0
+#event - unsafe_protocol: 1
+#event - g1: 1
+#event - g2: 0
+#category - prop 1 - fail: 2
+#category - prop 1 - match1: 0
+==end SSLContextSpec ==
+==start SignatureSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - i1: 0
+#event - i2: 0
+#event - update: 0
+#event - g1: 0
+#event - i3: 0
+#event - g2: 0
+#event - i4: 0
+#event - v1: 0
+#event - g3: 0
+#event - v2: 0
+#event - s1: 0
+#event - s2: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end SignatureSpec ==
+==start CipherOutputStreamSpec ==
+#monitors: 1
+#collected monitors: 0
+#terminated monitors: 0
+#event - fl: 0
+#event - cl: 0
+#event - w1: 0
+#event - w2: 0
+#event - c1: 0
+#category - prop 1 - fail: 0
+==end CipherOutputStreamSpec ==
+==start CipherSpec ==
+#monitors: 15
+#collected monitors: 0
+#terminated monitors: 0
+#event - u5: 0
+#event - i1: 0
+#event - i2: 15
+#event - g1: 15
+#event - g2: 0
+#event - f1: 0
+#event - g3: 15
+#event - f2: 15
+#event - f3: 0
+#event - f5: 0
+#event - f6: 0
+#event - f7: 0
+#event - wkb1: 0
+#event - u1: 0
+#event - u2: 0
+#event - u3: 0
+#event - u4: 0
+#category - prop 1 - fail: 17
+#category - prop 1 - match1: 1
+==end CipherSpec ==
+==start IvParameterSpecSpec ==
+#monitors: 7
+#collected monitors: 0
+#terminated monitors: 0
+#event - c3: 5
+#event - c4: 2
+#event - c1: 5
+#event - c2: 2
+#category - prop 1 - fail: 5
+#category - prop 1 - match: 4
+==end IvParameterSpecSpec ==
+==start RandomStringPasswordSpec ==
+#monitors: 1
+#collected monitors: 0
+#terminated monitors: 0
+#event - vo: 0
+#event - gb: 5
+#category - prop 1 - match: 0
+==end RandomStringPasswordSpec ==
+==start SecretKeySpecSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - c3: 0
+#event - c4: 0
+#event - c1: 0
+#event - c2: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end SecretKeySpecSpec ==
+==start MessageDigestSpec ==
+#monitors: 8
+#collected monitors: 0
+#terminated monitors: 0
+#event - update: 0
+#event - reset: 0
+#event - g1: 8
+#event - g2: 0
+#event - g3: 0
+#event - g4: 8
+#event - d1: 0
+#event - d2: 8
+#event - d3: 0
+#category - prop 1 - fail: 8
+#category - prop 1 - match: 0
+==end MessageDigestSpec ==
+==start SecureRandomSpec ==
+#monitors: 8
+#collected monitors: 0
+#terminated monitors: 0
+#event - next2: 2
+#event - next1: 0
+#event - g1: 2
+#event - g2: 0
+#event - g3: 0
+#event - g4: 2
+#event - c1: 4
+#event - c2: 2
+#event - setSeed3: 4
+#event - c3: 2
+#event - setSeed2: 4
+#event - setSeed1: 0
+#event - genSeed: 0
+#event - ints: 0
+#event - next3: 6
+#category - prop 1 - fail: 12
+#category - prop 1 - match1: 12
+==end SecureRandomSpec ==
+==start KeyManagerFactorySpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - init: 0
+#event - gkm1: 0
+#event - g1: 0
+#event - g2: 0
+#event - g3: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match1: 0
+==end KeyManagerFactorySpec ==
+==start PBEKeySpecSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - err3: 0
+#event - err2: 0
+#event - err1: 0
+#event - f1: 0
+#event - f2: 0
+#event - c1: 0
+#event - c2: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end PBEKeySpecSpec ==
+==start HMACParameterSpecSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - c: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end HMACParameterSpecSpec ==
+==start SecretKeySpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - e1: 0
+#category - prop 1 - match: 0
+==end SecretKeySpec ==
+==start DHGenParameterSpecSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - c1: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end DHGenParameterSpecSpec ==
+==start KeyGeneratorSpec ==
+#monitors: 13
+#collected monitors: 0
+#terminated monitors: 0
+#event - init: 2
+#event - g1: 13
+#event - g2: 0
+#event - g3: 13
+#event - gk1: 13
+#category - prop 1 - fail: 11
+#category - prop 1 - match: 4
+==end KeyGeneratorSpec ==
+==start KeyStoreSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - ge1: 0
+#event - load: 0
+#event - g1: 0
+#event - g2: 0
+#event - store: 0
+#event - gk1: 0
+#event - se1: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end KeyStoreSpec ==
+==start TrustManagerFactorySpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - init: 0
+#event - gtm1: 0
+#event - g1: 0
+#event - g2: 0
+#event - g3: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match1: 0
+==end TrustManagerFactorySpec ==
+==start KeyPairGeneratorSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - gen: 0
+#event - init3: 0
+#event - init2: 0
+#event - g1: 0
+#event - init1: 0
+#event - g2: 0
+#event - g3: 0
+#event - initError: 0
+#event - init4: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end KeyPairGeneratorSpec ==
+==start MacSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - i1: 0
+#event - i2: 0
+#event - update: 0
+#event - g1: 0
+#event - g2: 0
+#event - f1: 0
+#event - g3: 0
+#event - f2: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end MacSpec ==
+==start CipherInputStreamSpec ==
+#monitors: 1
+#collected monitors: 0
+#terminated monitors: 0
+#event - r2: 0
+#event - cl1: 0
+#event - c1: 0
+#event - r1: 0
+#category - prop 1 - fail: 0
+==end CipherInputStreamSpec ==
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.1.2:jar (default-jar) @ mascBench ---
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.7.1/plexus-component-annotations-1.7.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.7.1/plexus-component-annotations-1.7.1.pom (770 B at 22 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/1.7.1/plexus-containers-1.7.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/1.7.1/plexus-containers-1.7.1.pom (5.0 kB at 132 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-archiver/3.4.0/maven-archiver-3.4.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-archiver/3.4.0/maven-archiver-3.4.0.pom (4.6 kB at 127 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/4.1.0/plexus-archiver-4.1.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/4.1.0/plexus-archiver-4.1.0.pom (4.8 kB at 134 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/3.1.1/plexus-io-3.1.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/3.1.1/plexus-io-3.1.1.pom (4.5 kB at 134 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.1.0/plexus-utils-3.1.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.1.0/plexus-utils-3.1.0.pom (4.7 kB at 150 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.18/commons-compress-1.18.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.18/commons-compress-1.18.pom (18 kB at 506 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.2.0/plexus-utils-3.2.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.2.0/plexus-utils-3.2.0.pom (4.8 kB at 134 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.7.1/plexus-component-annotations-1.7.1.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-archiver/3.4.0/maven-archiver-3.4.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.2.1/maven-shared-utils-3.2.1.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/4.1.0/plexus-archiver-4.1.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/3.1.1/plexus-io-3.1.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.7.1/plexus-component-annotations-1.7.1.jar (4.3 kB at 130 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.18/commons-compress-1.18.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-archiver/3.4.0/maven-archiver-3.4.0.jar (24 kB at 677 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.2.0/plexus-utils-3.2.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/4.1.0/plexus-archiver-4.1.0.jar (192 kB at 4.9 MB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/3.1.1/plexus-io-3.1.1.jar (75 kB at 1.8 MB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.2.1/maven-shared-utils-3.2.1.jar (167 kB at 2.6 MB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.18/commons-compress-1.18.jar (592 kB at 7.4 MB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.2.0/plexus-utils-3.2.0.jar (263 kB at 3.1 MB/s)
+[INFO] Building jar: /home/RESEARCHER/pqc-research/D0-rvsec/runs/MASCBench-run01/target/mascBench-1.0-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.740 s
+[INFO] Finished at: 2026-10-18T14:12:34+09:00
+[INFO] ------------------------------------------------------------------------

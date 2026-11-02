@@ -1,0 +1,126 @@
+=== REMAINING MULTIPLICITY ===
+REFERENCE: 55
+MAX_COVERED: 43
+SUM_COVERED: 51
+SUM_REMAINING: 4
+
+CLASS: org.apache.spark.security.CryptoStreamUtils$
+METHOD: createCryptoOutputStream
+LOCATION: CryptoStreamUtils.scala:58
+ERROR: UnsatisfiedConstraint
+REFERENCE_COUNT: 2
+SUM_COUNT: 1
+MISSING: 1
+
+CLASS: org.apache.spark.security.CryptoStreamUtils$
+METHOD: createCryptoOutputStream
+LOCATION: CryptoStreamUtils.scala:58
+ERROR: InvalidSequenceOfMethodCalls
+REFERENCE_COUNT: 2
+SUM_COUNT: 1
+MISSING: 1
+
+CLASS: org.apache.spark.security.CryptoStreamUtils$
+METHOD: createCryptoInputStream
+LOCATION: CryptoStreamUtils.scala:88
+ERROR: UnsatisfiedConstraint
+REFERENCE_COUNT: 2
+SUM_COUNT: 1
+MISSING: 1
+
+CLASS: org.apache.spark.security.CryptoStreamUtils$
+METHOD: createCryptoInputStream
+LOCATION: CryptoStreamUtils.scala:88
+ERROR: InvalidSequenceOfMethodCalls
+REFERENCE_COUNT: 2
+SUM_COUNT: 1
+MISSING: 1
+
+=== CRYPTO UTILS SOURCE ===
+  45:   val SPARK_IO_ENCRYPTION_COMMONS_CONFIG_PREFIX = "spark.io.encryption.commons.config."
+  46: 
+  47:   /**
+  48:    * Helper method to wrap `OutputStream` with `CryptoOutputStream` for encryption.
+  49:    */
+  50:   def createCryptoOutputStream(
+  51:       os: OutputStream,
+  52:       sparkConf: SparkConf,
+  53:       key: Array[Byte]): OutputStream = {
+  54:     val params = new CryptoParams(key, sparkConf)
+  55:     val iv = createInitializationVector(params.conf)
+  56:     os.write(iv)
+  57:     new CryptoOutputStream(params.transformation, params.conf, os, params.keySpec,
+  58:       new IvParameterSpec(iv))
+  59:   }
+  60: 
+  61:   /**
+  62:    * Wrap a `WritableByteChannel` for encryption.
+  63:    */
+  64:   def createWritableChannel(
+  65:       channel: WritableByteChannel,
+  66:       sparkConf: SparkConf,
+  67:       key: Array[Byte]): WritableByteChannel = {
+  68:     val params = new CryptoParams(key, sparkConf)
+  69:     val iv = createInitializationVector(params.conf)
+  70:     val helper = new CryptoHelperChannel(channel)
+  71: 
+  72:     helper.write(ByteBuffer.wrap(iv))
+  73:     new CryptoOutputStream(params.transformation, params.conf, helper, params.keySpec,
+  74:       new IvParameterSpec(iv))
+  75:   }
+  76: 
+  77:   /**
+  78:    * Helper method to wrap `InputStream` with `CryptoInputStream` for decryption.
+  79:    */
+  80:   def createCryptoInputStream(
+  81:       is: InputStream,
+  82:       sparkConf: SparkConf,
+  83:       key: Array[Byte]): InputStream = {
+  84:     val iv = new Array[Byte](IV_LENGTH_IN_BYTES)
+  85:     ByteStreams.readFully(is, iv)
+  86:     val params = new CryptoParams(key, sparkConf)
+  87:     new CryptoInputStream(params.transformation, params.conf, is, params.keySpec,
+  88:       new IvParameterSpec(iv))
+  89:   }
+  90: 
+  91:   /**
+  92:    * Wrap a `ReadableByteChannel` for decryption.
+  93:    */
+  94:   def createReadableChannel(
+  95:       channel: ReadableByteChannel,
+
+=== TEST SOURCE CALL-SITE CANDIDATES ===
+MATCHING_TEST_FILES: 4
+
+FILE: core/src/test/scala/org/apache/spark/security/CryptoStreamUtilsSuite.scala
+MATCHES: 11
+  30: import org.apache.spark.security.CryptoStreamUtils._
+  34: class CryptoStreamUtilsSuite extends SparkFunSuite {
+  47: val props = CryptoStreamUtils.toCryptoConf(conf)
+  54: var key = CryptoStreamUtils.createKey(conf)
+  61: var key = CryptoStreamUtils.createKey(conf)
+  69: CryptoStreamUtils.createKey(conf)
+  80: val key = Some(CryptoStreamUtils.createKey(conf))
+  108: val out = CryptoStreamUtils.createCryptoOutputStream(bytes, SparkEnv.get.conf,
+  117: val in = CryptoStreamUtils.createCryptoInputStream(new ByteArrayInputStream(encrypted),
+  135: val outStream = createCryptoOutputStream(new FileOutputStream(file), conf, key)
+  142: val inStream = createCryptoInputStream(new FileInputStream(file), conf, key)
+
+FILE: core/src/test/scala/org/apache/spark/storage/BlockManagerSuite.scala
+MATCHES: 2
+  51: import org.apache.spark.security.{CryptoStreamUtils, EncryptionFunSuite}
+  96: Some(CryptoStreamUtils.createKey(bmConf))
+
+FILE: core/src/test/scala/org/apache/spark/storage/DiskStoreSuite.scala
+MATCHES: 2
+  28: import org.apache.spark.security.CryptoStreamUtils
+  139: val securityManager = new SecurityManager(conf, Some(CryptoStreamUtils.createKey(conf)))
+
+FILE: core/src/test/java/org/apache/spark/shuffle/sort/UnsafeShuffleWriterSuite.java
+MATCHES: 2
+  52: import org.apache.spark.security.CryptoStreamUtils;
+  290: Option.apply(CryptoStreamUtils.createKey(conf)));
+
+=== FINAL ===
+STATIC_CALLSITE_AUDIT_COMPLETE
+SOURCE_MATCH_DOES_NOT_PROVE_EXECUTION

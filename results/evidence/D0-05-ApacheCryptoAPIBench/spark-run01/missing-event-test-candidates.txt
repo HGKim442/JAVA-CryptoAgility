@@ -1,0 +1,103 @@
+=== SPARK TEST SOURCE INVENTORY ===
+CORE TEST_SOURCES: 753 AGENT: True
+NETWORK_COMMON TEST_SOURCES: 19 AGENT: False
+NETWORK_SHUFFLE TEST_SOURCES: 11 AGENT: False
+LAUNCHER TEST_SOURCES: 7 AGENT: False
+
+=== CANDIDATES BY TARGET ===
+
+TARGET: CryptoStreamUtils
+MATCHING_TEST_FILES: 4
+  [CORE] core/src/test/scala/org/apache/spark/security/CryptoStreamUtilsSuite.scala (mentions=9)
+  [CORE] core/src/test/java/org/apache/spark/shuffle/sort/UnsafeShuffleWriterSuite.java (mentions=2)
+  [CORE] core/src/test/scala/org/apache/spark/storage/BlockManagerSuite.scala (mentions=2)
+  [CORE] core/src/test/scala/org/apache/spark/storage/DiskStoreSuite.scala (mentions=2)
+
+TARGET: AuthEngine
+MATCHING_TEST_FILES: 1
+  [NETWORK_COMMON] common/network-common/src/test/java/org/apache/spark/network/crypto/AuthEngineSuite.java (mentions=16)
+
+TARGET: TransportCipher
+MATCHING_TEST_FILES: 2
+  [NETWORK_COMMON] common/network-common/src/test/java/org/apache/spark/network/crypto/AuthEngineSuite.java (mentions=2)
+  [NETWORK_COMMON] common/network-common/src/test/java/org/apache/spark/network/crypto/AuthIntegrationSuite.java (mentions=1)
+
+TARGET: SequenceFile
+MATCHING_TEST_FILES: 9
+  [CORE] core/src/test/scala/org/apache/spark/FileSuite.scala (mentions=25)
+  [CORE] core/src/test/java/test/org/apache/spark/JavaAPISuite.java (mentions=10)
+  [CORE] core/src/test/evosuite/org/apache/spark/status/AppStatusListener_ESTest_scaffolding.java (mentions=9)
+  [CORE] core/src/test/evosuite/org/apache/spark/deploy/security/HiveDelegationTokenProvider_ESTest_scaffolding.java (mentions=8)
+  [CORE] core/src/test/scala/org/apache/sparktest/ImplicitSuite.scala (mentions=6)
+  [CORE] core/src/test/java/test/org/apache/spark/Java8RDDAPISuite.java (mentions=2)
+  [CORE] core/src/test/evosuite/org/apache/spark/rdd/DefaultPartitionCoalescer_ESTest_scaffolding.java (mentions=1)
+  [CORE] core/src/test/evosuite/org/apache/spark/rdd/NarrowCoGroupSplitDep_ESTest_scaffolding.java (mentions=1)
+  [CORE] core/src/test/evosuite/org/apache/spark/rdd/RDDCheckpointData_ESTest_scaffolding.java (mentions=1)
+
+TARGET: SslContextFactory
+MATCHING_TEST_FILES: 1
+  [CORE] core/src/test/evosuite/org/apache/spark/SSLOptions_ESTest_scaffolding.java (mentions=8)
+
+TARGET: HtmlUnitSSLConnectionSocketFactory
+MATCHING_TEST_FILES: 0
+
+TARGET: SSLContext
+MATCHING_TEST_FILES: 1
+  [CORE] core/src/test/scala/org/apache/spark/SSLOptionsSuite.scala (mentions=2)
+
+TARGET: SSLOptions
+MATCHING_TEST_FILES: 14
+  [CORE] core/src/test/evosuite/org/apache/spark/SSLOptions_ESTest_scaffolding.java (mentions=58)
+  [CORE] core/src/test/evosuite/org/apache/spark/SSLOptions_ESTest.java (mentions=14)
+  [CORE] core/src/test/scala/org/apache/spark/SecurityManagerSuite.scala (mentions=12)
+  [CORE] core/src/test/scala/org/apache/spark/SSLOptionsSuite.scala (mentions=7)
+  [CORE] core/src/test/scala/org/apache/spark/ui/UISuite.scala (mentions=4)
+  [CORE] core/src/test/evosuite/org/apache/spark/deploy/history/LoadedAppUI_ESTest_scaffolding.java (mentions=1)
+  [CORE] core/src/test/evosuite/org/apache/spark/deploy/master/ui/MasterPage_ESTest_scaffolding.java (mentions=1)
+  [CORE] core/src/test/evosuite/org/apache/spark/deploy/worker/ui/LogPage_ESTest_scaffolding.java (mentions=1)
+  [CORE] core/src/test/evosuite/org/apache/spark/metrics/sink/ConsoleSink_ESTest_scaffolding.java (mentions=1)
+  [CORE] core/src/test/evosuite/org/apache/spark/rpc/RpcEnvConfig_ESTest_scaffolding.java (mentions=1)
+  [CORE] core/src/test/evosuite/org/apache/spark/rpc/netty/NettyRpcEnv_ESTest_scaffolding.java (mentions=1)
+  [CORE] core/src/test/evosuite/org/apache/spark/status/AppStatusListener_ESTest_scaffolding.java (mentions=1)
+  [CORE] core/src/test/evosuite/org/apache/spark/ui/ServerInfo_ESTest_scaffolding.java (mentions=1)
+  [CORE] core/src/test/evosuite/org/apache/spark/ui/storage/StorageTab_ESTest_scaffolding.java (mentions=1)
+
+TARGET: httpResponseCode
+MATCHING_TEST_FILES: 3
+  [CORE] core/src/test/scala/org/apache/spark/ui/UISeleniumSuite.scala (mentions=4)
+  [CORE] core/src/test/scala/org/apache/spark/deploy/history/HistoryServerSuite.scala (mentions=1)
+  [CORE] core/src/test/scala/org/apache/spark/ui/UISuite.scala (mentions=1)
+
+TARGET: LauncherServer
+MATCHING_TEST_FILES: 2
+  [LAUNCHER] launcher/src/test/java/org/apache/spark/launcher/LauncherServerSuite.java (mentions=15)
+  [LAUNCHER] launcher/src/test/java/org/apache/spark/launcher/BaseSuite.java (mentions=2)
+
+TARGET: SecurityManager
+MATCHING_TEST_FILES: 278
+  [CORE] core/src/test/evosuite/org/apache/spark/rpc/RpcEnvConfig_ESTest.java (mentions=170)
+  [CORE] core/src/test/scala/org/apache/spark/SecurityManagerSuite.scala (mentions=27)
+  [CORE] core/src/test/scala/org/apache/spark/deploy/worker/CommandUtilsSuite.scala (mentions=15)
+  [CORE] core/src/test/evosuite/org/apache/spark/metrics/sink/ConsoleSink_ESTest_scaffolding.java (mentions=6)
+  [CORE] core/src/test/evosuite/org/apache/spark/rpc/RpcEnvConfig_ESTest_scaffolding.java (mentions=6)
+  [CORE] core/src/test/evosuite/org/apache/spark/rpc/netty/NettyRpcEnv_ESTest_scaffolding.java (mentions=6)
+  [CORE] core/src/test/evosuite/org/apache/spark/deploy/worker/ui/LogPage_ESTest_scaffolding.java (mentions=5)
+  [CORE] core/src/test/scala/org/apache/spark/MapOutputTrackerSuite.scala (mentions=5)
+  [CORE] core/src/test/scala/org/apache/spark/deploy/SparkSubmitSuite.scala (mentions=5)
+  [CORE] core/src/test/scala/org/apache/spark/storage/DiskStoreSuite.scala (mentions=5)
+  [CORE] core/src/test/evosuite/org/apache/spark/deploy/master/ui/MasterPage_ESTest_scaffolding.java (mentions=4)
+  [CORE] core/src/test/evosuite/org/apache/spark/deploy/security/HiveDelegationTokenProvider_ESTest_scaffolding.java (mentions=4)
+  [CORE] core/src/test/evosuite/org/apache/spark/metrics/sink/ConsoleSink_ESTest.java (mentions=4)
+  [CORE] core/src/test/evosuite/org/apache/spark/metrics/sink/CsvSink_ESTest_scaffolding.java (mentions=4)
+  [CORE] core/src/test/evosuite/org/apache/spark/metrics/sink/GraphiteSink_ESTest_scaffolding.java (mentions=4)
+  ADDITIONAL_MATCHES: 263
+
+=== TEST RUNNER ARTIFACTS ===
+CORE COMPILED_TEST_CLASSES: 6283
+NETWORK_COMMON COMPILED_TEST_CLASSES: 48
+NETWORK_SHUFFLE COMPILED_TEST_CLASSES: 17
+LAUNCHER COMPILED_TEST_CLASSES: 17
+
+=== FINAL ===
+STATIC_SOURCE_MAPPING_COMPLETE
+NOTE: Source references do not prove runtime execution.

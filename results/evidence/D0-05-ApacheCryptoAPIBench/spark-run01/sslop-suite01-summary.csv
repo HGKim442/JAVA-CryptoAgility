@@ -1,0 +1,4 @@
+spec,class,className,method,location,error
+SSLContextSpec,org.apache.spark.SSLOptions.liftedTree1$1(SSLOptions.scala:105),scala:105),org.apache.spark.SSLOptions.liftedTree1$1(SSLOptions.scala:105),org.apache.spark.SSLOptions.liftedTree1$1(SSLOptions.scala:105),InvalidSequenceOfMethodCalls
+SSLContextSpec,org.apache.spark.SSLOptions.liftedTree1$1(SSLOptions.scala:108),scala:108),org.apache.spark.SSLOptions.liftedTree1$1(SSLOptions.scala:108),org.apache.spark.SSLOptions.liftedTree1$1(SSLOptions.scala:108),UnsafeProtocol
+SSLContextSpec,org.apache.spark.SSLOptions.liftedTree1$1(SSLOptions.scala:108),scala:108),org.apache.spark.SSLOptions.liftedTree1$1(SSLOptions.scala:108),org.apache.spark.SSLOptions.liftedTree1$1(SSLOptions.scala:108),InvalidSequenceOfMethodCalls

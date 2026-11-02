@@ -1,0 +1,54 @@
+=== 1. BUILD PLUGIN DECLARATIONS ===
+
+PLUGIN: maven-surefire-plugin
+GROUP_ID: org.apache.maven.plugins
+VERSION: 2.20.1
+EXECUTION: default-test
+EXPLICIT_PHASE: test
+GOALS: ['test']
+EXECUTION: test
+EXPLICIT_PHASE: [NONE]
+GOALS: ['test']
+
+PLUGIN_JAR: /home/RESEARCHER/.m2/repository/org/apache/maven/plugins/maven-surefire-plugin/2.20.1/maven-surefire-plugin-2.20.1.jar
+PLUGIN_JAR_EXISTS: True
+
+=== TEST GOAL DESCRIPTOR ===
+MATCHING_TEST_GOALS: 1
+GOAL: test
+DEFAULT_PHASE: test
+IMPLEMENTATION: org.apache.maven.plugin.surefire.SurefirePlugin
+REQUIRES_PROJECT: true
+REQUIRES_DEPENDENCY_RESOLUTION: test
+THREAD_SAFE: true
+
+PLUGIN: scalatest-maven-plugin
+GROUP_ID: org.scalatest
+VERSION: 1.0
+EXECUTION: test
+EXPLICIT_PHASE: [NONE]
+GOALS: ['test']
+
+PLUGIN_JAR: /home/RESEARCHER/.m2/repository/org/scalatest/scalatest-maven-plugin/1.0/scalatest-maven-plugin-1.0.jar
+PLUGIN_JAR_EXISTS: True
+
+=== TEST GOAL DESCRIPTOR ===
+MATCHING_TEST_GOALS: 1
+GOAL: test
+DEFAULT_PHASE: test
+IMPLEMENTATION: org.scalatest.tools.maven.TestMojo
+REQUIRES_PROJECT: true
+REQUIRES_DEPENDENCY_RESOLUTION: test
+THREAD_SAFE: false
+
+=== 2. INTERPRETATION ===
+DEFAULT_PHASE_TEST_MEANS_GOAL_CAN_BIND_TO_TEST_PHASE
+CONFIGURED_EXECUTION_DOES_NOT_PROVE_ACTUAL_INVOCATION
+ORIGINAL_SCRIPT_HAS_NO_EXPLICIT_PMOP
+
+=== FINAL ===
+STEP_163_COMPLETE
+PLUGIN_DESCRIPTOR_INSPECTION_ONLY
+NO_MAVEN_TEST_EXECUTION
+NO_SOURCE_MODIFICATION
+NO_EVIDENCE_MODIFICATION

@@ -1,0 +1,14 @@
+REFERENCE_EVENTS: 55
+NEW_RUN_EVENTS: 9
+MATCHED_EVENTS: 9
+UNEXPECTED_EVENTS: 0
+
+=== MATCHED BY CLASS ===
+7 org.apache.spark.security.CryptoStreamUtils$
+2 org.apache.spark.security.CryptoStreamUtils$CryptoParams
+
+=== UNEXPECTED EVENTS ===
+NONE
+
+=== VERDICT ===
+EXACT_REFERENCE_SUBSET

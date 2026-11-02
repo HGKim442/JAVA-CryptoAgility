@@ -1,0 +1,22 @@
+# Build artifacts
+*.class
+*.jar
+*.war
+**/target/
+**/build/
+
+# Historical OWASP build artifacts
+results/evidence/D0-04-OWASPBench/benchmark-expanded-old/
+results/evidence/D0-04-OWASPBench/post-crawler-20261018-181826/cargo-output.log
+
+# Credentials and local environment
+.env
+.env.*
+*.pem
+*.p12
+*.pfx
+*.key
+**/credentials/
+
+# Potentially sensitive crawler log
+results/evidence/D0-04-OWASPBench/crawler-run01-20261018-181813.log

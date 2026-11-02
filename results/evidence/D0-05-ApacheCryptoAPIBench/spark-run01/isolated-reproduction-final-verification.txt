@@ -1,0 +1,57 @@
+=== ISOLATED CRYPTO VERIFICATION ===
+REFERENCE_CRYPTO_EVENTS: 22
+OBSERVED_CRYPTO_EVENTS: 24
+MATCHED_CRYPTO_EVENTS: 22
+MISSING_CRYPTO_EVENTS: 0
+EXTRA_CRYPTO_EVENTS: 2
+
+=== CRYPTO EVENTS BY SIX-FIELD KEY ===
+METHOD=createCryptoInputStream ERROR=InvalidSequenceOfMethodCalls REFERENCE=2 OBSERVED=2 DELTA=0
+METHOD=createCryptoInputStream ERROR=UnsatisfiedConstraint REFERENCE=2 OBSERVED=2 DELTA=0
+METHOD=createCryptoOutputStream ERROR=InvalidSequenceOfMethodCalls REFERENCE=2 OBSERVED=2 DELTA=0
+METHOD=createCryptoOutputStream ERROR=UnsatisfiedConstraint REFERENCE=2 OBSERVED=2 DELTA=0
+METHOD=createReadableChannel ERROR=InvalidSequenceOfMethodCalls REFERENCE=1 OBSERVED=1 DELTA=0
+METHOD=createReadableChannel ERROR=UnsatisfiedConstraint REFERENCE=1 OBSERVED=1 DELTA=0
+METHOD=createWritableChannel ERROR=InvalidSequenceOfMethodCalls REFERENCE=1 OBSERVED=1 DELTA=0
+METHOD=createWritableChannel ERROR=UnsatisfiedConstraint REFERENCE=1 OBSERVED=1 DELTA=0
+METHOD=createKey ERROR=InvalidSequenceOfMethodCalls REFERENCE=2 OBSERVED=2 DELTA=0
+METHOD=createKey ERROR=InvalidSequenceOfMethodCalls REFERENCE=2 OBSERVED=2 DELTA=0
+METHOD=createKey ERROR=UnsafeAlgorithm REFERENCE=2 OBSERVED=2 DELTA=0
+METHOD=<init> ERROR=InvalidSequenceOfMethodCalls REFERENCE=2 OBSERVED=3 DELTA=1
+METHOD=<init> ERROR=UnsatisfiedConstraint REFERENCE=2 OBSERVED=3 DELTA=1
+
+=== COMPLETE SPARK COMPARISON ===
+REFERENCE_SPARK: 55
+MATCHED_SPARK_BOUNDED: 55
+MISSING_SPARK: 0
+EXTRA_SPARK: 19
+SPARK_DISTINCT_REFERENCE: 43
+SPARK_DISTINCT_MATCHED: 43
+
+=== APACHE TOTAL ===
+PREVIOUS_SEVEN_PROJECTS: 95
+SPARK_BOUNDED_MATCHES: 55
+APACHE_BOUNDED_MATCHES: 150
+APACHE_REFERENCE: 150
+
+=== INPUT FILE SHA256 ===
+9792a9d9dc54ec4bb1d9e9aeccb7088a448e180d5345b996443800861bedffb5  /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/spark-reference/summary.csv
+3aaaf149a8376e319ebca9a560506742c3f4afc5c04b2b2e3ee6dec105f516c1  /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/spark-run01/crypto-wrapper-exact01-summary.csv
+8da5c416dfee9abcb2b12fcf5fba8da0776804e7602a538fc313c12d0c12263b  /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/spark-run01/keyprop-exact01-driver-summary.csv
+ea522439e125fd3578f80df7522727cac7158c66a5a3522cb81bdd5b0654c59a  /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/spark-run01/keyprop-exact01-worker-summary.csv
+34a1f541f3fb2ca95e99d79d34dad485907c8eb2fb662a13684b20d4363d9e74  /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/spark-run01/sslop-suite01-summary.csv
+835570b43327d898b271a95e8df60308fcb9d41681b4463b1f54b5bdeaeba090  /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/spark-run01/authengine-suite02-summary.csv
+4b8ff5dd6981e85db43d37151d2c7324fd97468a23bcfe5c8986f92280d1a8d8  /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/spark-run01/authintegration-suite01-summary.csv
+91c9fce3fbf59c5b9b94872c3154e9eddde9f009c4f3047f485c32f428d9850a  /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/spark-run01/securitymanager-suite01-summary.csv
+7b37bc6e4e91bb83f6abf891e11744668c5b3c19520513515396fdd44840747c  /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/spark-run01/diskstore-suite01-summary.csv
+39a2d83af475892a5fe82fccc1d04a27e4004d42fa9b3b430b0ca6313a057c94  /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/spark-run01/filesuite01-summary.csv
+39a2d83af475892a5fe82fccc1d04a27e4004d42fa9b3b430b0ca6313a057c94  /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/spark-run01/javaapi-suite01-summary.csv
+d9ba26e880567d3c811e33c93d128db1ec356ea2db21cd063940aea26f10baa5  /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/spark-run01/uisuite01-summary.csv
+7923ee76f64ab221f5735943a6a785ea04f724e23537625e40c59aeaa7900aea  /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/spark-run01/uiselenium01-summary.csv
+6fb0e09e859143fa7879ef9be7e949579ac540b2152297f1c0ff437bd35f4aa7  /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/spark-run01/launcher-suite01-summary.csv
+
+=== FINAL VERDICT ===
+ALL_REFERENCE_MULTIPLICITIES_COVERED
+OVERPRODUCTION_PRESENT
+NOT_AN_EXACT_SINGLE_RUN_REPRODUCTION
+STEP_136_COMPLETE

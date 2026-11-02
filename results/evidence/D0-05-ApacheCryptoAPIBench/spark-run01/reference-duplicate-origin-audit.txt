@@ -1,0 +1,157 @@
+=== 1. TEST SOURCE ===
+  95:     val decryptedBytes = ByteStreams.toByteArray(wrappedInputStream)
+  96:     val decryptedStr = new String(decryptedBytes, UTF_8)
+  97:     assert(decryptedStr === plainStr)
+  98:   }
+  99: 
+ 100:   test("encryption key propagation to executors") {
+ 101:     val conf = createConf().setAppName("Crypto Test").setMaster("local-cluster[1,1,1024]")
+ 102:     val sc = new SparkContext(conf)
+ 103:     try {
+ 104:       val content = "This is the content to be encrypted."
+ 105:       val encrypted = sc.parallelize(Seq(1))
+ 106:         .map { str =>
+ 107:           val bytes = new ByteArrayOutputStream()
+ 108:           val out = CryptoStreamUtils.createCryptoOutputStream(bytes, SparkEnv.get.conf,
+ 109:             SparkEnv.get.securityManager.getIOEncryptionKey().get)
+ 110:           out.write(content.getBytes(UTF_8))
+ 111:           out.close()
+ 112:           bytes.toByteArray()
+ 113:         }.collect()(0)
+ 114: 
+ 115:       assert(content != encrypted)
+ 116: 
+ 117:       val in = CryptoStreamUtils.createCryptoInputStream(new ByteArrayInputStream(encrypted),
+ 118:         sc.conf, SparkEnv.get.securityManager.getIOEncryptionKey().get)
+ 119:       val decrypted = new String(ByteStreams.toByteArray(in), UTF_8)
+ 120:       assert(content === decrypted)
+ 121:     } finally {
+ 122:       sc.stop()
+ 123:     }
+ 124:   }
+ 125: 
+ 126:   test("crypto stream wrappers") {
+ 127:     val testData = new Array[Byte](128 * 1024)
+ 128:     new Random().nextBytes(testData)
+ 129: 
+ 130:     val conf = createConf()
+ 131:     val key = createKey(conf)
+ 132:     val file = Files.createTempFile("crypto", ".test").toFile()
+ 133:     file.deleteOnExit()
+ 134: 
+ 135:     val outStream = createCryptoOutputStream(new FileOutputStream(file), conf, key)
+ 136:     try {
+ 137:       ByteStreams.copy(new ByteArrayInputStream(testData), outStream)
+ 138:     } finally {
+ 139:       outStream.close()
+ 140:     }
+ 141: 
+ 142:     val inStream = createCryptoInputStream(new FileInputStream(file), conf, key)
+ 143:     try {
+ 144:       val inStreamData = ByteStreams.toByteArray(inStream)
+ 145:       assert(Arrays.equals(inStreamData, testData))
+ 146:     } finally {
+ 147:       inStream.close()
+ 148:     }
+ 149: 
+ 150:     val outChannel = createWritableChannel(new FileOutputStream(file).getChannel(), conf, key)
+ 151:     try {
+ 152:       val inByteChannel = Channels.newChannel(new ByteArrayInputStream(testData))
+ 153:       ByteStreams.copy(inByteChannel, outChannel)
+ 154:     } finally {
+ 155:       outChannel.close()
+ 156:     }
+ 157: 
+ 158:     val inChannel = createReadableChannel(new FileInputStream(file).getChannel(), conf, key)
+ 159:     try {
+ 160:       val inChannelData = ByteStreams.toByteArray(Channels.newInputStream(inChannel))
+
+=== 2. ORIGINAL EVENT ORDER ===
+REFERENCE_ROWS: 55
+DISTINCT_EVENT_TYPES: 43
+
+=== 3. DUPLICATED EVENT POSITIONS ===
+POSITIONS: [1, 28] CLASS: org.apache.spark.security.CryptoStreamUtils$ METHOD: createKey LOCATION: CryptoStreamUtils.scala:119 ERROR: InvalidSequenceOfMethodCalls
+POSITIONS: [2, 29] CLASS: org.apache.spark.security.CryptoStreamUtils$ METHOD: createKey LOCATION: CryptoStreamUtils.scala:120 ERROR: UnsafeAlgorithm
+POSITIONS: [3, 30] CLASS: org.apache.spark.security.CryptoStreamUtils$ METHOD: createKey LOCATION: CryptoStreamUtils.scala:120 ERROR: InvalidSequenceOfMethodCalls
+POSITIONS: [4, 31] CLASS: org.apache.spark.security.CryptoStreamUtils$CryptoParams METHOD: <init> LOCATION: CryptoStreamUtils.scala:162 ERROR: UnsatisfiedConstraint
+POSITIONS: [5, 32] CLASS: org.apache.spark.security.CryptoStreamUtils$CryptoParams METHOD: <init> LOCATION: CryptoStreamUtils.scala:162 ERROR: InvalidSequenceOfMethodCalls
+POSITIONS: [6, 37] CLASS: org.apache.spark.security.CryptoStreamUtils$ METHOD: createCryptoOutputStream LOCATION: CryptoStreamUtils.scala:58 ERROR: UnsatisfiedConstraint
+POSITIONS: [7, 38] CLASS: org.apache.spark.security.CryptoStreamUtils$ METHOD: createCryptoOutputStream LOCATION: CryptoStreamUtils.scala:58 ERROR: InvalidSequenceOfMethodCalls
+POSITIONS: [8, 39] CLASS: org.apache.spark.security.CryptoStreamUtils$ METHOD: createCryptoInputStream LOCATION: CryptoStreamUtils.scala:88 ERROR: UnsatisfiedConstraint
+POSITIONS: [9, 40] CLASS: org.apache.spark.security.CryptoStreamUtils$ METHOD: createCryptoInputStream LOCATION: CryptoStreamUtils.scala:88 ERROR: InvalidSequenceOfMethodCalls
+POSITIONS: [10, 53] CLASS: org.apache.hadoop.io.SequenceFile$Writer METHOD: <init> LOCATION: SequenceFile.java:854 ERROR: UnsafeAlgorithm
+POSITIONS: [11, 54] CLASS: org.apache.hadoop.io.SequenceFile$Writer METHOD: <init> LOCATION: SequenceFile.java:854 ERROR: InvalidSequenceOfMethodCalls
+POSITIONS: [12, 55] CLASS: org.apache.hadoop.io.SequenceFile$Writer METHOD: <init> LOCATION: SequenceFile.java:855 ERROR: InvalidSequenceOfMethodCalls
+
+=== 4. CRYPTO STREAM EVENTS ===
+REFERENCE_ROW=6 METHOD=createCryptoOutputStream LOCATION=CryptoStreamUtils.scala:58 ERROR=UnsatisfiedConstraint
+REFERENCE_ROW=7 METHOD=createCryptoOutputStream LOCATION=CryptoStreamUtils.scala:58 ERROR=InvalidSequenceOfMethodCalls
+REFERENCE_ROW=8 METHOD=createCryptoInputStream LOCATION=CryptoStreamUtils.scala:88 ERROR=UnsatisfiedConstraint
+REFERENCE_ROW=9 METHOD=createCryptoInputStream LOCATION=CryptoStreamUtils.scala:88 ERROR=InvalidSequenceOfMethodCalls
+REFERENCE_ROW=37 METHOD=createCryptoOutputStream LOCATION=CryptoStreamUtils.scala:58 ERROR=UnsatisfiedConstraint
+REFERENCE_ROW=38 METHOD=createCryptoOutputStream LOCATION=CryptoStreamUtils.scala:58 ERROR=InvalidSequenceOfMethodCalls
+REFERENCE_ROW=39 METHOD=createCryptoInputStream LOCATION=CryptoStreamUtils.scala:88 ERROR=UnsatisfiedConstraint
+REFERENCE_ROW=40 METHOD=createCryptoInputStream LOCATION=CryptoStreamUtils.scala:88 ERROR=InvalidSequenceOfMethodCalls
+
+=== 5. REFERENCE EVENT SEQUENCE ===
+01 CryptoStreamUtils$ createKey CryptoStreamUtils.scala:119 InvalidSequenceOfMethodCalls
+02 CryptoStreamUtils$ createKey CryptoStreamUtils.scala:120 UnsafeAlgorithm
+03 CryptoStreamUtils$ createKey CryptoStreamUtils.scala:120 InvalidSequenceOfMethodCalls
+04 CryptoStreamUtils$CryptoParams <init> CryptoStreamUtils.scala:162 UnsatisfiedConstraint
+05 CryptoStreamUtils$CryptoParams <init> CryptoStreamUtils.scala:162 InvalidSequenceOfMethodCalls
+06 CryptoStreamUtils$ createCryptoOutputStream CryptoStreamUtils.scala:58 UnsatisfiedConstraint
+07 CryptoStreamUtils$ createCryptoOutputStream CryptoStreamUtils.scala:58 InvalidSequenceOfMethodCalls
+08 CryptoStreamUtils$ createCryptoInputStream CryptoStreamUtils.scala:88 UnsatisfiedConstraint
+09 CryptoStreamUtils$ createCryptoInputStream CryptoStreamUtils.scala:88 InvalidSequenceOfMethodCalls
+10 SequenceFile$Writer <init> SequenceFile.java:854 UnsafeAlgorithm
+11 SequenceFile$Writer <init> SequenceFile.java:854 InvalidSequenceOfMethodCalls
+12 SequenceFile$Writer <init> SequenceFile.java:855 InvalidSequenceOfMethodCalls
+13 HtmlUnitSSLConnectionSocketFactory buildSSLSocketFactory HtmlUnitSSLConnectionSocketFactory.java:109 InvalidSequenceOfMethodCalls
+14 HtmlUnitSSLConnectionSocketFactory buildSSLSocketFactory HtmlUnitSSLConnectionSocketFactory.java:110 UnsafeProtocol
+15 HtmlUnitSSLConnectionSocketFactory buildSSLSocketFactory HtmlUnitSSLConnectionSocketFactory.java:110 InvalidSequenceOfMethodCalls
+16 AuthEngine generateKey AuthEngine.java:232 UnsatisfiedConstraint
+17 AuthEngine generateKey AuthEngine.java:232 InvalidSequenceOfMethodCalls
+18 AuthEngine generateKey AuthEngine.java:241 UnsatisfiedConstraint
+19 AuthEngine generateKey AuthEngine.java:241 InvalidSequenceOfMethodCalls
+20 AuthEngine initializeForAuth AuthEngine.java:209 UnsatisfiedConstraint
+21 AuthEngine initializeForAuth AuthEngine.java:209 InvalidSequenceOfMethodCalls
+22 AuthEngine initializeForAuth AuthEngine.java:212 UnsatisfiedConstraint
+23 AuthEngine initializeForAuth AuthEngine.java:212 InvalidSequenceOfMethodCalls
+24 TransportCipher createOutputStream TransportCipher.java:88 UnsatisfiedConstraint
+25 TransportCipher createOutputStream TransportCipher.java:88 InvalidSequenceOfMethodCalls
+26 TransportCipher createInputStream TransportCipher.java:92 UnsatisfiedConstraint
+27 TransportCipher createInputStream TransportCipher.java:92 InvalidSequenceOfMethodCalls
+28 CryptoStreamUtils$ createKey CryptoStreamUtils.scala:119 InvalidSequenceOfMethodCalls
+29 CryptoStreamUtils$ createKey CryptoStreamUtils.scala:120 UnsafeAlgorithm
+30 CryptoStreamUtils$ createKey CryptoStreamUtils.scala:120 InvalidSequenceOfMethodCalls
+31 CryptoStreamUtils$CryptoParams <init> CryptoStreamUtils.scala:162 UnsatisfiedConstraint
+32 CryptoStreamUtils$CryptoParams <init> CryptoStreamUtils.scala:162 InvalidSequenceOfMethodCalls
+33 CryptoStreamUtils$ createWritableChannel CryptoStreamUtils.scala:74 UnsatisfiedConstraint
+34 CryptoStreamUtils$ createWritableChannel CryptoStreamUtils.scala:74 InvalidSequenceOfMethodCalls
+35 CryptoStreamUtils$ createReadableChannel CryptoStreamUtils.scala:104 UnsatisfiedConstraint
+36 CryptoStreamUtils$ createReadableChannel CryptoStreamUtils.scala:104 InvalidSequenceOfMethodCalls
+37 CryptoStreamUtils$ createCryptoOutputStream CryptoStreamUtils.scala:58 UnsatisfiedConstraint
+38 CryptoStreamUtils$ createCryptoOutputStream CryptoStreamUtils.scala:58 InvalidSequenceOfMethodCalls
+39 CryptoStreamUtils$ createCryptoInputStream CryptoStreamUtils.scala:88 UnsatisfiedConstraint
+40 CryptoStreamUtils$ createCryptoInputStream CryptoStreamUtils.scala:88 InvalidSequenceOfMethodCalls
+41 LauncherServer createSecret LauncherServer.java:271 InvalidSequenceOfMethodCalls
+42 SecurityManager$$anonfun$2 apply SecurityManager.scala:268 InvalidSequenceOfMethodCalls
+43 SslContextFactory getKeyManagers SslContextFactory.java:1087 UnsafeAlgorithm
+44 SslContextFactory load SslContextFactory.java:306 InvalidSequenceOfMethodCalls
+45 SslContextFactory load SslContextFactory.java:307 UnsafeProtocol
+46 SslContextFactory load SslContextFactory.java:307 InvalidSequenceOfMethodCalls
+47 TestUtils$ httpResponseCode TestUtils.scala:213 InvalidSequenceOfMethodCalls
+48 TestUtils$ httpResponseCode TestUtils.scala:222 UnsafeProtocol
+49 TestUtils$ httpResponseCode TestUtils.scala:222 InvalidSequenceOfMethodCalls
+50 scala:105) org.apache.spark.SSLOptions.liftedTree1$1(SSLOptions.scala:105) org.apache.spark.SSLOptions.liftedTree1$1(SSLOptions.scala:105) InvalidSequenceOfMethodCalls
+51 scala:108) org.apache.spark.SSLOptions.liftedTree1$1(SSLOptions.scala:108) org.apache.spark.SSLOptions.liftedTree1$1(SSLOptions.scala:108) UnsafeProtocol
+52 scala:108) org.apache.spark.SSLOptions.liftedTree1$1(SSLOptions.scala:108) org.apache.spark.SSLOptions.liftedTree1$1(SSLOptions.scala:108) InvalidSequenceOfMethodCalls
+53 SequenceFile$Writer <init> SequenceFile.java:854 UnsafeAlgorithm
+54 SequenceFile$Writer <init> SequenceFile.java:854 InvalidSequenceOfMethodCalls
+55 SequenceFile$Writer <init> SequenceFile.java:855 InvalidSequenceOfMethodCalls
+
+=== FINAL ===
+REFERENCE_ORDER_ANALYSIS_COMPLETE
+NOTE: CSV ordering alone cannot prove
+which tests produced repeated events.

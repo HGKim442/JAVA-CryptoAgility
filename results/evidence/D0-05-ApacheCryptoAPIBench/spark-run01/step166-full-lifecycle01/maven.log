@@ -1,0 +1,44 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Spark Project Parent POM                                           [pom]
+[INFO] Spark Project Tags                                                 [jar]
+[INFO] Spark Project Local DB                                             [jar]
+[INFO] Spark Project Networking                                           [jar]
+[INFO] Spark Project Shuffle Streaming Service                            [jar]
+[INFO] Spark Project Unsafe                                               [jar]
+[INFO] Spark Project Launcher                                             [jar]
+[INFO] Spark Project Core                                                 [jar]
+[INFO] 
+[INFO] -----------------< org.apache.spark:spark-parent_2.11 >-----------------
+[INFO] Building Spark Project Parent POM 2.4.0-SNAPSHOT                   [1/8]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[WARNING] The POM for org.apache.maven.plugins:maven-clean-plugin:jar:3.0.0 is missing, no dependency information available
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Spark Project Parent POM 2.4.0-SNAPSHOT:
+[INFO] 
+[INFO] Spark Project Parent POM ........................... FAILURE [  0.105 s]
+[INFO] Spark Project Tags ................................. SKIPPED
+[INFO] Spark Project Local DB ............................. SKIPPED
+[INFO] Spark Project Networking ........................... SKIPPED
+[INFO] Spark Project Shuffle Streaming Service ............ SKIPPED
+[INFO] Spark Project Unsafe ............................... SKIPPED
+[INFO] Spark Project Launcher ............................. SKIPPED
+[INFO] Spark Project Core ................................. SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.265 s
+[INFO] Finished at: 2026-10-19T18:13:23+09:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Plugin org.apache.maven.plugins:maven-clean-plugin:3.0.0 or one of its dependencies could not be resolved:
+[ERROR] 	Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.apache.maven.plugins:maven-clean-plugin:jar:3.0.0 has not been downloaded from it before.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/PluginResolutionException

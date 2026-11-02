@@ -1,0 +1,156 @@
+Compiled from "ErrorSummary.java"
+public class br.unb.cic.mop.eh.ErrorSummary {
+  public java.lang.String spec;
+
+  public java.lang.String error;
+
+  public java.lang.String classQualifiedName;
+
+  public java.lang.String methodName;
+
+  public java.lang.String location;
+
+  public br.unb.cic.mop.eh.ErrorSummary();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public boolean equals(java.lang.Object);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: if_acmpne     7
+       5: iconst_1
+       6: ireturn
+       7: aload_1
+       8: ifnull        22
+      11: aload_0
+      12: invokevirtual #2                  // Method java/lang/Object.getClass:()Ljava/lang/Class;
+      15: aload_1
+      16: invokevirtual #2                  // Method java/lang/Object.getClass:()Ljava/lang/Class;
+      19: if_acmpeq     24
+      22: iconst_0
+      23: ireturn
+      24: aload_1
+      25: checkcast     #3                  // class br/unb/cic/mop/eh/ErrorSummary
+      28: astore_2
+      29: aload_0
+      30: getfield      #4                  // Field spec:Ljava/lang/String;
+      33: aload_2
+      34: getfield      #4                  // Field spec:Ljava/lang/String;
+      37: invokestatic  #5                  // Method java/util/Objects.equals:(Ljava/lang/Object;Ljava/lang/Object;)Z
+      40: ifeq          103
+      43: aload_0
+      44: getfield      #6                  // Field error:Ljava/lang/String;
+      47: aload_2
+      48: getfield      #6                  // Field error:Ljava/lang/String;
+      51: invokestatic  #5                  // Method java/util/Objects.equals:(Ljava/lang/Object;Ljava/lang/Object;)Z
+      54: ifeq          103
+      57: aload_0
+      58: getfield      #7                  // Field classQualifiedName:Ljava/lang/String;
+      61: aload_2
+      62: getfield      #7                  // Field classQualifiedName:Ljava/lang/String;
+      65: invokestatic  #5                  // Method java/util/Objects.equals:(Ljava/lang/Object;Ljava/lang/Object;)Z
+      68: ifeq          103
+      71: aload_0
+      72: getfield      #8                  // Field methodName:Ljava/lang/String;
+      75: aload_2
+      76: getfield      #8                  // Field methodName:Ljava/lang/String;
+      79: invokestatic  #5                  // Method java/util/Objects.equals:(Ljava/lang/Object;Ljava/lang/Object;)Z
+      82: ifeq          103
+      85: aload_0
+      86: getfield      #9                  // Field location:Ljava/lang/String;
+      89: aload_2
+      90: getfield      #9                  // Field location:Ljava/lang/String;
+      93: invokestatic  #5                  // Method java/util/Objects.equals:(Ljava/lang/Object;Ljava/lang/Object;)Z
+      96: ifeq          103
+      99: iconst_1
+     100: goto          104
+     103: iconst_0
+     104: ireturn
+
+  public int hashCode();
+    Code:
+       0: iconst_5
+       1: anewarray     #10                 // class java/lang/Object
+       4: dup
+       5: iconst_0
+       6: aload_0
+       7: getfield      #4                  // Field spec:Ljava/lang/String;
+      10: aastore
+      11: dup
+      12: iconst_1
+      13: aload_0
+      14: getfield      #6                  // Field error:Ljava/lang/String;
+      17: aastore
+      18: dup
+      19: iconst_2
+      20: aload_0
+      21: getfield      #7                  // Field classQualifiedName:Ljava/lang/String;
+      24: aastore
+      25: dup
+      26: iconst_3
+      27: aload_0
+      28: getfield      #8                  // Field methodName:Ljava/lang/String;
+      31: aastore
+      32: dup
+      33: iconst_4
+      34: aload_0
+      35: getfield      #9                  // Field location:Ljava/lang/String;
+      38: aastore
+      39: invokestatic  #11                 // Method java/util/Objects.hash:([Ljava/lang/Object;)I
+      42: ireturn
+
+  public java.lang.String toString();
+    Code:
+       0: ldc           #12                 // String %s,%s,%s,%s,%s,%s
+       2: bipush        6
+       4: anewarray     #10                 // class java/lang/Object
+       7: dup
+       8: iconst_0
+       9: aload_0
+      10: getfield      #4                  // Field spec:Ljava/lang/String;
+      13: aastore
+      14: dup
+      15: iconst_1
+      16: aload_0
+      17: getfield      #7                  // Field classQualifiedName:Ljava/lang/String;
+      20: aastore
+      21: dup
+      22: iconst_2
+      23: aload_0
+      24: invokespecial #13                 // Method className:()Ljava/lang/String;
+      27: aastore
+      28: dup
+      29: iconst_3
+      30: aload_0
+      31: getfield      #8                  // Field methodName:Ljava/lang/String;
+      34: aastore
+      35: dup
+      36: iconst_4
+      37: aload_0
+      38: getfield      #9                  // Field location:Ljava/lang/String;
+      41: aastore
+      42: dup
+      43: iconst_5
+      44: aload_0
+      45: getfield      #6                  // Field error:Ljava/lang/String;
+      48: aastore
+      49: invokestatic  #14                 // Method java/lang/String.format:(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+      52: areturn
+
+  private java.lang.String className();
+    Code:
+       0: aload_0
+       1: getfield      #7                  // Field classQualifiedName:Ljava/lang/String;
+       4: astore_1
+       5: aload_1
+       6: aload_1
+       7: ldc           #15                 // String .
+       9: invokevirtual #16                 // Method java/lang/String.lastIndexOf:(Ljava/lang/String;)I
+      12: iconst_1
+      13: iadd
+      14: invokevirtual #17                 // Method java/lang/String.substring:(I)Ljava/lang/String;
+      17: areturn
+}

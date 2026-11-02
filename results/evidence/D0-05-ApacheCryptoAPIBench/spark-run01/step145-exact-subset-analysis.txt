@@ -1,0 +1,52 @@
+=== 1. VERIFIED INPUTS ===
+REFERENCE_ROWS: 55
+REFERENCE_TYPES: 43
+VERIFIED_RUNS: 13
+crypto-wrapper-exact01-summary.csv ROWS: 13
+keyprop-exact01-driver-summary.csv ROWS: 7
+keyprop-exact01-worker-summary.csv ROWS: 4
+sslop-suite01-summary.csv ROWS: 3
+authengine-suite02-summary.csv ROWS: 8
+authintegration-suite01-summary.csv ROWS: 12
+securitymanager-suite01-summary.csv ROWS: 1
+diskstore-suite01-summary.csv ROWS: 9
+filesuite01-summary.csv ROWS: 3
+javaapi-suite01-summary.csv ROWS: 3
+uisuite01-summary.csv ROWS: 7
+uiselenium01-summary.csv ROWS: 3
+launcher-suite01-summary.csv ROWS: 1
+
+=== 2. EXHAUSTIVE SUBSET SEARCH ===
+SUBSETS_TESTED: 8191
+FULL_COVERAGE_SUBSETS: 4
+EXACT_MULTISET_SUBSETS: 0
+
+=== 3. BEST FULL-COVERAGE SUBSETS ===
+MINIMUM_EXCESS: 2
+MINIMUM_RUNS_AT_THAT_EXCESS: 11
+OPTIMAL_SUBSET_COUNT: 1
+
+BEST_SUBSET_1
+  crypto-wrapper-exact01-summary.csv
+  keyprop-exact01-driver-summary.csv
+  keyprop-exact01-worker-summary.csv
+  sslop-suite01-summary.csv
+  authintegration-suite01-summary.csv
+  securitymanager-suite01-summary.csv
+  filesuite01-summary.csv
+  javaapi-suite01-summary.csv
+  uisuite01-summary.csv
+  uiselenium01-summary.csv
+  launcher-suite01-summary.csv
+
+=== 4. EXACT MULTISET SUBSETS ===
+
+=== 5. INTERPRETATION ===
+NO_EXACT_SUBSET_FOUND
+BEST_SUBSET_HAS_EXCESS
+
+=== FINAL ===
+STEP_145_COMPLETE
+NO_TEST_EXECUTION
+NO_SOURCE_MODIFICATION
+NO_POSTHOC_SUCCESS_CLAIM

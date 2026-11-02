@@ -1,0 +1,41 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.spark:spark-parent_2.11:pom:2.4.0-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.apache.spark:spark-parent_2.11:2.4.0-SNAPSHOT (/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/pom.xml) points at br.unb.cic:mop-test-suite-b04 instead of org.apache:apache, please verify your project structure @ line 22, column 11
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ------------------< org.apache.spark:spark-core_2.11 >------------------
+[INFO] Building Spark Project Core 2.4.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- scalatest:1.0:test (default-cli) @ spark-core_2.11 ---
+Run starting. Expected test count is: 10
+UISuite:
+- basic ui visibility !!! IGNORED !!!
+- visibility at localhost:4040 !!! IGNORED !!!
+- jetty selects different port under contention
+- jetty with https selects different port under contention
+- jetty binds to port 0 correctly
+- jetty with https binds to port 0 correctly
+- verify webUrl contains the scheme
+- verify webUrl contains the port
+- verify proxy rewrittenURI
+- verify rewriting location header for reverse proxy
+- http -> https redirect applies to all URIs
+- specify both http and https ports separately
+Run completed in 6 seconds, 960 milliseconds.
+Total number of tests run: 10
+Suites: completed 1, aborted 0
+Tests: succeeded 10, failed 0, canceled 0, ignored 2, pending 0
+All tests passed.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  11.229 s
+[INFO] Finished at: 2026-10-19T11:29:36+09:00
+[INFO] ------------------------------------------------------------------------

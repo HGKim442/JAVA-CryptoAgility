@@ -1,0 +1,108 @@
+=== 1. AGENT RESET CALLSITE CANDIDATES ===
+CANDIDATE_CLASSES: 22
+DIRECT_RESET_CALLS_FOUND: 0
+CANDIDATE_SCAN_LIMIT: 60
+ALL_CANDIDATES_SCANNED: True
+
+=== 2. SPARK SOURCE RESET REFERENCES ===
+SOURCE_FILES_SCANNED: 1320
+SOURCE_HITS: 0
+
+=== 3. ORIGINAL CSV EVENT ORDER ===
+TOTAL_REFERENCE_EVENTS: 55
+01 | CryptoStreamUtils$ | createKey | CryptoStreamUtils.scala:119 | KeyGeneratorSpec | InvalidSequenceOfMethodCalls
+02 | CryptoStreamUtils$ | createKey | CryptoStreamUtils.scala:120 | KeyGeneratorSpec | UnsafeAlgorithm
+03 | CryptoStreamUtils$ | createKey | CryptoStreamUtils.scala:120 | KeyGeneratorSpec | InvalidSequenceOfMethodCalls
+04 | CryptoStreamUtils$CryptoParams | <init> | CryptoStreamUtils.scala:162 | SecretKeySpecSpec | UnsatisfiedConstraint
+05 | CryptoStreamUtils$CryptoParams | <init> | CryptoStreamUtils.scala:162 | SecretKeySpecSpec | InvalidSequenceOfMethodCalls
+06 | CryptoStreamUtils$ | createCryptoOutputStream | CryptoStreamUtils.scala:58 | IvParameterSpecSpec | UnsatisfiedConstraint
+07 | CryptoStreamUtils$ | createCryptoOutputStream | CryptoStreamUtils.scala:58 | IvParameterSpecSpec | InvalidSequenceOfMethodCalls
+08 | CryptoStreamUtils$ | createCryptoInputStream | CryptoStreamUtils.scala:88 | IvParameterSpecSpec | UnsatisfiedConstraint
+09 | CryptoStreamUtils$ | createCryptoInputStream | CryptoStreamUtils.scala:88 | IvParameterSpecSpec | InvalidSequenceOfMethodCalls
+10 | SequenceFile$Writer | <init> | SequenceFile.java:854 | MessageDigestSpec | UnsafeAlgorithm
+11 | SequenceFile$Writer | <init> | SequenceFile.java:854 | MessageDigestSpec | InvalidSequenceOfMethodCalls
+12 | SequenceFile$Writer | <init> | SequenceFile.java:855 | MessageDigestSpec | InvalidSequenceOfMethodCalls
+13 | HtmlUnitSSLConnectionSocketFactory | buildSSLSocketFactory | HtmlUnitSSLConnectionSocketFactory.java:109 | SSLContextSpec | InvalidSequenceOfMethodCalls
+14 | HtmlUnitSSLConnectionSocketFactory | buildSSLSocketFactory | HtmlUnitSSLConnectionSocketFactory.java:110 | SSLContextSpec | UnsafeProtocol
+15 | HtmlUnitSSLConnectionSocketFactory | buildSSLSocketFactory | HtmlUnitSSLConnectionSocketFactory.java:110 | SSLContextSpec | InvalidSequenceOfMethodCalls
+16 | AuthEngine | generateKey | AuthEngine.java:232 | PBEKeySpec | UnsatisfiedConstraint
+17 | AuthEngine | generateKey | AuthEngine.java:232 | PBEKeySpec | InvalidSequenceOfMethodCalls
+18 | AuthEngine | generateKey | AuthEngine.java:241 | SecretKeySpecSpec | UnsatisfiedConstraint
+19 | AuthEngine | generateKey | AuthEngine.java:241 | SecretKeySpecSpec | InvalidSequenceOfMethodCalls
+20 | AuthEngine | initializeForAuth | AuthEngine.java:209 | IvParameterSpecSpec | UnsatisfiedConstraint
+21 | AuthEngine | initializeForAuth | AuthEngine.java:209 | IvParameterSpecSpec | InvalidSequenceOfMethodCalls
+22 | AuthEngine | initializeForAuth | AuthEngine.java:212 | IvParameterSpecSpec | UnsatisfiedConstraint
+23 | AuthEngine | initializeForAuth | AuthEngine.java:212 | IvParameterSpecSpec | InvalidSequenceOfMethodCalls
+24 | TransportCipher | createOutputStream | TransportCipher.java:88 | IvParameterSpecSpec | UnsatisfiedConstraint
+25 | TransportCipher | createOutputStream | TransportCipher.java:88 | IvParameterSpecSpec | InvalidSequenceOfMethodCalls
+26 | TransportCipher | createInputStream | TransportCipher.java:92 | IvParameterSpecSpec | UnsatisfiedConstraint
+27 | TransportCipher | createInputStream | TransportCipher.java:92 | IvParameterSpecSpec | InvalidSequenceOfMethodCalls
+28 | CryptoStreamUtils$ | createKey | CryptoStreamUtils.scala:119 | KeyGeneratorSpec | InvalidSequenceOfMethodCalls
+29 | CryptoStreamUtils$ | createKey | CryptoStreamUtils.scala:120 | KeyGeneratorSpec | UnsafeAlgorithm
+30 | CryptoStreamUtils$ | createKey | CryptoStreamUtils.scala:120 | KeyGeneratorSpec | InvalidSequenceOfMethodCalls
+31 | CryptoStreamUtils$CryptoParams | <init> | CryptoStreamUtils.scala:162 | SecretKeySpecSpec | UnsatisfiedConstraint
+32 | CryptoStreamUtils$CryptoParams | <init> | CryptoStreamUtils.scala:162 | SecretKeySpecSpec | InvalidSequenceOfMethodCalls
+33 | CryptoStreamUtils$ | createWritableChannel | CryptoStreamUtils.scala:74 | IvParameterSpecSpec | UnsatisfiedConstraint
+34 | CryptoStreamUtils$ | createWritableChannel | CryptoStreamUtils.scala:74 | IvParameterSpecSpec | InvalidSequenceOfMethodCalls
+35 | CryptoStreamUtils$ | createReadableChannel | CryptoStreamUtils.scala:104 | IvParameterSpecSpec | UnsatisfiedConstraint
+36 | CryptoStreamUtils$ | createReadableChannel | CryptoStreamUtils.scala:104 | IvParameterSpecSpec | InvalidSequenceOfMethodCalls
+37 | CryptoStreamUtils$ | createCryptoOutputStream | CryptoStreamUtils.scala:58 | IvParameterSpecSpec | UnsatisfiedConstraint
+38 | CryptoStreamUtils$ | createCryptoOutputStream | CryptoStreamUtils.scala:58 | IvParameterSpecSpec | InvalidSequenceOfMethodCalls
+39 | CryptoStreamUtils$ | createCryptoInputStream | CryptoStreamUtils.scala:88 | IvParameterSpecSpec | UnsatisfiedConstraint
+40 | CryptoStreamUtils$ | createCryptoInputStream | CryptoStreamUtils.scala:88 | IvParameterSpecSpec | InvalidSequenceOfMethodCalls
+41 | LauncherServer | createSecret | LauncherServer.java:271 | SecureRandomSpec | InvalidSequenceOfMethodCalls
+42 | SecurityManager$$anonfun$2 | apply | SecurityManager.scala:268 | KeyStoreSpec | InvalidSequenceOfMethodCalls
+43 | SslContextFactory | getKeyManagers | SslContextFactory.java:1087 | KeyManagerFactorySpec | UnsafeAlgorithm
+44 | SslContextFactory | load | SslContextFactory.java:306 | SSLContextSpec | InvalidSequenceOfMethodCalls
+45 | SslContextFactory | load | SslContextFactory.java:307 | SSLContextSpec | UnsafeProtocol
+46 | SslContextFactory | load | SslContextFactory.java:307 | SSLContextSpec | InvalidSequenceOfMethodCalls
+47 | TestUtils$ | httpResponseCode | TestUtils.scala:213 | SSLContextSpec | InvalidSequenceOfMethodCalls
+48 | TestUtils$ | httpResponseCode | TestUtils.scala:222 | SSLContextSpec | UnsafeProtocol
+49 | TestUtils$ | httpResponseCode | TestUtils.scala:222 | SSLContextSpec | InvalidSequenceOfMethodCalls
+50 | scala:105) | org.apache.spark.SSLOptions.liftedTree1$1(SSLOptions.scala:105) | org.apache.spark.SSLOptions.liftedTree1$1(SSLOptions.scala:105) | SSLContextSpec | InvalidSequenceOfMethodCalls
+51 | scala:108) | org.apache.spark.SSLOptions.liftedTree1$1(SSLOptions.scala:108) | org.apache.spark.SSLOptions.liftedTree1$1(SSLOptions.scala:108) | SSLContextSpec | UnsafeProtocol
+52 | scala:108) | org.apache.spark.SSLOptions.liftedTree1$1(SSLOptions.scala:108) | org.apache.spark.SSLOptions.liftedTree1$1(SSLOptions.scala:108) | SSLContextSpec | InvalidSequenceOfMethodCalls
+53 | SequenceFile$Writer | <init> | SequenceFile.java:854 | MessageDigestSpec | UnsafeAlgorithm
+54 | SequenceFile$Writer | <init> | SequenceFile.java:854 | MessageDigestSpec | InvalidSequenceOfMethodCalls
+55 | SequenceFile$Writer | <init> | SequenceFile.java:855 | MessageDigestSpec | InvalidSequenceOfMethodCalls
+
+=== 4. CONTIGUOUS CLASS BLOCKS ===
+TOTAL_BLOCKS: 17
+ROWS=1-3 COUNT=3 CLASS=CryptoStreamUtils$
+ROWS=4-5 COUNT=2 CLASS=CryptoStreamUtils$CryptoParams
+ROWS=6-9 COUNT=4 CLASS=CryptoStreamUtils$
+ROWS=10-12 COUNT=3 CLASS=SequenceFile$Writer
+ROWS=13-15 COUNT=3 CLASS=HtmlUnitSSLConnectionSocketFactory
+ROWS=16-23 COUNT=8 CLASS=AuthEngine
+ROWS=24-27 COUNT=4 CLASS=TransportCipher
+ROWS=28-30 COUNT=3 CLASS=CryptoStreamUtils$
+ROWS=31-32 COUNT=2 CLASS=CryptoStreamUtils$CryptoParams
+ROWS=33-40 COUNT=8 CLASS=CryptoStreamUtils$
+ROWS=41-41 COUNT=1 CLASS=LauncherServer
+ROWS=42-42 COUNT=1 CLASS=SecurityManager$$anonfun$2
+ROWS=43-46 COUNT=4 CLASS=SslContextFactory
+ROWS=47-49 COUNT=3 CLASS=TestUtils$
+ROWS=50-50 COUNT=1 CLASS=scala:105)
+ROWS=51-52 COUNT=2 CLASS=scala:108)
+ROWS=53-55 COUNT=3 CLASS=SequenceFile$Writer
+
+=== 5. ORIGINAL TEST EXECUTION SCRIPT ===
+EXECUTE_SH:7: mvn clean test -pl artemis-commons --also-make
+EXECUTE_SH:13: mvn clean test -pl deltaspike/core/impl --also-make
+EXECUTE_SH:19: mvn clean test -pl kerberos-codec --also-make
+EXECUTE_SH:25: mvn clean test -pl framework/core --also-make
+EXECUTE_SH:31: mvn clean test -pl meecrowave-core -am
+EXECUTE_SH:35: ##### SPARK #############################################################
+EXECUTE_SH:36: cd spark/
+EXECUTE_SH:37: mvn clean test -pl core -am
+EXECUTE_SH:43: mvn clean test -pl tika-core -am
+EXECUTE_SH:49: #mvn clean test -pl container/openejb-core -am
+EXECUTE_SH:55: mvn clean test -pl wicket-util -am
+
+=== FINAL ===
+STEP_160_COMPLETE
+STATIC_CALLSITE_SEARCH_ONLY
+ABSENCE_OF_DIRECT_CALL_NOT_PROOF_OF_NO_RESET
+CSV_ROW_ORDER_NOT_PROVEN_CHRONOLOGICAL
+NO_TEST_EXECUTION
+NO_SOURCE_MODIFICATION

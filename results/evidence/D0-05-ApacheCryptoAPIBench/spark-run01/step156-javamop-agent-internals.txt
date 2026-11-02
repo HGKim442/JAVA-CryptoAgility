@@ -1,0 +1,173 @@
+=== 1. AGENT INFORMATION ===
+AGENT: /home/RESEARCHER/pqc-research/D0-rvsec/RVSec-replication-package/ApacheCryptoAPIBench/apache_codes/spark/core/JavaMOPAgent.jar
+SHA256: 34ce5560e377ac8b482025abd9d60c95e7e3380994a51250f6ebe4ff1bc5f675
+SIZE: 2358927
+
+=== 2. MANIFEST ===
+Manifest-Version: 1.0
+Implementation-Title: org.aspectj.weaver
+Premain-Class: org.aspectj.weaver.loadtime.Agent
+Implementation-Version: DEVELOPMENT
+Specification-Vendor: aspectj.org
+Can-Redefine-Classes: true
+Name: org/aspectj/weaver/
+Specification-Title: AspectJ Weaver Classes
+Specification-Version: DEVELOPMENT
+Created-By: 1.8.0_312 (Private Build)
+Implementation-Vendor: aspectj.org
+
+
+
+=== 3. JAR CONTENT OVERVIEW ===
+TOTAL_ENTRIES: 1274
+CLASS_FILES: 1190
+
+=== 4. POSSIBLE REPORTING CLASSES ===
+CANDIDATE_CLASSES: 30
+CLASS: br/unb/cic/mop/eh/logger/CSVLogger.class
+CLASS: br/unb/cic/mop/eh/logger/ILogger.class
+CLASS: br/unb/cic/mop/eh/report/IErrorReport.class
+CLASS: br/unb/cic/mop/eh/report/STDOutputReport.class
+CLASS: br/unb/cic/mop/eh/report/DefaultReport.class
+CLASS: mop/CipherOutputStreamSpecMonitor_Set.class
+CLASS: mop/CipherOutputStreamSpecMonitor.class
+CLASS: org/aspectj/bridge/MessageWriter.class
+CLASS: org/aspectj/weaver/ConstantPoolWriter.class
+CLASS: org/aspectj/weaver/patterns/PointcutRewriter.class
+CLASS: org/aspectj/weaver/tools/cache/CacheStatistics.class
+CLASS: org/aspectj/weaver/tools/WeavingAdaptor$WeavingAdaptorMessageWriter.class
+CLASS: org/aspectj/weaver/CompressingDataOutputStream.class
+CLASS: org/aspectj/weaver/bcel/BcelConstantPoolWriter.class
+CLASS: org/aspectj/weaver/bcel/asm/StackMapAdder$AspectJConnectClassWriter.class
+CLASS: com/runtimeverification/rvmonitor/java/rt/RVMLogging$Level.class
+CLASS: com/runtimeverification/rvmonitor/java/rt/RVMLoggingAll.class
+CLASS: com/runtimeverification/rvmonitor/java/rt/RVMLoggingUnique$1.class
+CLASS: com/runtimeverification/rvmonitor/java/rt/ViolationRecorder.class
+CLASS: com/runtimeverification/rvmonitor/java/rt/RVMLoggingWarning.class
+CLASS: com/runtimeverification/rvmonitor/java/rt/RVMLoggingCritical.class
+CLASS: com/runtimeverification/rvmonitor/java/rt/mop$NullOutputStream.class
+CLASS: com/runtimeverification/rvmonitor/java/rt/RVMLogging.class
+CLASS: com/runtimeverification/rvmonitor/java/rt/RVMLoggingUnique.class
+CLASS: com/runtimeverification/rvmonitor/java/rt/RVMLoggingNone.class
+CLASS: aj/org/objectweb/asm/MethodWriter.class
+CLASS: aj/org/objectweb/asm/AnnotationWriter.class
+CLASS: aj/org/objectweb/asm/ClassWriter.class
+CLASS: aj/org/objectweb/asm/FieldWriter.class
+CLASS: aj/org/objectweb/asm/signature/SignatureWriter.class
+
+=== 5. CSV AND DEDUP REFERENCES ===
+MATCHING_CLASSES: 76
+CLASS: br/unb/cic/mop/eh/ErrorType.class REFERENCES: InvalidSequenceOfMethodCalls,UnsatisfiedConstraint
+CLASS: br/unb/cic/mop/eh/logger/CSVLogger.class REFERENCES: summary.csv,output/summary,PrintWriter,FileWriter
+CLASS: br/unb/cic/mop/eh/report/DefaultReport.class REFERENCES: HashSet,PrintWriter
+CLASS: br/unb/cic/mop/eh/ErrorCollector.class REFERENCES: HashSet
+CLASS: br/unb/cic/mop/ExecutionContext.class REFERENCES: HashSet
+CLASS: mop/KeyManagerFactorySpecMonitor.class REFERENCES: InvalidSequenceOfMethodCalls
+CLASS: mop/SignatureSpecMonitor.class REFERENCES: InvalidSequenceOfMethodCalls
+CLASS: mop/KeyGeneratorSpecMonitor.class REFERENCES: InvalidSequenceOfMethodCalls
+CLASS: mop/KeyPairGeneratorSpecMonitor.class REFERENCES: InvalidSequenceOfMethodCalls
+CLASS: mop/KeyStoreSpecMonitor.class REFERENCES: InvalidSequenceOfMethodCalls
+CLASS: mop/TrustManagerFactorySpecMonitor.class REFERENCES: InvalidSequenceOfMethodCalls
+CLASS: mop/DHGenParameterSpecSpecMonitor.class REFERENCES: InvalidSequenceOfMethodCalls
+CLASS: mop/CipherOutputStreamSpecMonitor.class REFERENCES: InvalidSequenceOfMethodCalls
+CLASS: mop/GCMParameterSpecSpecMonitor.class REFERENCES: InvalidSequenceOfMethodCalls
+CLASS: mop/SecureRandomSpecMonitor.class REFERENCES: InvalidSequenceOfMethodCalls,UnsatisfiedConstraint
+CLASS: mop/MessageDigestSpecMonitor.class REFERENCES: InvalidSequenceOfMethodCalls
+CLASS: mop/SSLContextSpecMonitor.class REFERENCES: InvalidSequenceOfMethodCalls
+CLASS: mop/PBEParameterSpecSpecMonitor.class REFERENCES: InvalidSequenceOfMethodCalls
+CLASS: mop/IvParameterSpecSpecMonitor.class REFERENCES: InvalidSequenceOfMethodCalls,UnsatisfiedConstraint
+CLASS: mop/MacSpecMonitor.class REFERENCES: InvalidSequenceOfMethodCalls
+CLASS: mop/PBEKeySpecSpecMonitor.class REFERENCES: InvalidSequenceOfMethodCalls,UnsatisfiedConstraint
+CLASS: mop/KeyPairSpecMonitor.class REFERENCES: InvalidSequenceOfMethodCalls
+CLASS: mop/HMACParameterSpecSpecMonitor.class REFERENCES: InvalidSequenceOfMethodCalls
+CLASS: mop/CipherSpecMonitor.class REFERENCES: InvalidSequenceOfMethodCalls
+CLASS: mop/CipherInputStreamSpecMonitor.class REFERENCES: InvalidSequenceOfMethodCalls
+CLASS: mop/SecretKeySpecSpecMonitor.class REFERENCES: InvalidSequenceOfMethodCalls,UnsatisfiedConstraint
+CLASS: org/aspectj/apache/bcel/generic/InstructionHandle.class REFERENCES: HashSet
+CLASS: org/aspectj/bridge/MessageWriter.class REFERENCES: PrintWriter
+CLASS: org/aspectj/bridge/MessageUtil.class REFERENCES: PrintWriter
+CLASS: org/aspectj/bridge/context/PinpointingMessageHandler.class REFERENCES: PrintWriter
+CLASS: org/aspectj/bridge/IMessageHandler.class REFERENCES: PrintWriter
+CLASS: org/aspectj/bridge/AbortException.class REFERENCES: PrintWriter
+CLASS: org/aspectj/util/LangUtil.class REFERENCES: PrintWriter
+CLASS: org/aspectj/util/FileUtil.class REFERENCES: FileWriter
+CLASS: org/aspectj/asm/AsmManager.class REFERENCES: HashSet,FileWriter
+CLASS: org/aspectj/lang/SoftException.class REFERENCES: PrintWriter
+CLASS: org/aspectj/weaver/ResolvedMemberImpl.class REFERENCES: HashSet
+CLASS: org/aspectj/weaver/ResolvedType$SuperInterfaceWalker.class REFERENCES: HashSet
+CLASS: org/aspectj/weaver/ResolvedType.class REFERENCES: HashSet
+CLASS: org/aspectj/weaver/MemberImpl.class REFERENCES: HashSet
+CLASS: org/aspectj/weaver/CrosscuttingMembersSet.class REFERENCES: HashSet
+CLASS: org/aspectj/weaver/JoinPointSignatureIterator.class REFERENCES: HashSet
+CLASS: org/aspectj/weaver/WeaverStateInfo.class REFERENCES: HashSet
+CLASS: org/aspectj/weaver/ShadowMunger.class REFERENCES: HashSet
+CLASS: org/aspectj/weaver/StandardAnnotation.class REFERENCES: HashSet
+CLASS: org/aspectj/weaver/World.class REFERENCES: HashSet
+CLASS: org/aspectj/weaver/loadtime/ClassLoaderWeavingAdaptor.class REFERENCES: HashSet
+CLASS: org/aspectj/weaver/BCException.class REFERENCES: PrintWriter
+CLASS: org/aspectj/weaver/ltw/LTWWorld.class REFERENCES: ConcurrentHashMap
+CLASS: org/aspectj/weaver/ResolvedTypeMunger.class REFERENCES: HashSet
+CLASS: org/aspectj/weaver/tools/WeavingAdaptor$WeavingAdaptorMessageHolder.class REFERENCES: PrintWriter
+CLASS: org/aspectj/weaver/tools/PointcutParser.class REFERENCES: HashSet
+CLASS: org/aspectj/weaver/tools/WeavingAdaptor$WeavingAdaptorMessageWriter.class REFERENCES: HashSet,PrintWriter
+CLASS: org/aspectj/weaver/tools/WeavingAdaptor.class REFERENCES: PrintWriter
+CLASS: org/aspectj/weaver/tools/StandardPointcutParser.class REFERENCES: HashSet
+CLASS: org/aspectj/weaver/Shadow.class REFERENCES: HashSet
+CLASS: org/aspectj/weaver/CrosscuttingMembers.class REFERENCES: HashSet
+CLASS: org/aspectj/weaver/Iterators$1.class REFERENCES: HashSet
+CLASS: org/aspectj/weaver/bcel/LazyMethodGen.class REFERENCES: HashSet
+CLASS: org/aspectj/weaver/bcel/BcelWeaver.class REFERENCES: HashSet
+CLASS: org/aspectj/weaver/bcel/BcelClassWeaver.class REFERENCES: HashSet
+CLASS: org/aspectj/weaver/bcel/BcelAccessForInlineMunger.class REFERENCES: HashSet
+CLASS: org/aspectj/weaver/bcel/BcelAnnotation.class REFERENCES: HashSet
+CLASS: org/aspectj/weaver/bcel/BcelTypeMunger.class REFERENCES: HashSet
+CLASS: org/aspectj/runtime/reflect/MethodSignatureImpl.class REFERENCES: HashSet
+ADDITIONAL_MATCHES: 11
+
+=== 6. TEXT RESOURCES ===
+RESOURCE_FILES: 3
+RESOURCE: org/aspectj/weaver/XlintDefault.properties
+RESOURCE: org/aspectj/weaver/weaver-messages.properties
+RESOURCE: META-INF/aop-ajc.xml
+
+=== 7. ORIGINAL REPORTING SCRIPTS ===
+
+FILE: README.md
+MATCHES: 1
+40:    * **tomee**: executa os testes no original, mas entra em "deadlock" com o JavaMOPAgent.  
+
+FILE: execute.sh
+MATCHES: 0
+
+FILE: run-experiment.sh
+MATCHES: 0
+
+FILE: scripts/analysis-ApacheCryptoAPIBench.Rmd
+MATCHES: 53
+2: title: "JavaMOP"
+34: ```{r load-mop}
+36: mopArtemisCommons <- read.csv("../apache_codes/activemq-artemis/artemis-commons/output/summary.csv", head=T, sep=",")
+37: mopArtemisCommons['module'] <- 'ArtemisCommons'
+39: mopDeltaSpikeCore <- read.csv("../apache_codes/deltaspike/deltaspike/core/impl/output/summary.csv", head=T, sep=",")
+40: mopDeltaSpikeCore['module'] <- 'DeltaSpikeCore'
+42: mopApachedsKerberosCodec <- read.csv("../apache_codes/directory-server/kerberos-codec/output/summary.csv", head=T, sep=",")
+43: mopApachedsKerberosCodec['module'] <- 'ApachedsKerberosCodec'
+45: mopMcfCore <- read.csv("../apache_codes/manifoldcf/framework/core/output/summary.csv", head=T, sep=",")
+46: mopMcfCore['module'] <- 'DeltaMcfCore'
+48: mopMeecrowaveCore <- read.csv("../apache_codes/openwebbeans-meecrowave/meecrowave-core/output/summary.csv", head=T, sep=",")
+49: mopMeecrowaveCore['module'] <- 'MeecrowaveCore'
+51: mopSparkCore <- read.csv("../apache_codes/spark/core/output/summary.csv", head=T, sep=",")
+52: mopSparkCore['module'] <- 'SparkCore'
+54: mopTikaCore <- read.csv("../apache_codes/tika/tika-core/output/summary.csv", head=T, sep=",")
+55: mopTikaCore['module'] <- 'TikaCore'
+57: mopWicketUtil <- read.csv("../apache_codes/wicket/wicket-util/output/summary.csv", head=T, sep=",")
+58: mopWicketUtil['module'] <- 'WicketUtil'
+61: mop <- rbind(mopArtemisCommons, mopDeltaSpikeCore)
+62: mop <- rbind(mop, mopApachedsKerberosCodec)
+
+=== FINAL ===
+STEP_156_COMPLETE
+STATIC_BINARY_INSPECTION_ONLY
+DEDUPLICATION_BEHAVIOR_NOT_YET_PROVEN
+NO_TEST_EXECUTION
+NO_SOURCE_MODIFICATION

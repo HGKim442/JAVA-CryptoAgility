@@ -1,0 +1,62 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.spark:spark-parent_2.11:pom:2.4.0-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.apache.spark:spark-parent_2.11:2.4.0-SNAPSHOT (/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/pom.xml) points at br.unb.cic:mop-test-suite-b04 instead of org.apache:apache, please verify your project structure @ line 22, column 11
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ------------------< org.apache.spark:spark-core_2.11 >------------------
+[INFO] Building Spark Project Core 2.4.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- scalatest:1.0:test (default-cli) @ spark-core_2.11 ---
+Run starting. Expected test count is: 33
+FileSuite:
+- text files
+- text files (compressed)
+- SequenceFiles
+- SequenceFile (compressed)
+- SequenceFile with writable key
+- SequenceFile with writable value
+- SequenceFile with writable key and value
+- implicit conversions in reading SequenceFiles
+- object files of ints
+- object files of complex types
+- object files of classes from a JAR
+- write SequenceFile using new Hadoop API
+- read SequenceFile using new Hadoop API
+- binary file input as byte array
+- portabledatastream caching tests
+- portabledatastream persist disk storage
+- portabledatastream flatmap tests
+- fixed record length binary file as byte array
+- negative binary record length should raise an exception
+- file caching
+- prevent user from overwriting the empty directory (old Hadoop API)
+- prevent user from overwriting the non-empty directory (old Hadoop API)
+- allow user to disable the output directory existence checking (old Hadoop API)
+- prevent user from overwriting the empty directory (new Hadoop API)
+- prevent user from overwriting the non-empty directory (new Hadoop API)
+- allow user to disable the output directory existence checking (new Hadoop API
+- save Hadoop Dataset through old Hadoop API
+- save Hadoop Dataset through new Hadoop API
+- Get input files via old Hadoop API
+- Get input files via new Hadoop API
+- spark.files.ignoreCorruptFiles should work both HadoopRDD and NewHadoopRDD
+- spark.hadoopRDD.ignoreEmptySplits work correctly (old Hadoop API)
+- spark.hadoopRDD.ignoreEmptySplits work correctly (new Hadoop API)
+Run completed in 13 seconds, 400 milliseconds.
+Total number of tests run: 33
+Suites: completed 1, aborted 0
+Tests: succeeded 33, failed 0, canceled 0, ignored 0, pending 0
+All tests passed.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  18.003 s
+[INFO] Finished at: 2026-10-18T21:23:21+09:00
+[INFO] ------------------------------------------------------------------------

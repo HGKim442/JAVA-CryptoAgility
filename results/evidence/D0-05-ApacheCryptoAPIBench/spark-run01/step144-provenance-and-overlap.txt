@@ -1,0 +1,291 @@
+=== 1. EXACT FILE PROVENANCE ===
+
+ REFERENCE
+PATH: /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/spark-reference/summary.csv
+SHA256: 9792a9d9dc54ec4bb1d9e9aeccb7088a448e180d5345b996443800861bedffb5
+SIZE: 8506
+INODE: 231097
+MODIFIED: 2026-10-18T14:05:21.870804+09:00
+
+ PRE_SMOKE
+PATH: /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/spark-run01/pre-smoke-summary.csv
+SHA256: 9792a9d9dc54ec4bb1d9e9aeccb7088a448e180d5345b996443800861bedffb5
+SIZE: 8506
+INODE: 194615
+MODIFIED: 2026-10-18T14:05:21.870804+09:00
+
+ PUBLIC_ORIGINAL
+PATH: /home/RESEARCHER/pqc-research/D0-rvsec/RVSec-replication-package/ApacheCryptoAPIBench/apache_codes/spark/core/output/summary.csv
+SHA256: 9792a9d9dc54ec4bb1d9e9aeccb7088a448e180d5345b996443800861bedffb5
+SIZE: 8506
+INODE: 87609
+MODIFIED: 2026-10-18T14:05:21.870804+09:00
+
+PRE_VS_REFERENCE_BYTE_EQUAL: True
+PRE_VS_ORIGINAL_BYTE_EQUAL: True
+PRE_VS_REFERENCE_MULTISET_EQUAL: True
+
+=== 2. STEP 136 ACTUAL INPUTS ===
+crypto-wrapper-exact01-summary.csv ROWS= 13 HASH_OK= True
+keyprop-exact01-driver-summary.csv ROWS= 7 HASH_OK= True
+keyprop-exact01-worker-summary.csv ROWS= 4 HASH_OK= True
+sslop-suite01-summary.csv ROWS= 3 HASH_OK= True
+authengine-suite02-summary.csv ROWS= 8 HASH_OK= True
+authintegration-suite01-summary.csv ROWS= 12 HASH_OK= True
+securitymanager-suite01-summary.csv ROWS= 1 HASH_OK= True
+diskstore-suite01-summary.csv ROWS= 9 HASH_OK= True
+filesuite01-summary.csv ROWS= 3 HASH_OK= True
+javaapi-suite01-summary.csv ROWS= 3 HASH_OK= True
+uisuite01-summary.csv ROWS= 7 HASH_OK= True
+uiselenium01-summary.csv ROWS= 3 HASH_OK= True
+launcher-suite01-summary.csv ROWS= 1 HASH_OK= True
+
+INPUT_FILES_FOUND: 13
+
+=== 3. RECONSTRUCT STEP 136 UNION ===
+REFERENCE_ROWS: 55
+COMBINED_ROWS: 74
+MATCHED_BOUNDED: 55
+MISSING: 0
+EXCESS: 19
+EXCESS_EVENT_TYPES: 17
+UNEXPECTED_TYPES: 0
+
+=== 4. EXACT EXCESS EVENT BREAKDOWN ===
+
+EXCESS_EVENT_01
+EXCESS: 2
+REFERENCE_COUNT: 2
+COMBINED_COUNT: 4
+SPEC: SecretKeySpecSpec
+CLASS: CryptoStreamUtils$CryptoParams
+METHOD: <init>
+LOCATION: CryptoStreamUtils.scala:162
+ERROR: InvalidSequenceOfMethodCalls
+CONTRIBUTING_EXECUTIONS:
+  crypto-wrapper-exact01-summary.csv COUNT: 1
+  keyprop-exact01-driver-summary.csv COUNT: 1
+  keyprop-exact01-worker-summary.csv COUNT: 1
+  diskstore-suite01-summary.csv COUNT: 1
+
+EXCESS_EVENT_02
+EXCESS: 2
+REFERENCE_COUNT: 2
+COMBINED_COUNT: 4
+SPEC: SecretKeySpecSpec
+CLASS: CryptoStreamUtils$CryptoParams
+METHOD: <init>
+LOCATION: CryptoStreamUtils.scala:162
+ERROR: UnsatisfiedConstraint
+CONTRIBUTING_EXECUTIONS:
+  crypto-wrapper-exact01-summary.csv COUNT: 1
+  keyprop-exact01-driver-summary.csv COUNT: 1
+  keyprop-exact01-worker-summary.csv COUNT: 1
+  diskstore-suite01-summary.csv COUNT: 1
+
+EXCESS_EVENT_03
+EXCESS: 1
+REFERENCE_COUNT: 1
+COMBINED_COUNT: 2
+SPEC: IvParameterSpecSpec
+CLASS: AuthEngine
+METHOD: initializeForAuth
+LOCATION: AuthEngine.java:209
+ERROR: InvalidSequenceOfMethodCalls
+CONTRIBUTING_EXECUTIONS:
+  authengine-suite02-summary.csv COUNT: 1
+  authintegration-suite01-summary.csv COUNT: 1
+
+EXCESS_EVENT_04
+EXCESS: 1
+REFERENCE_COUNT: 1
+COMBINED_COUNT: 2
+SPEC: IvParameterSpecSpec
+CLASS: AuthEngine
+METHOD: initializeForAuth
+LOCATION: AuthEngine.java:209
+ERROR: UnsatisfiedConstraint
+CONTRIBUTING_EXECUTIONS:
+  authengine-suite02-summary.csv COUNT: 1
+  authintegration-suite01-summary.csv COUNT: 1
+
+EXCESS_EVENT_05
+EXCESS: 1
+REFERENCE_COUNT: 1
+COMBINED_COUNT: 2
+SPEC: IvParameterSpecSpec
+CLASS: AuthEngine
+METHOD: initializeForAuth
+LOCATION: AuthEngine.java:212
+ERROR: InvalidSequenceOfMethodCalls
+CONTRIBUTING_EXECUTIONS:
+  authengine-suite02-summary.csv COUNT: 1
+  authintegration-suite01-summary.csv COUNT: 1
+
+EXCESS_EVENT_06
+EXCESS: 1
+REFERENCE_COUNT: 1
+COMBINED_COUNT: 2
+SPEC: IvParameterSpecSpec
+CLASS: AuthEngine
+METHOD: initializeForAuth
+LOCATION: AuthEngine.java:212
+ERROR: UnsatisfiedConstraint
+CONTRIBUTING_EXECUTIONS:
+  authengine-suite02-summary.csv COUNT: 1
+  authintegration-suite01-summary.csv COUNT: 1
+
+EXCESS_EVENT_07
+EXCESS: 1
+REFERENCE_COUNT: 1
+COMBINED_COUNT: 2
+SPEC: IvParameterSpecSpec
+CLASS: CryptoStreamUtils$
+METHOD: createReadableChannel
+LOCATION: CryptoStreamUtils.scala:104
+ERROR: InvalidSequenceOfMethodCalls
+CONTRIBUTING_EXECUTIONS:
+  crypto-wrapper-exact01-summary.csv COUNT: 1
+  diskstore-suite01-summary.csv COUNT: 1
+
+EXCESS_EVENT_08
+EXCESS: 1
+REFERENCE_COUNT: 1
+COMBINED_COUNT: 2
+SPEC: IvParameterSpecSpec
+CLASS: CryptoStreamUtils$
+METHOD: createReadableChannel
+LOCATION: CryptoStreamUtils.scala:104
+ERROR: UnsatisfiedConstraint
+CONTRIBUTING_EXECUTIONS:
+  crypto-wrapper-exact01-summary.csv COUNT: 1
+  diskstore-suite01-summary.csv COUNT: 1
+
+EXCESS_EVENT_09
+EXCESS: 1
+REFERENCE_COUNT: 1
+COMBINED_COUNT: 2
+SPEC: IvParameterSpecSpec
+CLASS: CryptoStreamUtils$
+METHOD: createWritableChannel
+LOCATION: CryptoStreamUtils.scala:74
+ERROR: InvalidSequenceOfMethodCalls
+CONTRIBUTING_EXECUTIONS:
+  crypto-wrapper-exact01-summary.csv COUNT: 1
+  diskstore-suite01-summary.csv COUNT: 1
+
+EXCESS_EVENT_10
+EXCESS: 1
+REFERENCE_COUNT: 1
+COMBINED_COUNT: 2
+SPEC: IvParameterSpecSpec
+CLASS: CryptoStreamUtils$
+METHOD: createWritableChannel
+LOCATION: CryptoStreamUtils.scala:74
+ERROR: UnsatisfiedConstraint
+CONTRIBUTING_EXECUTIONS:
+  crypto-wrapper-exact01-summary.csv COUNT: 1
+  diskstore-suite01-summary.csv COUNT: 1
+
+EXCESS_EVENT_11
+EXCESS: 1
+REFERENCE_COUNT: 2
+COMBINED_COUNT: 3
+SPEC: KeyGeneratorSpec
+CLASS: CryptoStreamUtils$
+METHOD: createKey
+LOCATION: CryptoStreamUtils.scala:119
+ERROR: InvalidSequenceOfMethodCalls
+CONTRIBUTING_EXECUTIONS:
+  crypto-wrapper-exact01-summary.csv COUNT: 1
+  keyprop-exact01-driver-summary.csv COUNT: 1
+  diskstore-suite01-summary.csv COUNT: 1
+
+EXCESS_EVENT_12
+EXCESS: 1
+REFERENCE_COUNT: 2
+COMBINED_COUNT: 3
+SPEC: KeyGeneratorSpec
+CLASS: CryptoStreamUtils$
+METHOD: createKey
+LOCATION: CryptoStreamUtils.scala:120
+ERROR: InvalidSequenceOfMethodCalls
+CONTRIBUTING_EXECUTIONS:
+  crypto-wrapper-exact01-summary.csv COUNT: 1
+  keyprop-exact01-driver-summary.csv COUNT: 1
+  diskstore-suite01-summary.csv COUNT: 1
+
+EXCESS_EVENT_13
+EXCESS: 1
+REFERENCE_COUNT: 2
+COMBINED_COUNT: 3
+SPEC: KeyGeneratorSpec
+CLASS: CryptoStreamUtils$
+METHOD: createKey
+LOCATION: CryptoStreamUtils.scala:120
+ERROR: UnsafeAlgorithm
+CONTRIBUTING_EXECUTIONS:
+  crypto-wrapper-exact01-summary.csv COUNT: 1
+  keyprop-exact01-driver-summary.csv COUNT: 1
+  diskstore-suite01-summary.csv COUNT: 1
+
+EXCESS_EVENT_14
+EXCESS: 1
+REFERENCE_COUNT: 1
+COMBINED_COUNT: 2
+SPEC: PBEKeySpec
+CLASS: AuthEngine
+METHOD: generateKey
+LOCATION: AuthEngine.java:232
+ERROR: InvalidSequenceOfMethodCalls
+CONTRIBUTING_EXECUTIONS:
+  authengine-suite02-summary.csv COUNT: 1
+  authintegration-suite01-summary.csv COUNT: 1
+
+EXCESS_EVENT_15
+EXCESS: 1
+REFERENCE_COUNT: 1
+COMBINED_COUNT: 2
+SPEC: PBEKeySpec
+CLASS: AuthEngine
+METHOD: generateKey
+LOCATION: AuthEngine.java:232
+ERROR: UnsatisfiedConstraint
+CONTRIBUTING_EXECUTIONS:
+  authengine-suite02-summary.csv COUNT: 1
+  authintegration-suite01-summary.csv COUNT: 1
+
+EXCESS_EVENT_16
+EXCESS: 1
+REFERENCE_COUNT: 1
+COMBINED_COUNT: 2
+SPEC: SecretKeySpecSpec
+CLASS: AuthEngine
+METHOD: generateKey
+LOCATION: AuthEngine.java:241
+ERROR: InvalidSequenceOfMethodCalls
+CONTRIBUTING_EXECUTIONS:
+  authengine-suite02-summary.csv COUNT: 1
+  authintegration-suite01-summary.csv COUNT: 1
+
+EXCESS_EVENT_17
+EXCESS: 1
+REFERENCE_COUNT: 1
+COMBINED_COUNT: 2
+SPEC: SecretKeySpecSpec
+CLASS: AuthEngine
+METHOD: generateKey
+LOCATION: AuthEngine.java:241
+ERROR: UnsatisfiedConstraint
+CONTRIBUTING_EXECUTIONS:
+  authengine-suite02-summary.csv COUNT: 1
+  authintegration-suite01-summary.csv COUNT: 1
+
+=== 5. PRE-SMOKE CREATION CLUES ===
+PROVENANCE_TEXT_MATCHES: 0
+NOTE: Identical bytes do not prove new execution.
+
+=== FINAL ===
+STEP_144_ANALYSIS_COMPLETE
+NO_TEST_EXECUTION
+NO_SOURCE_MODIFICATION

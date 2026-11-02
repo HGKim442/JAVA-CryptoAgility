@@ -1,0 +1,352 @@
+=== SEARCHING EXECUTOR CONFIG SOURCES ===
+SOURCE_FILES: 486
+MATCHING_LOCATIONS: 30
+
+=== RELEVANT SOURCE SNIPPETS ===
+
+FILE: core/src/main/scala/org/apache/spark/SparkConf.scala
+LINE: 462
+ 460:     }
+ 461: 
+ 462:     val executorOptsKey = "spark.executor.extraJavaOptions"
+ 463:     val executorClasspathKey = "spark.executor.extraClassPath"
+ 464:     val driverOptsKey = "spark.driver.extraJavaOptions"
+ 465:     val driverClassPathKey = "spark.driver.extraClassPath"
+
+FILE: core/src/main/scala/org/apache/spark/SparkConf.scala
+LINE: 464
+ 462:     val executorOptsKey = "spark.executor.extraJavaOptions"
+ 463:     val executorClasspathKey = "spark.executor.extraClassPath"
+ 464:     val driverOptsKey = "spark.driver.extraJavaOptions"
+ 465:     val driverClassPathKey = "spark.driver.extraClassPath"
+ 466:     val driverLibraryPathKey = "spark.driver.extraLibraryPath"
+ 467:     val sparkExecutorInstances = "spark.executor.instances"
+
+FILE: core/src/main/scala/org/apache/spark/SparkConf.scala
+LINE: 481
+ 479:     }
+ 480: 
+ 481:     // Validate spark.executor.extraJavaOptions
+ 482:     getOption(executorOptsKey).foreach { javaOpts =>
+ 483:       if (javaOpts.contains("-Dspark")) {
+ 484:         val msg = s"$executorOptsKey is not allowed to set Spark options (was '$javaOpts'). " +
+
+FILE: core/src/main/scala/org/apache/spark/SparkConf.scala
+LINE: 482
+ 480: 
+ 481:     // Validate spark.executor.extraJavaOptions
+ 482:     getOption(executorOptsKey).foreach { javaOpts =>
+ 483:       if (javaOpts.contains("-Dspark")) {
+ 484:         val msg = s"$executorOptsKey is not allowed to set Spark options (was '$javaOpts'). " +
+ 485:           "Set them directly on a SparkConf or in a properties file when using ./bin/spark-submit."
+
+FILE: core/src/main/scala/org/apache/spark/api/python/PythonRunner.scala
+LINE: 165
+ 163:      * Writes a command section to the stream connected to the Python worker.
+ 164:      */
+ 165:     protected def writeCommand(dataOut: DataOutputStream): Unit
+ 166: 
+ 167:     /**
+ 168:      * Writes input data to the stream connected to the Python worker.
+
+FILE: core/src/main/scala/org/apache/spark/api/python/PythonRunner.scala
+LINE: 216
+ 214: 
+ 215:         dataOut.writeInt(evalType)
+ 216:         writeCommand(dataOut)
+ 217:         writeIteratorToStream(dataOut)
+ 218: 
+ 219:         dataOut.writeInt(SpecialLengths.END_OF_STREAM)
+
+FILE: core/src/main/scala/org/apache/spark/api/python/PythonRunner.scala
+LINE: 402
+ 400:     new WriterThread(env, worker, inputIterator, partitionIndex, context) {
+ 401: 
+ 402:       protected override def writeCommand(dataOut: DataOutputStream): Unit = {
+ 403:         val command = funcs.head.funcs.head.command
+ 404:         dataOut.writeInt(command.length)
+ 405:         dataOut.write(command)
+
+FILE: core/src/main/scala/org/apache/spark/deploy/Client.scala
+LINE: 81
+  79:         }
+  80: 
+  81:         val extraJavaOptsConf = "spark.driver.extraJavaOptions"
+  82:         val extraJavaOpts = sys.props.get(extraJavaOptsConf)
+  83:           .map(Utils.splitCommandString).getOrElse(Seq.empty)
+  84:         val sparkJavaOpts = Utils.sparkJavaOpts(conf)
+
+FILE: core/src/main/scala/org/apache/spark/deploy/Client.scala
+LINE: 85
+  83:           .map(Utils.splitCommandString).getOrElse(Seq.empty)
+  84:         val sparkJavaOpts = Utils.sparkJavaOpts(conf)
+  85:         val javaOpts = sparkJavaOpts ++ extraJavaOpts
+  86:         val command = new Command(mainClass,
+  87:           Seq("{{WORKER_URL}}", "{{USER_JAR}}", driverArgs.mainClass) ++ driverArgs.driverOptions,
+  88:           sys.env, classPathEntries, libraryPathEntries, javaOpts)
+
+FILE: core/src/main/scala/org/apache/spark/deploy/Client.scala
+LINE: 86
+  84:         val sparkJavaOpts = Utils.sparkJavaOpts(conf)
+  85:         val javaOpts = sparkJavaOpts ++ extraJavaOpts
+  86:         val command = new Command(mainClass,
+  87:           Seq("{{WORKER_URL}}", "{{USER_JAR}}", driverArgs.mainClass) ++ driverArgs.driverOptions,
+  88:           sys.env, classPathEntries, libraryPathEntries, javaOpts)
+  89: 
+
+FILE: core/src/main/scala/org/apache/spark/deploy/Command.scala
+LINE: 22
+  20: import scala.collection.Map
+  21: 
+  22: private[spark] case class Command(
+  23:     mainClass: String,
+  24:     arguments: Seq[String],
+  25:     environment: Map[String, String],
+
+FILE: core/src/main/scala/org/apache/spark/deploy/Command.scala
+LINE: 28
+  26:     classPathEntries: Seq[String],
+  27:     libraryPathEntries: Seq[String],
+  28:     javaOpts: Seq[String]) {
+  29: }
+
+FILE: core/src/main/scala/org/apache/spark/deploy/SparkSubmit.scala
+LINE: 557
+ 555:         confKey = "spark.driver.extraClassPath"),
+ 556:       OptionAssigner(args.driverExtraJavaOptions, ALL_CLUSTER_MGRS, ALL_DEPLOY_MODES,
+ 557:         confKey = "spark.driver.extraJavaOptions"),
+ 558:       OptionAssigner(args.driverExtraLibraryPath, ALL_CLUSTER_MGRS, ALL_DEPLOY_MODES,
+ 559:         confKey = "spark.driver.extraLibraryPath"),
+ 560: 
+
+FILE: core/src/main/scala/org/apache/spark/deploy/SparkSubmitArguments.scala
+LINE: 160
+ 158:       .orNull
+ 159:     driverExtraJavaOptions = Option(driverExtraJavaOptions)
+ 160:       .orElse(sparkProperties.get("spark.driver.extraJavaOptions"))
+ 161:       .orNull
+ 162:     driverExtraLibraryPath = Option(driverExtraLibraryPath)
+ 163:       .orElse(sparkProperties.get("spark.driver.extraLibraryPath"))
+
+FILE: core/src/main/scala/org/apache/spark/deploy/rest/StandaloneRestServer.scala
+LINE: 137
+ 135:     val driverMemory = sparkProperties.get("spark.driver.memory")
+ 136:     val driverCores = sparkProperties.get("spark.driver.cores")
+ 137:     val driverExtraJavaOptions = sparkProperties.get("spark.driver.extraJavaOptions")
+ 138:     val driverExtraClassPath = sparkProperties.get("spark.driver.extraClassPath")
+ 139:     val driverExtraLibraryPath = sparkProperties.get("spark.driver.extraLibraryPath")
+ 140:     val superviseDriver = sparkProperties.get("spark.driver.supervise")
+
+FILE: core/src/main/scala/org/apache/spark/deploy/rest/StandaloneRestServer.scala
+LINE: 154
+ 152:     val extraJavaOpts = driverExtraJavaOptions.map(Utils.splitCommandString).getOrElse(Seq.empty)
+ 153:     val sparkJavaOpts = Utils.sparkJavaOpts(conf)
+ 154:     val javaOpts = sparkJavaOpts ++ extraJavaOpts
+ 155:     val command = new Command(
+ 156:       "org.apache.spark.deploy.worker.DriverWrapper",
+ 157:       Seq("{{WORKER_URL}}", "{{USER_JAR}}", mainClass) ++ appArgs, // args to the DriverWrapper
+
+FILE: core/src/main/scala/org/apache/spark/deploy/rest/StandaloneRestServer.scala
+LINE: 155
+ 153:     val sparkJavaOpts = Utils.sparkJavaOpts(conf)
+ 154:     val javaOpts = sparkJavaOpts ++ extraJavaOpts
+ 155:     val command = new Command(
+ 156:       "org.apache.spark.deploy.worker.DriverWrapper",
+ 157:       Seq("{{WORKER_URL}}", "{{USER_JAR}}", mainClass) ++ appArgs, // args to the DriverWrapper
+ 158:       environmentVariables, extraClassPath, extraLibraryPath, javaOpts)
+
+FILE: core/src/main/scala/org/apache/spark/deploy/worker/CommandUtils.scala
+LINE: 49
+  47:       classPaths: Seq[String] = Seq.empty,
+  48:       env: Map[String, String] = sys.env): ProcessBuilder = {
+  49:     val localCommand = buildLocalCommand(
+  50:       command, securityMgr, substituteArguments, classPaths, env)
+  51:     val commandSeq = buildCommandSeq(localCommand, memory, sparkHome)
+  52:     val builder = new ProcessBuilder(commandSeq: _*)
+
+FILE: core/src/main/scala/org/apache/spark/deploy/worker/CommandUtils.scala
+LINE: 63
+  61:     // SPARK-698: do not call the run.cmd script, as process.destroy()
+  62:     // fails to kill a process tree on Windows
+  63:     val cmd = new WorkerCommandBuilder(sparkHome, memory, command).buildCommand()
+  64:     cmd.asScala ++ Seq(command.mainClass) ++ command.arguments
+  65:   }
+  66: 
+
+FILE: core/src/main/scala/org/apache/spark/deploy/worker/CommandUtils.scala
+LINE: 72
+  70:    * any extra class paths.
+  71:    */
+  72:   private def buildLocalCommand(
+  73:       command: Command,
+  74:       securityMgr: SecurityManager,
+  75:       substituteArguments: String => String,
+
+FILE: core/src/main/scala/org/apache/spark/deploy/worker/CommandUtils.scala
+LINE: 94
+  92:     }
+  93: 
+  94:     Command(
+  95:       command.mainClass,
+  96:       command.arguments.map(substituteArguments),
+  97:       newEnvironment,
+
+FILE: core/src/main/scala/org/apache/spark/deploy/worker/Worker.scala
+LINE: 808
+ 806:           conf.getAll.collect { case (key, value) if key.startsWith(prefix) => s"-D$key=$value" } :+
+ 807:           s"-D$useNLC=true"
+ 808:       cmd.copy(javaOpts = newJavaOpts)
+ 809:     } else {
+ 810:       cmd
+ 811:     }
+
+FILE: core/src/main/scala/org/apache/spark/launcher/WorkerCommandBuilder.scala
+LINE: 38
+  36:   childEnv.put(CommandBuilderUtils.ENV_SPARK_HOME, sparkHome)
+  37: 
+  38:   override def buildCommand(env: JMap[String, String]): JList[String] = {
+  39:     val cmd = buildJavaCommand(command.classPathEntries.mkString(File.pathSeparator))
+  40:     cmd.add(s"-Xmx${memoryMb}M")
+  41:     command.javaOpts.foreach(cmd.add)
+
+FILE: core/src/main/scala/org/apache/spark/launcher/WorkerCommandBuilder.scala
+LINE: 39
+  37: 
+  38:   override def buildCommand(env: JMap[String, String]): JList[String] = {
+  39:     val cmd = buildJavaCommand(command.classPathEntries.mkString(File.pathSeparator))
+  40:     cmd.add(s"-Xmx${memoryMb}M")
+  41:     command.javaOpts.foreach(cmd.add)
+  42:     cmd
+
+FILE: core/src/main/scala/org/apache/spark/launcher/WorkerCommandBuilder.scala
+LINE: 45
+  43:   }
+  44: 
+  45:   def buildCommand(): JList[String] = buildCommand(new JHashMap[String, String]())
+  46: 
+  47: }
+
+FILE: core/src/main/scala/org/apache/spark/scheduler/cluster/StandaloneSchedulerBackend.scala
+LINE: 82
+  80:       "--app-id", "{{APP_ID}}",
+  81:       "--worker-url", "{{WORKER_URL}}")
+  82:     val extraJavaOpts = sc.conf.getOption("spark.executor.extraJavaOptions")
+  83:       .map(Utils.splitCommandString).getOrElse(Seq.empty)
+  84:     val classPathEntries = sc.conf.getOption("spark.executor.extraClassPath")
+  85:       .map(_.split(java.io.File.pathSeparator).toSeq).getOrElse(Nil)
+
+FILE: core/src/main/scala/org/apache/spark/scheduler/cluster/StandaloneSchedulerBackend.scala
+LINE: 101
+  99:     // Start executors with a few necessary configs for registering with the scheduler
+ 100:     val sparkJavaOpts = Utils.sparkJavaOpts(conf, SparkConf.isExecutorStartupConf)
+ 101:     val javaOpts = sparkJavaOpts ++ extraJavaOpts
+ 102:     val command = Command("org.apache.spark.executor.CoarseGrainedExecutorBackend",
+ 103:       args, sc.executorEnvs, classPathEntries ++ testingClassPath, libraryPathEntries, javaOpts)
+ 104:     val webUrl = sc.ui.map(_.webUrl).getOrElse("")
+
+FILE: core/src/main/scala/org/apache/spark/scheduler/cluster/StandaloneSchedulerBackend.scala
+LINE: 102
+ 100:     val sparkJavaOpts = Utils.sparkJavaOpts(conf, SparkConf.isExecutorStartupConf)
+ 101:     val javaOpts = sparkJavaOpts ++ extraJavaOpts
+ 102:     val command = Command("org.apache.spark.executor.CoarseGrainedExecutorBackend",
+ 103:       args, sc.executorEnvs, classPathEntries ++ testingClassPath, libraryPathEntries, javaOpts)
+ 104:     val webUrl = sc.ui.map(_.webUrl).getOrElse("")
+ 105:     val coresPerExecutor = conf.getOption("spark.executor.cores").map(_.toInt)
+
+FILE: core/src/main/scala/org/apache/spark/util/Utils.scala
+LINE: 1234
+1232:    * Execute a command and return the process running the command.
+1233:    */
+1234:   def executeCommand(
+1235:       command: Seq[String],
+1236:       workingDir: File = new File("."),
+1237:       extraEnvironment: Map[String, String] = Map.empty,
+
+FILE: core/src/main/scala/org/apache/spark/util/Utils.scala
+LINE: 1261
+1259:       extraEnvironment: Map[String, String] = Map.empty,
+1260:       redirectStderr: Boolean = true): String = {
+1261:     val process = executeCommand(command, workingDir, extraEnvironment, redirectStderr)
+1262:     val output = new StringBuilder
+1263:     val threadName = "read stdout for " + command(0)
+1264:     def appendToOutput(s: String): Unit = output.append(s).append("\n")
+
+=== COMMAND UTILS ===
+  36: 
+  37:   /**
+  38:    * Build a ProcessBuilder based on the given parameters.
+  39:    * The `env` argument is exposed for testing.
+  40:    */
+  41:   def buildProcessBuilder(
+  42:       command: Command,
+  43:       securityMgr: SecurityManager,
+  44:       memory: Int,
+  45:       sparkHome: String,
+  46:       substituteArguments: String => String,
+  47:       classPaths: Seq[String] = Seq.empty,
+  48:       env: Map[String, String] = sys.env): ProcessBuilder = {
+  49:     val localCommand = buildLocalCommand(
+  50:       command, securityMgr, substituteArguments, classPaths, env)
+  51:     val commandSeq = buildCommandSeq(localCommand, memory, sparkHome)
+  52:     val builder = new ProcessBuilder(commandSeq: _*)
+  53:     val environment = builder.environment()
+  54:     for ((key, value) <- localCommand.environment) {
+  55:       environment.put(key, value)
+  56:     }
+  57:     builder
+  58:   }
+  59: 
+  60:   private def buildCommandSeq(command: Command, memory: Int, sparkHome: String): Seq[String] = {
+  61:     // SPARK-698: do not call the run.cmd script, as process.destroy()
+  62:     // fails to kill a process tree on Windows
+  63:     val cmd = new WorkerCommandBuilder(sparkHome, memory, command).buildCommand()
+  64:     cmd.asScala ++ Seq(command.mainClass) ++ command.arguments
+  65:   }
+  66: 
+  67:   /**
+  68:    * Build a command based on the given one, taking into account the local environment
+  69:    * of where this command is expected to run, substitute any placeholders, and append
+  70:    * any extra class paths.
+  71:    */
+  72:   private def buildLocalCommand(
+  73:       command: Command,
+  74:       securityMgr: SecurityManager,
+  75:       substituteArguments: String => String,
+  76:       classPath: Seq[String] = Seq.empty,
+  77:       env: Map[String, String]): Command = {
+  78:     val libraryPathName = Utils.libraryPathEnvName
+  79:     val libraryPathEntries = command.libraryPathEntries
+  80:     val cmdLibraryPath = command.environment.get(libraryPathName)
+  81: 
+  82:     var newEnvironment = if (libraryPathEntries.nonEmpty && libraryPathName.nonEmpty) {
+  83:       val libraryPaths = libraryPathEntries ++ cmdLibraryPath ++ env.get(libraryPathName)
+  84:       command.environment + ((libraryPathName, libraryPaths.mkString(File.pathSeparator)))
+  85:     } else {
+  86:       command.environment
+  87:     }
+  88: 
+  89:     // set auth secret to env variable if needed
+  90:     if (securityMgr.isAuthenticationEnabled) {
+  91:       newEnvironment += (SecurityManager.ENV_AUTH_SECRET -> securityMgr.getSecretKey)
+  92:     }
+  93: 
+  94:     Command(
+  95:       command.mainClass,
+  96:       command.arguments.map(substituteArguments),
+  97:       newEnvironment,
+  98:       command.classPathEntries ++ classPath,
+  99:       Seq.empty, // library path already captured in environment variable
+ 100:       // filter out auth secret from java options
+ 101:       command.javaOpts.filterNot(_.startsWith("-D" + SecurityManager.SPARK_AUTH_SECRET_CONF)))
+ 102:   }
+ 103: 
+ 104:   /** Spawn a thread that will redirect a given stream to a file */
+ 105:   def redirectStream(in: InputStream, file: File) {
+ 106:     val out = new FileOutputStream(file, true)
+ 107:     // TODO: It would be nice to add a shutdown hook here that explains why the output is
+ 108:     //       terminating. Otherwise if the worker dies the executor logs will silently stop.
+
+=== FINAL ===
+JAVA_OPTS_ORIGIN_AUDIT_COMPLETE
+NOTE: Source paths do not prove
+the actual Executor JVM arguments.

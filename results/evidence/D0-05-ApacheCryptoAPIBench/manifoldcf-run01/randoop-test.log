@@ -1,0 +1,420 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.apache.manifoldcf:mcf-parent:pom:2.9-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM org.apache.manifoldcf:mcf-parent:2.9-SNAPSHOT (/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/manifoldcf/pom.xml) points at br.unb.cic:mop-test-suite-b04 instead of org.apache:apache, please verify your project structure @ line 21, column 11
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] ManifoldCF                                                         [pom]
+[INFO] ManifoldCF - Framework                                             [pom]
+[INFO] ManifoldCF - Framework - Core                                      [jar]
+[INFO] 
+[INFO] ------------------< org.apache.manifoldcf:mcf-parent >------------------
+[INFO] Building ManifoldCF 2.9-SNAPSHOT                                   [1/3]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- remote-resources:1.5:process (default) @ mcf-parent ---
+[INFO] 
+[INFO] ----------------< org.apache.manifoldcf:mcf-framework >-----------------
+[INFO] Building ManifoldCF - Framework 2.9-SNAPSHOT                       [2/3]
+[INFO]   from framework/pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- remote-resources:1.5:process (default) @ mcf-framework ---
+[INFO] 
+[INFO] -------------------< org.apache.manifoldcf:mcf-core >-------------------
+[INFO] Building ManifoldCF - Framework - Core 2.9-SNAPSHOT                [3/3]
+[INFO]   from framework/core/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Could not transfer metadata org.seleniumhq.selenium:selenium-support/maven-metadata.xml from/to maven-default-http-blocker (http://0.0.0.0/): Blocked mirror for repositories: [apache.snapshots (http://repository.apache.org/snapshots, default, snapshots)]
+[INFO] 
+[INFO] --- remote-resources:1.5:process (default) @ mcf-core ---
+[INFO] 
+[INFO] --- resources:2.5:resources (default-resources) @ mcf-core ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/manifoldcf/framework/core/src/main/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- compiler:2.3.2:compile (default-compile) @ mcf-core ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:2.5:testResources (default-testResources) @ mcf-core ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- compiler:2.3.2:testCompile (default-testCompile) @ mcf-core ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:2.17:test (default-test) @ mcf-core ---
+[INFO] Surefire report directory: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/manifoldcf/framework/core/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=1024m; support was removed in 8.0
+Running randoop.RandoopRegressionTest
+Couldn't find org.apache.manifoldcf.configfile property; using default
+Couldn't find org.apache.manifoldcf.configfile property; using default
+Tests run: 183, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.548 sec <<< FAILURE! - in randoop.RandoopRegressionTest
+test146(randoop.RandoopRegressionTest0)  Time elapsed: 0.018 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:</home/[hsch]o/lcf> but was:</home/[pedr]o/lcf>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at randoop.RandoopRegressionTest0.test146(RandoopRegressionTest0.java:1659)
+
+test163(randoop.RandoopRegressionTest0)  Time elapsed: 0 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:</home/[hsch]o/lcf> but was:</home/[pedr]o/lcf>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at randoop.RandoopRegressionTest0.test163(RandoopRegressionTest0.java:1869)
+
+Running randoop.RandoopRegressionTest0
+Tests run: 183, Failures: 4, Errors: 1, Skipped: 0, Time elapsed: 0.042 sec <<< FAILURE! - in randoop.RandoopRegressionTest0
+test007(randoop.RandoopRegressionTest0)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: Expected exception of type org.apache.manifoldcf.core.interfaces.ManifoldCFException; message: Initialization failed: Could not read configuration file '/home/pedro/lcf/properties.xml'
+	at org.junit.Assert.fail(Assert.java:88)
+	at randoop.RandoopRegressionTest0.test007(RandoopRegressionTest0.java:79)
+
+test014(randoop.RandoopRegressionTest0)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: Expected exception of type org.apache.manifoldcf.core.interfaces.ManifoldCFException; message: Initialization failed: Could not read configuration file '/home/pedro/lcf/properties.xml'
+	at org.junit.Assert.fail(Assert.java:88)
+	at randoop.RandoopRegressionTest0.test014(RandoopRegressionTest0.java:145)
+
+test034(randoop.RandoopRegressionTest0)  Time elapsed: 0.015 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at org.apache.manifoldcf.core.system.ManifoldCF.pollAll(ManifoldCF.java:1491)
+	at randoop.RandoopRegressionTest0.test034(RandoopRegressionTest0.java:348)
+
+test146(randoop.RandoopRegressionTest0)  Time elapsed: 0 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:</home/[hsch]o/lcf> but was:</home/[pedr]o/lcf>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at randoop.RandoopRegressionTest0.test146(RandoopRegressionTest0.java:1659)
+
+test163(randoop.RandoopRegressionTest0)  Time elapsed: 0 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:</home/[hsch]o/lcf> but was:</home/[pedr]o/lcf>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at randoop.RandoopRegressionTest0.test163(RandoopRegressionTest0.java:1869)
+
+==start SecureRandomSpec ==
+#monitors: 4
+#collected monitors: 0
+#terminated monitors: 0
+#event - next2: 4
+#event - next1: 0
+#event - g1: 0
+#event - g2: 0
+#event - g3: 0
+#event - g4: 0
+#event - c1: 4
+#event - c2: 0
+#event - setSeed3: 0
+#event - c3: 0
+#event - setSeed2: 0
+#event - setSeed1: 0
+#event - genSeed: 0
+#event - ints: 0
+#event - next3: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match1: 4
+==end SecureRandomSpec ==
+==start KeyGeneratorSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - init: 0
+#event - g1: 0
+#event - g2: 0
+#event - g3: 0
+#event - gk1: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end KeyGeneratorSpec ==
+==start KeyStoreSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - ge1: 0
+#event - load: 0
+#event - g1: 0
+#event - g2: 0
+#event - store: 0
+#event - gk1: 0
+#event - se1: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end KeyStoreSpec ==
+==start MacSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - i1: 0
+#event - i2: 0
+#event - update: 0
+#event - g1: 0
+#event - g2: 0
+#event - f1: 0
+#event - g3: 0
+#event - f2: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end MacSpec ==
+==start CipherOutputStreamSpec ==
+#monitors: 1
+#collected monitors: 0
+#terminated monitors: 0
+#event - fl: 4
+#event - cl: 4
+#event - w1: 0
+#event - w2: 0
+#event - c1: 4
+#category - prop 1 - fail: 6
+==end CipherOutputStreamSpec ==
+==start DHGenParameterSpecSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - c1: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end DHGenParameterSpecSpec ==
+==start KeyManagerFactorySpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - init: 0
+#event - gkm1: 0
+#event - g1: 0
+#event - g2: 0
+#event - g3: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match1: 0
+==end KeyManagerFactorySpec ==
+==start SecretKeySpecSpec ==
+#monitors: 1
+#collected monitors: 0
+#terminated monitors: 0
+#event - c3: 12
+#event - c4: 0
+#event - c1: 12
+#event - c2: 0
+#category - prop 1 - fail: 12
+#category - prop 1 - match: 0
+==end SecretKeySpecSpec ==
+==start TrustManagerFactorySpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - init: 0
+#event - gtm1: 0
+#event - g1: 0
+#event - g2: 0
+#event - g3: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match1: 0
+==end TrustManagerFactorySpec ==
+==start CipherInputStreamSpec ==
+#monitors: 1
+#collected monitors: 0
+#terminated monitors: 0
+#event - r2: 0
+#event - cl1: 0
+#event - c1: 8
+#event - r1: 0
+#category - prop 1 - fail: 4
+==end CipherInputStreamSpec ==
+==start PBEParameterSpecSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - c3: 0
+#event - c1: 0
+#event - c2: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end PBEParameterSpecSpec ==
+==start RandomStringPasswordSpec ==
+#monitors: 1
+#collected monitors: 0
+#terminated monitors: 0
+#event - vo: 32
+#event - gb: 12
+#category - prop 1 - match: 0
+==end RandomStringPasswordSpec ==
+==start SSLContextSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - init: 0
+#event - engine: 0
+#event - unsafe_protocol: 0
+#event - g1: 0
+#event - g2: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match1: 0
+==end SSLContextSpec ==
+==start CipherSpec ==
+#monitors: 12
+#collected monitors: 0
+#terminated monitors: 0
+#event - u5: 0
+#event - i1: 0
+#event - i2: 12
+#event - g1: 12
+#event - g2: 0
+#event - f1: 0
+#event - g3: 12
+#event - f2: 0
+#event - f3: 0
+#event - f5: 0
+#event - f6: 0
+#event - f7: 0
+#event - wkb1: 0
+#event - u1: 0
+#event - u2: 0
+#event - u3: 0
+#event - u4: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match1: 0
+==end CipherSpec ==
+==start GCMParameterSpecSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - c1: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end GCMParameterSpecSpec ==
+==start PBEKeySpecSpec ==
+#monitors: 12
+#collected monitors: 0
+#terminated monitors: 0
+#event - err3: 12
+#event - err2: 12
+#event - err1: 12
+#event - f1: 0
+#event - f2: 0
+#event - c1: 12
+#event - c2: 0
+#category - prop 1 - fail: 36
+#category - prop 1 - match: 0
+==end PBEKeySpecSpec ==
+==start SignatureSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - i1: 0
+#event - i2: 0
+#event - update: 0
+#event - g1: 0
+#event - i3: 0
+#event - g2: 0
+#event - i4: 0
+#event - v1: 0
+#event - g3: 0
+#event - v2: 0
+#event - s1: 0
+#event - s2: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end SignatureSpec ==
+==start HMACParameterSpecSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - c: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end HMACParameterSpecSpec ==
+==start KeyPairGeneratorSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - gen: 0
+#event - init3: 0
+#event - init2: 0
+#event - g1: 0
+#event - init1: 0
+#event - g2: 0
+#event - g3: 0
+#event - initError: 0
+#event - init4: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end KeyPairGeneratorSpec ==
+==start KeyPairSpec ==
+#monitors: 0
+#collected monitors: 0
+#terminated monitors: 0
+#event - gpr: 0
+#event - gpu: 0
+#event - c1: 0
+#category - prop 1 - fail: 0
+#category - prop 1 - match: 0
+==end KeyPairSpec ==
+==start IvParameterSpecSpec ==
+#monitors: 12
+#collected monitors: 0
+#terminated monitors: 0
+#event - c3: 12
+#event - c1: 12
+#event - c2: 0
+#category - prop 1 - fail: 8
+#category - prop 1 - match: 8
+==end IvParameterSpecSpec ==
+==start MessageDigestSpec ==
+#monitors: 20
+#collected monitors: 0
+#terminated monitors: 1
+#event - update: 34
+#event - reset: 0
+#event - g1: 20
+#event - g2: 0
+#event - g3: 20
+#event - d1: 14
+#event - d2: 0
+#event - d3: 0
+#category - prop 1 - fail: 48
+#category - prop 1 - match: 0
+==end MessageDigestSpec ==
+
+Results :
+
+Failed tests: 
+  RandoopRegressionTest0.test146:1659 expected:</home/[hsch]o/lcf> but was:</home/[pedr]o/lcf>
+  RandoopRegressionTest0.test163:1869 expected:</home/[hsch]o/lcf> but was:</home/[pedr]o/lcf>
+  RandoopRegressionTest0.test007:79 Expected exception of type org.apache.manifoldcf.core.interfaces.ManifoldCFException; message: Initialization failed: Could not read configuration file '/home/pedro/lcf/properties.xml'
+  RandoopRegressionTest0.test014:145 Expected exception of type org.apache.manifoldcf.core.interfaces.ManifoldCFException; message: Initialization failed: Could not read configuration file '/home/pedro/lcf/properties.xml'
+  RandoopRegressionTest0.test146:1659 expected:</home/[hsch]o/lcf> but was:</home/[pedr]o/lcf>
+  RandoopRegressionTest0.test163:1869 expected:</home/[hsch]o/lcf> but was:</home/[pedr]o/lcf>
+
+Tests in error: 
+  RandoopRegressionTest0.test034:348 » NullPointer
+
+Tests run: 366, Failures: 6, Errors: 1, Skipped: 0
+
+[ERROR] There are test failures.
+
+Please refer to /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/manifoldcf/framework/core/target/surefire-reports for the individual test results.
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for ManifoldCF 2.9-SNAPSHOT:
+[INFO] 
+[INFO] ManifoldCF ......................................... SUCCESS [  0.359 s]
+[INFO] ManifoldCF - Framework ............................. SUCCESS [  0.007 s]
+[INFO] ManifoldCF - Framework - Core ...................... SUCCESS [  2.410 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.861 s
+[INFO] Finished at: 2026-10-18T19:53:21+09:00
+[INFO] ------------------------------------------------------------------------

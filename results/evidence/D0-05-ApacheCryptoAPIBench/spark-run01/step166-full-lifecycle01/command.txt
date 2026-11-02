@@ -1,0 +1,5 @@
+WORKING_DIRECTORY=/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-full-lifecycle01/spark
+COMMAND=mvn -o -ntp -pl core -am -Pmop clean test -Dstyle.color=never
+TIME_LIMIT_SECONDS=1800
+EXPLICIT_MOP_PROFILE=true
+ORIGINAL_EXECUTE_SH_EQUIVALENT=false

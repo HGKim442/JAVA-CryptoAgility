@@ -1,0 +1,132 @@
+=== EFFECTIVE BUILD DIRECTORIES ===
+directory: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target
+outputDirectory: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/classes
+testOutputDirectory: /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/test-classes
+
+=== CORE BUILD DIRECTORIES ===
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/classes
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/test-classes
+
+=== CRYPTO TEST CLASS FILES ===
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/classes/org/apache/spark/security/CryptoStreamUtils$CryptoParams.class
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/classes/org/apache/spark/security/CryptoStreamUtils$$anonfun$createInitializationVector$1.class
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/classes/org/apache/spark/security/CryptoStreamUtils.class
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/classes/org/apache/spark/security/CryptoStreamUtils$.class
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/classes/org/apache/spark/security/CryptoStreamUtils$CryptoHelperChannel.class
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/test-classes/org/apache/spark/SecurityManagerSuite$$anonfun$7.class
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/test-classes/org/apache/spark/SecurityManagerSuite$$anonfun$14.class
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/test-classes/org/apache/spark/SecurityManagerSuite$$anonfun$13.class
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/test-classes/org/apache/spark/SecurityManagerSuite$$anonfun$15.class
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/test-classes/org/apache/spark/SecurityManagerSuite$$anonfun$9.class
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/test-classes/org/apache/spark/SecurityManagerSuite$$anonfun$5.class
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/test-classes/org/apache/spark/SecurityManagerSuite$$anonfun$6.class
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/test-classes/org/apache/spark/SecurityManagerSuite$$anonfun$4.class
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/test-classes/org/apache/spark/SecurityManagerSuite$$anonfun$12.class
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/test-classes/org/apache/spark/SecurityManagerSuite$$anonfun$1$$anon$1.class
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/test-classes/org/apache/spark/security/CryptoStreamUtilsSuite$$anonfun$4$$anonfun$apply$1.class
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/test-classes/org/apache/spark/security/CryptoStreamUtilsSuite$$anonfun$5.class
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/test-classes/org/apache/spark/security/CryptoStreamUtilsSuite$$anonfun$2.class
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/test-classes/org/apache/spark/security/CryptoStreamUtilsSuite$$anonfun$8.class
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/test-classes/org/apache/spark/security/CryptoStreamUtilsSuite$$anonfun$org$apache$spark$security$CryptoStreamUtilsSuite$$createConf$1.class
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/test-classes/org/apache/spark/security/CryptoStreamUtilsSuite$$anonfun$6.class
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/test-classes/org/apache/spark/security/CryptoStreamUtilsSuite.class
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/test-classes/org/apache/spark/security/CryptoStreamUtilsSuite$$anonfun$6$$anonfun$7.class
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/test-classes/org/apache/spark/security/CryptoStreamUtilsSuite$$anonfun$4.class
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/test-classes/org/apache/spark/security/CryptoStreamUtilsSuite$$anonfun$1.class
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/test-classes/org/apache/spark/security/CryptoStreamUtilsSuite$$anonfun$3.class
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/test-classes/org/apache/spark/SecurityManagerSuite$$anonfun$15$$anonfun$apply$1.class
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/test-classes/org/apache/spark/SecurityManagerSuite$$anonfun$10.class
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/test-classes/org/apache/spark/SecurityManagerSuite.class
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/test-classes/org/apache/spark/SecurityManagerSuite$$anonfun$11.class
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/test-classes/org/apache/spark/SecurityManagerSuite$$anonfun$1.class
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/test-classes/org/apache/spark/SecurityManagerSuite$$anonfun$2.class
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/test-classes/org/apache/spark/SecurityManagerSuite$$anonfun$3.class
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/test-classes/org/apache/spark/SecurityManagerSuite$$anonfun$15$$anonfun$apply$2.class
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/test-classes/org/apache/spark/SecurityManagerSuite$$anonfun$8.class
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/test-classes/org/apache/spark/SecurityManagerSuite$$anonfun$16.class
+
+=== COMPILATION LOG DETAILS ===
+53:[INFO] --- scala:3.2.2:testCompile (scala-test-compile-first) @ spark-parent_2.11 ---
+54:[WARNING] Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+80:[INFO] Not compiling main sources
+83:[WARNING] Zinc server is not available at port 3030 - reverting to normal incremental compile
+85:[INFO] 'compiler-interface' not yet compiled for Scala 2.11.8. Compiling...
+87:[INFO] Compiling 2 Scala sources and 6 Java sources to /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/tags/target/scala-2.11/classes...
+101:[INFO] --- compiler:3.7.0:testCompile (default-testCompile) @ spark-tags_2.11 ---
+102:[INFO] Not compiling test sources
+108:[INFO] --- scala:3.2.2:testCompile (scala-test-compile-first) @ spark-tags_2.11 ---
+109:[WARNING] Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+110:[WARNING] Zinc server is not available at port 3030 - reverting to normal incremental compile
+112:[INFO] Compiling 3 Java sources to /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/tags/target/scala-2.11/test-classes...
+137:[INFO] Not compiling main sources
+140:[WARNING] Zinc server is not available at port 3030 - reverting to normal incremental compile
+142:[INFO] Compiling 12 Java sources to /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/kvstore/target/scala-2.11/classes...
+163:[INFO] --- compiler:3.7.0:testCompile (default-testCompile) @ spark-kvstore_2.11 ---
+164:[INFO] Not compiling test sources
+170:[INFO] --- scala:3.2.2:testCompile (scala-test-compile-first) @ spark-kvstore_2.11 ---
+171:[WARNING] Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+172:[WARNING] Zinc server is not available at port 3030 - reverting to normal incremental compile
+174:[INFO] Compiling 10 Java sources to /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/kvstore/target/scala-2.11/test-classes...
+199:[INFO] Not compiling main sources
+202:[WARNING] Zinc server is not available at port 3030 - reverting to normal incremental compile
+204:[INFO] Compiling 75 Java sources to /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-common/target/scala-2.11/classes...
+240:[INFO] --- compiler:3.7.0:testCompile (default-testCompile) @ spark-network-common_2.11 ---
+241:[INFO] Not compiling test sources
+247:[INFO] --- scala:3.2.2:testCompile (scala-test-compile-first) @ spark-network-common_2.11 ---
+248:[WARNING] Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+249:[WARNING] Zinc server is not available at port 3030 - reverting to normal incremental compile
+251:[INFO] Compiling 19 Java sources to /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-common/target/scala-2.11/test-classes...
+286:[INFO] Not compiling main sources
+289:[WARNING] Zinc server is not available at port 3030 - reverting to normal incremental compile
+291:[INFO] Compiling 20 Java sources to /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-shuffle/target/scala-2.11/classes...
+305:[INFO] --- compiler:3.7.0:testCompile (default-testCompile) @ spark-network-shuffle_2.11 ---
+306:[INFO] Not compiling test sources
+312:[INFO] --- scala:3.2.2:testCompile (scala-test-compile-first) @ spark-network-shuffle_2.11 ---
+313:[WARNING] Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+314:[WARNING] Zinc server is not available at port 3030 - reverting to normal incremental compile
+316:[INFO] Compiling 11 Java sources to /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/network-shuffle/target/scala-2.11/test-classes...
+341:[INFO] Not compiling main sources
+344:[WARNING] Zinc server is not available at port 3030 - reverting to normal incremental compile
+346:[INFO] Compiling 16 Java sources to /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/unsafe/target/scala-2.11/classes...
+360:[INFO] --- compiler:3.7.0:testCompile (default-testCompile) @ spark-unsafe_2.11 ---
+361:[INFO] Not compiling test sources
+367:[INFO] --- scala:3.2.2:testCompile (scala-test-compile-first) @ spark-unsafe_2.11 ---
+368:[WARNING] Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+369:[WARNING] Zinc server is not available at port 3030 - reverting to normal incremental compile
+371:[INFO] Compiling 1 Scala source and 5 Java sources to /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/common/unsafe/target/scala-2.11/test-classes...
+396:[INFO] Not compiling main sources
+399:[WARNING] Zinc server is not available at port 3030 - reverting to normal incremental compile
+401:[INFO] Compiling 20 Java sources to /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/launcher/target/scala-2.11/classes...
+422:[INFO] --- compiler:3.7.0:testCompile (default-testCompile) @ spark-launcher_2.11 ---
+423:[INFO] Not compiling test sources
+429:[INFO] --- scala:3.2.2:testCompile (scala-test-compile-first) @ spark-launcher_2.11 ---
+430:[WARNING] Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+431:[WARNING] Zinc server is not available at port 3030 - reverting to normal incremental compile
+433:[INFO] Compiling 7 Java sources to /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/launcher/target/scala-2.11/test-classes...
+467:[INFO] Not compiling main sources
+470:[WARNING] Zinc server is not available at port 3030 - reverting to normal incremental compile
+472:[INFO] Compiling 487 Scala sources and 77 Java sources to /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/classes...
+488:[INFO] --- compiler:3.7.0:testCompile (default-testCompile) @ spark-core_2.11 ---
+489:[INFO] Not compiling test sources
+495:[INFO] --- scala:3.2.2:testCompile (scala-test-compile-first) @ spark-core_2.11 ---
+496:[WARNING] Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+497:[WARNING] Zinc server is not available at port 3030 - reverting to normal incremental compile
+499:[INFO] Compiling 229 Scala sources and 25 Java sources to /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/test-classes...
+
+=== TARGET DIRECTORIES ===
+core:
+103M	/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/maven-shared-archive-resources
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/maven-shared-archive-resources/META-INF
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/tmp
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/analysis
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/antrun
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/classes
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/scala-2.11/test-classes
+/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/extra-resources
+network-common: NO_TARGET_DIRECTORY
+network-shuffle: NO_TARGET_DIRECTORY

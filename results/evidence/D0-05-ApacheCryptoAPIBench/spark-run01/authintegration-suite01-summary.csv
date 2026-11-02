@@ -1,0 +1,13 @@
+spec,class,className,method,location,error
+PBEKeySpec,org.apache.spark.network.crypto.AuthEngine,AuthEngine,generateKey,AuthEngine.java:232,UnsatisfiedConstraint
+PBEKeySpec,org.apache.spark.network.crypto.AuthEngine,AuthEngine,generateKey,AuthEngine.java:232,InvalidSequenceOfMethodCalls
+SecretKeySpecSpec,org.apache.spark.network.crypto.AuthEngine,AuthEngine,generateKey,AuthEngine.java:241,UnsatisfiedConstraint
+SecretKeySpecSpec,org.apache.spark.network.crypto.AuthEngine,AuthEngine,generateKey,AuthEngine.java:241,InvalidSequenceOfMethodCalls
+IvParameterSpecSpec,org.apache.spark.network.crypto.AuthEngine,AuthEngine,initializeForAuth,AuthEngine.java:209,UnsatisfiedConstraint
+IvParameterSpecSpec,org.apache.spark.network.crypto.AuthEngine,AuthEngine,initializeForAuth,AuthEngine.java:209,InvalidSequenceOfMethodCalls
+IvParameterSpecSpec,org.apache.spark.network.crypto.AuthEngine,AuthEngine,initializeForAuth,AuthEngine.java:212,UnsatisfiedConstraint
+IvParameterSpecSpec,org.apache.spark.network.crypto.AuthEngine,AuthEngine,initializeForAuth,AuthEngine.java:212,InvalidSequenceOfMethodCalls
+IvParameterSpecSpec,org.apache.spark.network.crypto.TransportCipher,TransportCipher,createOutputStream,TransportCipher.java:88,UnsatisfiedConstraint
+IvParameterSpecSpec,org.apache.spark.network.crypto.TransportCipher,TransportCipher,createOutputStream,TransportCipher.java:88,InvalidSequenceOfMethodCalls
+IvParameterSpecSpec,org.apache.spark.network.crypto.TransportCipher,TransportCipher,createInputStream,TransportCipher.java:92,UnsatisfiedConstraint
+IvParameterSpecSpec,org.apache.spark.network.crypto.TransportCipher,TransportCipher,createInputStream,TransportCipher.java:92,InvalidSequenceOfMethodCalls

@@ -1,0 +1,484 @@
+=== 1. EXTRACT CLASS BYTECODE ===
+ErrorDescription EXIT_CODE: 0 LINES: 180
+
+=== CLASS: ErrorDescription ===
+METHOD_HEADERS:
+public br.unb.cic.mop.eh.ErrorDescription(br.unb.cic.mop.eh.ErrorType, java.lang.String, java.lang.String);
+public br.unb.cic.mop.eh.ErrorDescription(br.unb.cic.mop.eh.ErrorType, java.lang.String, java.lang.String, java.lang.String);
+public java.lang.String getSpec();
+public br.unb.cic.mop.eh.ErrorType getType();
+public java.lang.String getLocation();
+public br.unb.cic.mop.eh.ErrorSummary getErrorSummary();
+public java.lang.String toString();
+public boolean equals(java.lang.Object);
+public int hashCode();
+
+SELECTED_METHOD_BYTECODE:
+
+METHOD: public br.unb.cic.mop.eh.ErrorDescription(br.unb.cic.mop.eh.ErrorType, java.lang.String, java.lang.String);
+BYTECODE_LINES: 10
+  public br.unb.cic.mop.eh.ErrorDescription(br.unb.cic.mop.eh.ErrorType, java.lang.String, java.lang.String);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: aload_2
+       3: aload_3
+       4: ldc           #1                  // String unknown
+       6: invokespecial #2                  // Method "<init>":(Lbr/unb/cic/mop/eh/ErrorType;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+       9: return
+
+
+METHOD: public br.unb.cic.mop.eh.ErrorDescription(br.unb.cic.mop.eh.ErrorType, java.lang.String, java.lang.String, java.lang.String);
+BYTECODE_LINES: 18
+  public br.unb.cic.mop.eh.ErrorDescription(br.unb.cic.mop.eh.ErrorType, java.lang.String, java.lang.String, java.lang.String);
+    Code:
+       0: aload_0
+       1: invokespecial #3                  // Method java/lang/Object."<init>":()V
+       4: aload_0
+       5: aload_1
+       6: putfield      #4                  // Field type:Lbr/unb/cic/mop/eh/ErrorType;
+       9: aload_0
+      10: aload_2
+      11: putfield      #5                  // Field spec:Ljava/lang/String;
+      14: aload_0
+      15: aload_3
+      16: putfield      #6                  // Field location:Ljava/lang/String;
+      19: aload_0
+      20: aload         4
+      22: putfield      #7                  // Field expecting:Ljava/lang/String;
+      25: return
+
+
+METHOD: public br.unb.cic.mop.eh.ErrorSummary getErrorSummary();
+BYTECODE_LINES: 56
+  public br.unb.cic.mop.eh.ErrorSummary getErrorSummary();
+    Code:
+       0: new           #8                  // class br/unb/cic/mop/eh/ErrorSummary
+       3: dup
+       4: invokespecial #9                  // Method br/unb/cic/mop/eh/ErrorSummary."<init>":()V
+       7: astore_1
+       8: aload_1
+       9: aload_0
+      10: getfield      #5                  // Field spec:Ljava/lang/String;
+      13: putfield      #10                 // Field br/unb/cic/mop/eh/ErrorSummary.spec:Ljava/lang/String;
+      16: aload_1
+      17: aload_0
+      18: getfield      #4                  // Field type:Lbr/unb/cic/mop/eh/ErrorType;
+      21: invokevirtual #11                 // Method br/unb/cic/mop/eh/ErrorType.toString:()Ljava/lang/String;
+      24: putfield      #12                 // Field br/unb/cic/mop/eh/ErrorSummary.error:Ljava/lang/String;
+      27: ldc           #13                 // String ([\w+\.\$]+)[.](\<?\w+\>?)\((.+)\)
+      29: invokestatic  #14                 // Method java/util/regex/Pattern.compile:(Ljava/lang/String;)Ljava/util/regex/Pattern;
+      32: astore_2
+      33: aload_2
+      34: aload_0
+      35: getfield      #6                  // Field location:Ljava/lang/String;
+      38: invokevirtual #15                 // Method java/util/regex/Pattern.matcher:(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+      41: astore_3
+      42: aload_1
+      43: aload_0
+      44: getfield      #6                  // Field location:Ljava/lang/String;
+      47: putfield      #16                 // Field br/unb/cic/mop/eh/ErrorSummary.classQualifiedName:Ljava/lang/String;
+      50: aload_1
+      51: aload_0
+      52: getfield      #6                  // Field location:Ljava/lang/String;
+      55: putfield      #17                 // Field br/unb/cic/mop/eh/ErrorSummary.methodName:Ljava/lang/String;
+      58: aload_1
+      59: aload_0
+      60: getfield      #6                  // Field location:Ljava/lang/String;
+      63: putfield      #18                 // Field br/unb/cic/mop/eh/ErrorSummary.location:Ljava/lang/String;
+      66: aload_3
+      67: invokevirtual #19                 // Method java/util/regex/Matcher.matches:()Z
+      70: ifeq          100
+      73: aload_1
+      74: aload_3
+      75: iconst_1
+      76: invokevirtual #20                 // Method java/util/regex/Matcher.group:(I)Ljava/lang/String;
+      79: putfield      #16                 // Field br/unb/cic/mop/eh/ErrorSummary.classQualifiedName:Ljava/lang/String;
+      82: aload_1
+      83: aload_3
+      84: iconst_2
+      85: invokevirtual #20                 // Method java/util/regex/Matcher.group:(I)Ljava/lang/String;
+      88: putfield      #17                 // Field br/unb/cic/mop/eh/ErrorSummary.methodName:Ljava/lang/String;
+      91: aload_1
+      92: aload_3
+      93: iconst_3
+      94: invokevirtual #20                 // Method java/util/regex/Matcher.group:(I)Ljava/lang/String;
+      97: putfield      #18                 // Field br/unb/cic/mop/eh/ErrorSummary.location:Ljava/lang/String;
+     100: aload_1
+     101: areturn
+
+
+METHOD: public boolean equals(java.lang.Object);
+BYTECODE_LINES: 26
+  public boolean equals(java.lang.Object);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: if_acmpne     7
+       5: iconst_1
+       6: ireturn
+       7: aload_1
+       8: ifnull        22
+      11: aload_0
+      12: invokevirtual #30                 // Method java/lang/Object.getClass:()Ljava/lang/Class;
+      15: aload_1
+      16: invokevirtual #30                 // Method java/lang/Object.getClass:()Ljava/lang/Class;
+      19: if_acmpeq     24
+      22: iconst_0
+      23: ireturn
+      24: aload_1
+      25: checkcast     #31                 // class br/unb/cic/mop/eh/ErrorDescription
+      28: astore_2
+      29: aload_0
+      30: invokevirtual #32                 // Method getErrorSummary:()Lbr/unb/cic/mop/eh/ErrorSummary;
+      33: aload_2
+      34: invokevirtual #32                 // Method getErrorSummary:()Lbr/unb/cic/mop/eh/ErrorSummary;
+      37: invokevirtual #33                 // Method br/unb/cic/mop/eh/ErrorSummary.equals:(Ljava/lang/Object;)Z
+      40: ireturn
+
+
+METHOD: public int hashCode();
+BYTECODE_LINES: 14
+  public int hashCode();
+    Code:
+       0: iconst_1
+       1: anewarray     #34                 // class java/lang/Object
+       4: dup
+       5: iconst_0
+       6: aload_0
+       7: invokevirtual #32                 // Method getErrorSummary:()Lbr/unb/cic/mop/eh/ErrorSummary;
+      10: invokevirtual #35                 // Method br/unb/cic/mop/eh/ErrorSummary.hashCode:()I
+      13: invokestatic  #36                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      16: aastore
+      17: invokestatic  #37                 // Method java/util/Objects.hash:([Ljava/lang/Object;)I
+      20: ireturn
+}
+SELECTED_METHODS: 5
+ErrorSummary EXIT_CODE: 0 LINES: 156
+
+=== CLASS: ErrorSummary ===
+METHOD_HEADERS:
+public br.unb.cic.mop.eh.ErrorSummary();
+public boolean equals(java.lang.Object);
+public int hashCode();
+public java.lang.String toString();
+private java.lang.String className();
+
+SELECTED_METHOD_BYTECODE:
+
+METHOD: public br.unb.cic.mop.eh.ErrorSummary();
+BYTECODE_LINES: 6
+  public br.unb.cic.mop.eh.ErrorSummary();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+
+METHOD: public boolean equals(java.lang.Object);
+BYTECODE_LINES: 54
+  public boolean equals(java.lang.Object);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: if_acmpne     7
+       5: iconst_1
+       6: ireturn
+       7: aload_1
+       8: ifnull        22
+      11: aload_0
+      12: invokevirtual #2                  // Method java/lang/Object.getClass:()Ljava/lang/Class;
+      15: aload_1
+      16: invokevirtual #2                  // Method java/lang/Object.getClass:()Ljava/lang/Class;
+      19: if_acmpeq     24
+      22: iconst_0
+      23: ireturn
+      24: aload_1
+      25: checkcast     #3                  // class br/unb/cic/mop/eh/ErrorSummary
+      28: astore_2
+      29: aload_0
+      30: getfield      #4                  // Field spec:Ljava/lang/String;
+      33: aload_2
+      34: getfield      #4                  // Field spec:Ljava/lang/String;
+      37: invokestatic  #5                  // Method java/util/Objects.equals:(Ljava/lang/Object;Ljava/lang/Object;)Z
+      40: ifeq          103
+      43: aload_0
+      44: getfield      #6                  // Field error:Ljava/lang/String;
+      47: aload_2
+      48: getfield      #6                  // Field error:Ljava/lang/String;
+      51: invokestatic  #5                  // Method java/util/Objects.equals:(Ljava/lang/Object;Ljava/lang/Object;)Z
+      54: ifeq          103
+      57: aload_0
+      58: getfield      #7                  // Field classQualifiedName:Ljava/lang/String;
+      61: aload_2
+      62: getfield      #7                  // Field classQualifiedName:Ljava/lang/String;
+      65: invokestatic  #5                  // Method java/util/Objects.equals:(Ljava/lang/Object;Ljava/lang/Object;)Z
+      68: ifeq          103
+      71: aload_0
+      72: getfield      #8                  // Field methodName:Ljava/lang/String;
+      75: aload_2
+      76: getfield      #8                  // Field methodName:Ljava/lang/String;
+      79: invokestatic  #5                  // Method java/util/Objects.equals:(Ljava/lang/Object;Ljava/lang/Object;)Z
+      82: ifeq          103
+      85: aload_0
+      86: getfield      #9                  // Field location:Ljava/lang/String;
+      89: aload_2
+      90: getfield      #9                  // Field location:Ljava/lang/String;
+      93: invokestatic  #5                  // Method java/util/Objects.equals:(Ljava/lang/Object;Ljava/lang/Object;)Z
+      96: ifeq          103
+      99: iconst_1
+     100: goto          104
+     103: iconst_0
+     104: ireturn
+
+
+METHOD: public int hashCode();
+BYTECODE_LINES: 32
+  public int hashCode();
+    Code:
+       0: iconst_5
+       1: anewarray     #10                 // class java/lang/Object
+       4: dup
+       5: iconst_0
+       6: aload_0
+       7: getfield      #4                  // Field spec:Ljava/lang/String;
+      10: aastore
+      11: dup
+      12: iconst_1
+      13: aload_0
+      14: getfield      #6                  // Field error:Ljava/lang/String;
+      17: aastore
+      18: dup
+      19: iconst_2
+      20: aload_0
+      21: getfield      #7                  // Field classQualifiedName:Ljava/lang/String;
+      24: aastore
+      25: dup
+      26: iconst_3
+      27: aload_0
+      28: getfield      #8                  // Field methodName:Ljava/lang/String;
+      31: aastore
+      32: dup
+      33: iconst_4
+      34: aload_0
+      35: getfield      #9                  // Field location:Ljava/lang/String;
+      38: aastore
+      39: invokestatic  #11                 // Method java/util/Objects.hash:([Ljava/lang/Object;)I
+      42: ireturn
+
+
+METHOD: public java.lang.String toString();
+BYTECODE_LINES: 38
+  public java.lang.String toString();
+    Code:
+       0: ldc           #12                 // String %s,%s,%s,%s,%s,%s
+       2: bipush        6
+       4: anewarray     #10                 // class java/lang/Object
+       7: dup
+       8: iconst_0
+       9: aload_0
+      10: getfield      #4                  // Field spec:Ljava/lang/String;
+      13: aastore
+      14: dup
+      15: iconst_1
+      16: aload_0
+      17: getfield      #7                  // Field classQualifiedName:Ljava/lang/String;
+      20: aastore
+      21: dup
+      22: iconst_2
+      23: aload_0
+      24: invokespecial #13                 // Method className:()Ljava/lang/String;
+      27: aastore
+      28: dup
+      29: iconst_3
+      30: aload_0
+      31: getfield      #8                  // Field methodName:Ljava/lang/String;
+      34: aastore
+      35: dup
+      36: iconst_4
+      37: aload_0
+      38: getfield      #9                  // Field location:Ljava/lang/String;
+      41: aastore
+      42: dup
+      43: iconst_5
+      44: aload_0
+      45: getfield      #6                  // Field error:Ljava/lang/String;
+      48: aastore
+      49: invokestatic  #14                 // Method java/lang/String.format:(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+      52: areturn
+
+SELECTED_METHODS: 4
+ErrorCollector EXIT_CODE: 0 LINES: 91
+
+=== CLASS: ErrorCollector ===
+METHOD_HEADERS:
+public static br.unb.cic.mop.eh.ErrorCollector instance();
+private br.unb.cic.mop.eh.ErrorCollector();
+public void reset();
+public void addError(br.unb.cic.mop.eh.ErrorDescription);
+public java.util.Set<br.unb.cic.mop.eh.ErrorDescription> getErrors();
+public void setReport(br.unb.cic.mop.eh.report.IErrorReport);
+public void printErrors() throws java.lang.Exception;
+
+SELECTED_METHOD_BYTECODE:
+
+METHOD: public static br.unb.cic.mop.eh.ErrorCollector instance();
+BYTECODE_LINES: 11
+  public static br.unb.cic.mop.eh.ErrorCollector instance();
+    Code:
+       0: getstatic     #1                  // Field instance:Lbr/unb/cic/mop/eh/ErrorCollector;
+       3: ifnonnull     16
+       6: new           #2                  // class br/unb/cic/mop/eh/ErrorCollector
+       9: dup
+      10: invokespecial #3                  // Method "<init>":()V
+      13: putstatic     #1                  // Field instance:Lbr/unb/cic/mop/eh/ErrorCollector;
+      16: getstatic     #1                  // Field instance:Lbr/unb/cic/mop/eh/ErrorCollector;
+      19: areturn
+
+
+METHOD: public void reset();
+BYTECODE_LINES: 9
+  public void reset();
+    Code:
+       0: aload_0
+       1: new           #11                 // class java/util/HashSet
+       4: dup
+       5: invokespecial #12                 // Method java/util/HashSet."<init>":()V
+       8: putfield      #13                 // Field errors:Ljava/util/Set;
+      11: return
+
+
+METHOD: public void addError(br.unb.cic.mop.eh.ErrorDescription);
+BYTECODE_LINES: 18
+  public void addError(br.unb.cic.mop.eh.ErrorDescription);
+    Code:
+       0: aload_0
+       1: getfield      #13                 // Field errors:Ljava/util/Set;
+       4: aload_1
+       5: invokeinterface #14,  2           // InterfaceMethod java/util/Set.contains:(Ljava/lang/Object;)Z
+      10: ifne          34
+      13: aload_0
+      14: getfield      #13                 // Field errors:Ljava/util/Set;
+      17: aload_1
+      18: invokeinterface #15,  2           // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+      23: pop
+      24: aload_0
+      25: getfield      #7                  // Field logger:Lbr/unb/cic/mop/eh/logger/ILogger;
+      28: aload_1
+      29: invokeinterface #16,  2           // InterfaceMethod br/unb/cic/mop/eh/logger/ILogger.logError:(Lbr/unb/cic/mop/eh/ErrorDescription;)V
+      34: return
+
+SELECTED_METHODS: 3
+CSVLogger EXIT_CODE: 0 LINES: 105
+
+=== CLASS: CSVLogger ===
+METHOD_HEADERS:
+public br.unb.cic.mop.eh.logger.CSVLogger();
+public void logError(br.unb.cic.mop.eh.ErrorDescription);
+
+SELECTED_METHOD_BYTECODE:
+
+METHOD: public void logError(br.unb.cic.mop.eh.ErrorDescription);
+BYTECODE_LINES: 95
+  public void logError(br.unb.cic.mop.eh.ErrorDescription);
+    Code:
+       0: new           #2                  // class java/io/File
+       3: dup
+       4: ldc           #3                  // String output
+       6: invokespecial #4                  // Method java/io/File."<init>":(Ljava/lang/String;)V
+       9: astore_2
+      10: aload_2
+      11: invokevirtual #5                  // Method java/io/File.exists:()Z
+      14: ifne          22
+      17: aload_2
+      18: invokevirtual #6                  // Method java/io/File.mkdir:()Z
+      21: pop
+      22: new           #2                  // class java/io/File
+      25: dup
+      26: ldc           #7                  // String output/summary.csv
+      28: invokespecial #4                  // Method java/io/File."<init>":(Ljava/lang/String;)V
+      31: astore_3
+      32: aload_3
+      33: invokevirtual #5                  // Method java/io/File.exists:()Z
+      36: ifne          43
+      39: iconst_1
+      40: goto          44
+      43: iconst_0
+      44: istore        4
+      46: new           #8                  // class java/io/PrintWriter
+      49: dup
+      50: new           #9                  // class java/io/FileWriter
+      53: dup
+      54: aload_3
+      55: iconst_1
+      56: invokespecial #10                 // Method java/io/FileWriter."<init>":(Ljava/io/File;Z)V
+      59: invokespecial #11                 // Method java/io/PrintWriter."<init>":(Ljava/io/Writer;)V
+      62: astore        5
+      64: aconst_null
+      65: astore        6
+      67: iload         4
+      69: ifeq          79
+      72: aload         5
+      74: ldc           #13                 // String spec,class,className,method,location,error
+      76: invokevirtual #14                 // Method java/io/PrintWriter.println:(Ljava/lang/String;)V
+      79: aload         5
+      81: aload_1
+      82: invokevirtual #15                 // Method br/unb/cic/mop/eh/ErrorDescription.getErrorSummary:()Lbr/unb/cic/mop/eh/ErrorSummary;
+      85: invokevirtual #16                 // Method br/unb/cic/mop/eh/ErrorSummary.toString:()Ljava/lang/String;
+      88: invokevirtual #14                 // Method java/io/PrintWriter.println:(Ljava/lang/String;)V
+      91: aload         5
+      93: ifnull        178
+      96: aload         6
+      98: ifnull        121
+     101: aload         5
+     103: invokevirtual #17                 // Method java/io/PrintWriter.close:()V
+     106: goto          178
+     109: astore        7
+     111: aload         6
+     113: aload         7
+     115: invokevirtual #19                 // Method java/lang/Throwable.addSuppressed:(Ljava/lang/Throwable;)V
+     118: goto          178
+     121: aload         5
+     123: invokevirtual #17                 // Method java/io/PrintWriter.close:()V
+     126: goto          178
+     129: astore        7
+     131: aload         7
+     133: astore        6
+     135: aload         7
+     137: athrow
+     138: astore        8
+     140: aload         5
+     142: ifnull        175
+     145: aload         6
+     147: ifnull        170
+     150: aload         5
+     152: invokevirtual #17                 // Method java/io/PrintWriter.close:()V
+     155: goto          175
+     158: astore        9
+     160: aload         6
+     162: aload         9
+     164: invokevirtual #19                 // Method java/lang/Throwable.addSuppressed:(Ljava/lang/Throwable;)V
+     167: goto          175
+     170: aload         5
+     172: invokevirtual #17                 // Method java/io/PrintWriter.close:()V
+     175: aload         8
+     177: athrow
+     178: goto          183
+     181: astore        5
+ADDITIONAL_LINES: 10
+SELECTED_METHODS: 1
+
+=== 2. EQUALITY METHOD CHECK ===
+ErrorDescription
+DECLARES_EQUALS: True
+DECLARES_HASHCODE: True
+ErrorSummary
+DECLARES_EQUALS: True
+DECLARES_HASHCODE: True
+
+=== FINAL ===
+STEP_158_COMPLETE
+STATIC_BYTECODE_INSPECTION
+NO_TEST_EXECUTION
+NO_SOURCE_MODIFICATION
+EQUALITY_SEMANTICS_REQUIRE_REVIEW

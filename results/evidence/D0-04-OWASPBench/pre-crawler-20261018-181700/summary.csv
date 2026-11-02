@@ -1,0 +1,8 @@
+spec,class,className,method,location,error,expecting
+SSLContextSpec,org.apache.tomcat.util.net.jsse.JSSESSLContext,JSSESSLContext,<init>,JSSESSLContext.java:45,InvalidSequenceOfMethodCalls,unknown
+SSLContextSpec,org.apache.tomcat.util.net.jsse.JSSESSLContext,JSSESSLContext,init,JSSESSLContext.java:53,UnsafeProtocol,"expecting one of {TLSv1.2, TLSv1.3} but found TLS."
+SSLContextSpec,org.apache.tomcat.util.net.jsse.JSSESSLContext,JSSESSLContext,init,JSSESSLContext.java:53,InvalidSequenceOfMethodCalls,unknown
+KeyManagerFactorySpec,org.apache.tomcat.util.net.SSLUtilBase,SSLUtilBase,getKeyManagers,SSLUtilBase.java:370,UnsafeAlgorithm," expecting one of PKIX,SunX509 but found SunX509."
+MessageDigestSpec,org.hsqldb.rights.GranteeManager,GranteeManager,digest,Unknown Source,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
+MessageDigestSpec,org.hsqldb.rights.GranteeManager,GranteeManager,digest,Unknown Source,InvalidSequenceOfMethodCalls,unknown
+SecureRandomSpec,org.apache.catalina.util.SessionIdGeneratorBase,SessionIdGeneratorBase,getRandomBytes,SessionIdGeneratorBase.java:205,InvalidSequenceOfMethodCalls,unknown

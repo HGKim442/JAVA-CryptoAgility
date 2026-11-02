@@ -1,0 +1,213 @@
+Compiled from "RVMLoggingUnique.java"
+public class com.runtimeverification.rvmonitor.java.rt.RVMLoggingUnique extends com.runtimeverification.rvmonitor.java.rt.RVMLogging {
+  java.io.PrintStream p;
+
+  java.util.Set<java.lang.String> msgs;
+
+  java.util.Map<java.lang.String, java.lang.Integer> counts;
+
+  com.runtimeverification.rvmonitor.java.rt.RVMLoggingUnique(java.io.PrintStream);
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method com/runtimeverification/rvmonitor/java/rt/RVMLogging."<init>":()V
+       4: aload_0
+       5: aload_1
+       6: putfield      #2                  // Field p:Ljava/io/PrintStream;
+       9: aload_0
+      10: new           #3                  // class java/util/concurrent/ConcurrentHashMap
+      13: dup
+      14: invokespecial #4                  // Method java/util/concurrent/ConcurrentHashMap."<init>":()V
+      17: putfield      #5                  // Field counts:Ljava/util/Map;
+      20: invokestatic  #6                  // Method java/lang/Runtime.getRuntime:()Ljava/lang/Runtime;
+      23: new           #7                  // class com/runtimeverification/rvmonitor/java/rt/RVMLoggingUnique$1
+      26: dup
+      27: aload_0
+      28: invokespecial #8                  // Method com/runtimeverification/rvmonitor/java/rt/RVMLoggingUnique$1."<init>":(Lcom/runtimeverification/rvmonitor/java/rt/RVMLoggingUnique;)V
+      31: invokevirtual #9                  // Method java/lang/Runtime.addShutdownHook:(Ljava/lang/Thread;)V
+      34: return
+
+  public void println(com.runtimeverification.rvmonitor.java.rt.RVMLogging$Level);
+    Code:
+       0: aload_0
+       1: getfield      #2                  // Field p:Ljava/io/PrintStream;
+       4: invokevirtual #10                 // Method java/io/PrintStream.println:()V
+       7: return
+
+  public void print(com.runtimeverification.rvmonitor.java.rt.RVMLogging$Level, boolean);
+    Code:
+       0: aload_0
+       1: getfield      #2                  // Field p:Ljava/io/PrintStream;
+       4: iload_2
+       5: invokevirtual #11                 // Method java/io/PrintStream.println:(Z)V
+       8: return
+
+  public void println(com.runtimeverification.rvmonitor.java.rt.RVMLogging$Level, boolean);
+    Code:
+       0: aload_0
+       1: getfield      #2                  // Field p:Ljava/io/PrintStream;
+       4: iload_2
+       5: invokevirtual #11                 // Method java/io/PrintStream.println:(Z)V
+       8: return
+
+  public void print(com.runtimeverification.rvmonitor.java.rt.RVMLogging$Level, char);
+    Code:
+       0: aload_0
+       1: getfield      #2                  // Field p:Ljava/io/PrintStream;
+       4: iload_2
+       5: invokevirtual #12                 // Method java/io/PrintStream.println:(C)V
+       8: return
+
+  public void println(com.runtimeverification.rvmonitor.java.rt.RVMLogging$Level, char);
+    Code:
+       0: aload_0
+       1: getfield      #2                  // Field p:Ljava/io/PrintStream;
+       4: iload_2
+       5: invokevirtual #12                 // Method java/io/PrintStream.println:(C)V
+       8: return
+
+  public void print(com.runtimeverification.rvmonitor.java.rt.RVMLogging$Level, char[]);
+    Code:
+       0: aload_0
+       1: getfield      #2                  // Field p:Ljava/io/PrintStream;
+       4: aload_2
+       5: invokevirtual #13                 // Method java/io/PrintStream.println:([C)V
+       8: return
+
+  public void println(com.runtimeverification.rvmonitor.java.rt.RVMLogging$Level, char[]);
+    Code:
+       0: aload_0
+       1: getfield      #2                  // Field p:Ljava/io/PrintStream;
+       4: aload_2
+       5: invokevirtual #13                 // Method java/io/PrintStream.println:([C)V
+       8: return
+
+  public void print(com.runtimeverification.rvmonitor.java.rt.RVMLogging$Level, double);
+    Code:
+       0: aload_0
+       1: getfield      #2                  // Field p:Ljava/io/PrintStream;
+       4: dload_2
+       5: invokevirtual #14                 // Method java/io/PrintStream.println:(D)V
+       8: return
+
+  public void println(com.runtimeverification.rvmonitor.java.rt.RVMLogging$Level, double);
+    Code:
+       0: aload_0
+       1: getfield      #2                  // Field p:Ljava/io/PrintStream;
+       4: dload_2
+       5: invokevirtual #14                 // Method java/io/PrintStream.println:(D)V
+       8: return
+
+  public void print(com.runtimeverification.rvmonitor.java.rt.RVMLogging$Level, float);
+    Code:
+       0: aload_0
+       1: getfield      #2                  // Field p:Ljava/io/PrintStream;
+       4: fload_2
+       5: invokevirtual #15                 // Method java/io/PrintStream.println:(F)V
+       8: return
+
+  public void println(com.runtimeverification.rvmonitor.java.rt.RVMLogging$Level, float);
+    Code:
+       0: aload_0
+       1: getfield      #2                  // Field p:Ljava/io/PrintStream;
+       4: fload_2
+       5: invokevirtual #15                 // Method java/io/PrintStream.println:(F)V
+       8: return
+
+  public void print(com.runtimeverification.rvmonitor.java.rt.RVMLogging$Level, int);
+    Code:
+       0: aload_0
+       1: getfield      #2                  // Field p:Ljava/io/PrintStream;
+       4: iload_2
+       5: invokevirtual #16                 // Method java/io/PrintStream.println:(I)V
+       8: return
+
+  public void println(com.runtimeverification.rvmonitor.java.rt.RVMLogging$Level, int);
+    Code:
+       0: aload_0
+       1: getfield      #2                  // Field p:Ljava/io/PrintStream;
+       4: iload_2
+       5: invokevirtual #16                 // Method java/io/PrintStream.println:(I)V
+       8: return
+
+  public void print(com.runtimeverification.rvmonitor.java.rt.RVMLogging$Level, long);
+    Code:
+       0: aload_0
+       1: getfield      #2                  // Field p:Ljava/io/PrintStream;
+       4: lload_2
+       5: invokevirtual #17                 // Method java/io/PrintStream.println:(J)V
+       8: return
+
+  public void println(com.runtimeverification.rvmonitor.java.rt.RVMLogging$Level, long);
+    Code:
+       0: aload_0
+       1: getfield      #2                  // Field p:Ljava/io/PrintStream;
+       4: lload_2
+       5: invokevirtual #17                 // Method java/io/PrintStream.println:(J)V
+       8: return
+
+  public void print(com.runtimeverification.rvmonitor.java.rt.RVMLogging$Level, java.lang.Object);
+    Code:
+       0: aload_0
+       1: getfield      #2                  // Field p:Ljava/io/PrintStream;
+       4: aload_2
+       5: invokevirtual #18                 // Method java/io/PrintStream.println:(Ljava/lang/Object;)V
+       8: return
+
+  public void println(com.runtimeverification.rvmonitor.java.rt.RVMLogging$Level, java.lang.Object);
+    Code:
+       0: aload_0
+       1: getfield      #2                  // Field p:Ljava/io/PrintStream;
+       4: aload_2
+       5: invokevirtual #18                 // Method java/io/PrintStream.println:(Ljava/lang/Object;)V
+       8: return
+
+  public void print(com.runtimeverification.rvmonitor.java.rt.RVMLogging$Level, java.lang.String);
+    Code:
+       0: aload_0
+       1: getfield      #2                  // Field p:Ljava/io/PrintStream;
+       4: aload_2
+       5: invokevirtual #19                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+       8: return
+
+  public void println(com.runtimeverification.rvmonitor.java.rt.RVMLogging$Level, java.lang.String);
+    Code:
+       0: aload_0
+       1: aload_2
+       2: invokevirtual #20                 // Method handleStringPrinting:(Ljava/lang/String;)V
+       5: return
+
+  public void handleStringPrinting(java.lang.String);
+    Code:
+       0: aload_0
+       1: getfield      #5                  // Field counts:Ljava/util/Map;
+       4: aload_1
+       5: invokeinterface #21,  2           // InterfaceMethod java/util/Map.containsKey:(Ljava/lang/Object;)Z
+      10: ifeq          48
+      13: aload_0
+      14: getfield      #5                  // Field counts:Ljava/util/Map;
+      17: aload_1
+      18: aload_0
+      19: getfield      #5                  // Field counts:Ljava/util/Map;
+      22: aload_1
+      23: invokeinterface #22,  2           // InterfaceMethod java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+      28: checkcast     #23                 // class java/lang/Integer
+      31: invokevirtual #24                 // Method java/lang/Integer.intValue:()I
+      34: iconst_1
+      35: iadd
+      36: invokestatic  #25                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      39: invokeinterface #26,  3           // InterfaceMethod java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+      44: pop
+      45: goto          71
+      48: aload_0
+      49: getfield      #2                  // Field p:Ljava/io/PrintStream;
+      52: aload_1
+      53: invokevirtual #19                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      56: aload_0
+      57: getfield      #5                  // Field counts:Ljava/util/Map;
+      60: aload_1
+      61: iconst_1
+      62: invokestatic  #25                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      65: invokeinterface #26,  3           // InterfaceMethod java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+      70: pop
+      71: return
+}

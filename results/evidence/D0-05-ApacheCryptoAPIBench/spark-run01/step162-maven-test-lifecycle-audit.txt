@@ -1,0 +1,194 @@
+
+=== POM: ORIGINAL_EFFECTIVE_WITH_MOP ===
+PATH: /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/spark-run01/step150-original-effective-pom.xml
+
+PLUGIN: maven-surefire-plugin
+LOCATION: BUILD_PLUGINS
+VERSION: 2.20.1
+CONFIGURATION:
+  argLine = -Xmx4096m -XX:MaxPermSize=1024m
+  argLine = -javaagent:/home/RESEARCHER/pqc-research/D0-rvsec/RVSec-replication-package/ApacheCryptoAPIBench/apache_codes/spark/core/JavaMOPAgent.jar
+  runOrder = alphabetical
+  includes = **/Test*.java
+            **/*Test.java
+            **/*TestCase.java
+            **/*Suite.java
+  reportsDirectory = /home/RESEARCHER/pqc-research/D0-rvsec/RVSec-replication-package/ApacheCryptoAPIBench/apache_codes/spark/core/target/surefire-reports
+EXPLICIT_EXECUTIONS: 2
+ EXECUTION_ID: default-test
+ PHASE: test
+ GOALS: ['test']
+ EXEC_CONFIG: argLine = -Xmx4096m -XX:MaxPermSize=1024m
+ EXEC_CONFIG: argLine = -javaagent:/home/RESEARCHER/pqc-research/D0-rvsec/RVSec-replication-package/ApacheCryptoAPIBench/apache_codes/spark/core/JavaMOPAgent.jar
+ EXECUTION_ID: test
+ PHASE: [NOT EXPLICIT]
+ GOALS: ['test']
+ EXEC_CONFIG: argLine = -Xmx4096m -XX:MaxPermSize=1024m
+ EXEC_CONFIG: argLine = -javaagent:/home/RESEARCHER/pqc-research/D0-rvsec/RVSec-replication-package/ApacheCryptoAPIBench/apache_codes/spark/core/JavaMOPAgent.jar
+
+PLUGIN: scalatest-maven-plugin
+LOCATION: BUILD_PLUGINS
+VERSION: 1.0
+CONFIGURATION:
+  argLine = -javaagent:/home/RESEARCHER/pqc-research/D0-rvsec/RVSec-replication-package/ApacheCryptoAPIBench/apache_codes/spark/core/JavaMOPAgent.jar
+  reportsDirectory = /home/RESEARCHER/pqc-research/D0-rvsec/RVSec-replication-package/ApacheCryptoAPIBench/apache_codes/spark/core/target/surefire-reports
+EXPLICIT_EXECUTIONS: 1
+ EXECUTION_ID: test
+ PHASE: [NOT EXPLICIT]
+ GOALS: ['test']
+ EXEC_CONFIG: argLine = -javaagent:/home/RESEARCHER/pqc-research/D0-rvsec/RVSec-replication-package/ApacheCryptoAPIBench/apache_codes/spark/core/JavaMOPAgent.jar
+
+PLUGIN: maven-failsafe-plugin
+LOCATION: PLUGIN_MANAGEMENT
+VERSION: 2.19.1
+CONFIGURATION:
+  NONE
+EXPLICIT_EXECUTIONS: 0
+
+PLUGIN: scalatest-maven-plugin
+LOCATION: PLUGIN_MANAGEMENT
+VERSION: 1.0
+CONFIGURATION:
+  reportsDirectory = /home/RESEARCHER/pqc-research/D0-rvsec/RVSec-replication-package/ApacheCryptoAPIBench/apache_codes/spark/core/target/surefire-reports
+  argLine = -ea -Xmx3g -Xss4m -XX:ReservedCodeCacheSize=512m
+EXPLICIT_EXECUTIONS: 1
+ EXECUTION_ID: test
+ PHASE: [NOT EXPLICIT]
+ GOALS: ['test']
+ EXEC_CONFIG: argLine = -ea -Xmx3g -Xss4m -XX:ReservedCodeCacheSize=512m
+
+PLUGIN: maven-surefire-plugin
+LOCATION: PLUGIN_MANAGEMENT
+VERSION: 2.20.1
+CONFIGURATION:
+  includes = **/Test*.java
+              **/*Test.java
+              **/*TestCase.java
+              **/*Suite.java
+  reportsDirectory = /home/RESEARCHER/pqc-research/D0-rvsec/RVSec-replication-package/ApacheCryptoAPIBench/apache_codes/spark/core/target/surefire-reports
+  argLine = -ea -Xmx3g -Xss4m -XX:ReservedCodeCacheSize=512m
+EXPLICIT_EXECUTIONS: 1
+ EXECUTION_ID: test
+ PHASE: [NOT EXPLICIT]
+ GOALS: ['test']
+ EXEC_CONFIG: argLine = -ea -Xmx3g -Xss4m -XX:ReservedCodeCacheSize=512m
+RELEVANT_PLUGIN_DECLARATIONS: 5
+
+=== POM: WORKING_EFFECTIVE_WITH_MOP ===
+PATH: /home/RESEARCHER/pqc-research/D0-rvsec/evidence/D0-05-ApacheCryptoAPIBench/spark-run01/step148-mop-effective-pom.xml
+
+PLUGIN: maven-surefire-plugin
+LOCATION: BUILD_PLUGINS
+VERSION: 2.20.1
+CONFIGURATION:
+  argLine = -Xmx4096m -XX:MaxPermSize=1024m -javaagent:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/JavaMOPAgent.jar
+  runOrder = alphabetical
+  includes = **/Test*.java
+            **/*Test.java
+            **/*TestCase.java
+            **/*Suite.java
+  reportsDirectory = /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/surefire-reports
+EXPLICIT_EXECUTIONS: 2
+ EXECUTION_ID: default-test
+ PHASE: test
+ GOALS: ['test']
+ EXEC_CONFIG: argLine = -Xmx4096m -XX:MaxPermSize=1024m -javaagent:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/JavaMOPAgent.jar
+ EXECUTION_ID: test
+ PHASE: [NOT EXPLICIT]
+ GOALS: ['test']
+ EXEC_CONFIG: argLine = -Xmx4096m -XX:MaxPermSize=1024m -javaagent:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/JavaMOPAgent.jar
+
+PLUGIN: scalatest-maven-plugin
+LOCATION: BUILD_PLUGINS
+VERSION: 1.0
+CONFIGURATION:
+  argLine = -javaagent:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/JavaMOPAgent.jar
+  reportsDirectory = /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/surefire-reports
+EXPLICIT_EXECUTIONS: 1
+ EXECUTION_ID: test
+ PHASE: [NOT EXPLICIT]
+ GOALS: ['test']
+ EXEC_CONFIG: argLine = -javaagent:/home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/JavaMOPAgent.jar
+
+PLUGIN: maven-failsafe-plugin
+LOCATION: PLUGIN_MANAGEMENT
+VERSION: 2.19.1
+CONFIGURATION:
+  NONE
+EXPLICIT_EXECUTIONS: 0
+
+PLUGIN: scalatest-maven-plugin
+LOCATION: PLUGIN_MANAGEMENT
+VERSION: 1.0
+CONFIGURATION:
+  reportsDirectory = /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/surefire-reports
+  argLine = -ea -Xmx3g -Xss4m -XX:ReservedCodeCacheSize=512m
+EXPLICIT_EXECUTIONS: 1
+ EXECUTION_ID: test
+ PHASE: [NOT EXPLICIT]
+ GOALS: ['test']
+ EXEC_CONFIG: argLine = -ea -Xmx3g -Xss4m -XX:ReservedCodeCacheSize=512m
+
+PLUGIN: maven-surefire-plugin
+LOCATION: PLUGIN_MANAGEMENT
+VERSION: 2.20.1
+CONFIGURATION:
+  includes = **/Test*.java
+              **/*Test.java
+              **/*TestCase.java
+              **/*Suite.java
+  reportsDirectory = /home/RESEARCHER/pqc-research/D0-rvsec/runs/ApacheCryptoAPIBench-run01/apache_codes/spark/core/target/surefire-reports
+  argLine = -ea -Xmx3g -Xss4m -XX:ReservedCodeCacheSize=512m
+EXPLICIT_EXECUTIONS: 1
+ EXECUTION_ID: test
+ PHASE: [NOT EXPLICIT]
+ GOALS: ['test']
+ EXEC_CONFIG: argLine = -ea -Xmx3g -Xss4m -XX:ReservedCodeCacheSize=512m
+RELEVANT_PLUGIN_DECLARATIONS: 5
+
+=== POM: ORIGINAL_CORE_SOURCE ===
+PATH: /home/RESEARCHER/pqc-research/D0-rvsec/RVSec-replication-package/ApacheCryptoAPIBench/apache_codes/spark/core/pom.xml
+RELEVANT_PLUGIN_DECLARATIONS: 0
+
+=== ORIGINAL EXECUTION SCRIPT ===
+LINE_7: mvn clean test -pl artemis-commons --also-make
+LINE_13: mvn clean test -pl deltaspike/core/impl --also-make
+LINE_19: mvn clean test -pl kerberos-codec --also-make
+LINE_25: mvn clean test -pl framework/core --also-make
+LINE_31: mvn clean test -pl meecrowave-core -am
+LINE_35: ##### SPARK #############################################################
+LINE_36: cd spark/
+LINE_37: mvn clean test -pl core -am
+LINE_43: mvn clean test -pl tika-core -am
+LINE_49: #mvn clean test -pl container/openejb-core -am
+LINE_55: mvn clean test -pl wicket-util -am
+
+=== ACTUAL CONTROLLED RUNS ===
+
+RUN: STEP151
+MATCHING_LINES: 5
+16: [INFO] --- scalatest:1.0:test (default-cli) @ spark-core_2.11 ---
+18: CryptoStreamUtilsSuite:
+27: Total number of tests run: 7
+29: Tests: succeeded 7, failed 0, canceled 0, ignored 0, pending 0
+32: [INFO] BUILD SUCCESS
+
+RUN: STEP153
+MATCHING_LINES: 5
+17: [INFO] --- scalatest:1.0:test (default-cli) @ spark-core_2.11 ---
+20: CryptoStreamUtilsSuite:
+29: Total number of tests run: 7
+31: Tests: succeeded 7, failed 0, canceled 0, ignored 0, pending 0
+34: [INFO] BUILD SUCCESS
+
+=== INTERPRETATION GUARD ===
+EFFECTIVE_POM_SHOWS_CONFIGURED_EXECUTIONS
+ACTUAL_JVM_BOUNDARIES_REQUIRE_RUNTIME_EVIDENCE
+SOURCE_SCRIPT_DOES_NOT_PROVE_PUBLISHED_RUN
+NO_POSTHOC_CSV_MERGING
+
+=== FINAL ===
+STEP_162_COMPLETE
+STATIC_MAVEN_LIFECYCLE_AUDIT
+NO_TEST_EXECUTION
+NO_SOURCE_MODIFICATION

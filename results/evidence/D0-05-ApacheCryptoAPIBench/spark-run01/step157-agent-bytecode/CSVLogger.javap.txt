@@ -1,0 +1,105 @@
+Compiled from "CSVLogger.java"
+public class br.unb.cic.mop.eh.logger.CSVLogger implements br.unb.cic.mop.eh.logger.ILogger {
+  public static final java.lang.String HEADER;
+
+  public br.unb.cic.mop.eh.logger.CSVLogger();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public void logError(br.unb.cic.mop.eh.ErrorDescription);
+    Code:
+       0: new           #2                  // class java/io/File
+       3: dup
+       4: ldc           #3                  // String output
+       6: invokespecial #4                  // Method java/io/File."<init>":(Ljava/lang/String;)V
+       9: astore_2
+      10: aload_2
+      11: invokevirtual #5                  // Method java/io/File.exists:()Z
+      14: ifne          22
+      17: aload_2
+      18: invokevirtual #6                  // Method java/io/File.mkdir:()Z
+      21: pop
+      22: new           #2                  // class java/io/File
+      25: dup
+      26: ldc           #7                  // String output/summary.csv
+      28: invokespecial #4                  // Method java/io/File."<init>":(Ljava/lang/String;)V
+      31: astore_3
+      32: aload_3
+      33: invokevirtual #5                  // Method java/io/File.exists:()Z
+      36: ifne          43
+      39: iconst_1
+      40: goto          44
+      43: iconst_0
+      44: istore        4
+      46: new           #8                  // class java/io/PrintWriter
+      49: dup
+      50: new           #9                  // class java/io/FileWriter
+      53: dup
+      54: aload_3
+      55: iconst_1
+      56: invokespecial #10                 // Method java/io/FileWriter."<init>":(Ljava/io/File;Z)V
+      59: invokespecial #11                 // Method java/io/PrintWriter."<init>":(Ljava/io/Writer;)V
+      62: astore        5
+      64: aconst_null
+      65: astore        6
+      67: iload         4
+      69: ifeq          79
+      72: aload         5
+      74: ldc           #13                 // String spec,class,className,method,location,error
+      76: invokevirtual #14                 // Method java/io/PrintWriter.println:(Ljava/lang/String;)V
+      79: aload         5
+      81: aload_1
+      82: invokevirtual #15                 // Method br/unb/cic/mop/eh/ErrorDescription.getErrorSummary:()Lbr/unb/cic/mop/eh/ErrorSummary;
+      85: invokevirtual #16                 // Method br/unb/cic/mop/eh/ErrorSummary.toString:()Ljava/lang/String;
+      88: invokevirtual #14                 // Method java/io/PrintWriter.println:(Ljava/lang/String;)V
+      91: aload         5
+      93: ifnull        178
+      96: aload         6
+      98: ifnull        121
+     101: aload         5
+     103: invokevirtual #17                 // Method java/io/PrintWriter.close:()V
+     106: goto          178
+     109: astore        7
+     111: aload         6
+     113: aload         7
+     115: invokevirtual #19                 // Method java/lang/Throwable.addSuppressed:(Ljava/lang/Throwable;)V
+     118: goto          178
+     121: aload         5
+     123: invokevirtual #17                 // Method java/io/PrintWriter.close:()V
+     126: goto          178
+     129: astore        7
+     131: aload         7
+     133: astore        6
+     135: aload         7
+     137: athrow
+     138: astore        8
+     140: aload         5
+     142: ifnull        175
+     145: aload         6
+     147: ifnull        170
+     150: aload         5
+     152: invokevirtual #17                 // Method java/io/PrintWriter.close:()V
+     155: goto          175
+     158: astore        9
+     160: aload         6
+     162: aload         9
+     164: invokevirtual #19                 // Method java/lang/Throwable.addSuppressed:(Ljava/lang/Throwable;)V
+     167: goto          175
+     170: aload         5
+     172: invokevirtual #17                 // Method java/io/PrintWriter.close:()V
+     175: aload         8
+     177: athrow
+     178: goto          183
+     181: astore        5
+     183: return
+    Exception table:
+       from    to  target type
+         101   106   109   Class java/lang/Throwable
+          67    91   129   Class java/lang/Throwable
+          67    91   138   any
+         150   155   158   Class java/lang/Throwable
+         129   140   138   any
+          46   178   181   Class java/lang/Exception
+}

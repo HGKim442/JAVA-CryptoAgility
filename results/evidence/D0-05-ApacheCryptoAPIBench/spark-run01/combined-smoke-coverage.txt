@@ -1,0 +1,35 @@
+=== INPUT EVENTS ===
+REFERENCE: 55
+CRYPTO_SUITE: 13
+SSL_SUITE: 3
+
+=== OVERLAP ANALYSIS ===
+OVERLAPPING_EVENT_OCCURRENCES: 0
+COMBINED_MAX_MULTIPLICITY: 16
+CRYPTO_UNEXPECTED: 0
+SSL_UNEXPECTED: 0
+
+=== VERIFIED COVERAGE ===
+REFERENCE_EVENTS: 55
+MATCHED_EVENTS: 16
+STILL_MISSING: 39
+UNEXPECTED_EVENTS: 0
+
+=== MISSING BY CLASS ===
+  8 org.apache.spark.network.crypto.AuthEngine
+  7 org.apache.spark.security.CryptoStreamUtils$
+  6 org.apache.hadoop.io.SequenceFile$Writer
+  4 org.apache.spark.network.crypto.TransportCipher
+  4 org.eclipse.jetty.util.ssl.SslContextFactory
+  3 com.gargoylesoftware.htmlunit.httpclient.HtmlUnitSSLConnectionSocketFactory
+  3 org.apache.spark.TestUtils$
+  2 org.apache.spark.security.CryptoStreamUtils$CryptoParams
+  1 org.apache.spark.launcher.LauncherServer
+  1 org.apache.spark.SecurityManager$$anonfun$2
+
+=== UNEXPECTED EVENTS ===
+NONE
+
+=== FINAL VERDICT ===
+VERIFIED_PARTIAL_REFERENCE_COVERAGE
+NOTE: Combined counts use per-row maximum, not the sum of independent runs.
