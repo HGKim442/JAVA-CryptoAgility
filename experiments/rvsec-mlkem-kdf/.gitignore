@@ -1,0 +1,12 @@
+classes/
+lib/
+logs/
+logs_repeated/
+actual_runs_*.csv
+actual_summary_*.json
+*.log
+*.p12
+*.pem
+*.key
+*.jar
+__pycache__/
