@@ -31,7 +31,32 @@ The runner compiles sources into a **private directory outside the Git branch**,
 ## Boundaries and publication
 
 - **RVSec 0.2.0 baseline**: earlier 5 pairs of normal vs ML-KEM-omission code gave equal original warning multisets. Those original RVSec runs are *not rerun here*.
-- D2-13/14/15 Java-agent tests, multi-thread / cancellation phases D2-16–24 and independent runtime monitoring remain **out of scope for this first branch checkpoint**.
+- D2-15 and D2-15.1 agent replay scripts and baseline
+  agent source are included.
+- D2-14 was separately reproduced in the researcher's
+  WSL environment, but its complete replay artifacts
+  are not packaged in this branch.
+- D2-15 and D2-15.1 require previously preserved local
+  D2 experiment artifacts; they are not standalone tests.
+- D2-16–24 and general-purpose runtime provenance
+  tracking remain outside this branch's verified scope.
+
+## Follow-up validation (2026-11-04)
+
+| Experiment | Expected outcomes matched |
+|---|---:|
+| D2-10/11/12 | 60/60 |
+| D2-14 | 24/24 |
+| D2-15 | 24/24 |
+| D2-15.1 | 24/24 |
+
+D2-15.1 allowed the honest alternate KDF path (3/3)
+while blocking the forged alternate path (3/3).
+
+These are controlled test outcomes, not proof of a
+general-purpose PQC contribution detector. RVSec
+itself was not modified.
+
 - Never commit private keys, shared secrets, keystore files, local absolute paths, confidential findings, raw unrelated logs or third-party patches.
 - This is research evidence for an **optional RVSec feature proposal**, not a claim of vulnerability in RVSec.
 
