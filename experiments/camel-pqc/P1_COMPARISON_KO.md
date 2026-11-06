@@ -8,6 +8,8 @@
 
 ## 실행
 
+GitHub 저장소 최상위에서 `cd experiments/camel-pqc`로 이동한 다음 실행합니다.
+
 ```bash
 bash run_wsl.sh
 ```
@@ -53,3 +55,7 @@ V0/V1의 HQC 행에서 `MLKEM_ROUNDTRIP=true`는 실제 요청과 실행이 불�
 
 - https://github.com/apache/camel/blob/camel-4.22.0/components/camel-pqc/src/main/java/org/apache/camel/component/pqc/dataformat/PQCDataFormat.java
 - https://github.com/apache/camel/blob/camel-4.22.0/components/camel-pqc/src/main/java/org/apache/camel/component/pqc/PQCKeyEncapsulationAlgorithms.java
+
+기능 비교와 정상 성능 측정은 동일한 `pom.xml`과 비교 Java 클래스를 사용하며, 별도 소스 복사본은 두지 않습니다. [정상 성능 측정 안내](README_KO.md).
+
+10개 독립 JVM 반복 검증 요약: [`USER_WSL_REPEAT_CHECK.txt`](reports/p1-reproduction/USER_WSL_REPEAT_CHECK.txt). 동일 조건의 반복 판정 10건이며 별개 결함 10건을 뜻하지 않습니다.

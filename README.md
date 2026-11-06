@@ -11,9 +11,9 @@ Java JCA/JCE 암호민첩성(Cryptographic Agility) 전환 시 보안 불변식�
 | 원 과제 E1/E2와 키 버전 | [Java E1/E2 + 키 버전 교체](experiments/jca-e1-e2-key-version/) | 6종 합성 PoC, PQC Provider 장애, 키 전환 |
 | PoC06 정책 전환 | [정책 효력 시점 검증](experiments/poc06-policy-cutover/) | Snapshot / Strict cutover |
 | PoC03+06/E2 | [Fallback 결합 실험](experiments/poc03-poc06-fallback-cutover/) | X25519·ML-KEM-768·AES-GCM, 연구용 combiner |
-| Apache Camel 4.22.0 | [P1/PoC06 기능 비교](experiments/camel-pqc-p1-comparison/) | V0/V1/V2, KEM 요청과 유효 JCA 선택 일치 |
-| Apache Camel 4.22.0 | [성능 계측](experiments/camel-pqc-timing/) | 5개 JVM의 탐색적 정상 경로 성능 |
-| Camel 원인 대조 | [사전 시험 코드](experiments/camel-pqc-probe-archived/) | 4.22.0 초기 추적용; WSL 최종본은 별도 수집 |
+| Apache Camel 4.22.0 | [P1/PoC06 기능·성능 통합 실험](experiments/camel-pqc/) | V0/V1/V2, KEM 실행 일치 및 5-JVM 정상 비용 |
+| Camel 원인 대조 | [최종 WSL Probe](experiments/camel-pqc-probe/) | 캐시 유무에 따른 알고리즘 요청 대조 |
+| Camel 초기 Probe | [과거 초기 검증 소스](archive/camel-pqc-initial-probe-20261106/) | 중간 기록 보존용, 최신 재현 기본 대상 아님 |
 | 과거 확장 코드 | [2026-10-10 보존용 소스](archive/jca-reference-v15-20261010/) | 당시 상태의 코드만, 최신 검증 아님 |
 | Vert.x 5.2.2 | [PoC06 TLS/JSSE 공개용 보고](docs/vertx-jsse-poc06/README_KO.md) | 미공개 결함 세부자료·패치 제외 |
 
@@ -28,6 +28,22 @@ Java JCA/JCE 암호민첩성(Cryptographic Agility) 전환 시 보안 불변식�
 - Camel 정상 왕복: 5개 JVM에서 V0 108.400μs, V1 108.913μs, V2 108.474μs(각 JVM 중앙값들의 중앙값). **운영 성능 보장 아님.**
 
 세부 근거 및 정확한 범위: [연구 현황](docs/PROJECT_STATUS_KO.md) · [공개/재현 규칙](docs/PUBLICATION_AND_REPRODUCIBILITY_KO.md).
+
+## GitHub 복제 후 빠른 시작
+
+```bash
+git clone https://github.com/HGKim442/JAVA-CryptoAgility.git
+cd JAVA-CryptoAgility
+
+# Camel 4.22.0의 P1/PoC06 기능 비교 (JDK 21+, Maven 3.9+)
+cd experiments/camel-pqc
+bash run_wsl.sh
+
+# 동일 폴더에서 탐색적 성능 측정
+bash scripts/run_timing.sh
+```
+
+원 과제 E1/E2 재현은 [`experiments/jca-e1-e2-key-version/README_KO.md`](experiments/jca-e1-e2-key-version/README_KO.md)를 따르세요. 해당 E2 재현에는 Bouncy Castle 1.86 JAR 경로를 지정해야 합니다. 전체 구조와 의도적으로 유지한 사본은 [저장소 구조 안내](docs/REPOSITORY_LAYOUT_KO.md)를 참고하세요.
 
 ## 재현 안내
 

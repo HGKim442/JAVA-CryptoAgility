@@ -9,9 +9,9 @@
 | PoC06 (정책 epoch) | `experiments/poc06-policy-cutover` | Snapshot / Strict cutover 단일요인 108/108, 통제 fixture |
 | PoC03+06 결합 | `experiments/poc03-poc06-fallback-cutover` | 정책 효력시점 + KEM 실패 144/144, 임의 경쟁상황 일반화 금지 |
 | PoC06 (키 버전) | `experiments/jca-e1-e2-key-version` | 54/54, AES-GCM 단일요인 |
-| P1 + PoC06 실제 OSS | `experiments/camel-pqc-p1-comparison` | Camel 4.22.0 실제 JAR, KEM 헤더·유효 실행 선택 비교 |
+| P1 + PoC06 실제 OSS | `experiments/camel-pqc` | Camel 4.22.0 실제 JAR, KEM 헤더·유효 실행 선택 비교 |
 | E1 Camel 재현성 | 동일 비교 | 12/12 x 10 JVM = 120/120; 사용자가 제공한 WSL 실행 출력 |
-| E1 Camel 정상 비용 | `experiments/camel-pqc-timing` + 요약 CSV | 5 JVM 탐색적 측정, 4,500회 정상 왕복, 운영성능 추론 금지 |
+| E1 Camel 정상 비용 | `experiments/camel-pqc` + 요약 CSV | 5 JVM 탐색적 측정, 4,500회 정상 왕복, 운영성능 추론 금지 |
 | P2 | 합성 정책·키 전환 항목만 완료 | 공개 Camel의 concurrent policy-key state 전환 증명 아님 |
 | P3 | 원 E1 합성 AAD 결합 포함 | 실제 임의 앱의 컨텍스트 결합 보증 아님 |
 | Vert.x JSSE 확장 | `docs/vertx-jsse-poc06` | 제한된 범위에서 수정 전후 비교, 상세 자료는 비공개 및 공식 조율 전 공개 금지 |

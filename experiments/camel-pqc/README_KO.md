@@ -12,16 +12,19 @@
 
 ## 실행 (Ubuntu/WSL)
 
-다운로드한 ZIP을 `~/pqc-research/`에 압축 해제 후:
+GitHub 저장소를 복제한 뒤 저장소 최상위 경로에서:
 
 ```bash
-cd ~/pqc-research/Camel_PQC_P1_PoC06_E1_Timing_v1
-bash scripts/run_timing.sh
+cd experiments/camel-pqc
+bash run_wsl.sh             # P1·PoC06 V0/V1/V2 기능 비교
+bash scripts/run_timing.sh # 정상 경로 비용 측정: 5개 독립 JVM
 ```
+
+기능 비교 실험의 설계와 판정은 [`P1_COMPARISON_KO.md`](P1_COMPARISON_KO.md)를 참고하세요.
 
 요구사항: Java 21 이상, Maven 3.9.x, Python 3, SHA256SUMS.txt 검사 가능 환경. 첫 실행 시 Maven 종속성 다운로드가 필요할 수 있다.
 
-출력 끝의 `RESULT=FIVE_FORK_TIMING_COLLECTED`, `RESULT_DIR=reports/normal_timing_...`가 있는지 확인한다. 실제 숫자는 현장에서 실행 전까지 미정이다. 외부 GitHub나 Camel 본체 파일을 수정하지 않는다. 보고서(`reports`)와 키·비밀 값은 GitHub에 자동 업로드되지 않는다.
+출력 끝의 `RESULT=FIVE_FORK_TIMING_COLLECTED`, `RESULT_DIR=reports/normal_timing_...`가 있는지 확인한다. 실제 숫자는 현장에서 실행 전까지 미정이다. 외부 GitHub나 Camel 본체 파일을 수정하지 않는다. 로컬 새 측정 결과(`reports/normal_timing_*`)는 기본적으로 Git 추적 대상이 아닙니다. 이미 검증된 요약·원시 CSV는 `reports/verified-wsl-run/`에 보존되어 있습니다. 비밀키는 업로드하지 마세요.
 
 ## 설계와 해석
 
