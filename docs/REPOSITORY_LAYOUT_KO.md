@@ -23,7 +23,7 @@
 2. Camel 5-JVM 재검증 결과의 동일한 텍스트 요약 사본은 하나(`summary.txt`)만 유지합니다. 10개 독립 JVM 반복 검증 기록 `USER_WSL_REPEAT_CHECK.txt`는 유일한 검증 요약이므로 `experiments/camel-pqc/reports/p1-reproduction/`에 별도로 보존합니다.
 3. `archive/jca-reference-v15-20261010/`의 세 Java 소스와 원본 E1/E2 재현 소스는 바이트가 같지만 **역사적 스냅샷과 독립 실행을 위해 의도적으로 보존**합니다.
 4. PoC03+06 결과 `summary.json`의 사본 두 개는 E1/E2 독립 감사 스크립트(`audit_reports.py`)가 각각 경로를 직접 참조하므로 **두 곳 유지**합니다. 숫자를 서로 다른 실험 결과로 중복 계산하지 않습니다.
-5. 과거 `reproduction/*`, `experiment/*` 브랜치는 재현 기록이고 `main`의 최신 실행 경로가 아닙니다. **기존 브랜치를 병합하거나 삭제하지 않았습니다.**
+5. 과거 `reproduction/*`, `experiment/*` 브랜치는 재현 기록이고 `main`의 최신 실행 경로가 아닙니다. **현재 유지하는 브랜치와 백업 태그는 [전체 브랜치 안내](BRANCH_INVENTORY_KO.md)를 참고하세요.**
 
 ## 보안 및 검증 한계
 
