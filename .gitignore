@@ -1,0 +1,24 @@
+# Build output and secrets
+**/target/
+**/__pycache__/
+*.pyc
+*.class
+*.jar
+*.war
+*.pem
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.key
+.env
+.env.*
+*.secret
+*.token
+.DS_Store
+.vscode/
+.idea/
+# locally-produced evidence (review before public upload)
+**/reports/normal_timing_*/fork_*.log
+**/reports/normal_timing_*/environment.txt
+**/reports/normal_timing_*/SHA256_REPORT.txt

@@ -1,0 +1,61 @@
+{
+  "status": "CONTROLLED_FIXTURE_EXPECTATION_MATCH",
+  "conditions_per_repetition": 48,
+  "repetitions": 3,
+  "rows": 144,
+  "verdicts": {
+    "COMPLIANT": 81,
+    "VIOLATION": 30,
+    "REJECTED_POLICY": 15,
+    "REJECTED_EXECUTION": 18
+  },
+  "focus": {
+    "C2_STABLE_BC_FAIL/SNAPSHOT": {
+      "V0_VULNERABLE": "VIOLATION",
+      "V1_ALLOWLIST": "VIOLATION",
+      "V2_FINAL_POLICY": "REJECTED_POLICY"
+    },
+    "C2_STABLE_BC_FAIL/STRICT_CUTOVER": {
+      "V0_VULNERABLE": "VIOLATION",
+      "V1_ALLOWLIST": "VIOLATION",
+      "V2_FINAL_POLICY": "REJECTED_POLICY"
+    },
+    "UPGRADE_BC_FAIL/SNAPSHOT": {
+      "V0_VULNERABLE": "COMPLIANT",
+      "V1_ALLOWLIST": "COMPLIANT",
+      "V2_FINAL_POLICY": "COMPLIANT"
+    },
+    "UPGRADE_BC_FAIL/STRICT_CUTOVER": {
+      "V0_VULNERABLE": "VIOLATION",
+      "V1_ALLOWLIST": "VIOLATION",
+      "V2_FINAL_POLICY": "REJECTED_POLICY"
+    },
+    "UPGRADE_SUNEC_FAIL/SNAPSHOT": {
+      "V0_VULNERABLE": "COMPLIANT",
+      "V1_ALLOWLIST": "COMPLIANT",
+      "V2_FINAL_POLICY": "COMPLIANT"
+    },
+    "UPGRADE_SUNEC_FAIL/STRICT_CUTOVER": {
+      "V0_VULNERABLE": "VIOLATION",
+      "V1_ALLOWLIST": "VIOLATION",
+      "V2_FINAL_POLICY": "REJECTED_POLICY"
+    },
+    "RELAX_BC_FAIL/SNAPSHOT": {
+      "V0_VULNERABLE": "VIOLATION",
+      "V1_ALLOWLIST": "VIOLATION",
+      "V2_FINAL_POLICY": "REJECTED_POLICY"
+    },
+    "RELAX_BC_FAIL/STRICT_CUTOVER": {
+      "V0_VULNERABLE": "COMPLIANT",
+      "V1_ALLOWLIST": "COMPLIANT",
+      "V2_FINAL_POLICY": "COMPLIANT"
+    }
+  },
+  "runtime": "openjdk version \"21.0.12.1\" 2026-08-18",
+  "java_source_sha256": "8fc9af941d97455017a8e1423eaadfb09620036bcacbb0ab469851fc0832c9c2",
+  "bc_jar_sha256": "2af190b300cbb0b35e248ccf5f4a06b6072030aeb3da7a98ec73abe5b4cb371f",
+  "scope": "synthetic deterministic policy-check/update/crypto ordering, real X25519/ML-KEM-768/AES-GCM, toy combiner, no external commit and no OSS validation",
+  "precision_note": "expected matches include intentionally unsafe V0/V1 successes; not vulnerabilities fixed",
+  "policy_note": "C1 explicitly permits classical-only fallback on KEM failure; C2 prohibits it",
+  "pqc_auth_note": "ML-DSA not tested here; separate signature-authentication policy required for signed requests"
+}

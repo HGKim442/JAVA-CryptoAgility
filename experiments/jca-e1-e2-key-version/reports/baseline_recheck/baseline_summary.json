@@ -1,0 +1,105 @@
+{
+  "status": "REPRODUCED_ORIGINAL_E1_E2_CODE",
+  "jdk": "openjdk version \"21.0.12.1\" 2026-08-18",
+  "original_nested_zip_sha256": "958ea97b5cb39d4a19b61a260f4ad26f95ac389a2fb9f16d0e78236785833608",
+  "source_sha256": {
+    "CheckpointCodec.java": "2d22e04b56af12f06b135a32961d43f0b94602cd9c90b873b1537ddf87bb43de",
+    "AnchorCodec.java": "bfc9ec5cb57d5984afa71326392da8eb208977d6cb6e6ae74875f8f25f8f8c34",
+    "PqcDowngradeExperiment.java": "6099d35c4af71919c47a45a70223559d8249948f373b02b1062dd7bc480aa4a2",
+    "TrustedStateStore.java": "a83cf0da612ae33af2f1d871f285e70575b2763fb1d1f13925d820313aaa2ce1",
+    "E1Experiment.java": "497647a16d8f4e895a0d2a371c2d0d25308663c0a1a7bec018713af8514e0ec3"
+  },
+  "bc_jar_sha256": "2af190b300cbb0b35e248ccf5f4a06b6072030aeb3da7a98ec73abe5b4cb371f",
+  "e1_attack_rows": 540,
+  "e1_normal_cost_rows": 900,
+  "e2_downgrade_rows": 36,
+  "e1_attack_effect_counts": {
+    "VULNERABLE": {
+      "01": 30,
+      "02": 30,
+      "03": 30,
+      "04": 30,
+      "05": 30,
+      "06": 30
+    },
+    "ALLOWLIST": {
+      "01": 0,
+      "02": 0,
+      "03": 30,
+      "04": 30,
+      "05": 30,
+      "06": 30
+    },
+    "PROPOSED": {
+      "01": 0,
+      "02": 0,
+      "03": 0,
+      "04": 0,
+      "05": 0,
+      "06": 0
+    }
+  },
+  "e1_normal_success": 900,
+  "e1_normal_latency_ns": {
+    "ALLOWLIST": {
+      "n": 300,
+      "median": 343448.0,
+      "p95": 760423.1500000006
+    },
+    "PROPOSED": {
+      "n": 300,
+      "median": 358806.0,
+      "p95": 710932.8500000001
+    },
+    "VULNERABLE": {
+      "n": 300,
+      "median": 363548.5,
+      "p95": 777406.9000000018
+    }
+  },
+  "e2_observations": {
+    "VULNERABLE": {
+      "1": {
+        "rows": 6,
+        "fallback_succeeded": 6,
+        "policy_rejected": 0,
+        "normal_hybrid_succeeded": 6
+      },
+      "2": {
+        "rows": 6,
+        "fallback_succeeded": 6,
+        "policy_rejected": 0,
+        "normal_hybrid_succeeded": 6
+      }
+    },
+    "ALLOWLIST": {
+      "1": {
+        "rows": 6,
+        "fallback_succeeded": 6,
+        "policy_rejected": 0,
+        "normal_hybrid_succeeded": 6
+      },
+      "2": {
+        "rows": 6,
+        "fallback_succeeded": 6,
+        "policy_rejected": 0,
+        "normal_hybrid_succeeded": 6
+      }
+    },
+    "PROPOSED": {
+      "1": {
+        "rows": 6,
+        "fallback_succeeded": 0,
+        "policy_rejected": 6,
+        "normal_hybrid_succeeded": 6
+      },
+      "2": {
+        "rows": 6,
+        "fallback_succeeded": 0,
+        "policy_rejected": 6,
+        "normal_hybrid_succeeded": 6
+      }
+    }
+  },
+  "note": "six JVM runs of original synthetic sources; not independent real-world defects, no valid statistical attack-detection-rate inference"
+}

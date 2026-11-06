@@ -1,0 +1,20 @@
+{
+  "scope": "synthetic single-factor key-version transition, real JCA SunJCE AES-GCM, no PQC or external commit",
+  "source_sha256": "23d07cb792b180d998984cc4c33ca39ef28f7708c822d74864719b1326e5a855",
+  "repetitions": 3,
+  "conditions_per_repetition": 18,
+  "rows": 54,
+  "verdicts": {
+    "COMPLIANT": 45,
+    "REJECTED_POLICY": 3,
+    "VIOLATION": 6
+  },
+  "assumptions": [
+    "administrator-authorized K1->K2 rotation",
+    "Snapshot and Strict-cutover are distinct policies",
+    "only V2 checks effective required key version before the AEAD operation",
+    "all successful paths use identical AAD binding; P3 tamper not compared"
+  ],
+  "performance_claim": "none; no time or memory comparison",
+  "status": "CONTROLLED_EXPECTATION_MATCH"
+}

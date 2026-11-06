@@ -1,0 +1,45 @@
+{
+  "status": "CONTROLLED_FIXTURE_EXPECTATION_MATCH",
+  "rows": 108,
+  "repeats": 3,
+  "conditions_per_repeat": 36,
+  "judgments": {
+    "COMPLIANT": 90,
+    "VIOLATION": 12,
+    "REJECTED": 6
+  },
+  "contrasts": [
+    {
+      "model": "SNAPSHOT",
+      "case": "UPGRADE_CLASSICAL",
+      "V0_VULNERABLE": "COMPLIANT",
+      "V1_ALLOWLIST": "COMPLIANT",
+      "V2_FINAL_POLICY": "COMPLIANT"
+    },
+    {
+      "model": "SNAPSHOT",
+      "case": "RELAX_CLASSICAL",
+      "V0_VULNERABLE": "VIOLATION",
+      "V1_ALLOWLIST": "VIOLATION",
+      "V2_FINAL_POLICY": "REJECTED"
+    },
+    {
+      "model": "STRICT_CUTOVER",
+      "case": "UPGRADE_CLASSICAL",
+      "V0_VULNERABLE": "VIOLATION",
+      "V1_ALLOWLIST": "VIOLATION",
+      "V2_FINAL_POLICY": "REJECTED"
+    },
+    {
+      "model": "STRICT_CUTOVER",
+      "case": "RELAX_CLASSICAL",
+      "V0_VULNERABLE": "COMPLIANT",
+      "V1_ALLOWLIST": "COMPLIANT",
+      "V2_FINAL_POLICY": "COMPLIANT"
+    }
+  ],
+  "java_source_sha256": "536b8bd3c40a138b823e8c870dd9a5f6d5262705484f9f261dcde212abc70964",
+  "bc_jar_sha256": "2af190b300cbb0b35e248ccf5f4a06b6072030aeb3da7a98ec73abe5b4cb371f",
+  "java_version": "openjdk version \"21.0.12.1\" 2026-08-18",
+  "evidence_scope": "synthetic fixture, deterministic order, real X25519/ML-KEM-768/AES-GCM, toy combiner; no external OSS or RVSec integration"
+}
