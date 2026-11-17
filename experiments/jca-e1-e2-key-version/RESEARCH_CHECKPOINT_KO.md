@@ -20,7 +20,6 @@ v2.4 우선순위: 03·06 우선, E2는 공통 정책 조건, 단일 요인 → 
 | PoC06 + P2 | 원본 E1 구성 TOCTOU, 11월 6일 Snapshot/Strict + Provider 실패 144행, 이번 키 버전 단일 인자 54행 | 키 회전·정책·Provider의 실제 단일 요청 전 과정 및 선형화 전체 증명 미완료 |
 | E1 | 원본 6 JVM: 공격 540행, 정상 비용 900행 재수집 | JVM 편차 심함. p50/p95는 예비 값이며 통계적 성능 개선 주장 불가 |
 | E2 | 원본 6 JVM: 장애 36행/정상 hybrid 36대조; 결합 144행 | 서명 요구 요청의 ML-DSA 및 범용 하이브리드 프로토콜 검증 미완료 |
-| 공개 OSS 검증 | Vert.x TLS/JSSE PoC06 한정 사례 별도 최종 확인(2026-11-06) | **JSSE 사례이며 원본 JCA/JCE Cipher/KEM 요청 단위 경로를 대체하지 않음** |
 | 외부 비교/신규성 | CrySL, CryptoGuard, RVSec 등 분석 범위와 선행 논문 목록 보유 | 기능 미지원 도구를 자동 FN 계산하지 말 것, 독립 신규성 판단 미완료 |
 
 ## 3. 이번 재실행 데이터의 정확한 판정
@@ -57,7 +56,7 @@ v2.4 우선순위: 03·06 우선, E2는 공통 정책 조건, 단일 요인 → 
 참고: https://github.com/apache/camel/blob/main/components/camel-pqc/src/test/java/org/apache/camel/component/pqc/dataformat/PQCDataFormatTest.java
 https://camel.apache.org/components/4.22.x/dataformats/pqc-dataformat.html
 
-독립 테스트가 지원되지 않으면, Vert.x JSSE 사례는 별도 완료로 보존하고 원 과제의 성과/한계를 정직하게 정리한다. `RVSec` 및 범용 `PqcAgent` 기능 확대는 이번 원 과제에서 제외.
+독립 테스트가 지원되지 않으면, 원 과제의 성과와 한계를 정직하게 정리한다. `RVSec` 및 범용 `PqcAgent` 기능 확대는 이번 원 과제에서 제외.
 
 ## 5. 기술적 한계 및 주장 통제
 
@@ -65,4 +64,4 @@ https://camel.apache.org/components/4.22.x/dataformats/pqc-dataformat.html
 - P2 요청 시점 정책의 **신뢰된 효력 모델**은 현실 서비스에 맞게 지정해야 한다. Snapshot에서 정상인 과거 요청을 Strict cutover 위반으로 섞지 않는다.
 - 신규 PoC06 키 버전은 동일 프로세스·키 메모리·정상 AAD의 합성 통제 실험, 디스크 영속 키 저장/분산 조정/실서비스 외부 커밋을 실험하지 않았다.
 - 비용 p50/p95는 참고값일 뿐 캐시, JVM JIT, 파일 I/O, GC, 분산/실서비스 처리량과 동일하지 않다.
-- Vert.x 미공개 상세 결함 보고서와 패치 코드는 비공개 유지. 공식 패치/보안 권고가 검증되기 전 공개 수치나 취약 세부를 확대 공개하지 않는다.
+- 외부 소프트웨어의 미공개 보안 이슈 보고서와 패치는 별도로 비공개 관리한다. 공식 확인 전에 상세 재현 정보나 보안 영향 추정을 확대 공개하지 않는다.

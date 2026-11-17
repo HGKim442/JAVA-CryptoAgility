@@ -14,7 +14,6 @@
 | E1 Camel 정상 비용 | `experiments/camel-pqc` + 요약 CSV | 5 JVM 탐색적 측정, 4,500회 정상 왕복, 운영성능 추론 금지 |
 | P2 | 합성 정책·키 전환 항목만 완료 | 공개 Camel의 concurrent policy-key state 전환 증명 아님 |
 | P3 | 원 E1 합성 AAD 결합 포함 | 실제 임의 앱의 컨텍스트 결합 보증 아님 |
-| Vert.x JSSE 확장 | `docs/vertx-jsse-poc06` | 제한된 범위에서 수정 전후 비교, 상세 자료는 비공개 및 공식 조율 전 공개 금지 |
 
 *보조 주의:* Camel 4.22.0의 `KYBER`는 `ML-KEM` 별칭입니다. 서로 다른 KEM 사례는 `HQC`와 비교했습니다. Camel 개발 브랜치에서는 생성기 생성 경로가 변경된 사실을 확인했으나, 이번 코드가 현재 제품에 그대로 적용된다고 주장하지 않습니다.
 

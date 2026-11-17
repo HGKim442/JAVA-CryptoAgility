@@ -15,7 +15,6 @@ Java JCA/JCE 암호민첩성(Cryptographic Agility) 전환 시 보안 불변식�
 | Camel 원인 대조 | [최종 WSL Probe](experiments/camel-pqc-probe/) | 캐시 유무에 따른 알고리즘 요청 대조 |
 | Camel 초기 Probe | [과거 초기 검증 소스](archive/camel-pqc-initial-probe-20261106/) | 중간 기록 보존용, 최신 재현 기본 대상 아님 |
 | 과거 확장 코드 | [2026-10-10 보존용 소스](archive/jca-reference-v15-20261010/) | 당시 상태의 코드만, 최신 검증 아님 |
-| Vert.x 5.2.2 | [PoC06 TLS/JSSE 공개용 보고](docs/vertx-jsse-poc06/README_KO.md) | 미공개 결함 세부자료·패치 제외 |
 
 ## 요약 결과
 
@@ -49,7 +48,7 @@ bash scripts/run_timing.sh
 
 실험별 `README_KO.md`를 먼저 읽고 실행하세요. Java 17+/21+ 및 필요한 모듈의 Maven·Bouncy Castle 1.86 등 조건이 서로 다릅니다. 연구 코드는 실제 사용자/운영시스템을 대상으로 하지 않고 통제 fixture로 실행됩니다.
 
-**공개 제한:** 상세 Vert.x 결함 재현/패치/원시 로그, 비밀키/자격증명, 제3자 논문 PDF, 미출판 연구 초안, RVSec 별도 트랙은 포함하지 않습니다. 공개 저장소에 업로드하기 전에 지도교수·연구실의 공유 권한을 확인하세요.
+**공개 제한:** 외부 소프트웨어 미공개 보안 이슈의 상세 재현/패치/원시 로그, 비밀키/자격증명, 제3자 논문 PDF, 미출판 연구 초안, RVSec 별도 트랙은 포함하지 않습니다. 공개 저장소에 업로드하기 전에 지도교수·연구실의 공유 권한을 확인하세요.
 
 ## 브랜치·과거 재현 기록
 

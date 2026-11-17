@@ -11,7 +11,6 @@
 - [E1/E2 및 키 버전](../experiments/jca-e1-e2-key-version/README_KO.md): `python3 audit_reports.py` 또는 README의 재현 명령
 - [PoC06 정책 전환](../experiments/poc06-policy-cutover/): `python3 run.py`
 - [PoC03·06 결합 실험](../experiments/poc03-poc06-fallback-cutover/): `python3 run.py`
-- [Vert.x 공개용 요약](vertx-jsse-poc06/README_KO.md): 보안 결함 재현 및 내부 패치는 공개하지 않음
 - [기존 구조 안내](REPOSITORY_LAYOUT_KO.md): 독립 실행·역사 보존을 위한 사본 설명
 
 ## 유지하는 브랜치 (총 7개, `main` 포함)
